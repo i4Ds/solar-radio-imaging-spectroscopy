@@ -33,7 +33,7 @@ engineering in Switzerland.
 
 **Realistic near-term checklist (slide 4 of the PDF), mapped:**
 
-- Understand MWA as a user — in progress (Sharma 2022 products + notebooks)
+- Understand MWA as a user — done
 - Demos — MWA demo uvfits on besso/calculon exists; solar imaging demo still blocked on data layout
 - Calibration / self-cal — later phase
 - Solar-specific software — `src/solarburst/` in solar-burst-multiview
