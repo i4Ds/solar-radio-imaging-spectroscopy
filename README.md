@@ -25,7 +25,7 @@ Do not fold those trees into this repo.
 
 - Phase 0–1 done: visibility subtraction matches Sharma’s `_sub.ms` bit-exactly (`scan_mean`, not the paper’s 15 s median).
 - Phase 2 in progress: `python -m solarburst.figures` rebuilds paper Figures 3, 5, 7, 9, 11, 12. Figure 3 peaks match the caption to 15%.
-- MWA containers run on calculon GPU nodes (Singularity); login node cannot. See `docs/calculon-mwa.md` in solar-burst-multiview.
+- MWA containers run on calculon GPU nodes (Singularity) and on CSCS (Podman); the stack works. See `docs/calculon-mwa.md` in solar-burst-multiview.
 
 **e-Callisto (Mexico, Jan–Mar)** has not started in this programme. Use `ecallisto_ng`.
 

@@ -25,7 +25,7 @@ engineering in Switzerland.
 | Design a system for seamless solar radio images (MCP server as a later idea) | umbrella + solar-burst-multiview | not started (MCP); imaging path started |
 | Start from existing MWA packages; 2015 → 2024 campaign | [solar-burst-multiview](https://github.com/i4Ds/solar-burst-multiview) | 2015 Sharma reproduction in progress; 2024 not started |
 | Calibration (MWA and SKA-Low teams) | solar-burst-multiview | not started as a gate |
-| MWA stack on calculon, transfer to CSCS, extend for solar | solar-burst-multiview `docs/calculon-mwa.md` | containers on calculon GPU nodes; CSCS batch still open |
+| MWA stack on calculon, transfer to CSCS, extend for solar | solar-burst-multiview `docs/calculon-mwa.md` | containers installed and working on calculon GPU nodes and on CSCS; solar-specific extension still to do |
 | SRCNet solar Detailed Science Cases | — | not started |
 | Instrument-agnostic parts; SKA-MID / MeerKAT / ALMA / eOVSA (with Rohit) | — | not started |
 | Scalability, CSCS, SKA-SDP, data-flow hardware | Karabo-Pipeline, CSCS | not started |
