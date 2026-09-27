@@ -5,7 +5,7 @@ radio indirect imaging and spectroscopy** (FHNW / i4DS).
 
 This repository is the map, not the code. Science and engineering live in the
 repos below. Track work on the
-[GitHub Project](https://github.com/orgs/i4Ds/projects).
+[GitHub Project](https://github.com/orgs/i4Ds/projects/18).
 
 ## Repositories
 
@@ -19,7 +19,7 @@ repos below. Track work on the
 
 Do not fold those trees into this repo.
 
-## Where we are (2026-09)
+## Where we are (27 September 2026)
 
 **Imaging (Perth / Kanpur, Oct–Dec)** is started on the laptop against Sharma 2022:
 

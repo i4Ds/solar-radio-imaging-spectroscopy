@@ -1,8 +1,4 @@
-# Sabbatical plan (Aug 2026)
-
-Source: *csillaghy sabbatical plan aug 2026* (OneDrive PDF). This file is the
-GitHub copy, annotated with where the work actually lives and what is already
-done.
+# Sabbatical plan (27 September 2026)
 
 **Theme:** agentic software aspects of solar radio indirect imaging and
 spectroscopy — André Csillaghy.
