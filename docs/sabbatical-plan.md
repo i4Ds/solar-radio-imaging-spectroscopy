@@ -1,4 +1,4 @@
-# Sabbatical plan (27 September 2026)
+# Sabbatical plan (29 September 2026)
 
 **Theme:** agentic software aspects of solar radio indirect imaging and
 spectroscopy — André Csillaghy.
@@ -13,43 +13,65 @@ largest models cannot run in-house; agentic AI changes how scientists touch
 data.
 
 The six-month goal is to see how those pieces fit, accelerate heliophysics
-tooling, and open Swiss collaborations on solar radio imaging.
+tooling, and open Swiss collaborations on solar radio imaging. That includes
+going into the large volume of MWA solar observations and making images of
+all events.
 
 ## Season I — Imaging (October Perth – November/December Kanpur)
 
 Based on science (Kansabanik et al. 2022, Sharma et al. 2022) and SKAO / SRCNet
 engineering in Switzerland.
 
-| Item | Repo | Status |
-|------|------|--------|
-| Design a system for seamless solar radio images (MCP server as a later idea) | umbrella + solar-burst-multiview | not started (MCP); imaging path started |
-| Start from existing MWA packages; 2015 → 2024 campaign | [solar-burst-multiview](https://github.com/i4Ds/solar-burst-multiview) | 2015 Sharma reproduction in progress; 2024 not started |
-| Calibration (MWA and SKA-Low teams) | solar-burst-multiview | not started as a gate |
-| MWA stack on calculon, transfer to CSCS, extend for solar | solar-burst-multiview `docs/calculon-mwa.md` | containers installed and working on calculon GPU nodes and on CSCS; solar-specific extension still to do |
-| SRCNet solar Detailed Science Cases | — | not started |
-| Instrument-agnostic parts; SKA-MID / MeerKAT / ALMA / eOVSA (with Rohit) | — | not started |
-| Scalability, CSCS, SKA-SDP, data-flow hardware | Karabo-Pipeline, CSCS | not started |
-| Science goals with Benz, Krucker, CESRA | — | discussion, not in git |
+🟢 done · 🟡 in progress · 🔴 not started
 
-**Realistic near-term checklist (slide 4 of the PDF), mapped:**
-
-- Understand MWA as a user — done
-- Demos — MWA demo uvfits on besso/calculon exists; solar imaging demo still blocked on data layout
-- Calibration / self-cal — later phase
-- Solar-specific software — `src/solarburst/` in solar-burst-multiview
-- KARABO simulations — [Karabo-Pipeline](https://github.com/i4Ds/Karabo-Pipeline)
-- SKA software stack — same
-- Side project: SKA calibration on new hardware; install simulation pipeline
+| # | Item | Repo | Status |
+|---|------|------|--------|
+| 1 | Understand MWA as a user | [solar-burst-multiview](https://github.com/i4Ds/solar-burst-multiview) | 🟢 done |
+| 2 | Understand the P-AIRCARS imaging pipeline | solar-burst-multiview | 🔴 not started |
+| 3 | MWA stack on the laptop, calculon, and CSCS (non-solar demo, then solar) | solar-burst-multiview `docs/calculon-mwa.md` | 🟡 in progress (containers working; solar extension still to do) |
+| 4 | Reproduce Sharma et al. 2022 from existing MWA packages | solar-burst-multiview | 🟡 in progress (Phases 0–1 done; Phase 2 open) |
+| 5 | Solar-specific software (`src/solarburst/`) | solar-burst-multiview | 🟡 in progress |
+| 6 | Calibration / self-cal (MWA and SKA-Low teams) | solar-burst-multiview | 🔴 not started |
+| 7 | 2024 campaign: image all events in the MWA solar archive | solar-burst-multiview | 🔴 not started |
+| 8 | Design a system for seamless solar radio images (MCP later) | umbrella + solar-burst-multiview | 🔴 not started |
+| 9 | SRCNet solar Detailed Science Cases | — | 🔴 not started |
+| 10 | Instrument-agnostic parts (SKA-MID / MeerKAT / ALMA / eOVSA, with Rohit) | — | 🔴 not started |
+| 11 | Scalability: CSCS, SKA-SDP, KARABO, data-flow hardware | [Karabo-Pipeline](https://github.com/i4Ds/Karabo-Pipeline), CSCS | 🔴 not started |
+| 12 | SKA software stack; side project: calibration on new hardware | Karabo-Pipeline | 🔴 not started |
+| 13 | Science goals with Benz, Krucker, CESRA | — | 🟡 in progress (discussion, not in git) |
 
 ## Season II — e-Callisto (January–March, Mexico)
 
-| Item | Repo | Status |
-|------|------|--------|
-| e-Callisto as context / alarm / interval selection | [ecallisto_ng](https://github.com/i4Ds/ecallisto_ng) | package exists; sabbatical use not started |
-| AI burst classification (Vincenzo), paper, Mexican stations | ecallisto_ng | not started here |
-| Dynamic range of Mexican stations | — | not started |
-| Compare e-Callisto and imagers; network calibration | ecallisto_ng + solar-burst-multiview | not started |
-| SDR tests (Spain / Udaipur / Mexico) as long-term replacement | — | not started |
+| # | Item | Repo | Status |
+|---|------|------|--------|
+| 14 | e-Callisto as context / alarm / interval selection | [ecallisto_ng](https://github.com/i4Ds/ecallisto_ng) | 🔴 not started |
+| 15 | Dynamic range of Mexican stations | — | 🔴 not started |
+| 16 | AI burst classification (Vincenzo), paper, Mexican stations | ecallisto_ng | 🔴 not started |
+| 17 | Compare e-Callisto and imagers; network calibration | ecallisto_ng + solar-burst-multiview | 🔴 not started |
+| 18 | Test the SDR solution with the mini-spectrum analyzer | — | 🔴 not started |
+| 19 | SDR tests (Spain / Udaipur / Mexico) as a long-term replacement | — | 🔴 not started |
+
+## Open questions
+
+1. **Imaging path for the archive.** Is P-AIRCARS (item 2) the pipeline for
+   item 7 (all MWA solar events), or do we stay with Sharma-style scan-mean
+   subtraction plus WSClean, or run both?
+2. **What “all events” means.** Every solar obsid in the archive, or only
+   burst-detected intervals? Cadence, bands, and Stokes still unset.
+3. **Validation before scale.** Does Phase 3 (re-image Sharma visibilities
+   with our stack) have to pass before item 7, or is matching Sharma’s
+   figures (item 4) enough to move on?
+4. **Where production imaging runs.** Calculon, CSCS, or both? The login node
+   on calculon cannot run containers; jobs have to be `sbatch`/`srun`.
+5. **Self-cal for 2024 MWAX data.** Item 6 is later; 2024 is MWAX, 2015 is
+   legacy, and they differ in channelisation and metadata.
+6. **MCP / agentic interface.** Item 8 is “later” — this season, or after
+   images exist?
+7. **How far to generalise.** MWA-first until item 7 works, or start
+   instrument-agnostic design (item 10) in parallel?
+8. **Sharma Figures 7–12 / Table 2.** Region centres and counts are still
+   approximate without Rohit’s mapping. Is that required, or is the present
+   match good enough?
 
 ## Outcomes
 
@@ -64,4 +86,5 @@ engineering in Switzerland.
 ## What this umbrella is not
 
 It is not a rename of solar-burst-multiview. That repo stays the MWA imaging
-workhorse. e-Callisto, Karabo, and STIX stay in their own repositories.
+workhorse (Sharma reproduction and the non-solar MWA demo). e-Callisto,
+Karabo, and STIX stay in their own repositories.
