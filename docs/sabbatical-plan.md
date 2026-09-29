@@ -28,7 +28,7 @@ engineering in Switzerland.
 |---|------|------|--------|
 | 1 | Understand MWA as a user | [solar-burst-multiview](https://github.com/i4Ds/solar-burst-multiview) | 🟢 done |
 | 2 | Understand the P-AIRCARS imaging pipeline | solar-burst-multiview | 🔴 not started |
-| 3 | MWA stack on the laptop, calculon, and CSCS (non-solar demo, then solar) | solar-burst-multiview `docs/calculon-mwa.md` | 🟡 in progress (containers working; solar extension still to do) |
+| 3 | MWA stack on the laptop, calculon, and CSCS (non-solar demo, then solar) | solar-burst-multiview `docs/calculon-mwa.md` | 🟡 in progress (containers on all three; one solar snapshot imaged, disk not recovered) |
 | 4 | Reproduce Sharma et al. 2022 from existing MWA packages | solar-burst-multiview | 🟡 in progress (Phases 0–1 done; Phase 2 open) |
 | 5 | Solar-specific software (`src/solarburst/`) | solar-burst-multiview | 🟡 in progress |
 | 6 | Calibration / self-cal (MWA and SKA-Low teams) | solar-burst-multiview | 🔴 not started |
@@ -39,6 +39,25 @@ engineering in Switzerland.
 | 11 | Scalability: CSCS, SKA-SDP, KARABO, data-flow hardware | [Karabo-Pipeline](https://github.com/i4Ds/Karabo-Pipeline), CSCS | 🔴 not started |
 | 12 | SKA software stack; side project: calibration on new hardware | Karabo-Pipeline | 🔴 not started |
 | 13 | Science goals with Benz, Krucker, CESRA | — | 🟡 in progress (discussion, not in git) |
+
+### Imaging pipeline setup (29 September 2026)
+
+Item 3. The containers run on the laptop (Docker/`mwa` under Colima), on
+calculon (Singularity), and on CSCS (Podman). The laptop notes and the solar
+trial are in solar-burst-multiview
+[`docs/calculon-mwa.md`](https://github.com/i4Ds/solar-burst-multiview/blob/cursor/calculon-mwa-containers/docs/calculon-mwa.md).
+
+One archive scan was used to test that laptop path, not to reproduce Sharma.
+Observation **1424757616** (Oberoi2024B_Sun, 2025-02-28, 176 s) was copied
+from the shared calculon archive and calibrated from Pictor A **1424775768**,
+five hours later. ASVO had already run birli. Hyperdrive `solutions-apply`
+worked: the peak went from speckles at about 4 Jy/beam to about 2×10⁵ Jy/beam.
+
+The image is still a grating-lobe stripe about 1.6° from the Sun. The scan is
+a picket fence of 1.28 MHz channels with gaps of about 8 MHz, so extra
+channels do not smear the lobe, and three minutes of Earth rotation do not
+fill the uv plane. A solar disk is not recoverable from this snapshot.
+Self-calibration on the Sun has not been tried. Item 6 stays not started.
 
 ## Season II — e-Callisto (January–March, Mexico)
 
