@@ -24,7 +24,7 @@ engineering in Switzerland.
 | 10 | Instrument-agnostic parts (SKA-MID / MeerKAT / ALMA / eOVSA) | — | 🔴 not started |
 | 11 | KARABO | [Karabo-Pipeline](https://github.com/i4Ds/Karabo-Pipeline) | 🔴 not started |
 | 12 | Scalability: CSCS, SKA-SDP, SKA software stack, data-flow hardware, calibration on new hardware | Karabo-Pipeline, CSCS | 🔴 not started |
-| 13 | Science goals with CESRA | — | 🟡 in progress (discussion, not in git) |
+| 13 | Science goals with CESRA | [docs/science-direction.md](science-direction.md) | 🟡 in progress (draft v3) |
 
 ## Season II — e-Callisto (January–March, Mexico)
 

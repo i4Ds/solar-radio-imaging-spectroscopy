@@ -28,7 +28,8 @@ Do not fold those trees into this repo.
 
 **e-Callisto (Mexico, Jan–Mar)** has not started in this programme. Use `ecallisto_ng`.
 
-Detail: [docs/sabbatical-plan.md](docs/sabbatical-plan.md). The MWA reproduction
+Detail: [docs/sabbatical-plan.md](docs/sabbatical-plan.md). Science
+direction (item 13): [docs/science-direction.md](docs/science-direction.md). The MWA reproduction
 mechanics stay in
 [solar-burst-multiview/docs/reproduction-plan.md](https://github.com/i4Ds/solar-burst-multiview/blob/main/docs/reproduction-plan.md).
 
