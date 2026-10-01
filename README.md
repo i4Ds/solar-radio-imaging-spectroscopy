@@ -18,18 +18,19 @@ repos below. Track work on the
 
 Do not fold those trees into this repo.
 
-## Where we are (29 September 2026)
+## Where we are (1 October 2026)
 
 **Imaging (Perth / Kanpur, Oct–Dec)** is underway:
 
-- Sharma 2022 reproduction (items 1–3) done; solar extension and calibration (item 4) in progress.
-- P-AIRCARS for SKA-Low (item 5) runs on this Mac. See `docs/paircars-mac.md` in solar-burst-multiview.
+- Understand MWA, the stack, and Sharma 2022 (items 1, 2, 4) done.
+- Understand MWA calibration (item 3) and solar extension / self-cal (item 5) in progress.
+- P-AIRCARS for SKA-Low (item 6) runs on this Mac; calculon CPU install started (`docs/calculon-paircars.md` in solar-burst-multiview).
 - MWA containers run on the laptop (Docker), calculon GPU nodes (Singularity), and CSCS (Podman).
 
 **e-Callisto (Mexico, Jan–Mar)** has not started in this programme. Use `ecallisto_ng`.
 
 Detail: [docs/sabbatical-plan.md](docs/sabbatical-plan.md). Science
-direction (item 13): [docs/science-direction.md](docs/science-direction.md). The MWA reproduction
+direction (item 14): [docs/science-direction.md](docs/science-direction.md). The MWA reproduction
 mechanics stay in
 [solar-burst-multiview/docs/reproduction-plan.md](https://github.com/i4Ds/solar-burst-multiview/blob/main/docs/reproduction-plan.md).
 
