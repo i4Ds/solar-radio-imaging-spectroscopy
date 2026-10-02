@@ -17,7 +17,7 @@ engineering in Switzerland.
 | 3 | Understand MWA calibration | solar-burst-multiview | 🟡 in progress |
 | 4 | Reproduce Sharma et al. 2022 from existing MWA packages | solar-burst-multiview | 🟢 done |
 | 5 | Solar extension of the MWA stack, and calibration / self-cal (MWA and SKA-Low teams) | solar-burst-multiview | 🟡 in progress |
-| 6 | P-AIRCARS for SKA-Low | P-AIRCARS | 🟡 in progress (Mac working; calculon CPU install started) |
+| 6 | P-AIRCARS for SKA-Low | P-AIRCARS | 🟡 in progress (Mac container runs; 2 Oct ch127 4 s image written, self-cal solutions not applied; calculon CPU install started) |
 | 7 | 2024 campaign: image all events in the MWA solar archive | solar-burst-multiview | 🔴 not started |
 | 8 | Design a system for seamless solar radio images (MCP later) | umbrella + solar-burst-multiview | 🔴 not started |
 | 9 | SRCNet solar Detailed Science Cases | — | 🔴 not started |

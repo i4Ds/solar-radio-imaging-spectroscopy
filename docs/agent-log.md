@@ -15,6 +15,50 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-10-02 — [cursor] Close of day: guest, postgres, channel 127
+
+Native macOS still cannot install P-AIRCARS. `pip install '.[dev]'` on
+this Mac fails twice: base Python is 3.13.13, and conda env `paircars`
+(Python 3.10.21) then has no wheel for `casatools==6.6.0.20`. Plan items
+21 and 22 in `docs/sabbatical-plan.md` are that native Mac build and a
+Metal GPU build. Both are not started.
+
+The working install is the Colima `paircars` guest: Ubuntu 22.04.5,
+x86_64, 16 vCPU, 40 GiB. The container was recreated so these mounts
+exist:
+
+| In the guest | On the Mac |
+|---|---|
+| `/obs` | `~/Projects/solar-burst-multiview/data` |
+| `/data` | `~/Projects/P-AIRCARS-data` |
+| `/opt/P-AIRCARS` | `~/Projects/P-AIRCARS` |
+
+Closing the terminal does not stop the guest. `1424757616` is visible at
+`/obs/1424757616` (24 measurement sets).
+
+`init-paircars-setup --init` with no `--configdir` uses
+`~/.paircarspipe`. A `pip install` into the `paircars` user site shadowed
+the conda package and started PostgreSQL with proot, which fails under
+Rosetta. The user-site copy was patched to fakechroot, and the guest
+`udocker` command rewrites `--execmode=P1` to `F1` and passes a TCP port.
+PostgreSQL then logged ready on port 5260 at 05:43 UTC. Those two fixes
+are only in the running container. A later init died because `lsof` was
+missing; it is installed now. `solar-burst-multiview`
+`scripts/paircars-mac/install-inside.sh` lists `lsof` so the next image
+build has it.
+
+Channel 127 image, no calibrator, Stokes I, 4 s at 2025-02-28 06:00:40.
+Job `20261002055510809`. The log header shows 15 CPUs and 35.09 GB.
+Intensity self-cal dynamic range 10.51. The master flow then says
+"Self-calibration subflow is not successful. No solutions are available
+to apply." No bandpass table. Imaging still wrote one image and removed
+the raw FITS. Primary-beam correction wrote 1 image and warned "No disk
+detected image is present to estimate phase shift." Overlay PNG:
+`P-AIRCARS-data/out/1424757616-ch127/20250228/1424757616_target/imagedir_f_1.28_t_4.0_pol_I_w_briggs_0.0/overlay_pngs/time_20250228060040.0_freq_162.48_pol_I_pbcor.png`.
+Pipeline banner: finished successful. The self-cal solutions were not
+applied. Read the master log
+`P-AIRCARS-data/pipeline-work/1424757616-ch127/main_paircars_20261002055510809.log`.
+
 ## 2026-10-02 — [cursor] Plan: native Mac P-AIRCARS, and the Linux guest
 
 Added sabbatical plan items 21 and 22 in `docs/sabbatical-plan.md`.
