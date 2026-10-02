@@ -1,0 +1,1811 @@
+                                                                                                           Page 1 of 80
+
+                               Community of European Solar Radio Astronomers
+
+
+                                             CESRA2026
+                                     Book of Abstracts
+
+
+
+
+                                  15–19 June 2026
+    University of Applied Sciences and Arts Northwestern Switzerland (FHNW)
+                           Brugg/Windisch, Switzerland
+                    https://sites.google.com/view/cesra2026/
+Note that all abstracts, names appear in their original form, with spelling and formatting preserved by the submitting
+                                 author; no proofreading or editing was conducted.
+                                                                                                                                                                              Page 2 of 80
+
+Table of Contents (Abstract title – presenter name)
+Solar radio bursts observations from Solar Orbiter — Antonio Vecchio ................................................................................ 5
+The Role of Particle Scattering Processes in Solar Flares — Gordon Emslie .......................................................................... 6
+Simulations of plasma emission in plasmas with density fluctuations — KRAFFT Catherine................................................. 7
+K-band solar monitoring with INAF single-dish facilities: from SUNPIT to Deep Learning applications — Marco Marongiu 8
+Escape of energetic particles from the solar corona into the heliosphere — Mykola Gordovskyy ....................................... 9
+Bursty acceleration and 3D trajectories of electrons in a solar flare — Shilpi Bhunia ......................................................... 10
+Radio Observations of Solar Active Regions with EOVSA — Sijie Yu .................................................................................... 11
+ALMA Observations of Solar Flares — Stephen White ......................................................................................................... 12
+First imaging observations of the evolution of Coronal Mass Ejections and Eruptive Prominences at K-band (18-26 GHz)
+— Alberto Pellizzoni .............................................................................................................................................................. 13
+Transient brightenings around a stable sunspot detected by ALMA at 3 mm — Alexander Nindos ................................... 14
+Using CoSEE-Cat to investigate the relation of solar energetic electron events with X-ray flares and type III radio bursts —
+Alexander Warmuth.............................................................................................................................................................. 15
+Location and properties of fine frequency structures in the spectra of solar type IV radio bursts — Aneesh Nadiger ...... 16
+Solar Radio Type V Burst: Scattering, Trapping, and Emission Process of a Dense Electron Beam — Arnold O. Benz ....... 17
+Dynamics of type II solar radio burst sources and spectral bridge formation — Artem Koval ............................................ 18
+Characteristics of Pulsating Structures Obtained from ARTEMIS IV/JLS and NRH — Bouratzis Costas ............................... 19
+The effect of solar wind turbulence on the clumpiness and local generation of Langmuir waves — Camille Yasmina
+Lorfing ................................................................................................................................................................................... 20
+Evolution of coronal radio wave scattering during an M class solar flare — Christian Vocks .............................................. 21
+The Small Phased Array DEmonstrator (SPADE) - Description and first results — Christophe Marqué .............................. 22
+Spicule modeling from simultaneous ALMA and IRIS observations — Costas Alissandrakis ............................................... 23
+Magnetic Field Geometry and Anisotropic Scattering Effects on Solar Radio Burst Observations — Daniel Clarkson ....... 24
+From Global Networks to High-Resolution Arrays: Unified Observations of Solar Radio Bursts — Daniela Banyś ............. 25
+Towards daily high-frequency radio imaging of the Solar disk with the SunDish project — Davide Napolitano................. 26
+Probing the Solar Corona with MeerKAT: Early Results and Diagnostic Capabilities — Deepan Patra ................................ 27
+First Remote Sensing Measurement of CME-entrained Magnetic Field in the Inner Heliosphere — Devojyoti Kansabanik
+ .............................................................................................................................................................................................. 28
+Determining the possible acceleration regions of in situ electrons using remote radio imaging and X-ray observations —
+Diana Morosan ...................................................................................................................................................................... 29
+Chasing Solar and Heliospheric Activity on cue with SKAO Pathfinders and Precursors — Divya Oberoi ........................... 30
+Advancing in-situ diagnostics of solar wind heating with radio observations — Eduard Kontar ......................................... 31
+                                                                                                                                                                             Page 3 of 80
+
+From GX Simulator to pyGX: Data-Constrained 3D Modeling of Solar Active Regions with Multi-View EUV and Microwave
+Observations — Gelu M. Nita ............................................................................................................................................... 32
+Highlights of the microwave imaging spectroscopy of solar flares — Gregory Fleishman .................................................. 34
+Multi-wavelength Analysis of Relativistic Electron Dynamics in the X8.2 Limb Flare SOL2017-09-10 — Guillermo Giménez
+de Castro ............................................................................................................................................................................... 35
+Solar and Heliospheric Radio Emission with SKA-Low: Observational Opportunities and Inference Challenge — Hariharan
+Krishnan ................................................................................................................................................................................ 36
+Study of Particle Signatures and CME-CME interaction during the 11–12th Nov 2025 event — Harsh Bhati ..................... 37
+When, where, and how can fast protons contribute to coronal heating? — Hugh Hudson ................................................ 38
+Improving LOFAR Solar Calibration at Very Low Frequencies: New Methods and a Flare Case Study — Hyoyin Gan ........ 39
+Strong particle acceleration in small flares — Iain Hannah .................................................................................................. 40
+Modelling density profiles along the propagation path of active region jets on August 25, 2011 — Jasmina Magdalenic
+Zhukov ................................................................................................................................................................................... 41
+Probing the Solar Flare Acceleration Region Using Multi-Wavelength Timing and Radio Imaging — Jinge ZHANG ........... 42
+AstroDoncel Data Centre: New-Generation Space Weather Services from the e-Callisto Network — Joaquín Martínez del
+Hoyo + Javier Bussons Gordo ................................................................................................................................................ 43
+Feature-Based Solar Radio Burst Classification in the e-Callisto Network — Jorge Borque López-Torres ........................... 44
+Automated Derivation of SRB Intensity Levels from e-Callisto Dynamic Spectrograms — Juan José García Delgado ........ 45
+Comprehensive study of solar type II radio bursts and the properties of the associated shock waves — Karthik Bhandari
+.............................................................................................................................................................................................. 46
+Geometric constraints on radio triangulation accuracy in multi-spacecraft systems — Ketaki Deshpande........................ 47
+Plasma flow in the solar atmosphere along magnetic fields driven by the Kelvin force — Kiyoto Shibasaki ...................... 48
+The Deep Learning-Based Dual-Branch Multimodal Fusion Model for Solar Flare Prediction — Limin Zhao ...................... 49
+Proofs of concept in the e-Callisto next generation framework — Manuel Prieto .............................................................. 50
+Formation mechanism of short-period quasi-periodic pulsations in radio bursts — Minghui Zhang .................................. 51
+Solar ALMA observation with very high spatial resolution. — Miroslav Bárta ..................................................................... 52
+Why U-Bursts Fail: Kinetic Constraints on Electron Beam Transport — Mohamed Sherif ................................................... 53
+Spectral component imaging of solar X-rax flares with STIX — Muriel Zoë Stiefel .............................................................. 54
+Connecting Electrons at the Sun and in the Heliosphere through X-ray and Radio Diagnostics — Nicole VILMER ............. 55
+Reassessing the exciter speed inferred from solar radio bursts — Nicolina Chrysaphi ....................................................... 56
+Fluctuations in Solar Type III Radio Burst Spectra Observed by Parker Solar Probe and Solar Orbiter — Panisara
+Thepthong ............................................................................................................................................................................. 57
+3D reconstruction of solar flare X-ray sources from combined STIX/HXI visibilities — Paolo Massa .................................. 58
+Advancing Solar and Space Weather Science in the LOFAR2.0 and SKAO Era — Pietro Zucca ............................................ 59
+                                                                                                                                                                             Page 4 of 80
+
+X-ray Spectroscopic Diagnostics of Confined and Eruptive M-Class Solar Flares Using SoLEXS/Aditya-L1 — Prakhar Singh
+.............................................................................................................................................................................................. 60
+Detection of Linearly Polarized Emissions from Metric Solar Radio Bursts — Puja Majee .................................................. 61
+Simulations of SKA Observations for solar emissions — Rohit Sharma................................................................................ 62
+The Solar Radio Playground: Probing Multi-Channel Correlations via Interpretable Diffusion Models for the SKA Era —
+Roman Farrugia ..................................................................................................................................................................... 63
+Hard X-ray and Radio emissions from the high corona associated with CMEs — Säm Krucker........................................... 64
+Spectropolarimetric analysis of herringbones in a type II solar radio burst — Sanna Normo ............................................. 65
+Physics-based flare forecasting method with the large Italian Radio Telescopes — Sara Mulas......................................... 66
+Small scale structures within solar noisestorms observed with LOFAR — Soham Dey ........................................................ 67
+Solar jets as the direct source of impulsive solar energetic electrons — Song Tan ............................................................. 68
+Imaging spectroscopy reveals spike-like repeating solar burst pairs in the solar corona — Suli Ma ................................... 69
+SPOTLIGHT on decimetric millisecond bursts: Insights from uGMRT solar observation — Surajit Mondal........................ 70
+Three-dimensional mapping of coronal magnetic field and charged particles in an M-class solar flare — Tatiana Kaltman
+.............................................................................................................................................................................................. 71
+The Nature of Electron Density Inhomogeneities in the Middle and Outer Corona — Timothy Bastian ............................ 72
+A New Radio-Quiet e-CALLISTO Site in the Azores: Extending Solar Radio Burst Coverage across the North Atlantic —
+Valente Cuambe .................................................................................................................................................................... 73
+On EIT Waves Relationship with Coronal Mass Ejections, Solar Flare, Coronal Holes, and Solar Wind Phenomena —
+VIRENDRA VERMA ................................................................................................................................................................ 74
+Metric Radio Bursts and Their Implications for Solar Activity Observed by MUSER-L (30-400 MHz) — Xingyao Chen ....... 76
+High-resolution Solar Observation with ALMA — Yi Chai ..................................................................................................... 77
+MUSER Observations of Solar Radio Burst Events — Yihua Yan........................................................................................... 78
+First Detailed MeerKAT Imaging Spectroscopy of a Solar Flare — Yingjie Luo ..................................................................... 79
+                                                                                                   Page 5 of 80
+
+Solar radio bursts observations from Solar Orbiter — Antonio Vecchio
+Vecchio, A., Maksimovic, M., Bonnin, X., Pesini, A., Kretzschmar, M.,Thepthong, P.
+
+Radboud University and Lira- Observatoire de Paris
+
+The Radio and Plasma Waves (RPW) instrument on the ESA Solar Orbiter mission is designed to measure
+electric and magnetic fields, plasma wave spectra and polarization properties, the spacecraft floating
+potential, and solar radio emissions in the interplanetary medium. In particular, RPW observes solar radio
+emissions up to 16 MHz, as well as associated Langmuir waves near the local plasma frequency.
+In the radio domain sampled by RPW, the most commonly observed features are solar Type III bursts. The high
+time and spectral resolution of RPW, combined with its unique capability to measure magnetic fluctuations up
+to ~1 MHz with high sensitivity, enable unprecedented sampling of Type III radio bursts from space, allowing,
+for the first time, the measurement of their magnetic component.
+In this contribution, I review the most relevant results obtained with RPW in the analysis of solar Type III
+bursts, including:
+•      the first direct measurements of the magnetic component of solar radio emissions,
+•      high temporal resolution observations of Type III radio bursts in the 3-13 MHz frequency range,
+•      the first catalogue of interplanetary Type III radio bursts compiled through a citizen science campaign.
+                                                                                                      Page 6 of 80
+
+The Role of Particle Scattering Processes in Solar Flares — Gordon Emslie
+Emslie, A.G.
+
+WKU
+
+Emissions in radio and hard X-rays are prompt diagnostics of the high energy electrons that are accelerated in
+flares, which in turn provide crucial information on the primary energy release mechanism(s). For spatially
+resolved radiation that is optically thin, the properties of the radiation field (intensity, photon
+energy/wavelength/frequency, direction, and polarization), combined with the appropriate “cross-section” for
+the emissions being observed, provide information on the local electron phase-space distribution function.
+Spatially-resolved measurements can thus be used to test various electron transport models, while for
+spatially unresolved measurements, an appropriate electron transport model is required in order to relate the
+observed, target-averaged, properties of the electron population to those of the all-important accelerated
+population.
+
+Models of electron transport range from the early cold-target, single particle, analytic approaches to full
+Fokker-Planck treatments that include physical processes such as Coulomb collisions, return current Ohmic
+effects, and scattering in the target. Scattering processes include both inelastic (e.g., collisional, ohmic) and
+elastic (e.g., magnetic, turbulent) scattering. We will review the evolution of scattering treatments over the
+years, and we will emphasize that even if the electron energy loss rate can be adequately modeled as a cold
+thick-target, with negligible diffusion in particle energy, the trajectory of the electrons, and so the spatial
+distribution of the electron spectrum, still fundamentally depends on diffusive angular scattering processes.
+This has substantial implications for the electron distribution function and its associated heating profile, and
+hence for the atmospheric response to flare energy input. Further, we will resolve the paradox that while in a
+converging magnetic field geometry magnetic scattering causes both positively- and negatively-charged
+particles to experience a magnetic mirror force toward the region of weaker field, there is no associated field-
+aligned body force that should be added to the MHD equations.
+                                                                                                 Page 7 of 80
+
+Simulations of plasma emission in plasmas with density fluctuations — KRAFFT Catherine
+Krafft, C., Polanco-Rodriguez F.J., Volokitin A.S., and Savoini P.
+
+Paris Saclay University
+
+Plasma emission in the solar wind is profoundly influenced by random density fluctuations, which
+fundamentally alter the dynamics of electrostatic wave turbulence excited by electron beams during type III
+solar radio bursts. As these waves propagate through inhomogeneous plasma, they undergo a suite of linear
+transformations—including reflection, refraction, tunneling, trapping, and mode conversion into
+electromagnetic radiation. These interactions critically reshape the pathways to electromagnetic emission at
+the plasma frequency. Strikingly, the canonical nonlinear three-wave decay process, wherein a Langmuir wave
+decays into an electromagnetic wave and an ion acoustic wave—a mechanism long considered central to
+plasma emission—becomes subordinate in the presence of strong density turbulence. Instead, linear mode
+conversion at constant frequency emerges as the dominant process. This presentation advances our
+understanding of solar wind plasma emission by elucidating the pivotal role of density fluctuations in
+governing wave dynamics and radiation mechanisms.
+                                                                                                      Page 8 of 80
+
+K-band solar monitoring with INAF single-dish facilities: from SUNPIT to Deep Learning applications —
+Marco Marongiu
+Marongiu M., Pellizzoni A., Zucca P., Mancini M., Righini S., Mulas S., Iacolina M.N.
+
+INAF - Cagliari Astronomical Observatory
+
+The solar radio emission in the K-band range (18–26 GHz) is a fundamental workbench for studying the solar
+chromosphere and corona. While the signal is dominated by the quiet-Sun free-free emission in local thermal
+equilibrium, dynamic structures - such as Active Regions, Coronal Holes, and Polar Brightenings - reveal
+complex interactions between solar plasma and local magnetic fields through additional gyro-magnetic
+components. Since 2018, the SunDish project has mapped these phenomena, generating a unique dataset of
+approximately 600 radio maps.
+
+To better manage the scientific exploitation of the data, we developed SUNPIT (SUNdish PIpeline Tool). This
+tool was specifically designed to streamline the transition from raw data to high-level scientific products.
+SUNPIT optimises imaging, flux calibration, and the extraction of physical parameters, including brightness
+temperatures, spectral indices, and fractional polarisation. A key advancement is the integration of Deep
+Learning techniques, specifically Convolutional Autoencoders, to improve the identification and tracking of
+dynamic solar features.
+
+In this talk, we demonstrate how this synergy between Deep Learning and high-frequency radio observations
+is essential for advancing our physical understanding of the Sun. This reliable and automated framework
+enhances the accuracy and efficiency of key investigations, including the analysis of the solar size and the solar
+atmosphere in terms of plasma density and temperature, the characterisation of gyro-resonance components
+in active regions, and the analysis of coronal holes. These tools provide the robust diagnostic framework
+necessary to fully exploit the INAF single-dish network for long-term solar monitoring.
+                                                                                                         Page 9 of 80
+
+Escape of energetic particles from the solar corona into the heliosphere — Mykola Gordovskyy
+Gordovskyy, M., Bate, W., Brun, A.S., Sieyra, M.V., Strugarek, A. and Browning, P.K.
+
+University of Hertfordshire
+
+High energy ions and electrons play a crucial role in the fast energy transport in solar flares. A fraction of the
+particles accelerated in flares precipitate in the solar atmosphere, heating the corona and chromosphere, and
+producing non-thermal gamma-, X-ray and radio emissions. Others escape from the corona into the
+heliosphere. The escaping energetic particles are an important component of the space weather. Recent
+advances in computational and observational studies of solar energetic particles, have significantly improved
+our understanding of how particles are transported in the solar corona, and from the corona into the
+heliosphere, particularly thanks to the unprecedented data from Solar Orbiter and Parker Solar Probe
+missions. In this talk, I will review the current progress in studies of solar particle acceleration and escape into
+the heliosphere, with an emphasis on data-constrained computational modelling. I will present our latest
+results of magnetic reconnection and particle acceleration modelling in individual solar flares, focusing, in
+particular, on the effect of magnetic configuration and the location of the acceleration site on the properties
+of escaping energetic particles.
+                                                                                                Page 10 of 80
+
+Bursty acceleration and 3D trajectories of electrons in a solar flare — Shilpi Bhunia
+Hayes,A.L., Klein, L., Vilmer, N., Maloney, A. S., Gallagher, T. P.
+
+Observatoire de Paris
+
+Solar flares are among the most energetic phenomena in the heliosphere, emitting radiation across the
+electromagnetic spectrum. During flare, electrons are accelerated to non-thermal energies as a result of
+magnetic reconnection. These electrons then propagate upwards and downwards from the energy release site
+along magnetic field lines and produce radio and hard X-ray (HXR) emissions, respectively. Frequently, we
+observe the simultaneous occurrence of multiple HXR peaks and successive radio bursts, providing compelling
+evidence that these emissions originate from a common population of accelerated electrons and that the
+underlying energy-release process consists of multiple local acceleration process. We present a detailed
+analysis of a highly energetic flare observed by the Spectrometer Telescope for Imaging X-rays (STIX) onboard
+Solar Orbiter, in conjunction with coordinated radio observations from ground- and space-based instruments
+from the low corona to interplanetary space. By investigating the evolution of X-ray, and radio sources, we
+find that the electrons producing HXR and radio emission have similar acceleration origins. Importantly, our
+study provides observational evidence that the flare acceleration process is temporally and spatially
+fragmentary, and during each of these small-scale processes, the electron beams are injected into a very
+fibrous corona and produce complex HXR and radio emission
+                                                                                                Page 11 of 80
+
+Radio Observations of Solar Active Regions with EOVSA — Sijie Yu
+Sijie Yu
+
+New Jersey Institute of Technology
+
+Solar active regions are important radio sources that provide diagnostics of coronal plasma and magnetic
+fields. This talk will review active-region radio observations with an emphasis on recent results from the
+Expanded Owens Valley Solar Array (EOVSA). I will briefly describe the current EOVSA imaging spectroscopy
+pipeline and its capabilities for routine multi-frequency studies. I will then discuss the main emission
+mechanisms in active regions, including gyroresonance, gyrosynchrotron, and free-free emission, and highlight
+key applications such as coronal magnetic field measurements.
+                                                                                                 Page 12 of 80
+
+ALMA Observations of Solar Flares — Stephen White
+White, S.
+
+AFRL
+
+Solar flares have not been a primary target for ALMA partly due to uncertainty about the response to bright
+flare emission at millimeter wavelengths. However, in 2024 May during the first ALMA observations where
+circular polarization measurements of the Sun were permitted, several flares were successfully observed at
+arcsecond resolution, including an X flare. Since the quiet Sun flux in the ALMA primary beam at 100 GHz is
+around 60 sfu, fluxes of that order or less can readily be handled by ALMA. On behalf of the team involved,
+this paper will discuss the observations in the context of models of flare heating and the response of the
+chromosphere to electron beams, and directions where ALMA can help with flare studies.
+                                                                                                    Page 13 of 80
+
+First imaging observations of the evolution of Coronal Mass Ejections and Eruptive Prominences at K-band
+(18-26 GHz) — Alberto Pellizzoni
+Pellizzoni A., Amaro A., Napolitano D., Mulas S., Marongiu M., Egron E., Righini S., Sirigu M. on behalf of the
+SunDish Team
+
+INAF - Italy
+
+The radio emergence of coronal mass ejections (CMEs) and eruptive prominences (EPs) has been the subject
+of several studies, given their relevant role in exploring the solar atmosphere and modelling its magnetic
+restructuring processes. This modelling is key to understanding the energy release mechanisms of active
+regions (ARs), which are among the main drivers of space weather.
+In this work, we present and analyse an unusual detection of an EP/CME event at 18.8 and 24.7 GHz
+performed by the Sardinia Radio Telescope (SRT) on August 19 and 20, 2025, under the SunDish project
+(https://sites.google.com/inaf.it/sundish).
+We discuss the complex structure of the erupting event, including an unprecedented radio feature extending
+over 15 arcmin from the solar disk and emerging from a region characterised by reconnection threads
+involving helical kink instabilities, ARs, and filaments. Through spectral and polarimetric information, we can
+constrain EP/CME physical parameters, including an extrapolation of the magnetic field associated with
+gyrosynchrotron and synchrotron emission components.
+This work paves the way for the systematic search for CME events in high-frequency radio images and their
+correlation with standard coronographic images and space-based measurements.
+                                                                                                         Page 14 of 80
+
+Transient brightenings around a stable sunspot detected by ALMA at 3 mm — Alexander Nindos
+Nindos, A., White, S.M., Alissandrakis, C.E., Barta, M., Bastian T.S., Berlicki, A., Brajsa, R., Chen, B., De Pontieu,
+B., Eklund, H., Fleishman, G.D., Gary, D.E., Hudson, H.H., Iwai, K., Kobelski, A., Krucker, S., Loukicheva, M.,
+Reardon, K., Sanchez-Maes, S., Shimojo, M., da Silva Santos, J., Skokic, I., Solanki, S., Szydlarski, M.,
+Wedemeyer, S.
+
+University of Ioannina, Greece
+
+Using Atacama Large Millimeter/submillimeter Array (ALMA) observations, we performed the first systematic
+survey for weak small-scale transient brightenings around a stable sunspot at 3 mm. Our dataset included
+images of an 80" x 80" field of view obtained with angular resolution of a few arcsec at a cadence of 2 s. The
+transient brightenings were detected as weak enhancements above the average intensity. Many of them were
+also registered in Atmospheric Imaging Assembly (AIA) images obtained at several EUV channels. All detected
+events were thermal in nature and the strongest of them showed loop-like or jet morphologies. Their
+properties were checked against model calculations and MHD simulations of jets.
+                                                                                                     Page 15 of 80
+
+Using CoSEE-Cat to investigate the relation of solar energetic electron events with X-ray flares and type III
+radio bursts — Alexander Warmuth
+Warmuth, A.
+
+Leibniz Institute for Astrophysics Potsdam (AIP)
+
+We have developed the Comprehensive Solar Energetic Electron event Catalogue (CoSEE-Cat), a new multi-
+instrument resource combining in situ and remote-sensing observations from Solar Orbiter to systematically
+characterise solar energetic electron (SEE) events and their solar origins. The first data release covers 303 SEE
+events detected between November 2020 and December 2022 at heliocentric distances ranging from 0.3 to
+1.0 au, compiled through a joint effort of eight instrument teams (EPD, STIX, EUI, RPW, Metis, SoloHI, SWA,
+and MAG). Statistical analysis of this first data release reveals a clear dichotomy between impulsive and
+gradual SEE events, supporting flares and CMEs as the respective sources for these two populations. We
+further show that commonly reported delays between electron solar release times and associated X-ray and
+type III radio burst signatures grow systematically with heliocentric distance, indicating that interplanetary
+propagation effects rather than actually delayed injections play a significant role.
+                                                                                                    Page 16 of 80
+
+Location and properties of fine frequency structures in the spectra of solar type IV radio bursts — Aneesh
+Nadiger
+Nadiger A, Morosan D E
+
+University of Turku
+
+ABSTRACT
+
+Context : The Type IV continuum spectra is dynamic and many short-lived fine structures have been observed.
+Several observations of stripes of emission and absorption bands forming zebra-like or fiber-like structures
+against the background of a continuous radio spectra have been reported.
+Aim : In this study, we investigate zebra patterns. Our analysis focuses on identifying the sources of the Zebra
+patterns and determining their properties.
+Methods : We study the Zebra bursts observed on 28th March, 2022. We used spectroscopic data from the e-
+Callisto network to identify the Zebra patterns and their characteristics, radio imaging from the Nan¸cay
+Radioheliograph to locate the emission sources, and ultraviolet imaging from AIA to provide
+coronal imaging.
+Results : We observe two distinct regions of Zebra patterns in our study. The sources are found to be
+stationary, with a period of about 6 seconds and drift rates of 7–9 MHz s-1 . The instantaneous separation
+between the stripes is about 4 MHz. Comparison with previous observations shows that ∆f typically
+increases with increasing frequency.
+Conclusions : The confined location of the Zebra sources would imply to the
+sources are trapped , possibly in a coronal loop. We observe 6-8 second periods
+for the zebras, indicating that the trapped plasma undergoes fast sausage mode
+oscillations
+                                                                                                     Page 17 of 80
+
+Solar Radio Type V Burst: Scattering, Trapping, and Emission Process of a Dense Electron Beam — Arnold O.
+Benz
+Benz, A.O., Huber,C., Timmel, V., Monstein, C.
+
+FHNW Windisch and ETH Zurich
+
+Solar type V radio bursts are associated with type III bursts. Several processes have been proposed to interpret
+the association, the electron velocity distribution, and the emission. We present the observation of a unique
+type V event observed by e-CALLISTO on 2121/05/07. The type V radio emission follows a group of U bursts.
+Its polarisation is opposite to the type III burst and its front edge has a U-shape. The observations conform to a
+scenario where a dense electron beam first saturates its two-stream instability (causing type III emission) and
+then becomes unstable to another instability, such as the electron firehose instability. This second instability
+scatters some beam electrons into velocities perpendicular to the magnetic field and produces a trapped
+distribution prone to electron cyclotron masering (ECM). A reduction in beaming is predicted for electron
+beams continuing to interplanetary space, observable for Parker Probe and Solar Orbiter.
+                                                                                                       Page 18 of 80
+
+Dynamics of type II solar radio burst sources and spectral bridge formation — Artem Koval
+Koval, A., Karlický, M., Bárta, M.
+
+Astronomical Institute of the Czech Academy of Sciences
+
+Type II solar radio bursts are commonly associated with shock waves propagating through the solar corona in
+connection with coronal mass ejections. A characteristic feature of these bursts is band splitting, where the
+emission lane divides into two closely spaced, nearly parallel bands. While its origin is still debated, it is often
+interpreted in terms of either plasma emission from different shock regions (upstream and downstream areas)
+or spatially separated acceleration sites along the shock front. We analyze LOFAR observations of a type II
+radio burst that display fine spectral structures connecting the split bands, referred to here as spectral bridges.
+These features exhibit both positive and negative frequency drifts. Their properties suggest that they are not
+random appearances, but are instead linked to evolving physical conditions within the shock or/and the
+coronal environments. In this study, we explore a scenario of the formation of spectral bridges. In addition, we
+examine the motion of the emission sources associated with the split bands and discuss how their dynamics
+may reflect the underlying structure and evolution of the shock.
+                                                                                                  Page 19 of 80
+
+Characteristics of Pulsating Structures Obtained from ARTEMIS IV/JLS and NRH — Bouratzis Costas
+Bouratzis, C., Alissandrakis, C. E., Hillaris, A., Armatas S.
+
+University of Athens, Greece
+
+We analyzed the characteristics of pulsating structures embedded in type IV radio-bursts, observed by the
+ARTEMIS-IV/JLS radio spectrograph and recorded with the SAO high resolution (100 samples per second)
+receiver in the 270–450 MHz range, with a frequency resolution of 1.4 MHz. We present preliminary results
+for their frequency drift, duration and periodicity, using cross correlation, autocorrelation, and a maximum
+tracking method. Imaging information was obtained from the Nançay Radioheliograph.
+                                                                                                     Page 20 of 80
+
+The effect of solar wind turbulence on the clumpiness and local generation of Langmuir waves — Camille
+Yasmina Lorfing
+Lorfing, C.Y., Reid, H., Pisa, D., Nicolaou, G., Trotta, D., Krupar, V., Magdalenic, J.
+
+KU Leuven
+
+How do solar wind turbulence affect the clumpiness and local
+generation of Langmuir waves? Solar electrons beams are accelerated in the corona to then travel out into the
+solar wind. These beams of non-thermal electrons evolve as a function of distance from the Sun, interacting
+with the turbulent background plasma and growing Langmuir waves as they propagate. Subsequent radio
+emission is also seen in the form of type III bursts. Where solar wind turbulence comes from and how
+turbulent energy is dissipated and evolves within the heliosphere has been a long lasting science question,
+studied through numerous simulations and observations since the 1970s. However, previous studies looking at
+the role of turbulence in the clumpiness and generation of Langmuir waves have never done so at such a high
+temporal resolution as offered by Solar Orbiter. Through a combination of in-situ and remote sensing
+observations of plasma conditions at the spacecraft and associated radio emission, we study the influence of
+density fluctuations in the solar wind on the local generation of plasma waves between 0.3 and 1 AU. With 35
+events between November 2020 and January 2025, we produce a statistical study of the role of turbulence on
+wave-particle interactions with heliocentric distance, and different latitudes outside of the ecliptic plane. This
+allows us to determine a relationship between density fluctuations, solar wind speed, heliocentric distance,
+and the clumpiness and waveform of Langmuir waves. We also study the associated radio emission to
+indentify a link between the intensity and maximum frequency of this radio emission and the quantity of
+Langmuir waves growth above thermal level at the spacecraft. Understanding the mechanisms driving
+Langmuir waves growth in different solar wind conditions will permit more accurate predictions of wave-
+particle interactions and propagation in the heliosphere. Moreover, our work not only supports previous
+theoretical work but can be complemented by measurements from the Parker Solar Probe spacecraft.
+                                                                                                      Page 21 of 80
+
+Evolution of coronal radio wave scattering during an M class solar flare — Christian Vocks
+Vocks, C., Bisi, M., Dabrowski, B., Morosan, D., Gallagher, P., Krankowski, A., Magdalenic, J., Mann, G.,
+Marque, C., Matyjasiak, B., Rothkaehl, H., Zucca, P.
+
+Leibniz-Institut für Astrophysik Potsdam (AIP)
+
+We present LOFAR observations of an M class flare with intense type III radio bursts. Some isolated burst have
+a fundamental-harmonic structure, but for most bursts this is not visible due to a rapid succession of bursts.
+Spectroscopic imaging with LOFAR shows type III bursts as compact sources for a given frequency. The
+intensity varies with burst evolution, and transient dual-source structures appear. We interpret these as
+signatures of fundamental and harmonic emission, the latter from a higher location in the corona.
+Fundamental-harmonic pairs, e.g. fundamental emission at 35 MHz and harmonic emission at 70 MHz, should
+originate from the same plasma volume. Differences in their positions and intensity variations are expected
+since radio wave transport effects in the corona, like scattering and refraction, affect fundamental more than
+harmonic emission. We show the evolution of position differences of fundamental-harmonic pairs during
+different phases of the flare. Since the effect of refraction in the overall density structure of the corona is not
+expected to change much, this enables a study how the flare influences coronal radio wave scattering.
+                                                                                                 Page 22 of 80
+
+The Small Phased Array DEmonstrator (SPADE) - Description and first results — Christophe Marqué
+Marqué, C., Martínez Picar, A., Magdalenić, J., Tassan-Din, E.
+
+Royal Observatory of Belgium
+
+Since the summer 2024, a compact phased array made of eight identical antennas is monitoring solar activity
+in the decameter range at the Humain radioastronomy station in Belgium. The instrument relies on Software
+Defined Radio receivers and open source software libraries (GNU Radio) for operations related to pointing and
+production of dynamic spectra between 25 and 75 MHz.
+We describe here the main technical aspects of SPADE and present highlights of observations performed since
+the instrument was turned on.
+                                                                                                 Page 23 of 80
+
+Spicule modeling from simultaneous ALMA and IRIS observations — Costas Alissandrakis
+Alissandrakis, C.E., Vial, J.-C. and Bastian T. S.
+
+University of Ioannina, Greece
+
+We analyze observations of spicules in a coronal hole with ALMA at mm-λ and IRIS spectra in the Mg II k and h
+lines. We computed the mm emission as thermal free-free and the Mg II emission through a one-dimensional,
+static, isothermal and isobaric NLTE model with a vertical slab geometry. We found that the electron
+temperature increases smoothly from about 10000 K at a height of 2000 km to about 17000 K at 14000 km
+and that the electron density decreases from about 1011 cm-3 to 1010 cm-3 in the same interval. We provide
+good evidence that an important part of the intensity decrease at the center of the k and h lines is due to
+opaque foreground plasma. we verified that the turbulent velocity in spicules is very high, up to 25-30 km/s,
+which could be an indirect signature of shocks.
+                                                                                                  Page 24 of 80
+
+Magnetic Field Geometry and Anisotropic Scattering Effects on Solar Radio Burst Observations — Daniel
+Clarkson
+Clarkson, D., Kontar, E.
+
+University of Glasgow
+
+Solar radio bursts and noise storms show complex fine structures whose observed properties are strongly
+affected by propagation through the turbulent corona. We investigate how anisotropic radio-wave scattering
+combined with non-radial magnetic field geometry shapes the apparent motion and size of fine structures.
+Using radio-wave propagation simulations with the dipolar structure of an active region, we reproduce
+puzzling non-radial source motion observed by LOFAR parallel to the solar limb. The apparent source evolution
+follows the direction of magnetic field lines rather than density gradients, and the major axis aligns
+perpendicular to the local magnetic field. Strong density fluctuation anisotropy within non-radial fields can
+also lead to source bifurcation, producing multiple apparent components. We also show that anisotropic
+scattering within closed magnetic structures can produce compact apparent sources, consistent with LOFAR
+observations of type I noise storms. Despite their diverse spectral signatures, noise storm embedded fine
+structures (type I bursts, S-bursts, spikes) exhibit similar compact sizes, which we show arise naturally from
+emission within closed fields. Secondary effects include enhanced coronal densities, steeper density gradients,
+reduced turbulence levels, and strong fluctuation anisotropy. These results demonstrate that the imaged
+source locations and sizes of radio bursts are governed primarily by propagation effects in combination with
+the large-scale magnetic topology rather than intrinsic emission differences, highlighting the crucial role of
+magnetic structure in shaping and interpreting scattered solar radio burst observations.
+                                                                                                     Page 25 of 80
+
+From Global Networks to High-Resolution Arrays: Unified Observations of Solar Radio Bursts — Daniela
+Banyś
+Banyś, D., Heinrich, L., Tandler, F., Wenzel, D., Monstein, C., Dąbrowski, B., Krankowski, A., Vocks, C.
+
+German Aerospace Center (DLR e.V.)
+
+Ground-based radio networks are crucial for the continuous monitoring of solar eruptive events and their
+impact on technological systems, although maintaining a reliable and globally distributed network remains
+challenging. We present a comparative study of solar radio burst observations and their relevance for space
+weather monitoring using CALLISTO, RSTN, and LOFAR. The CALLISTO spectrometers, operated within the
+international e-CALLISTO network (>190 stations worldwide), provide routine monitoring of solar radio
+emission across a broad frequency range from approximately 10 up to 1600 MHz. Within this framework, DLR
+operates optimized compact CALLISTO receivers, covering 10–80 MHz, 45–860 MHz, 800–1000 MHz, and 1.0–
+1.6 GHz. This system enables investigations of flare-accelerated electrons, shock-related emission, and coronal
+mass ejection signatures, while ensuring good comparability through standardized instrumentation.
+The Radio Solar Telescope Network (RSTN) provides complementary solar radio observations from 25-180
+MHz, with near-real-time event reporting via NOAA/SWPC. LOFAR, operating within 10-90 MHz and 110-240
+MHz, offers exceptional sensitivity and high frequency and temporal resolution, enabling detailed studies of
+fine structures in solar radio bursts and early coronal emission processes.
+In this work, we analyse selected solar radio events and perform direct comparisons to assess sensitivity,
+spectral resolution effects, and the capability to detect and characterize different solar emissions. In addition,
+a filtering technique is proposed that harmonizes frequency coverage across different spectra, suppresses
+noise, and reduces radio-frequency interferences (RFIs), thereby improving data quality for automated burst
+detection and classification. Our results highlight the complementary capabilities of the different networks
+and furthermore demonstrate the potential of combining multi-instrument radio spectra to improve space
+weather monitoring.
+                                                                                                    Page 26 of 80
+
+Towards daily high-frequency radio imaging of the Solar disk with the SunDish project — Davide Napolitano
+Napolitano, D., Pellizzoni, A., Righini, S., Marongiu M., Mulas, S., on behalf of the SunDish team
+
+INAF-IRA and University of Bologna
+
+In the last 8 years, under the Sundish Project (Pellizzoni et al. 2022), the Italian network of single dish
+radiotelescopes, operated by the National Institute for Astrophysics (INAF), has been adapted to perform solar
+observations, and has been used to conduct double frequency solar imaging in the radio K-band, at 18 and 26
+GHz, with a resolution ranging between 0.6 and 1 arcmin. Solar radio imaging observations in the K-band
+represent a unique tool, specifically probing the solar chromosphere and the transition region, where
+energetic phenomena originate, such as flares and Coronal Mass Ejections (CMEs). Through On-the-Fly radio
+imaging in this domain, it is possible to monitor the physical evolution of Active Regions (ARs) and Coronal
+Holes (CHs) before and after flare/CME occurrences, based on spectral index measurements and polarimetric
+imaging. This provides both physical insights about ARs temperature, density and magnetic field evolution
+during energetic events, and Space Weather applications.
+We present our updated observing strategies and performances when conducting daily monitoring of the Sun
+at high radio frequencies, improving the current weekly schedule.
+Specifically, we present a first run of daily observations for a continuous 14-day period to be performed in
+May 2026 with the 32-m “Grueff” radiotelescope, with a specific focus on the study of ARs and their short-
+term evolution. With the daily monitoring of a significant sample of flaring and non-flaring ARs, improvements
+can be made on the previous more sporadic diachronic observations. In addition to daily images of the full
+solar disk at 18 and 26 GHz, this observational run will test methods to track specific ARs and record their flux
+over short time-scales (ms time resolution) through high-frequency dynamical spectral analysis. We also plan
+to complement the above run with simultaneous observations with other ground-based and space-based
+observatories, in order to obtain an unprecedented probe of the dynamics of the entire Solar chromosphere.
+In perspective, the project aims to make use of the radiotelescope in Noto (Sicily), soon to be made available
+for solar observations, to improve the time coverage of our observations. Additionally, the planned
+implementation of tri-band receivers (K. Q, W Bands) at the INAF facilities will provide unprecedented radio
+coverage up to 100 GHz, enabling simultaneous observations at multiple frequencies, and allowing for the
+determination of the real-time spectral index of solar features.
+                                                                                                        Page 27 of 80
+
+Probing the Solar Corona with MeerKAT: Early Results and Diagnostic Capabilities — Deepan Patra
+Patra, D. (1), Kansabanik, D. (2), Dey, S. (1), Oberoi, D. (1), Gouws, M. (3), Buchner, S. (3) - (1) National Centre
+for Radio Astrophysics, Tata Institute of Fundamental Research, India ; (2) Institute of Astrophysics of
+Andalusia, Spain ; (3) South African Radio Astronomy Observatory, Liesbeek House, Cape Town, South Africa
+
+National Centre for Radio Astrophysics, Tata Institute of Fundamental Research, India
+
+Understanding the dynamics and structure of the coronal plasma and magnetic field requires a multi-
+wavelength and multi-instrument approach. Radio observations offer an independent and complementary
+diagnostic of coronal density, magnetic field, and non-thermal electron populations and their transportation.
+MeerKAT solar observations in the 580-1700 MHz provide spectroscopic snapshot imaging of the solar corona,
+at high temporal and spectral resolutions, probing low coronal heights (~1.01–1.2 solar radii). Its dense uv-
+coverage, wide field of view, and high sensitivity enable high fidelity full-polarization imaging of multiscale
+structures in both quiescent and active corona. These observations can probe multiple emission processes,
+including thermal bremsstrahlung, gyrosynchrotron, and gyroresonance emission, with polarization
+measurements providing additional constraints on magnetic field strength and topology. This complements
+EUV observations by probing coronal plasma and magnetic fields even in temperature regimes where EUV
+diagnostics become limited or unavailable. We present early results from MeerKAT solar observations,
+including imaging of coronal holes, filaments, cavities, and eruptive events. Full-Stokes imaging reveals
+complex polarization signatures, including circular polarization inversion above an active region across
+frequency along with temporal evolution during eruptive events, likely associated with mode coupling and
+changes in coronal magnetic topology, respectively. These results highlight the potential of MeerKAT to
+provide new constraints on coronal magnetic field structures and plasma conditions with unprecedented
+detail, particularly when complemented with multiwavelength observations. They further lay the groundwork
+for future solar science with the SKA-Mid telescope.
+                                                                                                   Page 28 of 80
+
+First Remote Sensing Measurement of CME-entrained Magnetic Field in the Inner Heliosphere — Devojyoti
+Kansabanik
+Devojyoti Kansabanik, Angelos Vourlidas, John Morgan, Surajit Mondal, Divya Oberoi
+
+Institute of Astrophysics of Andalusia, Granada, Spain
+
+Determining the magnetic field of coronal mass ejections (CMEs) in the inner heliosphere remains both a
+critical and a challenging problem in heliophysics. In the past, Faraday rotation (FR) measurements of
+background linearly polarized radio sources occulted by CMEs have been used to estimate CME-embedded
+magnetic fields, but such studies have been largely confined to the outer corona (~20 solar radii), mostly using
+the Jansky Very Large Array. Extending these measurements into the inner heliosphere is significantly more
+demanding, as both the electron density and magnetic field strength of CME plasma decrease with distance,
+resulting in a much weaker FR signal. Addressing this challenge requires observations at meterwave range
+along with instruments that provide a wide field of view to track the expanded CME structure. The Murchison
+Widefield Array (MWA) fulfills these requirements. However, estimating CME-associated FR also necessitates
+the use of non-trivial techniques to effectively isolate and remove spatio-temporal ionospheric FR variations
+from the measured FR. In this presentation, we report the first successful measurements of FR from a handful
+of CMEs observed with the MWA in the inner heliosphere, extending out to ~60 solar radii. We also discuss
+how future observations with SKA-Low will significantly enhance these capabilities, enabling more robust
+modeling of CME magnetic fields constrained by heliospheric observations.
+                                                                                                      Page 29 of 80
+
+Determining the possible acceleration regions of in situ electrons using remote radio imaging and X-ray
+observations — Diana Morosan
+Morosan, D. E.
+
+University of Turku
+
+Energetic particles in the heliosphere are produced by flaring processes on the Sun or shocks driven by coronal
+mass ejections. These particles can be detected remotely through the electromagnetic radiation they generate
+(X-rays or radio emission) or in situ by spacecraft monitoring the Sun and the heliosphere. Here, we
+investigate the acceleration locations, escape, and propagation directions of electron beams producing radio
+bursts observed with the Low Frequency Array (LOFAR), Nançay Radioheliohraph (NRH) and NenuFAR and
+compare it to hard X-ray (HXR) emission and in situ electrons observed at spacecraft. These observations are
+combined with three-dimensional (3D) renderings of the electron acceleration locations and results from
+magneto-hydrodynamic (MHD) models of the solar corona in order to investigate the origin and connectivity
+to spacecraft. This is done to spatially relate the electrons observed remotely at the Sun to in situ electrons. In
+the events studied, not all radio bursts or hard X-ray locations have a direct connectivity to spacecraft
+observing SEPs, however, there are occasions where the connecting field lines intersect the 3D locations of
+type II or herringbone bursts. In addition, for these events we found comparable start times of the radio
+emissions at the Sun to the injection times of spacecraft electrons.
+                                                                                                      Page 30 of 80
+
+Chasing Solar and Heliospheric Activity on cue with SKAO Pathfinders and Precursors — Divya Oberoi
+Oberoi, D. (1), Patra, D. (1), Kansabanik, D. (2), Dey, S. (1), Vourlidas, A. (3), Morgan, J. (4), Mondal, S. (1),
+Sharma, R. (5) - (1) National Centre for Radio Astrophysics, Tata Institute of Fundamental Research, India; (2)
+Institute of Astrophysics of Andalusia, Spain; (3) Johns Hopkins University Applied Physics Laboratory, USA; (4)
+Commonwealth Scientific and Industrial Research Organisation, Australia; (5) Indian Institute of Technology
+Kanpur, India
+
+
+National Centre for Radio Astrophysics
+
+Unsurprisingly, it has been the case for quite some time that the state-of-the-art, versatile, and non-solar
+dedicated instruments deliver an imaging quality much better than what is feasible with the dedicated solar
+observing facilities. Realising the full potential of these instruments for solar science is, however, challenging.
+Some of the most interesting times for solar observations are during periods of enhanced solar activity. Solar
+activity, however, is inherently unpredictable, especially from the perspective of scheduling observations,
+often done months in advance. At the same time, these telescopes are highly oversubscribed, with only a
+limited amount of time available for solar and heliospheric observations. A practical way to dramatically
+improve the efficiency of the limited observing time for capturing solar activity is by observing only when it is
+known to be occurring via triggered observations. As a part of preparing for science with the Square Kilometre
+Array Observatory, we have been working on designing, implementing, and operationalising such systems at
+the precursors and pathfinders for the SKAO. The first such system for capturing solar radio bursts, relying on
+an external dynamic spectrum-based near-realtime trigger, has recently been implemented at the Murchison
+Widefield Array (MWA), a precursor for the SKA-Low. Another realtime system designed to schedule
+observations needed to capture coronal mass ejections (CMEs) as they propagate away from the Sun has been
+made operational at the MWA as well as ASKAP, a pathfinder for the SKA-Mid. In addition to these remarkably
+successful applications, the use of triggering systems is also being explored at dedicated solar observing
+facilities to identify the times and durations for which data should be saved to disk or saved at higher
+temporal/spectral resolution. We present an overview of the current status of efforts towards triggered
+observations of solar and heliospheric transients, along with suggestions for their implementation at SKA
+telescopes.
+                                                                                                 Page 31 of 80
+
+Advancing in-situ diagnostics of solar wind heating with radio observations — Eduard Kontar
+Eduard P. Kontar, A. Gordon Emslie, Daniel L. Clarkson, and Alexander Pitna
+
+University of Glasgow, UK
+
+Plasma turbulence cascading from MHD to kinetic scales in the heliospheric plasma is believed to play a key
+role in coronal heating and fast solar wind acceleration, but the properties of the turbulence remain poorly
+constrained by observations. We compare the ion-scale density fluctuation levels inferred from the properties
+of solar radio bursts with the magnetic field fluctuation levels obtained through in situ measurements in the
+inner heliosphere. We find that the observed magnetic and density fluctuation amplitudes are consistent with
+excitation by kinetic Alfvén waves (KAWs) and/or KAW structures over a broad range of distances from the
+Sun. We then use the radio diagnostics and the KAW scenario to deduce the radial variation of magnetic
+fluctuation amplitudes in regions close to the Sun where in situ measurements cannot be obtained. Further,
+we calculate the energy cascade rate (plasma heating rate) profile over a region that extends from the low
+corona into the heliosphere, and compare it to the energy deposition rate required to drive the solar wind.
+The results provide unique diagnostics of the ion-scale plasma turbulence amplitude and energy cascade rate
+spanning over 3 orders of magnitude in solar distance.
+                                                                                                  Page 32 of 80
+
+From GX Simulator to pyGX: Data-Constrained 3D Modeling of Solar Active Regions with Multi-View EUV
+and Microwave Observations — Gelu M. Nita
+Gelu M. Nita, Sijie Yu, Alexey A. Kuznetsov, Viktor Fedenev, Alexey G. Stupishin, Bin Chen, and Gregory D.
+Fleishman
+
+New Jersey Institute of Technology
+
+Understanding the magneto-thermal structure of solar active regions requires data-constrained three-
+dimensional (3D) modeling that integrates realistic magnetic and thermal structures with multi-wavelength
+observational diagnostics. The Coronal Heating Modeling Pipeline (CHMP), originally implemented within the
+GX Simulator [1] framework, provides a well-established methodology combining magnetic field
+extrapolations, field-aligned heating parameterizations, and forward-modeled emission, validated in multiple
+peer-reviewed studies [2–4]. Here we present pyCHMP, the first fully integrated, science-ready Python
+implementation of the CHMP framework, developed within the emerging pyGX ecosystem. The pipeline builds
+on two core components: pyAMPP [5], which constructs data-constrained magnetic models of active regions,
+and pyGXrender [6], which dresses the magnetic skeleton with a parameterized thermal structure and
+synthesizes multi-wavelength emission from Earth and spacecraft perspectives. The transition from the IDL-
+based GX Simulator to a Python framework is carried out within the SUNCAST (Software UNified Collaboration
+for Advancing Solar Tomography) platform and aligned with the evolving SunPy ecosystem, ensuring long-term
+maintainability and broader community accessibility. We demonstrate pyCHMP using an active region
+observed simultaneously by EOVSA, SDO, STEREO-A, and Solar Orbiter. By iteratively adjusting the free
+parameters of the EBTEL-based thermal structure, we obtain model realizations that reproduce both EUV
+morphology and microwave emission, significantly reducing ambiguities inherent in single-instrument
+analyses. This enables quantitative assessment of coronal heating and its relationship to the underlying
+magnetic structure and establishes pyCHMP as a key step toward a modular, open, and reproducible
+framework for data-constrained solar modeling. Future work will extend this approach toward flare modeling
+within the broader pyGX ecosystem.
+References
+1.     Nita, G. M., et al. (2023). Data-constrained Solar Modeling with GX Simulator. ApJS, 267, 6.
+doi:10.3847/1538-4365/acd343
+2.     Fleishman, G. D., Kuznetsov, A. A., & Nita, G. M. (2025). Steady-state Heating of Diffuse Coronal Plasma
+in a Solar Active Region. ApJ, 988, 100. doi:10.3847/1538-4357/ade3dd
+3.     Kuznetsov, A. A., Fleishman, G. D., Nita, G. M., & Anfinogentov, S. A. (2025). Magneto-thermal Coupling
+and Coronal Heating in Solar Active Regions Inferred from Microwave Observations. ApJ, 991, 186.
+doi:10.3847/1538-4357/adfc4b
+4.     Kucera, T. A., Nita, G. M., Klimchuk, J. A., & Fleishman, G. D. (2026). Modeling of AR 12760 with GX
+Simulator and Evidence for the Extended Transition Region in Peripheral Active Region Loops. ApJ, 1000, 149.
+doi:10.3847/1538-4357/ae4743
+5.     Yu, S., & Nita, G. M. (2026). suncast-org/pyAMPP: pyAMPP v1.0.0. Zenodo.
+https://doi.org/10.5281/zenodo.19057091
+                                                                                               Page 33 of 80
+
+6.   Kuznetsov, A. A., Nita, G. M., & Fedenev, V. (2026). Rendering Codes for Solar Coronal Microwave and
+EUV Emissions. Zenodo. https://doi.org/10.5281/zenodo.19103923
+                                                                                                          Page 34 of 80
+
+Highlights of the microwave imaging spectroscopy of solar flares — Gregory Fleishman
+Fleishman, G. D., Kaltman, T, Gary, D. E., Chen, B, Yu, S., Oparin, I., and Nita, G. M.
+
+NJIT-CSTR/KIS
+
+Over recent decade, a novel methodology that employs microwave imaging spectroscopy data opened an
+entirely new window to look at coronal phenomena; notably solar flares. This methodology yields evolving
+maps of such coronal parameters at the flare sites as the magnetic field and the thermal plasma density along
+with parameters of the nonthermal electrons, primarily, their number density and spectral index in their
+distribution over energy. These diagnostics is the key to uncover otherwise elusive physics of magnetic energy
+transformations and particle acceleration in solar flares. Indeed, release of the magnetic energy due to
+reconnection is believed to drive such transient phenomena as solar flares, eruptions, and jets. This energy
+release should be associated with a decrease of the coronal magnetic field. Therefore, the quantitative
+measurements of the evolving magnetic field strength in the corona, that we are reporting here, are required
+to find out where exactly and with what rate this decrease takes place. Here, we report microwave
+observations of several solar flares, showing spatial variations and temporal changes in the coronal magnetic
+field at various coronal locations [1-4]. We discovered a fast decay of the magnetic field in the coronal loops
+and cusp regions [1,3]; well below the nominal reconnection X point implied by the standard model of solar
+flare. The field decays at a rate ranging from a fraction of Gauss up to ~10 Gauss per second in various events
+and locations. This fast rate of decay implies a highly enhanced, turbulent magnetic diffusivity and sufficiently
+strong electric field to account for the particle acceleration that produces the microwave emission. In addition,
+we report such phenomena, that are beyond the standard model, as bulk electron acceleration in the cusp
+region [5], where the magnetic field displays the fast decay, and a new high-energy, MeV-peaked, electron
+component in a corona volume [6]. We report 3D coronal maps of such important parameters as Alfven speed
+and plasma beta [4]. Finally, we review novel results on the spectral energy evolution of the nonthermal
+electrons accelerated in flares, oscillations of physical parameters in event(s) with quasiperiodic pulsations,
+and signatures of anisotropic pitch-angle distributions.
+1. Fleishman, G. D.; Gary, D. E.; Chen, B; Kuroda, N.; Yu, S.; and Nita, G. M. 2020. Science, 367, 278–280
+2. Chen, B; Shen, C., Gary, D. E., Reeves, K. K., Fleishman, G. D., Yu, S., Guo, F., Krucker, S., Lin, J., Nita, G., and
+Kong, X. 2020. Nature Astronomy, 4, p. 1140-1147
+3. Fleishman, G. D.; Kaltman, T.; Yu, S. 2026. ApJ, 999, 179
+4. Kaltman, T; Yu, S; Fleishman, G. D.; Ryan, D. F. 2026. AA, 707, A158
+5. Fleishman, G. D.; Nita, G. M.; Chen, B; Yu, S.; and Gary, D. E. Nature 606, 674-677
+6. Fleishman, G. D.; Oparin, I.; Nita, G. M. Chen, B.; Yu, S.; Gary, Dale E. 2026. Nature Astronomy,
+doi:10.1038/s41550-025-02754-w
+                                                                                                   Page 35 of 80
+
+Multi-wavelength Analysis of Relativistic Electron Dynamics in the X8.2 Limb Flare SOL2017-09-10 —
+Guillermo Giménez de Castro
+Perriyil, S. M., Giménez de Castro, G., Simões, P.J.A., Chen, B., Yu, S.
+
+Centro de Rádio Astronomia e Astrofísica Mackenzie
+
+The X8.2 solar flare of 10 September 2017 (SOL2017-09-10) was one of the most powerful events of Solar
+Cycle 24, offering a unique opportunity for multi-wavelength diagnostic studies near the solar limb. In this
+work, we present a comprehensive multispectral analysis of the flare's relativistic electron populations,
+utilizing microwave data from the Extended Owens Valley Solar Array (EOVSA), sub-millimeter observations
+from the Solar Submillimeter Telescope (SST), and X-ray to gamma-ray data from RHESSI and Fermi. Our
+analysis reveals two distinct non-thermal electron populations: a coronal source characterized by a mild
+electron power-law index and a deeper chromospheric source with a significantly harder index. These radio
+findings are remarkably consistent with the X-ray and gamma-ray spectral analysis. As previous works have
+shown, spatial comparisons between RHESSI 35 keV images and EOVSA microwave maps indicate that mildly
+relativistic electrons are confined within coronal magnetic loops. In contrast, the >1 MeV electrons responsible
+for the sub-millimeter and gamma-ray emission originate from a deeper atmospheric layer. Despite the
+occultation of footpoints due to the flare's location on the West limb, these findings suggest a clear
+decoupling between different energy populations.
+                                                                                                 Page 36 of 80
+
+Solar and Heliospheric Radio Emission with SKA-Low: Observational Opportunities and Inference Challenge
+— Hariharan Krishnan
+Hariharan Krishnan
+
+SKAO
+
+The solar corona and inner heliosphere constitute a dynamic and highly structured plasma environment that
+generates a wide range of low-frequency radio emissions, including type II and type III bursts, fine spectral
+structures, and transient polarized signals associated with particle acceleration and shock-driven processes.
+These emissions provide a powerful window into solar and heliospheric plasma physics, including electron
+acceleration, wave–particle interactions, and the evolution and propagation of large-scale disturbances
+through the heliosphere.
+The SKA-Low Frequency Telescope (SKA-Low) will provide a transformative leap in solar and heliospheric radio
+observational capability. With its dense short-baseline configuration, broad instantaneous bandwidth (50–350
+MHz), and high temporal, spectral, and spatial resolution, SKA-Low will enable sub-second imaging
+spectroscopy of impulsive solar radio emission with unprecedented fidelity. This will open a new observational
+regime for tracking the dynamics and heliospheric evolution of impulsive radio emission, resolving fine
+spectral structures, improving sensitivity to faint and diffuse emission, and enabling large-scale statistical
+studies across diverse solar and heliospheric conditions.
+At the same time, the interpretation of low-frequency solar and heliospheric radio emission is intrinsically
+shaped by propagation effects, including scattering, refraction, and mode coupling. These processes do not
+limit the observational capability of SKA-Low, but define the framework within which physical inference must
+be made. Recognizing and incorporating these effects is essential for extracting robust and physically
+meaningful constraints on source and propagation properties.
+In this contribution, I highlight the exceptional scientific potential enabled by SKA-Low for solar and
+heliospheric physics and emphasize the importance of a physically grounded interpretation framework to fully
+realize that potential. By clearly articulating what SKA-Low can directly reveal and what requires model-
+dependent inference, I aim to support optimal exploitation of its capabilities and strengthen the connection
+between observations and plasma physics across the solar–heliospheric system.
+                                                                                                 Page 37 of 80
+
+Study of Particle Signatures and CME-CME interaction during the 11–12th Nov 2025 event — Harsh Bhati
+Bhati, H., Chettri M., Singh, H.
+
+Netaji Subhas University of Technology, Delhi, India
+
+The intense solar activity of 11-12 November 2025, featuring an X5.1 flare from sunspot region 4274 and a G4-
+class Coronal Mass Ejection (CME), triggered significant interplanetary disturbances and the strongest Ground
+Level Enhancement (GLE #77) in two decades. This study investigates particle signatures and CME-CME
+interactions to understand how shocks and plasma compression drive relativistic particle production. The
+research aims to characterize the restructuring of plasma and the resulting complex ejecta that led to a
+minimum Dst index of -217 nT durin 11-12th Nov 2025. Multi-platform observations from Aditya-L1 (ASPEX-
+STEPS), ACE, WIND, and OMNI were used to analyze high-resolution IMF and plasma data at the L1 point.
+Interactions were identified through primary and secondary jumps in plasma beta ratio, velocity, density, and
+temperature during the passage of trailing CMEs. Results show the primary CME shock arrived at L1 at ~23:48
+UT on 11 November, followed by secondary enhancements confirming the formation of complex ejecta, which
+are the optimal site for SEP acceleration. To quantify turbulence, magnetic field Power Spectral Density (PSD)
+was computed using Welch’s method. Spectral analysis revealed a kinetic-scale slope of -2.602, which lies
+between KAW-like and Whistler-like slope, indicating energy transfer to dissipative scales. Neutron monitors
+confirmed GLE #77 with a rare double peak, highlighting multi-stage ejections. These results demonstrate that
+CME-driven shocks significantly enhance small-scale turbulence and plasma compression. The findings
+emphasize the non-linear nature of complex ejecta, necessitating multi-point observations and can be further
+improved by ML/DL analysis.
+                                                                                                  Page 38 of 80
+
+When, where, and how can fast protons contribute to coronal heating? — Hugh Hudson
+Hugh Hudson, Lyndsay Fletcher, Graham Kerr, and Alec MacKinnon
+
+U of Glasgow / SSL, UC Berkeley
+
+Closed magnetic fields in the solar corona (the streamer belt and/or active regions) may trap high-energy ions,
+such as cosmic rays, with hours-long lifetimes against collisional losses. Populations of MeV-GeV positive ions
+may appear in the corona as a result of flare or CME particle acceleration, and their presence may be hard to
+detect via remote-sensing astronomical observations. We consider their potential consequences in various
+contexts, including the EUV late phase (ELP) and long-duration γ-ray (LDGRF) phenomena, as well as
+background galactic cosmic rays. The very simple model described here assumes the evolution of the trapping
+volume via a sequence of equilibrium states that include the reservoir property of closed magnetic fields
+linking the corona to the chromosphere. Based upon a basic static equilibrium model (RTV), we estimate the
+particle numbers and energies for which collisional heating rates match nominal coronal heating. We find that
+a population of MeV protons at a number density of order 10−6 of the background plasma density can
+produce significant coronal heating on ELP/LDGRF time scales of hours. We comment also on improving the
+RTV-based analysis by computing RADYN equilibria with particle energy input balanced by realistic radiation
+and conduction losses.
+                                                                                                   Page 39 of 80
+
+Improving LOFAR Solar Calibration at Very Low Frequencies: New Methods and a Flare Case Study — Hyoyin
+Gan
+Hyoyin Gan and Christian Vocks
+
+The Leibniz Institute for Astrophysics Potsdam (AIP)
+
+Solar radio imaging is complex because the Sun is an extended, bright, and highly variable source. Rapid solar
+radio emission—lasting from sub-seconds to seconds—requires high-precision calibration to resolve fine
+structures. This task is especially challenging at very low frequencies (< 80 MHz), where ionospheric effects
+introduce significant distortions. The standard LOFAR pipeline typically relies on a two-step process: (1)
+calibrating against a steady reference source during "quiet" periods and (2) transferring those solutions to
+active flare data.
+
+Previously, we built a new calibration method incorporating a sun model to improve the calibration. In this
+talk, we present an updated framework that integrates a ‘quiet’ solar model with iterative rounds of phase-
+only self-calibration. We evaluate this method by comparing image quality and signal-to-noise ratios (SNR)
+against traditional strategies. Finally, we demonstrate the effectiveness of this approach through a case study
+of solar flares, using our optimised pipeline to process LOFAR observations at very low frequencies (20-80
+MHz).
+                                                                                                    Page 40 of 80
+
+Strong particle acceleration in small flares — Iain Hannah
+Hannah, I. G. and Kerr, G. K
+
+University of Glasgow
+
+RHESSI observed 10,000s of microflares (GOES A,B class events) demonstrating particle acceleration and
+heating like larger events (Christe et al. 2008, Hannah et al. 2008). But one microflare showed unusual X-ray
+emission > 50 keV and a strong type III radio burst, evidence of strong electron acceleration, even though it
+was a low A-class microflare (Hannah et al. 2007). Recently dozens of these “hard microflares” have been
+found with Solar Orbiter on STIX (Battaglia et al. 2024, Saqri et al. 2024), showing similar behaviour of small
+flares accelerating electrons to high energies. Here we present a reanalysis of the original RHESSI hard
+microflare, not only in the context of the STIX work, but also using more advanced approaches than the 2007
+paper – particularly in terms of the X-ray spectral fitting to determine the properties of this non-thermal
+energy release. This will then be used to investigate how the solar atmosphere responds to such an energy
+input through RADYN simulations, helping to understand the energy transport and deposition.
+                                                                                                   Page 41 of 80
+
+Modelling density profiles along the propagation path of active region jets on August 25, 2011 — Jasmina
+Magdalenic Zhukov
+Magdalenic, J., Senthamizh, P. V.
+
+Royal Observatory of Belgium & KU Leuven
+
+Solar coronal jets are narrow and fast propagating ejections of hot plasma, observed at different energies.
+They are considered to be related to the reconnection between open and closed field lines in the active
+regions (AR) or at the edges of coronal holes. The AR jets occur regularly at a small-scale, and when they occur
+on a larger scale, they are related to CMEs and SEPs. Understanding the process of jets requires study of
+spectral and imaging data across different energy regimes. In this study of AR jets, together with the generally
+employed multiwavelength analysis, we employ also MHD modelling of the corona in order to determine the
+coronal plasma density along the propagation path of jets and associated type III radio bursts.
+We focused to series of jets observed on August 25, 2011, all originating from the NOAA AR 1271 situated
+near the west solar limb. We found that studied jets were clearly associated with the three distinctive type III
+radio burst groups, observed around 11:30, 12:40 and 14:10 UT. The type III radio bursts were observed by
+ground-based and space-based radio instruments. While Nancay radioheliograph observations allowed us to
+establish association of type III bursts and jets, direction finding observations by STEREO and WIND spacecraft
+were employed to estimate the propagation path of radio emission. After estimating type III bursts source
+positions employing radio triangulation method we modelled the solar corona, with the 3D MHD model of
+solar wind EUHFORIA, at the obtained source positions.
+Our results show that somewhat particular propagation path of type III radio bursts, and possibly also the
+coronal density profiles (estimated through radio observations and modelling), were probably influenced by
+the fast solar wind propagating along the open magnetic field lines sourced from the nearby coronal hole.
+                                                                                                  Page 42 of 80
+
+Probing the Solar Flare Acceleration Region Using Multi-Wavelength Timing and Radio Imaging — Jinge
+ZHANG
+Zhang, J., Reid, H. A. S., James, A. W., Morosan, D., Briand, C., Bhunia, S.
+
+Observatoire de Paris - PSL
+
+Magnetic reconnection in solar flares accelerates electrons upward and downward, producing type III radio
+bursts and hard X-ray (HXR) emissions. The complex Radio/HXR temporal relationship has led to varied
+estimates of acceleration region heights and unclear origins of timing delays. We have developed a timing-
+based framework to estimate the acceleration-region height by interpreting observed delays as arising from
+differing propagation paths and velocities of electron beams. We combine delay measurements with type III
+source height and electron speeds from radio and HXR observations, with radio imaging providing
+independent constraints. Applying this framework to the 11 December 2022 flare using NenuFAR, NRH, and
+Solar Orbiter/STIX observations, the acceleration region was located in the corona, with consistent results
+from the timing and imaging approaches. We also found indications of variability between electron injection
+episodes within the event. This approach offers a new method to localize flare acceleration regions and link
+timing delays to electron transport.
+                                                                                                      Page 43 of 80
+
+AstroDoncel Data Centre: New-Generation Space Weather Services from the e-Callisto Network — Joaquín
+Martínez del Hoyo + Javier Bussons Gordo
+Martínez del Hoyo, J.; Bussons Gordo, J.; Prieto Mateo, M.; Borque López-Torres, J.; García Delgado, J.J.
+
+Space Research Group, Universidad de Alcalá (Spain)
+
+Solar Radio Bursts (SRB) are continuously monitored by the e-Callisto network, an efficient Space Weather
+Instrument comprising more than 80 low-cost radio spectrometers around the world. Near-real-time burst
+reports including event date, time and spectrograms from the stations reporting positive detection are
+automatically generated and made public at the AstroDoncel website.
+
+                The goal of this new e-Callisto Data Center is to provide services conducive to a substantial
+reduction of analysis time and effort by the end user and to a more efficient response to potentially disruptive
+Space Weather episodes. This includes an SRB online catalogue that is traceable, interoperable, re-usable by
+international research teams, with confidence metrics and links to complementary instruments either ground-
+or satellite-based missions and geophysical observations.
+
+               In this work* we present: samples of the new e-Callisto catalogue, including the so-far-
+unreported period 2012-19; automatic derivation of additional SRB event parameters associated to burst
+intensity and type which can play a significant role in future definition of alert levels; full-day spectrograms
+combining the frequency ranges covered by triggered^ stations; and a new detection scheme, alternative to
+AI, based on statistical analysis of spectrogram signals.
+
+*Work funded by Junta de Comunidades de Castilla-La Mancha and the European Union through the
+CELESTINA-SPARC project (SBPLY/23/180225/000071).
+                                                                                                  Page 44 of 80
+
+Feature-Based Solar Radio Burst Classification in the e-Callisto Network — Jorge Borque López-Torres
+Borque, J.; Bussons Gordo, J.; García Delgado, J.J.; Martínez del Hoyo, J.; Prieto Mateo, M.
+
+Universidad de Alcalá
+
+Solar Radio Bursts (SRBs) are continuously monitored by the e-Callisto network, an efficient space weather
+instrument comprising more than 80 low-cost radio spectrometers distributed around the world. Near-real-
+time burst reports, providing event date, time interval, and spectrograms from the stations reporting
+positivedetections, are automatically generated and made publicly available through the AstroDoncel website.
+
+
+
+SRBs are classified into different types according to their morphology in the frequency-time domain, reflecting
+the physical processes occurring in the outer layers of the Sun. In this work, we present a feature-based
+automatic SRB classification model. By extracting more than 80 features from the spectrograms, we developed
+a classification framework operating in three modes: a binary SRB/non-SRB mode; a 4-class mode
+discriminating Type III, Type II, Type IV, and RFI/background; and a complete mode that achieves strong
+performance across 8 classes.
+
+
+
+We compare the results obtained using 15-minute and 1-minute FITS files, based on a dataset containing more
+than 5,000 SRBs from the e-Callisto network collected between 2024 and 2026, together with selected
+observations from 2012 to 2019. Preliminary experiments indicate promising classification performance across
+all three modes, particularly for the reduced and complete schemes. These results suggest that the proposed
+feature set captures relevant information for SRB characterization. We also present an example of daily
+classification monitoring within the e-Callisto web, where newly detected SRBs are assigned burst types
+together with confidence metrics derived from model probabilities and inter-station consistency.
+                                                                                                   Page 45 of 80
+
+Automated Derivation of SRB Intensity Levels from e-Callisto Dynamic Spectrograms — Juan José García
+Delgado
+García Delgado, J.J., Bussons Gordo, J., Borque López-Torres, J., Martínez del Hoyo, J., Prieto Mateo, M.
+
+Space Research Group, Universidad de Alcalá, 28805 Alcalá de Henares, Spain
+
+Solar Radio Bursts (SRBs) are continuously monitored by the e-Callisto network, an efficient Space Weather
+Instrument comprising more than 80 low-cost radio spectrometers around the world. Near-real-time burst
+reports providing event date, time interval and spectrograms from the stations reporting positive detections
+are automatically generated and made public at the AstroDoncel website. Expanding this catalogue with
+physically meaningful and quantifiable parameters is essential for advancing the study of SRBs.
+
+In this work, we present an automated methodology to derive additional physical information from detected
+events, focusing on SRB localization in the time-frequency domain and intensity classification. Our input
+consists of spectrogram segments extracted within the temporal windows identified by the detection pipeline.
+While SRBs ideally exhibit a well-defined intensity maximum, radio frequency interference (RFI) often
+dominates the signal. To address this, we combine morphological and intensity-based criteria with post-
+processing steps to distinguish SRBs from RFI, achieving a localization accuracy above 97%. Based on this, we
+construct a dataset of ~1400 events and develop two models: one based on Y-factor estimates, and another
+combining Y-factor and signal-to-noise ratio (SNR), enabling probabilistic classification into three intensity
+levels.
+
+Our results demonstrate that SRBs can be reliably identified even in the presence of strong RFI. The proposed
+models assign an intensity class to each event as a new catalogue parameter. This framework advances SRB
+parametrization and enables future developments such as an automated burst delimitation, extraction of
+frequency bounds and temporal extent, and derivation of properties such as drift rates. Ultimately, this
+approach improves the characterization of solar radio activity and its potential implications for space weather
+monitoring.
+                                                                                                       Page 46 of 80
+
+Comprehensive study of solar type II radio bursts and the properties of the associated shock waves —
+Karthik Bhandari
+Bhandari, K., Morosan, D., Normo, S.
+
+University of Turku
+
+Type II radio bursts are solar radio emissions generated by electrons accelerated by coronal shocks. These
+bursts are typically found close to expanding coronal mass ejections (CMEs), making them valuable for
+studying the properties and dynamics of CME-driven shocks in the solar corona.
+Here, we aim to determine the regions in the solar corona where shock waves accelerate electrons and
+determine their characteristic properties. To do this, we combine radio observations of type II solar radio
+bursts with magneto-hydrodynamic (MHD) simulations of the solar corona.
+We analyse ten type II radio bursts from Solar Cycle 25 exhibiting emissions in the 150-300 MHz frequency
+range. The novelty of this study lies in using radio imaging data for all type II bursts to examine the positions of
+the radio sources. The radio source positions, combined with a geometrical fitting of the CME shock and the
+MHD simulations, are used to determine essential shock parameters at the acceleration region, such as the
+Alfvén Mach number M_A and shock normal angle relative to the magnetic field θ_BN. The shock parameters
+are then combined with the properties of the radio emission and the associated eruption in a comprehensive
+study.
+We found that for all events, the Type II bursts are located near or inside coronal streamers. These streamer
+regions have a low Alfvén speed while the estimated shock speeds are high, resulting in the formation of
+super-critical shocks (4.5<M_A<9.8) at the type II locations. However, in most events, type II bursts are located
+at oblique shocks rather than near-perpendicular geometries, suggesting that the shock structure is more
+complex at local scales than the simple spherical shock models usually applied to CME shocks.
+Our results suggest that CME-streamer interaction regions are necessary for the generation of type II bursts,
+as they provide ideal plasma conditions for the formation of super-critical shocks and the subsequent
+acceleration of electrons.
+                                                                                                    Page 47 of 80
+
+Geometric constraints on radio triangulation accuracy in multi-spacecraft systems — Ketaki Deshpande
+Deshpande, K., Magdalenic, M., Rodriguez, L.
+
+KU Leuven & Royal Observatory of Belgium
+
+Ground-based radio imaging observations are limited to metric wavelengths due to the ionospheric cutoff,
+restricting studies of radio emissions at larger wavelengths to space-based observations. To overcome this
+limitation, space-based instruments provide direction-finding (DF) measurements that enable three-
+dimensional (3D) localization of radio sources employing radio triangulation technique. DF observations from
+at least two spacecraft need to be combined to estimate the 3D position of radio emission sources.
+
+In this study, we investigate how the accuracy of radio triangulation depends on the relative position of the
+observing spacecraft and direction of the propagation of radio emission. We analyze 35 type III radio bursts
+observed simultaneously by at least two spacecraft, i.e., STEREO-A, STEREO-B, and Wind, with different
+separation angles ranging from 0° to 180°. We studied behaviour of the radio source sizes, defined by the 3D
+region bounded by the shortest distance between the two wave vectors. We have found the clear U-shaped
+dependence of the source sizes on the spacecraft separation angle, with the convection point at around 90°.
+This behavior indicates that optimal triangulation accuracy is achieved for separation angles between 60° and
+120°. We also demonstrate that additionally to the spacecraft configuration angle between the burst
+propagation direction also significantly influences localization accuracy. Moreover, we have found that the
+radio source sizes have more clear dependence on the relative position of the observing spacecraft and
+direction of the propagation of radio emission than on the observing frequency.
+
+Additionally, we reconstruct the 3D propagation paths for all 35 events. Our results show that type III radio
+bursts do not strictly follow Parker spiral magnetic field lines and are not confined to the ecliptic plane,
+challenging commonly held assumptions about their propagation.
+                                                                                                  Page 48 of 80
+
+Plasma flow in the solar atmosphere along magnetic fields driven by the Kelvin force — Kiyoto Shibasaki
+Shibasaki, L.
+
+Solar Physics Research Inc.
+
+The solar atmosphere is in a plasma state. Magnetic field lines are frozen into the plasma; they move together
+perpendicular to the field. Along the magnetic field, however, the primary forces governing dynamics are the
+gas pressure gradient force and gravity. Consequently, in a steady state, hydrostatic equilibrium is achieved.
+However, observations reveal temperature-dependent upward/downward flows along the magnetic field. In
+this work, we propose a mechanism to explain flows along the field. Charged particles exhibit gyro motion in a
+magnetic field due to the Lorentz force, thereby possessing a magnetic moment. However, statistical
+thermodynamics states that magnetism does not arise in classical physics (Bohr-van Leeuwen Theorem). This
+theorem can be proven incorrect. Magnetism does arise in classical physics, and plasma possesses a magnetic
+moment. The Kelvin force acts on the magnetic moment, with a component parallel to the magnetic field.
+Since plasma is diamagnetic, it experiences a force directed toward regions of weaker magnetic field strength.
+In the solar atmosphere, the magnetic field is weaker upward, so the magnetic Kelvin force points upward.
+Moreover, this magnetic moment is proportional to the plasma temperature. When this upward Kelvin force
+exceeds the downward gravity force, the plasma flows upward. This explains the temperature-dependent
+upward/downward flows. Introducing the magnetic moment in this way allows us to understand the dynamics
+of plasma along the magnetic field in the solar atmosphere.
+                                                                                                   Page 49 of 80
+
+The Deep Learning-Based Dual-Branch Multimodal Fusion Model for Solar Flare Prediction — Limin Zhao
+Limin Zhao, Xingyao Chen, Xiaoshuai Zhu, Dong Zhao, Yihua Yan
+
+Beihang University
+
+Solar flares are intense eruptive events caused by the rapid release of magnetic energy, often impacting
+Earth's space environment through electromagnetic radiation and high-energy particles. Accurate flare
+prediction is critical for space weather forecasting. However, many existing deep learning approaches often
+rely on single-modal inputs or shallow feature fusion, limiting their ability to capture complementary
+information. In this study, we propose a dual-branch multimodal fusion deep learning model for predicting 24-
+hour solar flares. The model integrates magnetograms and magnetic parameters through cross-attention
+mechanisms, followed by cross-scale interactions at the feature level to enhance multi-scale representation. It
+is designed to perform both binary prediction of ⩾ C-class flares and multi-class classification of C, M, and X-
+class flares. To ensure rigorous evaluation, we employ a stratified group five-fold cross-validation scheme to
+preserve class representativeness and adopt a splitting-before-sampling strategy based on NOAA active region
+numbers to prevent data leakage. Experimental results show that the model achieves a TSS of 0.661 and an
+HSS of 0.658 for binary ⩾ C-class prediction, while notably attaining a TSS of 0.780 and an HSS of 0.775 for X-
+class flares in the multi-class task. Compared with existing approaches, the model demonstrates superior
+performance in predicting intense X-class flares, effectively suppresses the false alarm rate, and exhibits
+strong generalization capability.
+                                                                                                       Page 50 of 80
+
+Proofs of concept in the e-Callisto next generation framework — Manuel Prieto
+Manuel Prieto Mateo, Javier Bussons Gordo, Jorge Borque López-Torres, Juan José García Delgado, Joaquín
+Martínez del Hoyo
+
+University of Alcala
+
+Solar Radio Bursts (SRB) are continuously monitored by the e-Callisto network, an efficient Space Weather
+Instrument comprising more than 80 low-cost radio spectrometers around the world. Near-real-time burst
+reports including event date, time and spectrograms from the stations reporting positive detection are
+automatically generated and made public at the AstroDoncel website.
+In this work, we present the preliminary results of two new concepts under evaluation as part of the initiative
+for updating e-Callisto. The first concept the “leaky wave” antenna. The Space Research Group of the
+University of Alcala developed a new antenna in collaboration with the Technical University of Cartagena. It is
+a frequency-scanning antenna designed to operate in the 400 MHz to 800 MHz band for solar radio astronomy
+applications. The antenna was tested and characterized in the laboratory. In this work we present the field
+tests results for solar radio burst detection.
+The second concept is based on a commercial software defined radio device (SDR) as a replacement for the
+conventional radio receiver/spectrometer. SDRs offer better features for reconfiguration, scalability and in-
+built digital filtering/processing with respect to the Callisto analog receiver. The SDR was tested in parallel with
+the conventional e-Callisto RF chain for performance comparison. Preliminary results are presented.
+                                                                                                    Page 51 of 80
+
+Formation mechanism of short-period quasi-periodic pulsations in radio bursts — Minghui Zhang
+Zhang, M.H., Zhang, Y., Yan Y.H., ...
+
+National Space Science Center, the Chinese Academy of Sciences
+
+To investigate the physical origin and formation mechanism of short-period quasi-periodic pulsations (QPPs)
+observed in a solar radio burst event, this paper conducts high spatially (55.6′′- 10.3′′) and temporally (25 ms)
+resolution observational research on a radio burst event that occurred on 11 November 2014 using the
+MUSER radio telescope (with an observation frequency range of 30 MHz to 15 GHz). Through preprocessing of
+observational data, extraction of pulsation signals, and analysis of spectral characteristics, the core parameter
+characteristics of QPPs in this event are clarified: the pulsation period is around 1 s, the peak frequency is
+concentrated in the range of 1-2 GHz, the pulsations show a highly right-hand circular polarization feature and
+there are four groups of short-period QPPs scattered from 05:06 to 06:31 UT. We also used multiple space
+instruments from X-ray to extreme ultraviolet to performed the supplementary analysis, including the
+AIA/SDO, the GOES in 0.1 - 0.8 nm, and the Fermi Gamma-ray Space Telescope. Combined with the magnetic
+reconnection theory, plasma oscillation mechanism, and nonlinear force-free field (NLFFF) magnetic field
+extrapolation, the regulatory effects of different formation mechanisms on pulsation period, frequency drift,
+and amplitude variation are compared and analyzed. The research results show that the formation of QPPs in
+this event is closely related to the periodic modulation of the small-scale magnetic reconnection process in the
+source region, such as plasmoid or ultra-thin current sheet. This study provides spectral imaging observational
+data and theoretical support for an in-depth understanding of the characteristics of the radio fine structures
+of short-period QPPs in solar eruptions, and provides a valuable reference for the subsequent use of radio
+observations to diagnose the fine physical conditions of the solar eruption source region.
+                                                                                                     Page 52 of 80
+
+Solar ALMA observation with very high spatial resolution. — Miroslav Bárta
+Barta, M. , Chai, Yi
+
+Astronomical Institute of Academy of Sciences, Czechia
+
+Solar ALMA observing mode in its present setup poses severe limitations to
+extension of ALMA baselines length. Currently, observations in Band 3
+(at 100GHz) can be carried out at maximum configuration C-4, Bands 5 and 6 in
+C-3, and Band 7 in C-2 only. Consequently, the spatial resolution reaches ~0.7 arcsec at its best.
+
+Reasons for this constraint lay in our inability to fix the fast phase
+variations, whose destroying effect increases with the baseline lengths, by the
+standard calibration procedure. In our recent research, carried out in frame of
+ESO ALMA Development Study, we have suggested and successfully
+tested two new approaches for improved observation setup and subsequent
+calibration, which allow for far longer baselines and, consequently,
+much better resolution: (1) Time-scale
+separation between the solar dynamic times and the faster effect of atmospheric
+turbulence, followed by self-calibration, and (2), extraction of the water-vapor
+fluctuations directly from the science data in Band 5 and subsequent phase
+correction in the way used for the non-solar observations. While the latter
+approach is limited to Band 5 or 7, when we can detect a wing of the water line
+in the science spectra, the former is universal and only needs the very-high
+cadence of integrations, currently we use 0.19s (the best in the standard mode
+so far is 1s). Results: We managed and demonstrated it by real test ALMA observations that the maximum
+configuration can be extended to C-7 for Band 3, and to C-6 in Band 5, i.e., we have managed to increase the
+spatial resolution 5x! We will present summary of the procedure and namely its results -
+movies with unprecedented resolution of 0.15 arcsec obtained by processing of
+solar test ALMA observations carried out in December 2023.
+                                                                                                    Page 53 of 80
+
+Why U-Bursts Fail: Kinetic Constraints on Electron Beam Transport — Mohamed Sherif
+Sherif, M., Reid, H.
+
+University College London - Mullard Space Science Laboratory
+
+Solar radio U-bursts, generated by near-relativistic electron beams traversing closed magnetic structures,
+provide diagnostic of plasma dynamics in the solar corona. Despite their shared origin with Type III bursts, U-
+bursts are observed less frequently. This rarity suggests that electron transport after the apex of closed loops
+often fails to reach the threshold for coherent emission, implying stringent constraints on the underlying
+beam-plasma mechanism. This phenomenon remains a theoretical challenge, as it necessitates a detailed
+understanding of wave-particle interactions in environments of increasing plasma density and varying
+magnetic convergence. In this study, we use kinetic modelling to examine the evolution of electron beams
+responsible for U-burst emission. We find that the U-burst morphology is critically sensitive to initial beam
+parameters; higher beam densities and harder initial velocity distributions yield higher stopping frequencies
+and beam velocities. Additionally, density inhomogeneities and loop geometry are shown to stifle or facilitate
+wave growth, serving as a primary factor in the observed variability of U-burst observability and spectral
+evolution. Our findings provides a physical basis for understanding the comparative rarity of U-bursts and
+distinguishes them from type III bursts, offering new constraints on electron acceleration and transport in the
+solar corona.
+                                                                                                  Page 54 of 80
+
+Spectral component imaging of solar X-rax flares with STIX — Muriel Zoë Stiefel
+Stiefel, M.Z., Massa, P., Guidetti, A., Battaglia, M., Krucker, S.
+
+FHNW & ETHZ
+
+Solar hard X-ray (HXR) observations provide key diagnostics of high-temperature plasmas and of nonthermal
+electron populations present during solar flares and coronal mass ejections. Current HXR instruments rely on
+indirect methods for imaging, measuring Fourier components, known as ‘visibilities’. In the standard imaging
+approach, the visibilities of specific energy ranges are extracted from the data and used for image
+reconstruction. However, the interpretation is often ambiguous, as specific energy ranges can contain
+overlapping contributions from multiple spectral components, such as a mixture of thermal and nonthermal
+emission.
+We introduce the method of spectral component imaging as developed in Stiefel et al. (2025). In this method,
+the visibilities of individual spectral components are determined by combining energy-dependent visibilities
+and results from spectral analysis. We will demonstrate the effectiveness of the method on small B-class flares
+all the way up to X-class flares and and discuss the scientific advantages of the method. Further, we discuss
+the feasibility of extending this approach to radio imaging techniques, where similar visibility-based methods
+are employed.
+                                                                                                       Page 55 of 80
+
+Connecting Electrons at the Sun and in the Heliosphere through X-ray and Radio Diagnostics — Nicole
+VILMER
+Vilmer,N.,Paipa,D.,Pesini,A.,Reid,H,Vecchio,A., Bonnin, X, Maksimovic,M.
+
+LIRA-PSL Paris Observatory CNRS
+
+One of the main objective of the Solar Orbiter mission concerns the production of energetic particles in the
+heliosphere, and the link between energetic particles at the Sun and in the Heliosphere. For energetic
+electrons, part of this question can be addressed by combining X-ray and radio observations. The launch of the
+Solar Orbiter in early 2020 marked a significant milestone, as it is equipped with the capability to
+simultaneously capture both types of emission. In this contribution, we shall present the results of a first
+statistical study (Paipa-Leon et al. 2026) based on several tens of events with associated X-ray and
+interplanetary type III emissions. We will investigate the correlations between the properties of interplanetary
+type III radio bursts and of their associated HXR X-rays : energy density of the X-ray emitting electrons and
+characteristics of the radio burst (peak flux, exciter velocity and energy contained in the radio emitting
+electrons). We will then present preliminary results obtained from the combination of the RPW interplanetary
+type III catalog recently published (Pesini et al. 2026) and the list of X-ray flares observed by STIX (Hayes et al.
+2025) and will investigate how the association rates varies with the distance of the spacecraft to the Sun, the
+GOES class, the connection with particular active regions, the longitude of the flaring active region.
+                                                                                                     Page 56 of 80
+
+Reassessing the exciter speed inferred from solar radio bursts — Nicolina Chrysaphi
+Chrysaphi, N., Kontar, E. P., Clarkson, D. L.
+
+INAF - IAPS, Rome, Italy
+
+Solar eruptive events accelerate energetic particles that can emit intense radio waves throughout the
+heliosphere. The observed frequency-drift rate of such solar radio bursts is used to obtain the speed with
+which the exciter of the radio photons is propagating through the heliosphere, whether that is the CME-driven
+shock or the flare-accelerated electron beam. This exciter speed is often used to infer further values describing
+fundamental properties of either the local heliospheric environment or the exciter itself. However, relating the
+observed frequency-drift rate of radio bursts to the exciter speed requires the assumption that the drift rate is
+purely the result of the exciter's motion. We demonstrate that this is not the case, presenting two additional
+contributors with often opposing impacts. We examine the balance between the different contributors and
+identify instances where the observations represent either an underestimation or an overestimation of the
+intrinsic exciter's motion. We calculate the correction factor between the true and observed values, allowing
+us to infer the true properties of the exciters of radio emissions, improving the ability of solar radio bursts to
+remotely diagnose accelerated particles throughout the heliosphere.
+                                                                                                     Page 57 of 80
+
+Fluctuations in Solar Type III Radio Burst Spectra Observed by Parker Solar Probe and Solar Orbiter —
+Panisara Thepthong
+Thepthong, P., Kretzschmar, M., Maksimovic, M., Pesini, A.
+
+LPC2E, CNRS, University of Orléans
+
+Solar type III radio bursts are generated by electron beams accelerated during solar flares and propagating
+through the heliosphere. Type III radio bursts can be generated by the excitation of Langmuir waves by the
+electron beam via the bump-on-tail instability, followed by their conversion into electromagnetic emission
+near the local plasma frequency via nonlinear processes. Alternatively, in an inhomogeneous plasma, the
+presence of density fluctuations can enable the linear conversion from a Langmuir wave to electromagnetic
+waves. Observational and theoretical studies have suggested that density fluctuations may contribute to the
+formation of structured patterns in the radio emission of type III bursts. In this work, we analyze data from
+Solar Orbiter (SolO) and Parker Solar Probe (PSP) across a wide range of heliocentric distances and
+observational angles to investigate the spectral structures, or fluctuations, of the type III radio emissions. We
+first define the maximum spectrum of the bursts by taking the maximum flux in the temporal profile at each
+frequency, and then investigate both statistically and individually the spectral fluctuations. The statistical
+analysis of 595 type III events and of their individual fluctuations shows a strong agreement between
+measurements from the two spacecraft, with no clear dependence on longitude separation, suggesting that
+local effects are responsible for these fluctuations. Our observations also suggest that there is a continuum of
+fluctuations between the large fluctuations, which are commonly associated with striae or structured type III
+bursts, and smaller fluctuations that were not studied before.
+                                                                                                     Page 58 of 80
+
+3D reconstruction of solar flare X-ray sources from combined STIX/HXI visibilities — Paolo Massa
+Massa P., Palumbo B., Stiefel M. Z., Ryan D. F., Collier H., Su Y. , Piana M., Krucker S.
+
+University of Applied Sciences and Arts Northwestern Switzerland (FHNW)
+
+The Spectrometer/Telescope for Imaging X-rays (STIX) on board the ESA Solar Orbiter satellite and the Hard X-
+ray Imager (HXI) on board the ASO-S mission observe the X-ray emission from solar flares. The two telescopes
+rely on an indirect imaging technique and measure the intensity of the X-ray radiation that is modulated by
+means of grid pairs. The data provided by the two instruments can be interpreted as visibilities, i.e., 2D Fourier
+components of the flaring X-ray sources. However, in the case where STIX and HXI observe the same event
+from a different vantage point, the datasets of 2D visibilities they provide can be combined to form a sampling
+of the 3D Fourier transform of the flaring X-ray emission. This combined dataset allows the reconstruction of
+the 3D morphology of the X-ray sources in solar flares.
+We present the results of the 3D reconstruction problem in the case of the X9.1 GOES class flare occurred on
+October 3, 2024. At that time, the separation angle between STIX, the flaring site and HXI was close to 90
+degrees, which is an ideal configuration. We validate our 3D imaging method by comparing the resulting
+reconstructions with the 2D ones that are independently obtained from STIX and HXI visibilities. Finally, we
+show how the 3D results can be utilized to estimate altitude and radial velocity of the thermal looptop source
+as a function of time.
+                                                                                                     Page 59 of 80
+
+Advancing Solar and Space Weather Science in the LOFAR2.0 and SKAO Era — Pietro Zucca
+Pietro Zucca
+
+ASTRON - Netherlands institute for radio astronmy
+
+The Low Frequency Array, LOFAR, is now a key instrument for radio studies of the Sun, the heliosphere and
+the ionosphere. It offers high time, frequency and spatial resolution, together with a wide field of view. These
+features make LOFAR very well suited for solar and space weather studies. In this contribution I will present
+recent results and future plans in the context of the LOFAR2.0 upgrade and the coming Square Kilometre Array
+Observatory, SKAO.
+Current work with LOFAR includes detailed imaging and dynamic spectra of solar radio bursts and coronal
+structures, and continuous monitoring of ionospheric disturbances. These observations help us understand
+how energy and particles propagate through the corona, the heliosphere and the near Earth environment, and
+they provide inputs for models that aim to improve space weather forecasts. The LOFAR IDOLS project,
+Incremental Development of LOFAR Space weather, operates a dedicated station that observes the Sun and
+the ionosphere almost continuously. These data are used both for space weather science and for monitoring
+the ionospheric conditions that affect LOFAR astronomy.
+In the LOFAR2.0 era, the array will have higher sensitivity, better stability and more flexible observing modes.
+It will be possible to observe with the low band and high band antennas at the same time, which will give
+continuous coverage over a much wider frequency range. This will improve imaging of fine structures in the
+solar corona and allow better tracking of the full evolution of space weather events from the low corona into
+interplanetary space.
+A key development is the effort on polarization and in particular on circular polarization. New calibration and
+imaging pipelines now deliver first Stokes V images of solar and planetary radio emission with LOFAR. These
+first Stokes V results demonstrate that we can begin to measure the magnetic field structure in the corona and
+in the emission regions of planetary magnetospheres. They also provide a new way to monitor instrumental
+leakage and to test the stability of the full polarization signal path in LOFAR2.0.
+I will also give an overview of the current status of SKAO and of the plans of the Sun heliosphere ionosphere,
+SHI, science team. SKA Low in Australia is in the middle of its construction phase, with many thousands of
+antennas already in place and work ongoing on the central processing facility. First test images and first fringes
+show that the system is progressing toward its first array configuration. SKA Mid in South Africa is also
+advancing toward early array milestones. The SHI team is preparing science use cases that link current
+precursors and pathfinders with future SKA studies of the quiet Sun, solar bursts, heliospheric transients and
+ionospheric structure. Together these facilities will provide multi scale, multi frequency radio coverage of the
+Sun and the near Earth environment, opening new windows on the physics of solar activity, heliospheric
+dynamics and ionospheric structure and driving significant advances in fundamental research.
+                                                                                                  Page 60 of 80
+
+X-ray Spectroscopic Diagnostics of Confined and Eruptive M-Class Solar Flares Using SoLEXS/Aditya-L1 —
+Prakhar Singh
+Singh, P., Pant, V., Joshi, B., Sarwade, A.
+
+Aryabhatta Research Institute of Observational Sciences (ARIES)
+
+Solar flares and coronal mass ejections (CMEs) are two major sources of magnetic energy release in the solar
+atmosphere; however, the physical conditions that distinguish eruptive flares from confined ones are still not
+fully understood. In this study, we use soft X-ray spectral observations from the Solar Low Energy X-ray
+Spectrometer (SoLEXS) onboard Aditya-L1 to perform a statistical investigation of the thermal and
+compositional properties of eruptive (CME-associated) and confined (non-CME) solar flares. We analyze a
+sample of M-class flares observed during 2024–2025, including both eruptive and confined events. For each
+flare, we perform time-resolved spectral analysis to derive key plasma parameters: temperature (T), emission
+measure (EM), and elemental abundances, along with soft X-ray fluence, FIP bias, and flare rise and decay
+times. These parameters are statistically compared between eruptive and confined flare events to identify
+differences in thermal evolution, abundance evolution, and energy release characteristics. This study focuses
+on differences in energy partitioning between eruptive and confined flares. We hypothesize that confined
+flares exhibit higher peak temperatures, whereas eruptive flares tend to have larger emission measures.
+Additionally, we find that low-FIP elements (Fe and Ca) in eruptive flares evolve toward more photospheric
+abundances compared to confined events, which may suggest differences in the origin and transport of flare
+plasma. Furthermore, we investigate whether differences exist in elemental abundance recovery, soft X-ray
+fluence, FIP bias, and flare rise and decay times between the two flare categories.
+                                                                                                    Page 61 of 80
+
+Detection of Linearly Polarized Emissions from Metric Solar Radio Bursts — Puja Majee
+Majee, P., Dey, S., Kansabanik, D., Oberoi, D., Mondal, S.
+
+National Centre for Radio Astrophysics, Pune, India
+
+Solar radio bursts are coherent plasma emissions driven by energetic non-thermal electrons accelerated
+through magnetic reconnection or coronal shocks. The polarimetric properties of these bursts are among the
+most promising diagnostics for estimating the local coronal magnetic field and provide valuable insights into
+the underlying emission mechanisms and local plasma conditions. Plasma emission theory predicts these
+metric solar emissions to be circularly polarized, though propagation effects such as scattering and mode-
+coupling can significantly reduce the observed degree of circular polarization below the theoretical
+expectation. Linear polarization, however, has long been considered to be absent, as the conventional wisdom
+holds that any linearly polarized component would be washed out due to differential Faraday rotation
+encountered during coronal propagation. As a consequence, any signal appearing in Stokes Q and U has
+usually been attributed to the instrumental leakage, and reducing them to zero has often been used as a
+constraint during polarization calibration of solar radio observations. This picture has recently been challenged
+by the detection of linear polarization in type I and type III bursts from simultaneous observations with the
+Murchison Widefield Array (MWA) and the upgraded Giant Metrewave Radio Telescope (uGMRT), and, more
+recently, by the detection of linearly polarized emission also from a type II burst using the MWA. These
+findings also have broader implications for understanding the emission mechanism of stellar radio bursts,
+where linearly polarized component are often observed and key insights are drawn from our understanding of
+analogous solar phenomena. In this talk, I will present the detection and characteristics of linear polarization
+components of metric solar emissions, focusing on a type II burst, and briefly discuss possible generation
+mechanisms for the observed linear polarization.
+                                                                                                       Page 62 of 80
+
+Simulations of SKA Observations for solar emissions — Rohit Sharma
+Sharma, R., Nindos, A. and Oberoi, D.
+
+Space, Planetary & Astronomical Sciences & Engineering (SPASE) Indian Institute of Technology Kanpur, India
+
+The Sun is a plasma laboratory. Characteristics of different plasma systems, from the photosphere to the
+corona, can be captured by studying emissions at radio wavelengths, which originate from a diverse set of
+emission mechanisms. The spectro-temporal structure of these emissions, their flux densities and polarimetric
+properties can vary dramatically across different phenomena, magnetic topologies, and emission processes.
+
+Even during periods of low solar activity, solar radio emissions exhibit variability in frequency and time. These
+emission features can be attributed to magnetic reconnection events crucial for the
+nanoflare-based coronal and chromospheric heating theories. Recent radio observations have detected
+emission features with flux densities at milli-Solar Flux Unit (SFU) levels, potentially linked to such small-scale
+flares. The upcoming Square Kilometre Array Observatory (SKAO) promises increased sensitivity
+and better imaging quality, which could help further characterise these faint emissions over its precursors.
+
+Mock radio data simulations provide an opportunity to anticipate the possible limits of a given instrument for
+complex solar radio sources. I will present on solar and heliophysics science cases using mock data simulations
+along with SKAO observations of faint milli-SFU emission population using Karabo-SKA simulator. Various
+aspects relating to using optimal data analysis, e.g. deconvolution for SKA-low and SKA-mid, characterisation
+of self-noise, etc., will be discussed. In addition, the SKAO array assemblies will improve in a phased manner.
+This mock radio solar data allows us to plan observation strategies and synergies with other solar instruments.
+                                                                                                    Page 63 of 80
+
+The Solar Radio Playground: Probing Multi-Channel Correlations via Interpretable Diffusion Models for the
+SKA Era — Roman Farrugia
+Farrugia, R., Panos B.,
+
+FHNW I4DS
+
+As we approach the era of the Square Kilometre Array (SKA), the solar physics community faces the challenge
+of extracting physical insights from petabyte-scale, multimodal radio data. In this work, we develop a "Solar
+Radio Playground": a synthetic, controllable dataset comprising 8 frequency channels. These data are
+generated using the FORWARD toolset, driven by magnetic field data from the Solar Dynamics Observatory’s
+HMI instrument, and provided through a collaboration with IIT Kanpur. This setup provides a controllable
+environment to benchmark sophisticated AI methodologies against known physical ground truths.
+
+While diffusion models represent the state-of-the-art for image generation, their inherent lack of
+explainability remains a significant hurdle for scientific application. In this work, we demonstrate how these
+models can be repurposed as powerful explainability tools rather than opaque black boxes. By applying a
+pixel-wise Mutual Information (MI) decomposition, we generate saliency maps that explain the model's
+decision-making process during reconstruction. This approach allows for the quantification of exactly which
+spatial features in a given channel inform the model's prediction of another channel. This technology is
+currently under incremental development and is being iteratively upgraded in realism to become a flexible,
+multi-dimensional, and possibly time-lagged framework for probing physical drivers within the SKA data
+product proper.
+                                                                                                    Page 64 of 80
+
+Hard X-ray and Radio emissions from the high corona associated with CMEs — Säm Krucker
+Säm Krucker
+
+FHNW
+
+Hard X-ray bremsstrahlung emissions are strong diagnostics of electron acceleration during the magnetic
+energy release process that drives solar flares. Solar Orbiter's unique vantage point away from the Earth-Sun
+line allows us to use limb-occultation as a diagnostic tool to investigate faint hard X-ray source located above
+the main flare site which are generally lost in the dynamic range of hard X-ray telescopes. We present new
+results combing Solar Orbiter/STIX and ASO-S/HXI to study hard X-ray sources associated with CMEs and
+compare them to radio observations. Our results highlight that high coronal hard X-ray sources are an integral
+part of solar eruptive events and they are energetically important despite of their intrinsically faint
+appearance.
+                                                                                                      Page 65 of 80
+
+Spectropolarimetric analysis of herringbones in a type II solar radio burst — Sanna Normo
+Normo, S., Morosan, D. E.
+
+University of Turku
+
+Type II solar radio bursts are well-known signatures of fast electrons accelerated by coronal shock waves.
+Beyond their classical fundamental-harmonic structure, type II burst can exhibit more complex morphologies,
+characterised by multiple emission lanes often composed of fine structures, such as herringbones. The
+presence of these different fine structures reflects the complex and turbulent nature of the shock and the
+ambient coronal plasma where the observed radio emission is generated. In this study, we aim to study the
+variation in intensity and polarisation for individual fine structures composing type II bursts. To do this we use
+high time and frequency resolution NenuFAR dynamic spectra that allow us to extract the intensity-time
+profiles of individual herringbones in both Stokes I and V and compare their evolution across time and
+frequency. Here, we report on a complex type II event observed by NenuFAR on 23 September 2025, which
+exhibits multiple emission lanes and highly circularly polarised herringbones.
+                                                                                                    Page 66 of 80
+
+Physics-based flare forecasting method with the large Italian Radio Telescopes — Sara Mulas
+Mulas S., Pellizzoni A., Marongiu M., Righini S., Marcucci A., Napolitano D.
+
+INAF - OAC
+
+Solar eruptive events can cause serious hazards to human technologies, therefore a flares forecast system is
+among the utmost goals of Space Weather. High radio frequency observations with the Italian network of
+large single-dish radio telescopes resulted in ∼450 solar images between 2018 and 2023 in K-band frequency
+range (18–26 GHz).
+
+Solar radio mapping at these frequencies allows the probing of the Active Regions (ARs) chromospheric
+magnetic field close to the Transition Region, where strong flares and coronal mass ejection events occur.
+Enhanced magnetic fields up to 2000 G determine anomalous spectra in the ARs brightness compared to pure
+free-free emission, due to the addition of a steeper gyro-resonance component associated with circular
+polarisation up to 40%.
+
+In our work we showed that the detection of AR spectral flattening implies a very high probability of a strong
+flare occurrence within 30 hours (89% statistical precision). With the inclusion of other relevant radio AR
+parameters, the precision improves up to 97%, proving a high reliability of our physics-based flare prediction
+method (Mulas et al. 2026 with a national INAF press realise: https://www.media.inaf.it/2026/01/09/sundish-
+brillamenti-solari/ ). As a future perspective, we are expanded this work to include also the forecast of Coronal
+Mass Ejections.
+                                                                                                 Page 67 of 80
+
+Small scale structures within solar noisestorms observed with LOFAR — Soham Dey
+Dey S., Oberoi D., Patra D., Zucca P., Mondal S.
+
+National Centre for Radio Astrophysics
+
+Solar noise storms are among the most commonly observed active radio emissions from the Sun at meter
+wavelengths. The observed angular sizes of radio sources in the solar corona are expected to be dominated by
+scattering from density inhomogeneities, setting a minimum observable source size. Models of anisotropic
+radio-wave scattering predict source sizes of few arcminutes at frequencies around 140 MHz.
+We present interferometric imaging observations of a solar noise storm at 140-190 MHz using the LOw
+Frequency ARray (LOFAR), including Dutch remote baselines extending to ~ 75 km. This is the first high angular
+resolution imaging study of noise storm structures at these frequencies with LOFAR. We detect small-scale
+structures in the noise storm emission with angular sizes significantly smaller than those expected from
+standard scattering models, while a type-III burst observed during the same period shows source sizes
+consistent with predictions. We show that the noise storm sources are spatially coincident with coronal loop-
+top regions visible in extreme ultraviolet observations. Drawing on recent work by Mondal et al. 2025, we
+propose that the over-dense coronal loop environment in which noise storms originate can substantially
+reduce the effective scattering path length, thereby explaining the anomalously compact source sizes. These
+results demonstrate that noise storms and type-III bursts experience markedly different propagation
+environments.
+                                                                                                   Page 68 of 80
+
+Solar jets as the direct source of impulsive solar energetic electrons — Song Tan
+Tan, S., Warmuth, A., Schuller, F.
+
+Leibniz Institute for Astrophysics Potsdam (AIP)
+
+The precise solar origin and acceleration mechanism of impulsive solar energetic electron (SEE) events remain
+a subject of debate. While these events are commonly associated with flares and type III radio bursts, previous
+statistical studies comparing in situ electron release times with Hard X-ray (HXR) peaks have reported weak
+correlations and unexplained time delays, hindering a clear understanding of particle injection and transport.
+In this study, we present a statistical analysis of over 100 impulsive SEE events detected by EPD on board Solar
+Orbiter between 2020 and 2023 (as a part of the Comprehensive Solar Energetic Electron event Catalogue
+(CoSEE-Cat)). Using high-cadence EUV imaging from SDO/AIA, we pinpoint the onset times of associated EUV
+jets and compare them with solar release times (SRTs) derived via Velocity Dispersion Analysis (VDA). Our
+results reveal a significantly improved correlation between VDA-derived SRTs and jet onset times compared to
+traditional HXR- or type III-based proxies. We further examine the temporal relationship between EUV jets and
+their associated type III radio bursts to explore whether jet-driven reconnection provides the open magnetic
+field pathways along which energetic electrons escape into the heliosphere. These findings support EUV jets as
+the primary driver of impulsive SEE injection and highlight the importance of combining EUV jet observations
+with radio diagnostics for accurate timing analysis.
+                                                                                                 Page 69 of 80
+
+Imaging spectroscopy reveals spike-like repeating solar burst pairs in the solar corona — Suli Ma
+Ma, S., Kontar, E., Clarkson, D., Chen, H., and Yan, Y.
+
+National Space Science Center, CAS
+
+Solar radio bursts exhibit complex fine structures that reveal intricate coronal plasma dynamics. Here, we
+report a new type of spike-like repeating burst pairs,
+characterized by two short-lived (0.1-2s), narrowband components separated by ~4 s at frequencies 30-50
+MHz. Using high-resolution dynamic spectra and spectroscopic imaging,
+we analyzed 613 burst pairs, measuring their durations, bandwidths, drift rates, flux densities, and spatial
+characteristics. Imaging links sources to an active region,
+with earlier components spatially concentrated and delayed components displaced and exhibiting reduced
+drift rates. Radio-wave propagation simulations support the delayed bursts as turbulent echoes of harmonic
+emission in anisotropic coronal plasma.
+The location of the burst sources high in the corona suggests ongoing magnetic reconnection and electron
+acceleration well above typical flare heights. Our findings offer new insights into coronal turbulence effects
+while advancing diagnostics of coronal plasma and the elusive nature of solar radio echoes from ground-based
+transmitters.
+                                                                                                    Page 70 of 80
+
+SPOTLIGHT on decimetric millisecond bursts: Insights from uGMRT solar observation — Surajit Mondal
+Mondal, S., Dey, S., Patra, D., Majee, P. , Oberoi, D., Kansabanik, D., and the SPOTLIGHT collaboration
+
+National Centre for Radio Astrophysics
+
+Millisecond radio bursts in the decimetric bands, while discovered back in 1977, have been investigated in
+only a handful of studies till date. The primary reason behind this is that very few instruments have the ability
+to record data at the time resolution required for characterizing these bursts. Among these few studies, there
+are even fewer instances where it was possible to image the corresponding radio source. Even in those
+instances, the imaging was possible only with data integrated over time spans much larger than the burst
+duration, raising questions about the true nature of the millisecond radio source. In this investigation, we, for
+the first time, image a millisecond radio burst at a time resolution of 1.25ms and frequency resolution of
+198kHz, and thus resolve the radio burst both in spectro-temporal as well as spatial domains. This ultra-high
+time and frequency resolution imaging capability has been enabled by the Survey for sPoradic radiO bursTs via
+a commensaL multIbeam Gpu-powered Hpc at the gmrT (SPOTLIGHT) backend operating at the Upgraded
+Giant Metrewave Radio Telescope (uGMRT). We use these data to show that even at these time-frequency
+resolutions, the observed emission is incredibly fragmented in the spectro-temporal plane, with very rapid
+intensity fluctuations. While a frequency-drift is visible in the dynamic spectrum, the radio source locations
+show rapid movements, with no apparent systematic drift across frequency. We explain this scenario by
+hypothesising that the emission is highly affected by scattering, which is responsible for rapid shifts of the
+apparent source location. Since such rapid shifts are likely possible when the emission frequency is close to
+the plasma frequency, these observations can be used to constrain the emission mechanism responsible for
+the generation of the millisecond radio burst.
+                                                                                               Page 71 of 80
+
+Three-dimensional mapping of coronal magnetic field and charged particles in an M-class solar flare —
+Tatiana Kaltman
+Kaltman, T., Yu, S., Fleishman, G. D., Ryan, D. F.
+
+Institut für Sonnenphysik (KIS)
+
+Probing physical conditions in solar flare is crucial for understanding coronal energy release and particle
+acceleration.
+Simultaneous X-ray observations from Solar Orbiter/STIX and Hinode/XRT, taken from different vantage
+points, allowed stereoscopic reconstruction of the flaring loop. We use imaging spectroscopy data of the
+SOL2021-05-07 flare available from Expanded Owens Valley Solar Array to derive maps of the magnetic field
+strength, thermal and nonthermal electron densities, and the power-law index of nonthermal electrons via
+gyrosynchrotron modeling. By correlating positions of microwave and thermal X-ray sources, we associate the
+reconstructed 3D coordinates of the X-ray source with the microwave-derived plasma parameters.
+In addition to the derived 3D maps of the magnetic field strength, we also compute 3D maps of the Alfvén
+speed and plasma beta in a flaring volume, revealing a magnetically dominated environment. These spatially
+resolved diagnostics provide valuable constraints for models of magnetic reconnection and flare dynamics,
+representing a step toward realistic 3D characterization of energy release in solar eruptive events.
+                                                                                                    Page 72 of 80
+
+The Nature of Electron Density Inhomogeneities in the Middle and Outer Corona — Timothy Bastian
+T. S. Bastian
+
+National Radio Astronomy Observatory
+
+The VLA was used to observe background radio sources during solar minimum in 2019 to transilluminate the
+foreground solar corona. A total of 18 sources was observed during the course of a solar rotation to observe
+along 63 lines of sight. These probed the corona from 1.9-10.5 solar radii for a wide range of heliolatitudes.
+Density inhomogeneities in the corona lead to angular broadening of the background source. For the outer
+corona (r>5-6 solar radii), the (anisotropic) spectrum of electron density inhomogeneities is well fit by a power
+law with a Gaussian cutoff. Interpreted in terms of a turbulent spectrum, the spectral index, inner scale, and
+degree of anisotropy are deduced. These results are largely consistent with past work although there are
+several new and interesting wrinkles -- for example, we find that the inner scale is isotropic. For the middle
+corona, defined as the range 1.5-6 solar radio, the situation is less clear. I suggest that “deterministic
+scattering”, rather than scattering on turbulent inhomogeneities, may dominate here.
+                                                                                                     Page 73 of 80
+
+A New Radio-Quiet e-CALLISTO Site in the Azores: Extending Solar Radio Burst Coverage across the North
+Atlantic — Valente Cuambe
+Valente A. Cuambe, Christian Monstein, Javier Bussons-Gordo, Manuel Pietro Mateo
+
+RAEGE-Az
+
+Solar radio bursts are a key diagnostic of flare and CME-driven particle acceleration and represent a major
+source of interference for radio-based technological systems, including Global Navigation Satellite Systems
+(GNSS). Continuous, low-latency monitoring of solar radio emission is therefore essential for both scientific
+understanding and operational space-weather services. The global e-CALLISTO network provides near real-
+time dynamic spectra at metric and decametric wavelengths, but its performance critically depends on local
+radio-frequency interference (RFI) conditions.
+
+Within the SOLAR-Az project, a comprehensive RFI survey was conducted across Santa Maria and Flores
+islands (Azores, Portugal) to identify suitable locations for the deployment of new e-CALLISTO spectrometers.
+Broadband measurements covering 10~MHz--1.7~GHz were carried out at more than twenty candidate sites,
+and site suitability was quantified using statistical indicators of peak power, mean levels, and variability,
+ensuring safe operation under low-noise amplification without receiver saturation.
+
+The survey identifies a single location at Farol da Maia (Santa Maria Island) as a genuine radio-quiet zone. In
+particular, the area near the abandoned whale factory exhibits no detectable interference from commercial,
+military, or emergency communication systems across the native CALLISTO band, enabling full-band
+observations without additional filtering. This site is therefore selected for the installation of the e-CALLISTO
+antennas, representing the cleanest radio environment identified in the Azores, among the sites investigated.
+                                                                                                   Page 74 of 80
+
+On EIT Waves Relationship with Coronal Mass Ejections, Solar Flare, Coronal Holes, and Solar Wind
+Phenomena — VIRENDRA VERMA
+VERMA, VIRENDRA
+
+UTTARAKHAND SPACE APPLICATION CENTRE, DEHRADUN, INDIA
+
+ In the present paper, we studied relationship of EIT waves with Coronal Mass Ejections (CMEs) , solar flares ,
+coronal holes (CHs), and solar winds. Here, we have studied the relationship between the Extreme Ultraviolet
+Imaging Telescope (EIT) waves phenomena with solar flares, coronal holes, solar winds, and CMEs events. The
+EIT/ SOHO instrument recorded 176 EIT events during the above period (March 25, 1997-June 17, 1998) and
+the EIT waves list was published by [1] T. After temporal matching of EIT wave events with CME phenomena,
+we find that corresponding to 58 EIT wave events, no CME events were recorded and thus we excluded 58 EIT
+wave events from the present study. Out of 176 EIT wave events, only 106 are accompanied by CMEs. The
+correlation study of the speed of EIT wave events and CMEs events of 106 events shows poor correlation r=
+0.32, indicating that the EIT waves and CMEs events do not have a common mechanism of origin, and also
+indicate that some other factor is working in the formation of CMEs from EIT waves. Further, We have also
+matched the spatial matching EIT wave sources as indicated by [1] with CHs and flares and found that CMEs
+appear to be associated with EIT wave phenomena and CHs. Earlier [2] , and [3] indicated that the CMEs
+may have been produced by some mechanism, in which the mass ejected by solar flares or active
+prominences, gets connected with the open magnetic lines of CHs (source of high-speed solar wind streams)
+and moves along them to appear as CMEs. Most recently [4] proposed a methodology to understand the
+origin of CMEs through magnetic reconnection of CHs open magnetic field and solar flares.
+           In the present paper, we proposed a scenario/ 2-dimensional model, in which the origin of CMEs
+through reconnection of EIT waves and solar winds coming from the CHs and also found that the calculated
+CMEs velocity after reconnection of EIT waves and solar winds coming from the CHs are in very close to the
+observed CMEs linear velocity. We also calculated the value of the correlation coefficient between the
+observed linear velocity of CME events and the calculated value of CME velocity after reconnection and found
+the value as r=0.884. The value of correlation as r=0.884 is excellent and supports the proposed methodology.
+Further study is in progress to understand the role of solar winds in origin of CMEs. Finally, we have also
+discussed the role of solar wind phenomena in the formation of CMEs phenomena with other solar
+phenomena, in the latest scenario of solar heliophysics phenomena. Finally, we have also discussed the role
+of solar wind phenomena in the formation of CMEs phenomena with other solar phenomena, in the latest
+scenario of solar heliophysics phenomena.
+
+REFERENCES
+1. B. J. Thompson and D. C. Myers, Astrophys. J. Suppl. 183 ,225 (2009) . DOI. ADS.
+2. V. K. Verma and M. C. Pande, Proc. IAU Colloq. 104 (Poster Papers) , p.239.(1989)
+3. V. K. Verma, J. Geophys Indian Union, 2, 65 (1989)
+4. V. Verma, and N. Mittal, Astronomy Letters, 45, 164-176.(2019)
+Page 75 of 80
+                                                                                                 Page 76 of 80
+
+Metric Radio Bursts and Their Implications for Solar Activity Observed by MUSER-L (30-400 MHz) — Xingyao
+Chen
+Xingyao Chen, Linjie Chen, Zhichao Zhou, Wei Wang, Yihua Yan
+
+National Space Science Center, Chinese Academy of Sciences
+
+The Mingantu Spectral Radioheliograph low-frequency array (MUSER-L), operating in the 30-400 MHz range,
+has been conducting routine solar observations within the 0-8 UT time window since 2025, providing high-
+cadence imaging spectroscopy with 0.1 s temporal and 1 MHz spectral resolution. During its initial observing
+phase, MUSER-L has accumulated over 150 days of observations and detected a variety of coherent radio
+bursts, including type III burst storms, type II bursts, quasi-periodic pulsations, spike bursts, etc. The
+combination of imaging and dynamic spectral observations offers the opportunity to investigate the spatial
+and temporal evolution of processes such as electron acceleration, shock propagation, and wave-particle
+interactions in the solar corona. We present representative events together with an overview of the current
+data products. As the data processing system is still under development, observations are presently based on
+a subset of antennas and short baselines, with longer baselines and data processing pipelines still being
+commissioned. These preliminary results illustrate the potential for combining imaging and spectral
+diagnostics in the metric regime and provide a basis for future quantitative studies and multi-wavelength
+investigations of solar eruptive phenomena.
+                                                                                                     Page 77 of 80
+
+High-resolution Solar Observation with ALMA — Yi Chai
+Yi Chai, Miroslav Barta
+
+Astronomical Institute of the Czech Academy of Sciences
+
+High spatial resolution in ALMA observations has been one of the major promises for the astronomy and
+astrophysics communities, and solar researchers are no exception. While solar observations have benefited
+from unprecedented millimeter/submillimeter data that were unavailable before ALMA, they remain
+constrained by limited choices of antenna configurations for given bands. So far, these limits on array
+configurations have not accounted for the possibility of correcting sequences of distorted images using
+techniques such as self-calibration. Given that higher spatial-resolution ALMA observations have the potential
+to address key questions—such as the well-known coronal heating problem—we proposed this study to push
+the maximum baseline length for solar observations as far as possible; the proposal was later accepted as an
+ESO project. We successfully developed routines to simulate ALMA solar observations using long-baseline
+array configurations with atmospheric disturbances represented by phase errors, and we compared the self-
+calibrated results with the unself-calibrated ones. The simulations show that, with the help of self-calibration,
+it is possible to extend Band 3 observations to configuration C-7 and Band 5 to C-6. A test observation using
+these setups was carried out, and the data were successfully reduced using self-calibration.
+                                                                                                  Page 78 of 80
+
+MUSER Observations of Solar Radio Burst Events — Yihua Yan
+Yihua Yan, Wei Wang, Linjie Chen, Chengming Tan, Suli Ma, Xingyao Chen, Zhichao Zhou
+
+National Space Science Center, Chinese Academy of Sciences
+
+Wide‐band solar radio observations, spanning decameter to centimeter wavelengths, constitute a key
+component of the Chinese Meridian Project (CMP) for tracking and monitoring solar eruptions from the Sun's
+atmosphere into interplanetary space. The Mingantu Spectral Radioheliograph (MUSER) with three arrays at
+low (30–400 MHz), intermediate (400 MHz–2 GHz), and high (2–15 GHz) frequency bands images the solar
+atmosphere in 3D from the top‐chromosphere up into the mid‐corona (Yan et al. 2021, 2025). The MUSER
+observations have been presented previously (e.g., Zhang et al., 2021). With the newly established calibration
+systems for MUSER under CMP‐II and the new calibration method, further progress on solar radio imaging
+spectroscopy has been made. Various solar radio bursts have been recorded by MUSER. Data are transmitted
+to the CMP data center daily. Here we present the recent progress on MUSER for solar and space weather
+observations.
+                                                                                                           Page 79 of 80
+
+First Detailed MeerKAT Imaging Spectroscopy of a Solar Flare — Yingjie Luo
+Luo, Y., Kontar, E. P., Du Toit Strauss, R., Botha, G. J. J., Mrozek, T., Nita, G. M., Buchner, S., Chibueze, J. O.
+
+University of Glasgow
+
+Radio observations provide powerful diagnostics of energy release, particle acceleration, and transport
+processes in solar flares. However, despite recent advances in radio interferometric imaging spectroscopy,
+current instruments remain limited by image fidelity and resolution, restricting detailed spectroscopic studies
+of flaring regions. In this report, we present high-fidelity imaging spectroscopy of an M1.3-class flare observed
+by the MeerKAT array, a precursor to the future-generation facility SKA-Mid. Emission at these frequencies
+originates primarily in the low corona, offering direct insight into magnetic reconnection and primary energy-
+release sites. The observations achieve an unprecedented dynamic range exceeding $10^3$, enabling the
+simultaneous analysis of intense coherent bursts and much fainter incoherent emission from the active region.
+Multiple spatially distinct coherent sources are identified, suggesting contributions from different populations
+of accelerated electrons. In addition, the incoherent emission extends beyond structures seen by AIA,
+highlighting MeerKAT’s capability to detect dilute but hot plasma not accessible to extreme-ultraviolet
+diagnostics. Combined with contemporaneous hard X-ray observations and magnetic field extrapolations, the
+radio sources are found to be associated with distinct magnetic structures, providing further insight into the
+origin and evolution of energetic electrons. These results demonstrate the importance of high-fidelity imaging
+spectroscopy in disentangling complex flare emission and establish MeerKAT as a powerful tool for solar flare
+studies, paving the way for future observations with SKA-Mid.
+Page 80 of 80
+
