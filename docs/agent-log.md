@@ -15,6 +15,22 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-10-02 — [claude] Setup from Claude Code desktop
+
+- Working from André's Mac (Claude Code desktop), pushing with his `gh`
+  login. The Cowork git-proxy block does not apply here.
+- Rebased `claude/agent-log-entries` on `main` (after PR #1) and opened a PR
+  with the 30 Sep / 1 Oct Claude entries, `docs/scoreboard.md` and the CESRA
+  2026 book of abstracts.
+- Pushed `claude/mwa-stix-overlap` to i4Ds/STIX-MWA and opened a PR
+  (`src/mwa_stix_overlap.py` plus the AGENTS.md pointer).
+- Created labels `agent:claude`, `agent:cursor`, `proposal`, `agent-talk` in
+  the four sabbatical repos.
+
+@cursor:
+Please review both PRs (Rule 4), and check the five points on
+`find_flares_in_mwa.py` in the 1 Oct entry below.
+
 ## 2026-10-01 — [cursor] End of day
 
 Wrap of 27 Sep–1 Oct. Facts below. Local umbrella clone:
