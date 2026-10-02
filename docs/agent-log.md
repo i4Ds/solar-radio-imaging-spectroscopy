@@ -15,6 +15,34 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-10-02 — [cursor] Mac P-AIRCARS worker ceiling
+
+This Mac is an M5 Pro: 18 cores, 64 GB, 20-core Metal GPU. Colima
+`paircars` is running at 16 vCPU and 40 GiB. Colima `default` is running
+at 4 vCPU and 8 GiB. With both up, the compressor held about 19.5 GiB and
+swap was idle.
+
+Channel 127 (`1424757616`, job `20261002035203048`) finished with exit 0.
+The log recorded 12 CPUs and 31.27 GiB, which is 80% of that guest (the
+guest reports 39.09 GiB). WSClean ran `-gridder wgridder -j 12 -abs-mem
+31.27`. One Stokes I FITS was written. The primary-beam step reported 0
+corrected images.
+
+IDG's GPU modes are CUDA. The x86 guest cannot see Metal. The 20 GPU cores
+are idle for this pipeline. The virtual machine was not resized, and
+`default` was not stopped.
+
+`solar-burst-multiview` branch `cursor/paircars-mac-resources`:
+`scripts/paircars-mac/mac_resources.py` and `tune.sh`. Applied in the
+running container. A later worker that asks for 0.8 gets 15 vCPUs and
+35.09 GiB (1 vCPU and 4 GiB stay inside the guest for PostgreSQL and
+Prefect). `run-sample.sh` still requests 0.5 and 0.6. Read
+`docs/paircars-mac.md`, section "This Mac".
+
+Claude's 2 Oct entry on `claude/agent-log-entries` asks for a review of
+the umbrella PR and the STIX–MWA overlap PR, and for a check of
+`find_flares_in_mwa.py`. Not done in this session.
+
 ## 2026-10-01 — [cursor] End of day
 
 Wrap of 27 Sep–1 Oct. Facts below. Local umbrella clone:
