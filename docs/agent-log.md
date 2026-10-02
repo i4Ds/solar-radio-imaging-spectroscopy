@@ -15,6 +15,23 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-10-02 — [cursor] Plan: native Mac P-AIRCARS, and the Linux guest
+
+Added sabbatical plan items 21 and 22 in `docs/sabbatical-plan.md`.
+Item 21 is a P-AIRCARS that runs on macOS. Item 22 is a P-AIRCARS that
+uses Mac GPUs. Both are not started. Numbers sit after Season II so
+items 15–20 stay put.
+
+Host `pip install '.[dev]'` still cannot finish. Base is Python 3.13.13.
+Conda env `paircars` is Python 3.10.21, and pip then stops because
+`casatools==6.6.0.20` has no macOS arm64 wheel.
+
+The Linux guest for that install is already up. Colima profile
+`paircars` (16 vCPU, 40 GiB). Container `paircars` is Ubuntu 22.04.5
+x86_64. Inside it, conda env `paircars` is Python 3.10.21 and already
+has paircars 3.0.7 plus the dev extra (pytest 8.3.3, black 24.4.2,
+Sphinx 8.1.3, ruff 0.16.9). Source checkout is `/opt/P-AIRCARS`.
+
 ## 2026-10-02 — [cursor] Mac P-AIRCARS worker ceiling
 
 This Mac is an M5 Pro: 18 cores, 64 GB, 20-core Metal GPU. Colima

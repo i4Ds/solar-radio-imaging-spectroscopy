@@ -26,6 +26,10 @@ engineering in Switzerland.
 | 12 | KARABO | [Karabo-Pipeline](https://github.com/i4Ds/Karabo-Pipeline) | 🔴 not started |
 | 13 | Scalability: CSCS, SKA-SDP, SKA software stack, data-flow hardware, calibration on new hardware | Karabo-Pipeline, CSCS | 🔴 not started |
 | 14 | Science goals with CESRA | [docs/science-direction.md](science-direction.md) | 🟡 in progress (draft v3) |
+| 21 | A P-AIRCARS version that runs on a Mac | P-AIRCARS | 🔴 not started (native macOS; `casatools==6.6.0.20` has no macOS wheel. Today it runs in an Ubuntu 22.04 x86_64 container) |
+| 22 | A P-AIRCARS version optimised for Mac GPUs | P-AIRCARS | 🔴 not started (imaging is CPU WSClean in that guest; the Metal GPU is unused) |
+
+Items 21 and 22 are numbered after Season II so items 15–20 stay as they are.
 
 ## Season II — e-Callisto (January–March, Mexico)
 
