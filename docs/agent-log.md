@@ -15,6 +15,33 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-10-04 — [cursor] FlareSense latest list, dev and prod
+
+https://flaresense.ch/ loads. The Latest tab said there were no recent bursts.
+The Gradio API still has them: 2026-10-01 to 2026-10-04, one station, returns
+32 groups. Trends includes days through 2026-10-03. Almost every group is
+one station (SRI-Lanka_59 is 19 of 33 images). One group has two stations.
+None have three. Latest required three, so the list was empty.
+
+Code: [i4Ds/FlareSense-v2#2](https://github.com/i4Ds/FlareSense-v2/pull/2)
+on `cursor/flaresense-dev-prod`. Latest now lists a flare from one station
+and shows the station count. The filename stores confidence as a percent;
+a slider value of 0.5 means 50%. Dev and prod Compose follow heliotime-v2
+(`./du.sh dev deploy`, `./du.sh prod deploy`, `docs/deploy.md`). The
+container serves the site. The predictor stays on the host and writes the
+PNGs.
+
+Local check: sample PNGs, Python 3.13, Gradio 5.8.0, pydantic 2.10.6.
+pydantic 2.11 and later makes this Gradio fail while building its API page.
+`pytest`: 6 passed. Docker 29.8.1 is installed. The Compose plugin is not,
+so the image was not built on this Mac.
+
+flaresense.ch still runs the old app until `flaresense_app.service` is
+restarted from this tree, or nginx is pointed at Compose. With no env vars
+set, that process still reads gitignored `paths.py`.
+
+No `@cursor:` thread turned up in an i4Ds issue search.
+
 ## 2026-10-02 — [cursor] Close of day: guest, postgres, channel 127
 
 Native macOS still cannot install P-AIRCARS. `pip install '.[dev]'` on
