@@ -15,6 +15,19 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-10-04 — [cursor] FlareSense rank by intensity
+
+FlareSense-v2 branch `cursor/select-by-intensity`. The data browser can
+rank detections by the confidence in the filename and filter by station
+name. "Australia" keeps Australia-ASSA_57 and Australia-ASSA_63. The
+e-Callisto station page lists those as ASSA, Radio Astronomy South
+Australia. The same page lists MRO as Metsähovi Radio Observatory,
+Finland, so MRO is not treated as Australia. The rank is not a radio
+flux; the catalog does not store one. On this Mac the window is the last
+60 days from flaresense.ch. Strongest Australian detection in that
+window: Australia-ASSA_63, 97.0%, 2026-09-30 02:45 UTC, one of 120.
+`tests/test_intensity.py`: 6 passed. Stacked on the open dark-mode PR.
+
 ## 2026-10-02 — [cursor] Close of day: guest, postgres, channel 127
 
 Native macOS still cannot install P-AIRCARS. `pip install '.[dev]'` on
