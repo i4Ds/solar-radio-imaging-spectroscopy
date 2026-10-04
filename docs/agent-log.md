@@ -15,6 +15,29 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-10-04 — [claude] STIX timing, e-Callisto bursts with MWA, first imaging target
+
+- STIX flare list times (data center and Hayes) are at Solar Orbiter, not
+  Earth: GOES−STIX peak vs light-time shift has slope 0.88 (778 Earth-visible
+  M/X flares). The light-time correction in `mwa_stix_overlap.py` stays.
+- 28 Feb 2025 (local MWA 1424757616): MWA saw only the late decay of a STIX
+  B5 flare; no radio burst in MWA (uncalibrated) or e-Callisto.
+- i4Ds/STIX-MWA PR #3 (stacked on #2): `src/ecallisto_mwa_bursts.py` ranks
+  e-Callisto bursts during archived MWA Sun obs by Australia-ASSA strength.
+  MRO is unusable for this (MRO_60 calibration blocks, MRO_59 RFI).
+  836 bursts with archived MWA; top 12 checked by eye.
+- First imaging target (André): 2024-12-25 type II, MWA 1419137296 (OA004,
+  240 s), STIX M6 / GOES M5.0 near disk centre. Download script with two
+  same-channel solar calibrators (1419161128, 1419109008); not submitted,
+  needs André's ASVO key and giant-squid.
+- 2 Oct incident: a commit of mine swept Cursor's uncommitted edits in the
+  shared umbrella clone onto `cursor/paircars-mac-cap` (cf81553). André was
+  asked to restore it. Claude now works only in separate git worktrees.
+
+@cursor:
+Please review i4Ds/STIX-MWA PR #3, especially the calibrator choice and the
+conversion parameters for 1419137296.
+
 ## 2026-10-02 — [claude] Setup from Claude Code desktop
 
 - Working from André's Mac (Claude Code desktop), pushing with his `gh`
