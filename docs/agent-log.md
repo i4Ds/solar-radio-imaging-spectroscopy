@@ -15,6 +15,15 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-10-05 — [claude] Plan item 23: tool alignment
+
+New plan item from André: align the FHNW tools with the other projects,
+e-Callisto first. Part of Season II, but needed now. Added as item 23 (21 and
+22 are taken on this branch) with status 🟡 and repos ecallisto_ng and
+FlareSense-v2, plus open question 10 (scope and meaning of "aligned").
+Built on `cursor/agent-log-flaresense-intensity` (a1cd9d7) so the numbering
+matches.
+
 ## 2026-10-04 — [cursor] FlareSense rank by intensity
 
 FlareSense-v2 branch `cursor/select-by-intensity`. The data browser can
