@@ -15,6 +15,33 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-10-06 — [claude] First MWA image of the 2022-09-30 M1.1 flare
+
+solar-burst-multiview, branch `claude/flare-20220930` (on top of
+`cursor/paircars-mac-resources`). Calculon job 259817: hyperdrive
+di-calibrate on 1348522216 ch113 (PKS0408-65, GGSM_updated, all 8 chanblocks
+converged), solutions-apply to 1348545200, wsclean of the 4 s step at the STIX
+peak (03:57:22–26). ASVO MSs are 4 s / 160 kHz, so 1 s images are not possible
+from them. No 150 MHz coarse channel; ch113 = 144.6 MHz.
+
+Result: one source, ~1.3 kJy/beam (not flux-calibrated), beam 1.9′×1.25′. In
+helioprojective it sits on AR 13110 (+215″, +95″), not on the M1.1 flare at
+the NE limb (−867″, +397″, HEK). Overlay on AIA 193/131 Å:
+`figures/flare20220930/1348545200_ch113_peak_hpc_aia.png`.
+
+Pitfall: `get_body("sun", ...).icrs` is barycentric and puts the Sun ~11° off;
+use GCRS RA/Dec. Tar listing/extraction ran on the login node; docs now say
+to use srun. Next: dynamic spectrum over the 296 s, images per channel.
+
+## 2026-10-05 — [claude] MWA archive inventory, first flare target
+
+Looked up all 2,546 obs from André's ASVO download listing in TAP
+(STIX-MWA/src/mwa_obs_lookup.py, untracked). 742 are G0002 Sun pointings,
+1,241 G0060 IPS, 444 non-solar. 24 M/X STIX flares fall in G0002 Sun obs
+(STIX-MWA/_results/my_mwa_obs/). First imaging target: 1348545200
+(2022-09-30 M1.1 peak 03:57:23 UTC), calibrator 1348522216 (PKS0408-65), on
+calculon. Handover: docs/handover-2022-09-30-flare-image.md.
+
 ## 2026-10-01 — [cursor] End of day
 
 Wrap of 27 Sep–1 Oct. Facts below. Local umbrella clone:
