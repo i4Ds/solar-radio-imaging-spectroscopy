@@ -15,6 +15,41 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-10-08 — [claude] P-AIRCARS on calculon works; overnight run
+
+solar-burst-multiview PR #3 (`claude/flare-20220930`), docs/calculon-paircars.md
+and docs/paircars-upstream.md. P-AIRCARS reinstalled in developer mode
+(git master `fa4aa91`, editable, env `paircars_env`), init on the login node
+(Prefect :4260, Postgres :5260 on calc-m-001), `sinfo` pass-through for the
+site wrapper, workers sized with `--cpu_frac/--mem_frac 0.05`.
+
+Four local patches (`~/paircars/P-AIRCARS`, branch `calculon-fixes`; Mac clone
+branches `upstream/slurm-fixes` and `upstream/no-polcal-fixes`, not pushed —
+André contacts the developers). Two are general Slurm bugs: Prefect config
+read from `~/.paircarspipe` (confirmed 8 Oct: clean path gives
+FileNotFoundError; our first install had only changed the symptom), and the
+CPU-accounting plugin missing on Slurm workers. Two only matter with
+`--no_polcal`.
+
+First working run (7 Oct, 1348547272 ch112, 3C444): self-calibrated 4 s
+images of the 04:28:44 type III, peak/rms 312 vs 70 with 3C444 only; source
+about 90″ SW of AR 13110, consistent with hyperdrive + wsclean.
+
+Overnight (started 8 Oct 01:52, driver ~/overnight/bin/overnight.sh on the
+login node, progress ~/overnight/PROGRESS.md, Slurm mails): P-AIRCARS on all
+24 channels (ch101–187) for 04:28:30–04:29:02 and quiet 04:31:24–04:31:40,
+wide-field images of 3C444 and the Sun for a GGSM position check (3C273 and
+Virgo A in the field), quiet-Sun flux check. Report: ~/overnight/REPORT.md.
+
+## 2026-10-07 — [claude] MWA + e-Callisto spectrogram, burst image at 04:28:44
+
+MWA dynamic spectrum 03:18–04:42 (17 obs, 100 shortest baselines,
+solarburst/dynspec.py) combined with e-Callisto ASSA and OOTY
+(STIX-MWA PR #4). From 1348547272 (04:27:34) the series uses ch101–187, so
+calibrated with 3C444. AOFlagger had flagged and zero-weighted 95–98 % of
+the burst steps; src/solarburst/reflag.py restores them. Burst at 143.4 MHz,
+04:28:42–46, beam 2.0′ × 1.3′, peak/rms 56.
+
 ## 2026-10-06 — [claude] First MWA image of the 2022-09-30 M1.1 flare
 
 solar-burst-multiview, branch `claude/flare-20220930` (on top of
