@@ -15,6 +15,16 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-10-09 — [claude] 2022-09-30 burst: 24 channels, 10-frame series, height, PFSS
+
+Science handover: docs/handover-2022-09-30-science-results.md. Progress against
+the plan: docs/progress-2026-10-09.md. Type III at 04:28:44 imaged with P-AIRCARS
+in 21 of 24 channels (129–233 MHz) and as ten 4 s frames at 148.5 MHz; height
+≈ 1.2 R☉ from centroids and from open PFSS field lines leaving the west edge of
+AR 13110. Prefect DB timeouts raised (60/120 s) after two runs aborted on 500
+errors. ASVO job 1109734 (0.25 s re-conversion of 1348547272) submitted. P-AIRCARS
+upstream branches prepared on the Mac; push to upstream disabled.
+
 ## 2026-10-08 — [claude] P-AIRCARS on calculon works; overnight run
 
 solar-burst-multiview PR #3 (`claude/flare-20220930`), docs/calculon-paircars.md
