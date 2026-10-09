@@ -53,6 +53,94 @@ conversion parameters for 1419137296.
 @cursor:
 Please review both PRs (Rule 4), and check the five points on
 `find_flares_in_mwa.py` in the 1 Oct entry below.
+## 2026-10-02 — [cursor] Close of day: guest, postgres, channel 127
+
+Native macOS still cannot install P-AIRCARS. `pip install '.[dev]'` on
+this Mac fails twice: base Python is 3.13.13, and conda env `paircars`
+(Python 3.10.21) then has no wheel for `casatools==6.6.0.20`. Plan items
+21 and 22 in `docs/sabbatical-plan.md` are that native Mac build and a
+Metal GPU build. Both are not started.
+
+The working install is the Colima `paircars` guest: Ubuntu 22.04.5,
+x86_64, 16 vCPU, 40 GiB. The container was recreated so these mounts
+exist:
+
+| In the guest | On the Mac |
+|---|---|
+| `/obs` | `~/Projects/solar-burst-multiview/data` |
+| `/data` | `~/Projects/P-AIRCARS-data` |
+| `/opt/P-AIRCARS` | `~/Projects/P-AIRCARS` |
+
+Closing the terminal does not stop the guest. `1424757616` is visible at
+`/obs/1424757616` (24 measurement sets).
+
+`init-paircars-setup --init` with no `--configdir` uses
+`~/.paircarspipe`. A `pip install` into the `paircars` user site shadowed
+the conda package and started PostgreSQL with proot, which fails under
+Rosetta. The user-site copy was patched to fakechroot, and the guest
+`udocker` command rewrites `--execmode=P1` to `F1` and passes a TCP port.
+PostgreSQL then logged ready on port 5260 at 05:43 UTC. Those two fixes
+are only in the running container. A later init died because `lsof` was
+missing; it is installed now. `solar-burst-multiview`
+`scripts/paircars-mac/install-inside.sh` lists `lsof` so the next image
+build has it.
+
+Channel 127 image, no calibrator, Stokes I, 4 s at 2025-02-28 06:00:40.
+Job `20261002055510809`. The log header shows 15 CPUs and 35.09 GB.
+Intensity self-cal dynamic range 10.51. The master flow then says
+"Self-calibration subflow is not successful. No solutions are available
+to apply." No bandpass table. Imaging still wrote one image and removed
+the raw FITS. Primary-beam correction wrote 1 image and warned "No disk
+detected image is present to estimate phase shift." Overlay PNG:
+`P-AIRCARS-data/out/1424757616-ch127/20250228/1424757616_target/imagedir_f_1.28_t_4.0_pol_I_w_briggs_0.0/overlay_pngs/time_20250228060040.0_freq_162.48_pol_I_pbcor.png`.
+Pipeline banner: finished successful. The self-cal solutions were not
+applied. Read the master log
+`P-AIRCARS-data/pipeline-work/1424757616-ch127/main_paircars_20261002055510809.log`.
+
+## 2026-10-02 — [cursor] Plan: native Mac P-AIRCARS, and the Linux guest
+
+Added sabbatical plan items 21 and 22 in `docs/sabbatical-plan.md`.
+Item 21 is a P-AIRCARS that runs on macOS. Item 22 is a P-AIRCARS that
+uses Mac GPUs. Both are not started. Numbers sit after Season II so
+items 15–20 stay put.
+
+Host `pip install '.[dev]'` still cannot finish. Base is Python 3.13.13.
+Conda env `paircars` is Python 3.10.21, and pip then stops because
+`casatools==6.6.0.20` has no macOS arm64 wheel.
+
+The Linux guest for that install is already up. Colima profile
+`paircars` (16 vCPU, 40 GiB). Container `paircars` is Ubuntu 22.04.5
+x86_64. Inside it, conda env `paircars` is Python 3.10.21 and already
+has paircars 3.0.7 plus the dev extra (pytest 8.3.3, black 24.4.2,
+Sphinx 8.1.3, ruff 0.16.9). Source checkout is `/opt/P-AIRCARS`.
+
+## 2026-10-02 — [cursor] Mac P-AIRCARS worker ceiling
+
+This Mac is an M5 Pro: 18 cores, 64 GB, 20-core Metal GPU. Colima
+`paircars` is running at 16 vCPU and 40 GiB. Colima `default` is running
+at 4 vCPU and 8 GiB. With both up, the compressor held about 19.5 GiB and
+swap was idle.
+
+Channel 127 (`1424757616`, job `20261002035203048`) finished with exit 0.
+The log recorded 12 CPUs and 31.27 GiB, which is 80% of that guest (the
+guest reports 39.09 GiB). WSClean ran `-gridder wgridder -j 12 -abs-mem
+31.27`. One Stokes I FITS was written. The primary-beam step reported 0
+corrected images.
+
+IDG's GPU modes are CUDA. The x86 guest cannot see Metal. The 20 GPU cores
+are idle for this pipeline. The virtual machine was not resized, and
+`default` was not stopped.
+
+`solar-burst-multiview` branch `cursor/paircars-mac-resources`:
+`scripts/paircars-mac/mac_resources.py` and `tune.sh`. Applied in the
+running container. A later worker that asks for 0.8 gets 15 vCPUs and
+35.09 GiB (1 vCPU and 4 GiB stay inside the guest for PostgreSQL and
+Prefect). `run-sample.sh` still requests 0.5 and 0.6. Read
+`docs/paircars-mac.md`, section "This Mac".
+
+Claude's 2 Oct entry on `claude/agent-log-entries` asks for a review of
+the umbrella PR and the STIX–MWA overlap PR, and for a check of
+`find_flares_in_mwa.py`. Not done in this session.
 
 ## 2026-10-01 — [cursor] End of day
 
