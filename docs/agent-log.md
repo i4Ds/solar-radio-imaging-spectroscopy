@@ -15,6 +15,77 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-10-09 — [claude] 2022-09-30 burst: 24 channels, 10-frame series, height, PFSS
+
+Science handover: docs/handover-2022-09-30-science-results.md. Progress against
+the plan: docs/progress-2026-10-09.md. Type III at 04:28:44 imaged with P-AIRCARS
+in 21 of 24 channels (129–233 MHz) and as ten 4 s frames at 148.5 MHz; height
+≈ 1.2 R☉ from centroids and from open PFSS field lines leaving the west edge of
+AR 13110. Prefect DB timeouts raised (60/120 s) after two runs aborted on 500
+errors. ASVO job 1109734 (0.25 s re-conversion of 1348547272) submitted. P-AIRCARS
+upstream branches prepared on the Mac; push to upstream disabled.
+
+## 2026-10-08 — [claude] P-AIRCARS on calculon works; overnight run
+
+solar-burst-multiview PR #3 (`claude/flare-20220930`), docs/calculon-paircars.md
+and docs/paircars-upstream.md. P-AIRCARS reinstalled in developer mode
+(git master `fa4aa91`, editable, env `paircars_env`), init on the login node
+(Prefect :4260, Postgres :5260 on calc-m-001), `sinfo` pass-through for the
+site wrapper, workers sized with `--cpu_frac/--mem_frac 0.05`.
+
+Four local patches (`~/paircars/P-AIRCARS`, branch `calculon-fixes`; Mac clone
+branches `upstream/slurm-fixes` and `upstream/no-polcal-fixes`, not pushed —
+André contacts the developers). Two are general Slurm bugs: Prefect config
+read from `~/.paircarspipe` (confirmed 8 Oct: clean path gives
+FileNotFoundError; our first install had only changed the symptom), and the
+CPU-accounting plugin missing on Slurm workers. Two only matter with
+`--no_polcal`.
+
+First working run (7 Oct, 1348547272 ch112, 3C444): self-calibrated 4 s
+images of the 04:28:44 type III, peak/rms 312 vs 70 with 3C444 only; source
+about 90″ SW of AR 13110, consistent with hyperdrive + wsclean.
+
+Overnight (started 8 Oct 01:52, driver ~/overnight/bin/overnight.sh on the
+login node, progress ~/overnight/PROGRESS.md, Slurm mails): P-AIRCARS on all
+24 channels (ch101–187) for 04:28:30–04:29:02 and quiet 04:31:24–04:31:40,
+wide-field images of 3C444 and the Sun for a GGSM position check (3C273 and
+Virgo A in the field), quiet-Sun flux check. Report: ~/overnight/REPORT.md.
+
+## 2026-10-07 — [claude] MWA + e-Callisto spectrogram, burst image at 04:28:44
+
+MWA dynamic spectrum 03:18–04:42 (17 obs, 100 shortest baselines,
+solarburst/dynspec.py) combined with e-Callisto ASSA and OOTY
+(STIX-MWA PR #4). From 1348547272 (04:27:34) the series uses ch101–187, so
+calibrated with 3C444. AOFlagger had flagged and zero-weighted 95–98 % of
+the burst steps; src/solarburst/reflag.py restores them. Burst at 143.4 MHz,
+04:28:42–46, beam 2.0′ × 1.3′, peak/rms 56.
+
+## 2026-10-06 — [claude] First MWA image of the 2022-09-30 M1.1 flare
+
+solar-burst-multiview, branch `claude/flare-20220930` (on top of
+`cursor/paircars-mac-resources`). Calculon job 259817: hyperdrive
+di-calibrate on 1348522216 ch113 (PKS0408-65, GGSM_updated, all 8 chanblocks
+converged), solutions-apply to 1348545200, wsclean of the 4 s step at the STIX
+peak (03:57:22–26). ASVO MSs are 4 s / 160 kHz, so 1 s images are not possible
+from them. No 150 MHz coarse channel; ch113 = 144.6 MHz.
+
+Result: one source, ~1.3 kJy/beam (not flux-calibrated), beam 1.9′×1.25′. In
+helioprojective it sits on AR 13110 (+215″, +95″), not on the M1.1 flare at
+the NE limb (−867″, +397″, HEK). Overlay on AIA 193/131 Å:
+`figures/flare20220930/1348545200_ch113_peak_hpc_aia.png`.
+
+Pitfall: `get_body("sun", ...).icrs` is barycentric and puts the Sun ~11° off;
+use GCRS RA/Dec. Tar listing/extraction ran on the login node; docs now say
+to use srun. Next: dynamic spectrum over the 296 s, images per channel.
+
+## 2026-10-05 — [claude] MWA archive inventory, first flare target
+
+Looked up all 2,546 obs from André's ASVO download listing in TAP
+(STIX-MWA/src/mwa_obs_lookup.py, untracked). 742 are G0002 Sun pointings,
+1,241 G0060 IPS, 444 non-solar. 24 M/X STIX flares fall in G0002 Sun obs
+(STIX-MWA/_results/my_mwa_obs/). First imaging target: 1348545200
+(2022-09-30 M1.1 peak 03:57:23 UTC), calibrator 1348522216 (PKS0408-65), on
+calculon. Handover: docs/handover-2022-09-30-flare-image.md.
 ## 2026-10-04 — [claude] STIX timing, e-Callisto bursts with MWA, first imaging target
 
 - STIX flare list times (data center and Hayes) are at Solar Orbiter, not
