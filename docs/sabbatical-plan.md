@@ -1,4 +1,4 @@
-# Sabbatical plan (1 October 2026)
+# Sabbatical plan (5 October 2026)
 
 **Theme:** agentic software aspects of solar radio indirect imaging and
 spectroscopy.
@@ -41,6 +41,9 @@ Items 21 and 22 are numbered after Season II so items 15–20 stay as they are.
 | 18 | AI burst classification, paper, Mexican stations | ecallisto_ng | 🔴 not started |
 | 19 | Compare e-Callisto and imagers; network calibration | ecallisto_ng + solar-burst-multiview | 🔴 not started |
 | 20 | SDR tests (Spain / Udaipur / Mexico) as a long-term replacement | — | 🔴 not started |
+| 23 | Align the FHNW tools with the other projects, e-Callisto first | [ecallisto_ng](https://github.com/i4Ds/ecallisto_ng), [FlareSense-v2](https://github.com/i4Ds/FlareSense-v2) | 🟡 started early (needed now, not only in January) |
+
+Item 23 belongs to Season II but starts now, in parallel with Season I.
 
 ## Open questions
 
@@ -66,6 +69,9 @@ Items 21 and 22 are numbered after Season II so items 15–20 stay as they are.
 9. **DI-cal vs P-AIRCARS for campaign data.** Hyperdrive on Pictor A for one
    2025 solar/cal pair did not produce a solar disk, and that calibrator
    obsid was the wrong grid. Self-cal (item 6) may be required before item 7.
+10. **Tool alignment (item 23).** Which other projects and tools are in
+    scope besides e-Callisto, and what does "aligned" mean: shared data
+    formats, shared station metadata, a common API, or merged code?
 
 ## Outcomes
 
