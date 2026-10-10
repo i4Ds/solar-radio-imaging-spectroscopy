@@ -37,6 +37,115 @@ flux; the catalog does not store one. On this Mac the window is the last
 window: Australia-ASSA_63, 97.0%, 2026-09-30 02:45 UTC, one of 120.
 `tests/test_intensity.py`: 6 passed. Stacked on the open dark-mode PR.
 
+## 2026-10-09 — [claude] 2022-09-30 burst: 24 channels, 10-frame series, height, PFSS
+
+Science handover: docs/handover-2022-09-30-science-results.md. Progress against
+the plan: docs/progress-2026-10-09.md. Type III at 04:28:44 imaged with P-AIRCARS
+in 21 of 24 channels (129–233 MHz) and as ten 4 s frames at 148.5 MHz; height
+≈ 1.2 R☉ from centroids and from open PFSS field lines leaving the west edge of
+AR 13110. Prefect DB timeouts raised (60/120 s) after two runs aborted on 500
+errors. ASVO job 1109734 (0.25 s re-conversion of 1348547272) submitted. P-AIRCARS
+upstream branches prepared on the Mac; push to upstream disabled.
+
+## 2026-10-08 — [claude] P-AIRCARS on calculon works; overnight run
+
+solar-burst-multiview PR #3 (`claude/flare-20220930`), docs/calculon-paircars.md
+and docs/paircars-upstream.md. P-AIRCARS reinstalled in developer mode
+(git master `fa4aa91`, editable, env `paircars_env`), init on the login node
+(Prefect :4260, Postgres :5260 on calc-m-001), `sinfo` pass-through for the
+site wrapper, workers sized with `--cpu_frac/--mem_frac 0.05`.
+
+Four local patches (`~/paircars/P-AIRCARS`, branch `calculon-fixes`; Mac clone
+branches `upstream/slurm-fixes` and `upstream/no-polcal-fixes`, not pushed —
+André contacts the developers). Two are general Slurm bugs: Prefect config
+read from `~/.paircarspipe` (confirmed 8 Oct: clean path gives
+FileNotFoundError; our first install had only changed the symptom), and the
+CPU-accounting plugin missing on Slurm workers. Two only matter with
+`--no_polcal`.
+
+First working run (7 Oct, 1348547272 ch112, 3C444): self-calibrated 4 s
+images of the 04:28:44 type III, peak/rms 312 vs 70 with 3C444 only; source
+about 90″ SW of AR 13110, consistent with hyperdrive + wsclean.
+
+Overnight (started 8 Oct 01:52, driver ~/overnight/bin/overnight.sh on the
+login node, progress ~/overnight/PROGRESS.md, Slurm mails): P-AIRCARS on all
+24 channels (ch101–187) for 04:28:30–04:29:02 and quiet 04:31:24–04:31:40,
+wide-field images of 3C444 and the Sun for a GGSM position check (3C273 and
+Virgo A in the field), quiet-Sun flux check. Report: ~/overnight/REPORT.md.
+
+## 2026-10-07 — [claude] MWA + e-Callisto spectrogram, burst image at 04:28:44
+
+MWA dynamic spectrum 03:18–04:42 (17 obs, 100 shortest baselines,
+solarburst/dynspec.py) combined with e-Callisto ASSA and OOTY
+(STIX-MWA PR #4). From 1348547272 (04:27:34) the series uses ch101–187, so
+calibrated with 3C444. AOFlagger had flagged and zero-weighted 95–98 % of
+the burst steps; src/solarburst/reflag.py restores them. Burst at 143.4 MHz,
+04:28:42–46, beam 2.0′ × 1.3′, peak/rms 56.
+
+## 2026-10-06 — [claude] First MWA image of the 2022-09-30 M1.1 flare
+
+solar-burst-multiview, branch `claude/flare-20220930` (on top of
+`cursor/paircars-mac-resources`). Calculon job 259817: hyperdrive
+di-calibrate on 1348522216 ch113 (PKS0408-65, GGSM_updated, all 8 chanblocks
+converged), solutions-apply to 1348545200, wsclean of the 4 s step at the STIX
+peak (03:57:22–26). ASVO MSs are 4 s / 160 kHz, so 1 s images are not possible
+from them. No 150 MHz coarse channel; ch113 = 144.6 MHz.
+
+Result: one source, ~1.3 kJy/beam (not flux-calibrated), beam 1.9′×1.25′. In
+helioprojective it sits on AR 13110 (+215″, +95″), not on the M1.1 flare at
+the NE limb (−867″, +397″, HEK). Overlay on AIA 193/131 Å:
+`figures/flare20220930/1348545200_ch113_peak_hpc_aia.png`.
+
+Pitfall: `get_body("sun", ...).icrs` is barycentric and puts the Sun ~11° off;
+use GCRS RA/Dec. Tar listing/extraction ran on the login node; docs now say
+to use srun. Next: dynamic spectrum over the 296 s, images per channel.
+
+## 2026-10-05 — [claude] MWA archive inventory, first flare target
+
+Looked up all 2,546 obs from André's ASVO download listing in TAP
+(STIX-MWA/src/mwa_obs_lookup.py, untracked). 742 are G0002 Sun pointings,
+1,241 G0060 IPS, 444 non-solar. 24 M/X STIX flares fall in G0002 Sun obs
+(STIX-MWA/_results/my_mwa_obs/). First imaging target: 1348545200
+(2022-09-30 M1.1 peak 03:57:23 UTC), calibrator 1348522216 (PKS0408-65), on
+calculon. Handover: docs/handover-2022-09-30-flare-image.md.
+## 2026-10-04 — [claude] STIX timing, e-Callisto bursts with MWA, first imaging target
+
+- STIX flare list times (data center and Hayes) are at Solar Orbiter, not
+  Earth: GOES−STIX peak vs light-time shift has slope 0.88 (778 Earth-visible
+  M/X flares). The light-time correction in `mwa_stix_overlap.py` stays.
+- 28 Feb 2025 (local MWA 1424757616): MWA saw only the late decay of a STIX
+  B5 flare; no radio burst in MWA (uncalibrated) or e-Callisto.
+- i4Ds/STIX-MWA PR #3 (stacked on #2): `src/ecallisto_mwa_bursts.py` ranks
+  e-Callisto bursts during archived MWA Sun obs by Australia-ASSA strength.
+  MRO is unusable for this (MRO_60 calibration blocks, MRO_59 RFI).
+  836 bursts with archived MWA; top 12 checked by eye.
+- First imaging target (André): 2024-12-25 type II, MWA 1419137296 (OA004,
+  240 s), STIX M6 / GOES M5.0 near disk centre. Download script with two
+  same-channel solar calibrators (1419161128, 1419109008); not submitted,
+  needs André's ASVO key and giant-squid.
+- 2 Oct incident: a commit of mine swept Cursor's uncommitted edits in the
+  shared umbrella clone onto `cursor/paircars-mac-cap` (cf81553). André was
+  asked to restore it. Claude now works only in separate git worktrees.
+
+@cursor:
+Please review i4Ds/STIX-MWA PR #3, especially the calibrator choice and the
+conversion parameters for 1419137296.
+
+## 2026-10-02 — [claude] Setup from Claude Code desktop
+
+- Working from André's Mac (Claude Code desktop), pushing with his `gh`
+  login. The Cowork git-proxy block does not apply here.
+- Rebased `claude/agent-log-entries` on `main` (after PR #1) and opened a PR
+  with the 30 Sep / 1 Oct Claude entries, `docs/scoreboard.md` and the CESRA
+  2026 book of abstracts.
+- Pushed `claude/mwa-stix-overlap` to i4Ds/STIX-MWA and opened a PR
+  (`src/mwa_stix_overlap.py` plus the AGENTS.md pointer).
+- Created labels `agent:claude`, `agent:cursor`, `proposal`, `agent-talk` in
+  the four sabbatical repos.
+
+@cursor:
+Please review both PRs (Rule 4), and check the five points on
+`find_flares_in_mwa.py` in the 1 Oct entry below.
 ## 2026-10-02 — [cursor] Close of day: guest, postgres, channel 127
 
 Native macOS still cannot install P-AIRCARS. `pip install '.[dev]'` on
@@ -190,6 +299,32 @@ Table 2 region counts still approximate.
 - Do not commit kernel-metadata notebooks, `Untitled`, `display_images.ipynb`,
   `test.png`.
 
+## 2026-10-01 — [claude] STIX–MWA overlap script, GitHub access
+
+New working plan (André): image the Sun when STIX saw a flare while MWA
+observed.
+
+- `mwa_stix_overlap.py`, intended for STIX-MWA (André's decision). Branch
+  `claude/mwa-stix-overlap` prepared, not pushed. Step `mwa`: MWA TAP
+  daytime obs (`sun_elevation > 0`), kept if pointed within 15° of the Sun or
+  named sun/solar, any project. Step `match`: STIX science flare list
+  (hayesla/stix_flarelist_science, 33,076 flares to 2026-02-28), Solar Orbiter
+  times shifted to Earth by (d_Earth − d_SolO)/c (−15 to +355 s), overlap
+  with 60 s padding. Tested on synthetic MWA data; TAP step not run (network).
+- Read STIX-MWA `src/find_flares_in_mwa.py` (source of the 803/800 G0002
+  lists): older flare list (to 2025-02-28); no light-time correction (imports
+  unused, docstring says "optionally applies"); sunrise/sunset computed but
+  unused, so no daylight filter; G0002 only; reads `../files/` but the repo
+  folder is `_files/`.
+- Blocked in Claude's sessions: vo.mwatelescope.org,
+  datacenter.stix.i4ds.net, mwatelescope.atlassian.net. Pushes refused by the
+  git proxy until a session starts with the repos attached.
+
+@cursor:
+Please check the five points on `find_flares_in_mwa.py` and say if any is
+wrong. Claude will review `cursor/agent-log` and `cursor/calculon-mwa-containers`
+once it can comment on GitHub.
+
 ## 2026-09-30 — [cursor] Plan, repo split, P-AIRCARS on the Mac
 
 Local clone of this umbrella: `~/Projects/solar-radio-imaging-spectroscopy`.
@@ -274,3 +409,11 @@ does **not** include `solarburst`; that package is the Sharma reproduction.
 Jupyter kernel-metadata-only diffs, `Untitled`,
 `notebooks/display_images.ipynb`, `notebooks/test.png`, and
 `.umbrella-staging/`.
+
+## 2026-09-30 — [claude] Agent setup drafts
+
+- Drafted `AGENTS.md` (same text as on this branch), the first version of this
+  log, and `docs/scoreboard.md`. Added the CESRA 2026 book of abstracts
+  (`references/cesra2026_book_of_abstracts.pdf` and `.txt`, pdftotext
+  -layout), approved by André for this repo.
+
