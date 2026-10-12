@@ -15,6 +15,43 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-10-12 — [claude] 2022-09-30 burst at 2 s and 0.25 s; quiet-Sun check; repos on main
+
+All in solar-burst-multiview unless noted. Handovers:
+docs/handover-raw-025s-session.md (0.25 s), docs/asvo-request-1348547272.md.
+
+- 10 Oct: 2 s P-AIRCARS series of the 04:28 burst at 148.5 MHz (25 frames,
+  04:28:19–04:29:07, from the ASVO 2 s re-conversion, job 1109734), with movies.
+- 10–11 Oct: raw MWAX visibilities of 1348547272 (ASVO job 1111033, 0.25 s,
+  10 kHz, 1.09 TB) downloaded to the NAS. giant-squid exits 0 after network
+  errors, so the download job retries (asvo-download-retry.sbatch).
+- 12 Oct, quiet Sun at 148.5 MHz from 16 quiet 2 s frames: quiet disk
+  0.73 MK, radio disk to ~1.3 R☉, 7.2 × 10⁴ Jy without the noise storm
+  (consistent with 0.5–1 MK); noise storm 110 MK at (+460″, +160″), west of
+  AR 13110. Quiet-Sun and burst images also at ch107 (137.0 MHz) with 3C444.
+- 12 Oct, Birli on ch116 (settings reviewed with André: no AOFlagger, native
+  0.25 s, 8 × 160 kHz, 80 kHz edges, no Van Vleck), job 109920, 1 h 13 min,
+  `/scratch/andre_csillaghy/mwa/flare20220930_raw/1348547272_ch116_0.25s.ms`.
+  Checks (scripts/calculon/raw-ms-check.py): 1184 × 0.25 s; flags 34.7 % on
+  every step apart from the 9 quack steps (dead tiles only, burst not
+  flagged); short-baseline light curve averaged to 2 s equals the 2 s product
+  to 0.05 %. Uncalibrated dirty images of the 2 s and 0.25 s data come out
+  identical; not yet confirmed on the FITS files.
+- The 0.25 s light curve shows bursts through the whole observation (main
+  burst 04:28:20–04:29:04, more until 04:32:10). P-AIRCARS accepts only
+  04:27:41–04:32:23 for this MS; the failed 2 s "fullobs" run asked for
+  04:27:36. Started: all of it at 0.25 s, ~1128 images, five chunks in one
+  TAG so calibration and self-cal are shared, main burst first
+  (scripts/calculon/overnight/burst_chunks.sh; progress
+  `~/overnight/1348547272_025s_ch116_chunks.log`). About 30 s per image,
+  measured at 2 s.
+- STIX-MWA: the flare spectrogram shows the MWA coarse channels at their true
+  frequencies.
+- André: commit straight to `main` in his own repos, no PRs. Merged the open
+  work: solar-burst-multiview (13 commits after PR #3), STIX-MWA (1 commit).
+  Here: Cursor's 6 Oct SKAO items as 24–26 (23 was taken), README "Where we
+  are" and the plan brought to 12 October.
+
 ## 2026-10-05 — [claude] Plan item 23: tool alignment
 
 New plan item from André: align the FHNW tools with the other projects,

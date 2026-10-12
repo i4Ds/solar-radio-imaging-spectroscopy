@@ -1,4 +1,4 @@
-# Sabbatical plan (6 October 2026)
+# Sabbatical plan (12 October 2026)
 
 **Theme:** agentic software aspects of solar radio indirect imaging and
 spectroscopy.
@@ -16,8 +16,8 @@ engineering in Switzerland.
 | 2 | MWA stack on the laptop, calculon, and CSCS (non-solar demo) | solar-burst-multiview `docs/calculon-mwa.md` | 🟢 done |
 | 3 | Understand MWA calibration | solar-burst-multiview | 🟡 in progress |
 | 4 | Reproduce Sharma et al. 2022 from existing MWA packages | solar-burst-multiview | 🟢 done |
-| 5 | Solar extension of the MWA stack, and calibration / self-cal (MWA and SKA-Low teams) | solar-burst-multiview | 🟡 in progress |
-| 6 | P-AIRCARS for SKA-Low | P-AIRCARS | 🟡 in progress (Mac container runs; 2 Oct ch127 4 s image written, self-cal solutions not applied; calculon CPU install started) |
+| 5 | Solar extension of the MWA stack, and calibration / self-cal (MWA and SKA-Low teams) | solar-burst-multiview | 🟡 in progress (12 Oct: first quiet-Sun check of the brightness scale, 0.73 MK quiet disk at 148.5 MHz) |
+| 6 | P-AIRCARS for SKA-Low | P-AIRCARS | 🟡 in progress (runs on calculon since 8 Oct with 4 local patches, not upstream; self-calibrated images of the 2022-09-30 burst at 4 s and 2 s; 0.25 s series of the whole flare running since 12 Oct. Mac container runs) |
 | 7 | 2024 campaign: image all events in the MWA solar archive | solar-burst-multiview | 🔴 not started |
 | 8 | Design a system for seamless solar radio images (MCP later) | umbrella + solar-burst-multiview | 🔴 not started |
 | 9 | SRCNet solar Detailed Science Cases | same work as item 25 | 🔴 not started |
@@ -68,7 +68,7 @@ repo or in `solar-burst-multiview`.
 
 - **SKAO Confluence / SRCNet Science Delivery** — operational Detailed Science
   Cases. Solar is named as an SRCNet science domain in the Jan 2025 SRCNet
-  update. Exact page URL: open question 10.
+  update. Exact page URL: open question 11.
 - **Public science framing:** SKAO SHI working-group chapter for AASKA II,
   [arXiv:2607.17881](https://arxiv.org/abs/2607.17881). Standard SDP/SRCNet
   archive products do **not** cover solar flux/pol calibration, ≲50 ms burst
