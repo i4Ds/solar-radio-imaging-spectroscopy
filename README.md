@@ -19,12 +19,13 @@ can help.
 
 ---
 
-## Highlight 1 — The same burst four times per second
+## Highlight 1 — Four images per second: the burst flickers (30 September 2022)
 
 ![The radio burst at 148.5 MHz in quarter-second steps over an ultraviolet image of the Sun](docs/highlights/burst025s_ch116_aia.gif)
 
-*The burst of Highlight 2 below, now in steps of a quarter of a second, the finest
-time resolution of the MWA: 224 images over 56 seconds, shown at half speed.
+*A radio burst seen by the MWA at 148.5 MHz (the one of Highlight 2 below), in
+steps of a quarter of a second, the finest time resolution of the MWA: 224
+images over 56 seconds, shown at half speed.
 Cyan contours: the radio burst at 148.5 MHz; background: the Sun in extreme
 ultraviolet (SDO). Bottom: brightness of the burst over time; the red line
 marks the frame shown.*
@@ -61,14 +62,15 @@ well.)*
 
 ## Highlight 3 — How high above the Sun? Following the magnetic field
 
-![Magnetic field lines from the active region and the radio source positions](docs/highlights/pfss_ar13110.png)
+![Magnetic field lines from the active region and the radio burst in quarter-second steps](docs/highlights/burst025s_ch116_pfss.gif)
 
 *Lines: a model of the Sun's magnetic field, computed from a magnetic map of the
 solar surface taken 25 minutes earlier. Green lines are "open": they reach out
 into interplanetary space, so fast electrons can escape along them. White lines
-are closed loops. Dots: where the radio burst is seen at each frequency. The
-radio sources sit right on the bundle of open field lines leaving the active
-region.*
+are closed loops. Cyan contours: the radio burst at 148.5 MHz every quarter of
+a second, as in Highlight 1 (half speed). Bottom: brightness of the burst over
+time. The burst sits right on the bundle of open field lines leaving the active
+region, and stays there through all its flashes.*
 
 ![Radio source position versus frequency](docs/highlights/burst_height_vs_freq.png)
 
