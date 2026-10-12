@@ -41,7 +41,25 @@ visible in 21 of them, always at the same place, just west of the active
 region. (The three noisy panels at the top end of the band did not calibrate
 well.)*
 
-## Highlight 2 — How high above the Sun? Following the magnetic field
+## Highlight 2 — The same burst four times per second
+
+![The radio burst at 148.5 MHz in quarter-second steps over an ultraviolet image of the Sun](docs/highlights/burst025s_ch116_aia.gif)
+
+*The burst of Highlight 1, now in steps of a quarter of a second, the finest
+time resolution of the MWA: 224 images over 56 seconds, shown at half speed.
+Cyan contours: the radio burst at 148.5 MHz; background: the Sun in extreme
+ultraviolet (SDO). Bottom: brightness of the burst over time; the red line
+marks the frame shown.*
+
+At 4-second steps the burst looked like one smooth rise and fall. Every quarter
+of a second it turns out to be a rapid series of flashes, each lasting a second or
+less, on top of the slower rise and decay. The source does not move: all
+flashes come from the same place, just west of the active region, within a
+fraction of the instrument's resolution. For this we downloaded the raw
+telescope data (1.1 terabytes for five minutes of observation) and processed it
+ourselves; the images of the rest of the flare are being made now.
+
+## Highlight 3 — How high above the Sun? Following the magnetic field
 
 ![Magnetic field lines from the active region and the radio source positions](docs/highlights/pfss_ar13110.png)
 
@@ -64,7 +82,7 @@ surface** (about eleven times the diameter of the Earth). One method uses the
 radio frequency and models of how the gas density falls with height; the other
 uses where the open magnetic field lines cross the observed positions.
 
-## Highlight 3 — Three instruments, one picture: radio, X-rays and ultraviolet
+## Highlight 4 — Three instruments, one picture: radio, X-rays and ultraviolet
 
 ![MWA, STIX and AIA images of the same morning](docs/highlights/flare20220930_mwa_stix_aia.png)
 
@@ -80,7 +98,7 @@ image to our point of view, the X-ray source lands within 15 arcseconds
 Interestingly, this large flare was quiet in radio at these frequencies; the
 radio activity came from the other, smaller active region near the centre.
 
-## Highlight 4 — Combining a large radio telescope with a citizen-science network
+## Highlight 5 — Combining a large radio telescope with a citizen-science network
 
 ![Radio spectrum over one hour: MWA and e-Callisto](docs/highlights/flare_20220930_spectrogram_mwa.png)
 
@@ -95,7 +113,7 @@ MWA observes only at certain times, but with far higher sensitivity and with
 images. Put together, they show which events the small stations catch and
 which only the large telescope sees.
 
-## Highlight 5 — Better images with self-calibration (P-AIRCARS on our cluster)
+## Highlight 6 — Better images with self-calibration (P-AIRCARS on our cluster)
 
 ![Three ways of calibrating the same radio image](docs/highlights/paircars_vs_hyperdrive_042844.png)
 
@@ -110,7 +128,7 @@ Getting P-AIRCARS to run on our cluster uncovered several software problems in
 the pipeline's cluster mode, which we fixed and documented; we plan to offer
 the fixes to its developers.
 
-## Highlight 6 — Reproducing a published study
+## Highlight 7 — Reproducing a published study
 
 ![Quiet-Sun radio images at eight frequencies](docs/highlights/sharma2022_fig3.png)
 
@@ -143,11 +161,11 @@ processing tools.
   archive (the 30 September 2022 event above); combining MWA with e-Callisto,
   STIX and SDO.
 - **Since 10 October:** the burst of Highlight 1 imaged every 2 seconds
-  instead of every 4. The raw data at the MWA's finest time resolution (a
-  quarter of a second, 1.1 TB) downloaded and converted for 148.5 MHz; it
-  agrees with the 2-second data to 0.05 %, and no burst data is lost to
-  flagging. Images of the whole flare (about 1100 frames, a quarter of a
-  second apart) are being made on the cluster. A first check of the
+  instead of every 4, then every quarter of a second, the MWA's finest time
+  resolution (Highlight 2). For this the raw data (1.1 TB) was downloaded and
+  converted for 148.5 MHz; it agrees with the 2-second data to 0.05 %, and no
+  burst data is lost to flagging. Images of the whole flare (about 1100
+  frames) are being made on the cluster; the main burst is done. A first check of the
   brightness scale on the quiet Sun gives 0.7 million degrees for the quiet
   disk, the expected order of magnitude.
 - **Next:** the quarter-second movie of the whole flare; polarisation, which
