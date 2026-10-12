@@ -5,6 +5,8 @@ AI-assisted ("agentic") software can help us make and understand radio images
 of the Sun.** This page shows the main results so far. The code lives in the
 repositories listed at the end.
 
+**Latest status:** [Where we are](#where-we-are).
+
 **Why radio images of the Sun?** When the Sun flares, it accelerates electrons
 to high speeds. Some of them race out through the solar atmosphere along
 magnetic field lines and make the gas there emit radio waves. The radio
@@ -126,6 +128,8 @@ original data products. This is how we learned the instrument, its data and its
 processing tools.
 
 ---
+
+<a id="where-we-are"></a>
 
 ## Where we are (12 October 2026)
 
