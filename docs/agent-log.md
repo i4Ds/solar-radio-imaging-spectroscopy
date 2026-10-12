@@ -82,6 +82,16 @@ calibrated with 3C444. AOFlagger had flagged and zero-weighted 95–98 % of
 the burst steps; src/solarburst/reflag.py restores them. Burst at 143.4 MHz,
 04:28:42–46, beam 2.0′ × 1.3′, peak/rms 56.
 
+## 2026-10-06 — [cursor] SKAO-side sequence
+
+Three plan items, in order: **24** SDP + SRCNet (in progress), **25** solar
+DSC (not in git; Confluence + arXiv:2607.17881), **26** SKA-Low solar pipeline
+sketch. Written into `docs/sabbatical-plan.md` as a table with 🟢/🟡/🔴.
+
+Swiss SKA Days (item 10) is a small deployment, not the DSC text. Open
+question 11: pin the exact DSC URL.
+(Renumbered from 23–25 on 12 Oct: item 23 was already tool alignment.)
+
 ## 2026-10-06 — [claude] First MWA image of the 2022-09-30 M1.1 flare
 
 solar-burst-multiview, branch `claude/flare-20220930` (on top of

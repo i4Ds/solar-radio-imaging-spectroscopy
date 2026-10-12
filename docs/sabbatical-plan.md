@@ -1,4 +1,4 @@
-# Sabbatical plan (5 October 2026)
+# Sabbatical plan (6 October 2026)
 
 **Theme:** agentic software aspects of solar radio indirect imaging and
 spectroscopy.
@@ -20,16 +20,74 @@ engineering in Switzerland.
 | 6 | P-AIRCARS for SKA-Low | P-AIRCARS | 🟡 in progress (Mac container runs; 2 Oct ch127 4 s image written, self-cal solutions not applied; calculon CPU install started) |
 | 7 | 2024 campaign: image all events in the MWA solar archive | solar-burst-multiview | 🔴 not started |
 | 8 | Design a system for seamless solar radio images (MCP later) | umbrella + solar-burst-multiview | 🔴 not started |
-| 9 | SRCNet solar Detailed Science Cases | — | 🔴 not started |
-| 10 | Work with the SRCNet small deployment shown at Swiss SKA Days (August 2026) | SRCNet | 🔴 not started |
+| 9 | SRCNet solar Detailed Science Cases | same work as item 25 | 🔴 not started |
+| 10 | Work with the SRCNet small deployment shown at Swiss SKA Days (August 2026) | SRCNet (hands-on for item 24) | 🔴 not started |
 | 11 | Instrument-agnostic parts (SKA-MID / MeerKAT / ALMA / eOVSA) | — | 🔴 not started |
 | 12 | KARABO | [Karabo-Pipeline](https://github.com/i4Ds/Karabo-Pipeline) | 🔴 not started |
-| 13 | Scalability: CSCS, SKA-SDP, SKA software stack, data-flow hardware, calibration on new hardware | Karabo-Pipeline, CSCS | 🔴 not started |
+| 13 | Scalability: CSCS, SKA-SDP, SKA software stack, data-flow hardware, calibration on new hardware | Karabo-Pipeline, CSCS (after item 24) | 🔴 not started |
 | 14 | Science goals with CESRA | [docs/science-direction.md](science-direction.md) | 🟡 in progress (draft v3) |
 | 21 | A P-AIRCARS version that runs on a Mac | P-AIRCARS | 🔴 not started (native macOS; `casatools==6.6.0.20` has no macOS wheel. Today it runs in an Ubuntu 22.04 x86_64 container) |
 | 22 | A P-AIRCARS version optimised for Mac GPUs | P-AIRCARS | 🔴 not started (imaging is CPU WSClean in that guest; the Metal GPU is unused) |
+| 24 | Understand SDP and SRCNet | SKAO Confluence; items 10 and 12 | 🟡 in progress |
+| 25 | Understand the solar DSC | not in git; Confluence + [arXiv:2607.17881](https://arxiv.org/abs/2607.17881) | 🔴 not started |
+| 26 | Sketch a SKA-Low solar pipeline | this umbrella `docs/`; precursor item 6 | 🔴 not started |
 
 Items 21 and 22 are numbered after Season II so items 15–20 stay as they are.
+
+## SKAO side (now — items 24–26)
+
+Do these three in order. They are the SKAO block of Season I.
+
+| # | Item | Where | Status |
+|---|------|--------|--------|
+| 24 | Understand SDP and SRCNet | SKAO Confluence; Swiss SKA Days deployment (item 10); KARABO (item 12) | 🟡 in progress |
+| 25 | Understand the solar DSC | **Not in git.** Confluence / SRCNet Science Delivery (URL still to pin). Public framing: [arXiv:2607.17881](https://arxiv.org/abs/2607.17881) | 🔴 not started |
+| 26 | Sketch a SKA-Low solar pipeline | this umbrella `docs/` until it needs code; precursor P-AIRCARS (item 6) | 🔴 not started |
+
+### 24 — SDP and SRCNet
+
+**SDP** (Science Data Processor) is the telescope-side pipeline: visibilities
+in, Observatory Data Products out.
+
+**SRCNet** is the regional network: archive, reprocessing, and the science
+platform. It is not the correlator and it is not SDP.
+
+Hands-on: the small SRCNet deployment shown at Swiss SKA Days (August 2026),
+item 10. Swiss software context: KARABO, item 12. Item 13 (CSCS, SKA software
+stack, hardware) is what comes after this understanding, not instead of it.
+
+Read: [SRCNet Documents](https://confluence.skatelescope.org/display/SNC/SRCNet+Documents)
+(SKAO Confluence, often restricted); [SRCNet update (Jan 2025)](https://www.skao.int/sites/default/files/documents/SKA%20SRCNet%20Update%202025Jan.pdf).
+v0.1 science test cases are generic (imaging, catalogues), not solar:
+[uksrc-developers/science-testcases-srcnetv01](https://github.com/uksrc-developers/science-testcases-srcnetv01).
+
+### 25 — Solar DSC
+
+Item 9 in the table above is the same work. There is still no file in this
+repo or in `solar-burst-multiview`.
+
+- **SKAO Confluence / SRCNet Science Delivery** — operational Detailed Science
+  Cases. Solar is named as an SRCNet science domain in the Jan 2025 SRCNet
+  update. Exact page URL: open question 10.
+- **Public science framing:** SKAO SHI working-group chapter for AASKA II,
+  [arXiv:2607.17881](https://arxiv.org/abs/2607.17881). Standard SDP/SRCNet
+  archive products do **not** cover solar flux/pol calibration, ≲50 ms burst
+  imaging, or near-real-time space weather. A low-latency SHI layer *upstream
+  of SRCNet* is likely needed.
+- Item 10 is a **deployment**, not the DSC text.
+- Item 14 (CESRA) is the physics. The DSC is the SRCNet/SKAO engineering case.
+
+### 26 — SKA-Low solar pipeline (sketch, one page)
+
+After 24 and 25. Data flow, not a new repo yet:
+
+1. SKA-Low visibilities → SDP (standard cal/image as far as it goes).
+2. Solar-specific layer (self-cal, high cadence, Stokes): precursor is
+   P-AIRCARS on MWA, item 6.
+3. Products into SRCNet so the solar DSC (item 25) can be run there.
+
+Do not fold this into `solar-burst-multiview`. That repo stays MWA. Put the
+sketch in this umbrella under `docs/` until it needs code.
 
 ## Season II — e-Callisto (January–March, Mexico)
 
@@ -72,6 +130,9 @@ Item 23 belongs to Season II but starts now, in parallel with Season I.
 10. **Tool alignment (item 23).** Which other projects and tools are in
     scope besides e-Callisto, and what does "aligned" mean: shared data
     formats, shared station metadata, a common API, or merged code?
+11. **Where the solar DSC document is.** Item 25 (and 9) have no file in git.
+    Pin the Confluence (or other) URL for the SRCNet/SKAO solar Detailed
+    Science Case.
 
 ## Outcomes
 

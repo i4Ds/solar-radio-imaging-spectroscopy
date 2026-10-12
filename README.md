@@ -143,6 +143,10 @@ processing tools.
   tells us more about how the radio waves are produced; checking the absolute
   positions and brightness scale; more events from the archive.
 
+**SKAO side (plan items 24–26).** First the SKA Science Data Processor (SDP) and
+the SKA Regional Centre Network (SRCNet), then the solar Detailed Science Case,
+then a sketch of a SKA-Low solar pipeline.
+
 **Season II — e-Callisto (January–March, Mexico)** has not started yet.
 
 The detailed plan is in [docs/sabbatical-plan.md](docs/sabbatical-plan.md), the
