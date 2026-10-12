@@ -127,7 +127,7 @@ processing tools.
 
 ---
 
-## Where we are (10 October 2026)
+## Where we are (12 October 2026)
 
 **Season I — imaging (October–December).**
 
@@ -138,10 +138,17 @@ processing tools.
   P-AIRCARS, now running on our cluster; the first events from our own MWA
   archive (the 30 September 2022 event above); combining MWA with e-Callisto,
   STIX and SDO.
-- **Next:** images at the MWA's finest time resolution (a quarter of a second;
-  the data have been requested from the MWA archive); polarisation, which
+- **Since 10 October:** the burst of Highlight 1 imaged every 2 seconds
+  instead of every 4. The raw data at the MWA's finest time resolution (a
+  quarter of a second, 1.1 TB) downloaded and converted for 148.5 MHz; it
+  agrees with the 2-second data to 0.05 %, and no burst data is lost to
+  flagging. Images of the whole flare (about 1100 frames, a quarter of a
+  second apart) are being made on the cluster. A first check of the
+  brightness scale on the quiet Sun gives 0.7 million degrees for the quiet
+  disk, the expected order of magnitude.
+- **Next:** the quarter-second movie of the whole flare; polarisation, which
   tells us more about how the radio waves are produced; checking the absolute
-  positions and brightness scale; more events from the archive.
+  positions; more events from the archive.
 
 **SKAO side (plan items 24–26).** First the SKA Science Data Processor (SDP) and
 the SKA Regional Centre Network (SRCNet), then the solar Detailed Science Case,
