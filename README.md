@@ -19,7 +19,25 @@ can help.
 
 ---
 
-## Highlight 1 — Watching a solar radio burst take off (30 September 2022)
+## Highlight 1 — The same burst four times per second
+
+![The radio burst at 148.5 MHz in quarter-second steps over an ultraviolet image of the Sun](docs/highlights/burst025s_ch116_aia.gif)
+
+*The burst of Highlight 2 below, now in steps of a quarter of a second, the finest
+time resolution of the MWA: 224 images over 56 seconds, shown at half speed.
+Cyan contours: the radio burst at 148.5 MHz; background: the Sun in extreme
+ultraviolet (SDO). Bottom: brightness of the burst over time; the red line
+marks the frame shown.*
+
+At 4-second steps the burst looked like one smooth rise and fall. Every quarter
+of a second it turns out to be a rapid series of flashes, each lasting a second or
+less, on top of the slower rise and decay. The source does not move: all
+flashes come from the same place, just west of the active region, within a
+fraction of the instrument's resolution. For this we downloaded the raw
+telescope data (1.1 terabytes for five minutes of observation) and processed it
+ourselves; the images of the rest of the flare are being made now.
+
+## Highlight 2 — Watching a solar radio burst take off (30 September 2022)
 
 ![A radio burst at 148.5 MHz over an ultraviolet image of the Sun](docs/highlights/burst10_ch116_aia.gif)
 
@@ -40,24 +58,6 @@ from the archived data to calibrated images.
 visible in 21 of them, always at the same place, just west of the active
 region. (The three noisy panels at the top end of the band did not calibrate
 well.)*
-
-## Highlight 2 — The same burst four times per second
-
-![The radio burst at 148.5 MHz in quarter-second steps over an ultraviolet image of the Sun](docs/highlights/burst025s_ch116_aia.gif)
-
-*The burst of Highlight 1, now in steps of a quarter of a second, the finest
-time resolution of the MWA: 224 images over 56 seconds, shown at half speed.
-Cyan contours: the radio burst at 148.5 MHz; background: the Sun in extreme
-ultraviolet (SDO). Bottom: brightness of the burst over time; the red line
-marks the frame shown.*
-
-At 4-second steps the burst looked like one smooth rise and fall. Every quarter
-of a second it turns out to be a rapid series of flashes, each lasting a second or
-less, on top of the slower rise and decay. The source does not move: all
-flashes come from the same place, just west of the active region, within a
-fraction of the instrument's resolution. For this we downloaded the raw
-telescope data (1.1 terabytes for five minutes of observation) and processed it
-ourselves; the images of the rest of the flare are being made now.
 
 ## Highlight 3 — How high above the Sun? Following the magnetic field
 
@@ -82,21 +82,20 @@ surface** (about eleven times the diameter of the Earth). One method uses the
 radio frequency and models of how the gas density falls with height; the other
 uses where the open magnetic field lines cross the observed positions.
 
-## Highlight 4 — Three instruments, one picture: radio, X-rays and ultraviolet
+## Highlight 4 — Better images with self-calibration (P-AIRCARS on our cluster)
 
-![MWA, STIX and AIA images of the same morning](docs/highlights/flare20220930_mwa_stix_aia.png)
+![Three ways of calibrating the same radio image](docs/highlights/paircars_vs_hyperdrive_042844.png)
 
-*Top: the whole Sun in radio (MWA, left) and ultraviolet (SDO/AIA). Bottom: zoom
-on the large flare of that morning at the north-east edge of the Sun, seen in
-X-rays by STIX on the European Solar Orbiter spacecraft (magenta contours).*
+*The same 4-second radio image produced three ways, on an ultraviolet image of
+the active region. Left: standard calibration on a reference radio source.
+Middle and right: with P-AIRCARS, a pipeline built specifically for solar MWA
+data, without and with self-calibration. Self-calibration refines the
+calibration using the Sun itself, which makes the image about 4.5 times
+cleaner. All three agree on where the burst is.*
 
-A larger flare (class M1.1) happened the same morning at the edge of the Sun.
-Solar Orbiter was almost exactly behind the Sun as seen from Earth, so its
-X-ray telescope STIX saw the flare from the other side. After converting its
-image to our point of view, the X-ray source lands within 15 arcseconds
-(about 1.5 % of the Sun's radius) of where the flare is seen in ultraviolet.
-Interestingly, this large flare was quiet in radio at these frequencies; the
-radio activity came from the other, smaller active region near the centre.
+Getting P-AIRCARS to run on our cluster uncovered several software problems in
+the pipeline's cluster mode, which we fixed and documented; we plan to offer
+the fixes to its developers.
 
 ## Highlight 5 — Combining a large radio telescope with a citizen-science network
 
@@ -113,37 +112,7 @@ MWA observes only at certain times, but with far higher sensitivity and with
 images. Put together, they show which events the small stations catch and
 which only the large telescope sees.
 
-## Highlight 6 — Better images with self-calibration (P-AIRCARS on our cluster)
-
-![Three ways of calibrating the same radio image](docs/highlights/paircars_vs_hyperdrive_042844.png)
-
-*The same 4-second radio image produced three ways, on an ultraviolet image of
-the active region. Left: standard calibration on a reference radio source.
-Middle and right: with P-AIRCARS, a pipeline built specifically for solar MWA
-data, without and with self-calibration. Self-calibration refines the
-calibration using the Sun itself, which makes the image about 4.5 times
-cleaner. All three agree on where the burst is.*
-
-Getting P-AIRCARS to run on our cluster uncovered several software problems in
-the pipeline's cluster mode, which we fixed and documented; we plan to offer
-the fixes to its developers.
-
-## Highlight 7 — Reproducing a published study
-
-![Quiet-Sun radio images at eight frequencies](docs/highlights/sharma2022_fig3.png)
-
-*The radio Sun at eight frequencies between 108 and 240 MHz, rebuilt from the
-data of Sharma et al. (2022, Astrophysical Journal 937, 99). Colours show the
-radio brightness temperature in millions of kelvin.*
-
-![Radio and ultraviolet overlay from the reproduction](docs/highlights/sharma2022_fig9.png)
-
-*Radio emission at 240 MHz (colours) over the ultraviolet Sun, with the regions
-studied in the paper (circles).*
-
-As a first step we rebuilt the figures of a published MWA study from its
-original data products. This is how we learned the instrument, its data and its
-processing tools.
+Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
 
 ---
 
@@ -160,9 +129,9 @@ processing tools.
   P-AIRCARS, now running on our cluster; the first events from our own MWA
   archive (the 30 September 2022 event above); combining MWA with e-Callisto,
   STIX and SDO.
-- **Since 10 October:** the burst of Highlight 1 imaged every 2 seconds
+- **Since 10 October:** the burst of Highlight 2 imaged every 2 seconds
   instead of every 4, then every quarter of a second, the MWA's finest time
-  resolution (Highlight 2). For this the raw data (1.1 TB) was downloaded and
+  resolution (Highlight 1). For this the raw data (1.1 TB) was downloaded and
   converted for 148.5 MHz; it agrees with the 2-second data to 0.05 %, and no
   burst data is lost to flagging. Images of the whole flare (about 1100
   frames) are being made on the cluster; the main burst is done. A first check of the
