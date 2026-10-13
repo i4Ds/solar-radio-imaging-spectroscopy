@@ -1,4 +1,4 @@
-# Sabbatical plan (12 October 2026)
+# Sabbatical plan (13 October 2026)
 
 **Theme:** agentic software aspects of solar radio indirect imaging and
 spectroscopy.
@@ -20,7 +20,7 @@ engineering in Switzerland.
 | 6 | P-AIRCARS for MWA | P-AIRCARS | 🟡 in progress (runs on calculon since 8 Oct with 4 local patches, not upstream; self-calibrated images of the 2022-09-30 burst at 4 s and 2 s; 0.25 s series of the whole flare running since 12 Oct. Mac container runs) |
 | 7 | 2024 campaign: image all events in the MWA solar archive | solar-burst-multiview | 🔴 not started |
 | 8 | Design a system for seamless solar radio images (MCP later) | umbrella + solar-burst-multiview | 🔴 not started |
-| 9 | SRCNet solar Detailed Science Cases | same work as item 25 | 🔴 not started |
+| 9 | SRCNet solar Detailed Science Cases | same work as item 25 | 🟡 in progress (DSC-053, see item 25) |
 | 10 | Work with the SRCNet small deployment shown at Swiss SKA Days (August 2026) | SRCNet (hands-on for item 24) | 🔴 not started |
 | 11 | Instrument-agnostic parts (SKA-MID / MeerKAT / ALMA / eOVSA) | — | 🔴 not started |
 | 12 | KARABO | [Karabo-Pipeline](https://github.com/i4Ds/Karabo-Pipeline) | 🔴 not started |
@@ -29,7 +29,7 @@ engineering in Switzerland.
 | 21 | A P-AIRCARS version that runs on a Mac | P-AIRCARS | 🔴 not started (native macOS; `casatools==6.6.0.20` has no macOS wheel. Today it runs in an Ubuntu 22.04 x86_64 container) |
 | 22 | A P-AIRCARS version optimised for Mac GPUs | P-AIRCARS | 🔴 not started (imaging is CPU WSClean in that guest; the Metal GPU is unused) |
 | 24 | Understand SDP and SRCNet | SKAO Confluence; items 10 and 12 | 🟡 in progress |
-| 25 | Understand the solar DSC | not in git; Confluence + [arXiv:2607.17881](https://arxiv.org/abs/2607.17881) | 🔴 not started |
+| 25 | Understand the solar DSC | [ska-src-dsc-053-solar-dynaspec](https://gitlab.com/ska-telescope/src/sd/workflows/ska-src-dsc-053-solar-dynaspec) (SKA GitLab, branch `dev`); Confluence + [arXiv:2607.17881](https://arxiv.org/abs/2607.17881) | 🟡 in progress (13 Oct: DSC-053 runs end to end on an MWA picket-fence scan after four local fixes, not upstream) |
 | 26 | Sketch a SKA-Low solar pipeline | this umbrella `docs/`; precursor item 6 | 🔴 not started |
 
 Items 21 and 22 are numbered after Season II so items 15–20 stay as they are.
@@ -41,7 +41,7 @@ Do these three in order. They are the SKAO block of Season I.
 | # | Item | Where | Status |
 |---|------|--------|--------|
 | 24 | Understand SDP and SRCNet | SKAO Confluence; Swiss SKA Days deployment (item 10); KARABO (item 12) | 🟡 in progress |
-| 25 | Understand the solar DSC | **Not in git.** Confluence / SRCNet Science Delivery (URL still to pin). Public framing: [arXiv:2607.17881](https://arxiv.org/abs/2607.17881) | 🔴 not started |
+| 25 | Understand the solar DSC | DSC-053 workflow repo on SKA GitLab; Confluence space SRCSC. Public framing: [arXiv:2607.17881](https://arxiv.org/abs/2607.17881) | 🟡 in progress |
 | 26 | Sketch a SKA-Low solar pipeline | this umbrella `docs/` until it needs code; precursor P-AIRCARS (item 6) | 🔴 not started |
 
 ### 24 — SDP and SRCNet
@@ -63,12 +63,31 @@ v0.1 science test cases are generic (imaging, catalogues), not solar:
 
 ### 25 — Solar DSC
 
-Item 9 in the table above is the same work. There is still no file in this
-repo or in `solar-burst-multiview`.
+Item 9 in the table above is the same work.
 
-- **SKAO Confluence / SRCNet Science Delivery** — operational Detailed Science
-  Cases. Solar is named as an SRCNet science domain in the Jan 2025 SRCNet
-  update. Exact page URL: open question 11.
+- **DSC-053 "Solar Dynamic Spectrum comparison with other observatories".**
+  Workflow repo
+  [ska-src-dsc-053-solar-dynaspec](https://gitlab.com/ska-telescope/src/sd/workflows/ska-src-dsc-053-solar-dynaspec),
+  code on branch `dev` (`main` is empty). Text on Confluence:
+  [DSC-053](https://confluence.skatelescope.org/display/SRCSC/DSC-053+Solar+Dynamic+Spectrum+comparison+with+other+observatories)
+  and its
+  [chronological walk-through](https://confluence.skatelescope.org/display/SRCSC/DSC-053+%3A+Chronological+walk-through).
+  Steps: median over baselines of |V| normalised by the autocorrelations →
+  dynamic spectrum FITS (24 picket-fence MSes merged) → RFI flagging →
+  power-law fit per time step (spectral index vs time) → cut-out from another
+  observatory (Yamagawa) for comparison.
+- **13 Oct: runs end to end** on MWA 1424757616 (quiet Sun, 2025-02-28,
+  picket fence, 4 s / 160 kHz), about 1 min on the laptop, conda env `dsc053`.
+  Four bugs fixed on a local branch (`local/1424757616-test`, not pushed):
+  flags ignored; autocorrelation normalisation divided by √A₂ only; flagger
+  hard-coded for 32 fine channels with swapped axes; zero-σ channels stalled
+  the fit. Still open: the flagger drops 131 of 192 channels; fine channels
+  within one coarse channel differ by up to 5×; `CRPIX1 = 0` in the FITS
+  header.
+- **SRCNet workflow templates.** Sibling DSCs (057, 067, 008) are moving to
+  [ska-src-workflow-templates](https://gitlab.com/ska-telescope/src/sd/utilities/ska-src-workflow-templates)
+  (pydantic `ScienceWorkflow` steps with SWF IDs, uv, ruff). DSC-053 is not
+  ported, and there is no dynamic-spectrum template yet.
 - **Public science framing:** SKAO SHI working-group chapter for AASKA II,
   [arXiv:2607.17881](https://arxiv.org/abs/2607.17881). Standard SDP/SRCNet
   archive products do **not** cover solar flux/pol calibration, ≲50 ms burst
@@ -130,9 +149,9 @@ Item 23 belongs to Season II but starts now, in parallel with Season I.
 10. **Tool alignment (item 23).** Which other projects and tools are in
     scope besides e-Callisto, and what does "aligned" mean: shared data
     formats, shared station metadata, a common API, or merged code?
-11. **Where the solar DSC document is.** Item 25 (and 9) have no file in git.
-    Pin the Confluence (or other) URL for the SRCNet/SKAO solar Detailed
-    Science Case.
+11. **Where the solar DSC document is.** Answered 13 Oct: DSC-053 on
+    Confluence (space SRCSC) and the workflow repo
+    `ska-src-dsc-053-solar-dynaspec` (see item 25).
 
 ## Outcomes
 

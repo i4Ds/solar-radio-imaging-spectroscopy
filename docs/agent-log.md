@@ -15,6 +15,38 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-10-13 — [claude] DSC-053 (solar dynamic spectrum) runs end to end
+
+Repo `~/Projects/ska-src-dsc-053-solar-dynaspec` (SKA GitLab,
+src/sd/workflows). Not André's repo: nothing pushed.
+
+- The code is on branch `dev` (Marcin Sokolowski, AusSRC; Rohit Sharma is
+  project scientist; last commit 24 Feb, tested on SWESRC). `main` is the
+  empty GitLab template. Confluence: SRCSC space, DSC-053 page and
+  "Chronological walk-through" (answers plan open question 11).
+- Ran `src/main.py` on `solar-burst-multiview/data/1424757616` (quiet Sun
+  2025-02-28, 24 coarse channels, 4 s / 160 kHz Birli MSes, `DATA` only).
+  Work dir `solar-burst-multiview/data/dsc053/1424757616` (gitignored); the
+  picket-fence glob wants `*_chNN-NN*.ms`, so that dir holds symlinks.
+  Conda env `dsc053` (pyuvdata 3.2.8, python-casacore, ipykernel).
+- Four bugs fixed, commit `a4a578d` on local branch `local/1424757616-test`:
+  flagged visibilities were used (69 of 152 tiles dead → all NaN); the
+  autocorrelation normalisation divided by √A₂ only (in-place update, values
+  up to 8 instead of ≤1, affects all data); MWA flag list hard-coded for 32
+  fine channels plus `data[t,ch]` and swapped NaN thresholds; zero-rmsiqr
+  channels froze the `lm` fit at its start. Result: 39 time steps, spectral
+  index −0.04 ± 0.24 (flat). André reviews the diff before anything goes
+  to the DSC-053 authors.
+- Open: flagger drops 131 of 192 channels; fine channels within a coarse
+  channel differ up to 5×; `CRPIX1 = 0` in the output FITS.
+- VS Code: `.vscode/` (env, PYTHONPATH, launch config for main.py) and
+  `local/dsc053_1424757616.ipynb` (Marcin's notebook with our paths), both in
+  `.git/info/exclude`. Kernel "Python (dsc053)".
+- Sibling DSCs (057, 067, 008) are porting to
+  `ska-src-workflow-templates` (pydantic `ScienceWorkflow`, SWF IDs, uv).
+- Next: plan how to run DSC-053 on `ska-src-api-deployment-stack` (local
+  deployment ruled out by André: takes all laptop resources).
+
 ## 2026-10-12 — [claude] 2022-09-30 burst at 2 s and 0.25 s; quiet-Sun check; repos on main
 
 All in solar-burst-multiview unless noted. Handovers:
