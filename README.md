@@ -62,16 +62,14 @@ well.)*
 
 ## Highlight 3 — How high above the Sun? Following the magnetic field
 
-![Magnetic field lines from the active region and the radio burst in quarter-second steps](docs/highlights/burst025s_ch116_pfss.gif)
+![Magnetic field lines from the active region and the radio source positions](docs/highlights/pfss_ar13110.png)
 
 *Lines: a model of the Sun's magnetic field, computed from a magnetic map of the
 solar surface taken 25 minutes earlier. Green lines are "open": they reach out
 into interplanetary space, so fast electrons can escape along them. White lines
-are closed loops. Dots: where the radio burst is seen at each frequency (129–233
-MHz, coloured by frequency). Cyan contours: the burst at 148.5 MHz every quarter
-of a second, as in Highlight 1 (half speed). Bottom: brightness of the burst
-over time. The radio sources sit right on the bundle of open field lines leaving
-the active region, and the burst stays there through all its flashes.*
+are closed loops. Dots: where the radio burst is seen at each frequency. The
+radio sources sit right on the bundle of open field lines leaving the active
+region.*
 
 ![Radio source position versus frequency](docs/highlights/burst_height_vs_freq.png)
 
