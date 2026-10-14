@@ -60,7 +60,7 @@ less, on top of the slower rise and decay. The source does not move: all
 flashes come from the same place, just west of the active region, within a
 fraction of the instrument's resolution. For this we downloaded the raw
 telescope data (1.1 terabytes for five minutes of observation) and processed it
-ourselves; the images of the rest of the flare are being made now.
+ourselves. So far only the main burst has been imaged at this rate.
 
 ## Highlight 3 — Watching a solar radio burst take off (30 September 2022)
 
@@ -150,22 +150,25 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
 
 - **Done:** understanding the MWA and its data; the MWA processing software
   running on a laptop, on our cluster (calculon) and at the Swiss National
-  Supercomputing Centre (CSCS); reproduction of Sharma et al. 2022.
-- **In progress:** calibration of MWA solar data; the solar-specific pipeline
-  P-AIRCARS, now running on our cluster; the first events from our own MWA
-  archive (the 30 September 2022 event above); combining MWA with e-Callisto,
-  STIX and SDO.
-- **Since 10 October:** the burst of Highlight 3 imaged every 2 seconds
-  instead of every 4, then every quarter of a second, the MWA's finest time
-  resolution (Highlight 2). For this the raw data (1.1 TB) was downloaded and
-  converted for 148.5 MHz; it agrees with the 2-second data to 0.05 %, and no
-  burst data is lost to flagging. Images of the whole flare (about 1100
-  frames) are being made on the cluster; the main burst is done. The brightness scale was
-  checked on the quiet Sun (Highlight 1): two calibrations agree, the total
-  power is right; the comparison with published MWA maps is under way.
-- **Next:** the quarter-second movie of the whole flare; polarisation, which
-  tells us more about how the radio waves are produced; checking the absolute
-  positions; more events from the archive.
+  Supercomputing Centre (CSCS); reproduction of Sharma et al. 2022; the first
+  event from our own MWA archive (30 September 2022) imaged every 4 s, every
+  2 s and, for the main burst, every quarter of a second (Highlight 2).
+- **The quarter-second burst (12–13 October):** 224 images over 56 seconds at
+  148.5 MHz, made from the raw data (1.1 TB) with the solar pipeline P-AIRCARS
+  on our cluster. The burst is a series of brightenings: 13 of them stand far
+  above the noise, and all come from the same place within 10 arcseconds. A
+  brightening just before the burst sits about 120 arcseconds further north.
+- **In progress:** the brightness scale. On the quiet Sun at 137 MHz, two
+  observations and two calibrations agree. We are now downloading the 3
+  December 2015 observation that the MWA team used for their published
+  quiet-Sun maps, to compare like with like. Also in progress: combining MWA
+  with e-Callisto, STIX and SDO.
+- **Stopped:** quarter-second images of the rest of the flare (before and after
+  the main burst). The first of these runs failed on 13 October and nothing has
+  run since.
+- **Next:** polarisation, which tells us more about how the radio waves are
+  produced; checking the absolute positions; a few more test events from the
+  archive (strong bursts and quiet days) before any large campaign.
 
 **SKAO side (plan items 24–27).** First the SKA Science Data Processor (SDP), then
 the services of the SKA Regional Centre Network (SRCNet), then a sketch of a
