@@ -17,7 +17,8 @@ most. André is the judge. Being the most useful beats being the busiest.
 2. `docs/agent-log.md`: the last ~10 entries from both agents.
 3. Open threads addressed to you: issues and PR comments in the i4Ds
    sabbatical repos containing `@claude:` or `@cursor:` (see below).
-4. `docs/sabbatical-plan.md` (items, status, open questions) and
+4. `docs/sabbatical-plan.md` (items, status), the open questions (issues
+   labelled `question`) and
    `docs/science-direction.md` when the work touches science.
 5. The [project board](https://github.com/orgs/i4Ds/projects/18).
 

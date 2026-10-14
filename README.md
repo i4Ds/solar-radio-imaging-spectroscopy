@@ -167,9 +167,9 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
   tells us more about how the radio waves are produced; checking the absolute
   positions; more events from the archive.
 
-**SKAO side (plan items 24–26).** First the SKA Science Data Processor (SDP) and
-the SKA Regional Centre Network (SRCNet), then the solar Detailed Science Case,
-then a sketch of a SKA-Low solar pipeline. The solar Detailed Science Case
+**SKAO side (plan items 24–27).** First the SKA Science Data Processor (SDP), then
+the services of the SKA Regional Centre Network (SRCNet), then a sketch of a
+SKA-Low solar pipeline. The solar Detailed Science Case
 (DSC-053, dynamic spectra compared with other observatories) now runs end to
 end on an MWA observation on the laptop; next is running it on the SRCNet
 software stack.
