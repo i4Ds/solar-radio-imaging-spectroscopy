@@ -18,7 +18,7 @@ engineering in Switzerland.
 | 4 | Reproduce Sharma et al. 2022 from existing MWA packages | solar-burst-multiview | 🟢 done |
 | 5 | Solar extension of the MWA stack, and calibration / self-cal (MWA and SKA-Low teams) | solar-burst-multiview | 🟡 in progress (12 Oct: first quiet-Sun check of the brightness scale, 0.73 MK quiet disk at 148.5 MHz) |
 | 6 | P-AIRCARS for MWA | P-AIRCARS | 🟡 in progress (runs on calculon since 8 Oct, 4 local patches; see solar-burst-multiview `docs/calculon-paircars.md`) |
-| 7 | 2024 campaign: image all events in the MWA solar archive | solar-burst-multiview | 🔴 not started |
+| 7 | 2024 campaign: image all events in the MWA solar archive | solar-burst-multiview | 🔴 not started. Plan carefully first: it can use huge resources if it has to be redone. Start with a few test cases (strong bursts and quiet Sun); see [#21](https://github.com/i4Ds/solar-radio-imaging-spectroscopy/issues/21) |
 | 8 | Design a system for seamless solar radio images (MCP later) | umbrella + solar-burst-multiview | 🔴 not started |
 | 9 | SRCNet solar Detailed Science Cases | same work as item 25 | 🟡 in progress (DSC-053, see item 25) |
 | 10 | Work with the SRCNet small deployment shown at Swiss SKA Days (August 2026) | SRCNet (hands-on for item 27) | 🔴 not started |
