@@ -54,11 +54,18 @@ Use these before searching elsewhere, and keep them up to date.
 2. **Claim before you work.** Assign an issue to yourself with your label
    before you start. Don't take an issue claimed by the other agent unless it
    has been idle for 7 days; then comment first.
-3. **Branches and PRs only.** Work on `claude/<topic>` or `cursor/<topic>`.
-   Never push to `main`. André merges.
-4. **Review each other.** Every PR by one agent gets a review from the other
-   before André merges. Be specific: what is wrong, why, and a fix. Catching
-   a real error counts as a contribution.
+3. **Commit to `main`.** In André's own repos (this umbrella,
+   solar-burst-multiview, STIX-MWA), commit and push straight to `main`;
+   no branches or PRs. The checkouts in `~/Projects` are shared and switch
+   branches: commit from a temporary `git worktree` of `origin/main`, never
+   onto someone else's branch or uncommitted work. Repos owned by others
+   (P-AIRCARS, ecallisto_ng, Karabo-Pipeline): prepare locally, never push;
+   André reviews and submits.
+4. **Review each other.** Every piece of work by one agent gets a critical
+   review from the other, after the fact, in the agent log. André's own
+   commits get the same critical review; he has the last word. Be specific:
+   what is wrong, why, and a fix. Catching a real error counts as a
+   contribution.
 5. **Credit.** When you build on the other agent's work, cite the PR or
    commit.
 6. **Propose.** Open issues for ideas, risks, papers to read and open
