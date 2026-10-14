@@ -19,11 +19,35 @@ can help.
 
 ---
 
-## Highlight 1 — Four images per second: the burst flickers (30 September 2022)
+## Highlight 1 — Is the brightness right? The quiet Sun as a yardstick (30 September 2022)
+
+![The Sun at 137 MHz an hour before the flare and during the flare, with brightness profiles](docs/highlights/quiet_sun_ch107_compare.png)
+
+*Left: the Sun at 137 MHz on 30 September 2022 at 03:30, an hour before the
+flare: a smooth, evenly bright disk, somewhat larger than the visible Sun
+(dashed circle), with one brighter spot over the active region. Middle: the
+same frequency during the flare (04:27–04:32), using only its quietest moments:
+the spot over the active region has grown into a "noise storm" ten times
+brighter. Colours are on a logarithmic scale. Right: brightness against
+distance from the centre of the Sun.*
+
+Away from flares the Sun's outer atmosphere glows steadily at radio
+wavelengths, at roughly a million degrees. That makes it a natural yardstick:
+if our images show the quiet Sun at the right brightness, we can also trust the
+brightness of the bursts. The two images were calibrated an hour apart on two
+different reference radio sources, and where the storm does not interfere they
+agree within 15–20 %, at about 0.4 million degrees. The total radio power of the
+Sun comes out as expected. The brightness per area is about half of what the
+MWA team published for the quiet Sun at this frequency (Sharma & Oberoi 2020),
+probably because our images spread the emission over a somewhat larger area.
+To settle this we are now processing the very observation they used (3 December
+2015) with our own pipeline.
+
+## Highlight 2 — Four images per second: the burst flickers (30 September 2022)
 
 ![The radio burst at 148.5 MHz in quarter-second steps over an ultraviolet image of the Sun](docs/highlights/burst025s_ch116_aia.gif)
 
-*A radio burst seen by the MWA at 148.5 MHz (the one of Highlight 2 below), in
+*A radio burst seen by the MWA at 148.5 MHz (the one of Highlight 3 below), in
 steps of a quarter of a second, the finest time resolution of the MWA: 224
 images over 56 seconds, shown at half speed.
 Cyan contours: the radio burst at 148.5 MHz; background: the Sun in extreme
@@ -38,7 +62,7 @@ fraction of the instrument's resolution. For this we downloaded the raw
 telescope data (1.1 terabytes for five minutes of observation) and processed it
 ourselves; the images of the rest of the flare are being made now.
 
-## Highlight 2 — Watching a solar radio burst take off (30 September 2022)
+## Highlight 3 — Watching a solar radio burst take off (30 September 2022)
 
 ![A radio burst at 148.5 MHz over an ultraviolet image of the Sun](docs/highlights/burst10_ch116_aia.gif)
 
@@ -60,7 +84,7 @@ visible in 21 of them, always at the same place, just west of the active
 region. (The three noisy panels at the top end of the band did not calibrate
 well.)*
 
-## Highlight 3 — How high above the Sun? Following the magnetic field
+## Highlight 4 — How high above the Sun? Following the magnetic field
 
 ![Magnetic field lines from the active region and the radio source positions](docs/highlights/pfss_ar13110.png)
 
@@ -83,7 +107,7 @@ surface** (about eleven times the diameter of the Earth). One method uses the
 radio frequency and models of how the gas density falls with height; the other
 uses where the open magnetic field lines cross the observed positions.
 
-## Highlight 4 — Better images with self-calibration (P-AIRCARS on our cluster)
+## Highlight 5 — Better images with self-calibration (P-AIRCARS on our cluster)
 
 ![Three ways of calibrating the same radio image](docs/highlights/paircars_vs_hyperdrive_042844.png)
 
@@ -98,7 +122,7 @@ Getting P-AIRCARS to run on our cluster uncovered several software problems in
 the pipeline's cluster mode, which we fixed and documented; we plan to offer
 the fixes to its developers.
 
-## Highlight 5 — Combining a large radio telescope with a citizen-science network
+## Highlight 6 — Combining a large radio telescope with a citizen-science network
 
 ![Radio spectrum over one hour: MWA and e-Callisto](docs/highlights/flare_20220930_spectrogram_mwa.png)
 
@@ -106,7 +130,8 @@ the fixes to its developers.
 about an hour. Bright vertical streaks are bursts of fast electrons. The top
 panel combines all instruments; below are stations of e-Callisto, a worldwide
 network of small radio spectrometers coordinated at FHNW (Australia and India
-here), and the MWA (bottom).*
+here), and the MWA (bottom, twice: each MWA frequency channel at its true
+frequency, with gaps where the MWA does not observe, and one row per channel).*
 
 e-Callisto stations observe the Sun around the clock with simple receivers; the
 MWA observes only at certain times, but with far higher sensitivity and with
@@ -119,7 +144,7 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
 
 <a id="where-we-are"></a>
 
-## Where we are (12 October 2026)
+## Where we are (14 October 2026)
 
 **Season I — imaging (October–December).**
 
@@ -130,14 +155,14 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
   P-AIRCARS, now running on our cluster; the first events from our own MWA
   archive (the 30 September 2022 event above); combining MWA with e-Callisto,
   STIX and SDO.
-- **Since 10 October:** the burst of Highlight 2 imaged every 2 seconds
+- **Since 10 October:** the burst of Highlight 3 imaged every 2 seconds
   instead of every 4, then every quarter of a second, the MWA's finest time
-  resolution (Highlight 1). For this the raw data (1.1 TB) was downloaded and
+  resolution (Highlight 2). For this the raw data (1.1 TB) was downloaded and
   converted for 148.5 MHz; it agrees with the 2-second data to 0.05 %, and no
   burst data is lost to flagging. Images of the whole flare (about 1100
-  frames) are being made on the cluster; the main burst is done. A first check of the
-  brightness scale on the quiet Sun gives 0.7 million degrees for the quiet
-  disk, the expected order of magnitude.
+  frames) are being made on the cluster; the main burst is done. The brightness scale was
+  checked on the quiet Sun (Highlight 1): two calibrations agree, the total
+  power is right; the comparison with published MWA maps is under way.
 - **Next:** the quarter-second movie of the whole flare; polarisation, which
   tells us more about how the radio waves are produced; checking the absolute
   positions; more events from the archive.
