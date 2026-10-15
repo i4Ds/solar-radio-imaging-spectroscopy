@@ -19,29 +19,31 @@ can help.
 
 ---
 
-## Highlight 1 — Is the brightness right? The quiet Sun as a yardstick (30 September 2022)
+## Highlight 1 — Is the brightness right? Checking against a published quiet Sun
 
-![The Sun at 137 MHz an hour before the flare and during the flare, with brightness profiles](docs/highlights/quiet_sun_ch107_compare.png)
+![The quiet Sun in 2015 and in 2022, brightness temperature maps](docs/highlights/highlight_quiet_2015_vs_2022.png)
 
-*Left: the Sun at 137 MHz on 30 September 2022 at 03:30, an hour before the
-flare: a smooth, evenly bright disk, somewhat larger than the visible Sun
-(dashed circle), with one brighter spot over the active region. Middle: the
-same frequency during the flare (04:27–04:32), using only its quietest moments:
-the spot over the active region has grown into a "noise storm" ten times
-brighter. Colours are on a logarithmic scale. Right: brightness against
-distance from the centre of the Sun.*
+*Radio "temperature" maps of the quiet Sun, coloured from 0 to 1.5 million
+degrees. Inner circle: the visible Sun; outer circle: twice its radius; small
+ellipse: the size of the telescope's sharpest detail. Left: 3 December 2015,
+the observation published by the MWA solar team (Sharma & Oberoi 2020), here
+processed with our own pipeline. Right: 30 September 2022, one hour before our
+flare; the dark red spot is a "noise storm" over the active region, up to
+9 million degrees.*
 
 Away from flares the Sun's outer atmosphere glows steadily at radio
-wavelengths, at roughly a million degrees. That makes it a natural yardstick:
-if our images show the quiet Sun at the right brightness, we can also trust the
-brightness of the bursts. The two images were calibrated an hour apart on two
-different reference radio sources, and where the storm does not interfere they
-agree within 15–20 %, at about 0.4 million degrees. The total radio power of the
-Sun comes out as expected. The brightness per area is about half of what the
-MWA team published for the quiet Sun at this frequency (Sharma & Oberoi 2020),
-probably because our images spread the emission over a somewhat larger area.
-To settle this we are now processing the very observation they used (3 December
-2015) with our own pipeline.
+wavelengths, at roughly a million degrees, which makes it a natural yardstick
+for the brightness scale of our images. To test our pipeline, we downloaded the
+very observation the MWA team published and processed it ourselves. The result
+matches their published map: a smooth disk somewhat larger than the visible
+Sun, at **0.58 million degrees** against their 0.63, and the same bright
+patch in the south-west. The pipeline works.
+
+Our 2022 quiet Sun, however, comes out patchy and fainter, at about 0.35
+million degrees. We have ruled out the telescope's layout, the imaging settings
+and the length of the observation. The leading suspect now is the bright noise
+storm: it can mislead the self-calibration, the step that refines the
+calibration using the Sun itself. A test without that step is running.
 
 ## Highlight 2 — Four images per second: the burst flickers (30 September 2022)
 
@@ -158,11 +160,12 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
   on our cluster. The burst is a series of brightenings: 13 of them stand far
   above the noise, and all come from the same place within 10 arcseconds. A
   brightening just before the burst sits about 120 arcseconds further north.
-- **In progress:** the brightness scale. On the quiet Sun at 137 MHz, two
-  observations and two calibrations agree. We are now downloading the 3
-  December 2015 observation that the MWA team used for their published
-  quiet-Sun maps, to compare like with like. Also in progress: combining MWA
-  with e-Callisto, STIX and SDO.
+- **In progress:** the brightness scale (Highlight 1). Our pipeline
+  reproduces the MWA team's published quiet Sun of 3 December 2015 (0.58
+  against 0.63 million degrees). Our 2022 quiet Sun is fainter (about 0.35);
+  not the array layout, imaging settings or integration time; a test without
+  self-calibration is running. Also in progress: combining MWA with
+  e-Callisto, STIX and SDO.
 - **Stopped:** quarter-second images of the rest of the flare (before and after
   the main burst). The first of these runs failed on 13 October and nothing has
   run since.
