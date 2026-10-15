@@ -40,10 +40,13 @@ Sun, at **0.58 million degrees** against their 0.63, and the same bright
 patch in the south-west. The pipeline works.
 
 Our 2022 quiet Sun, however, comes out patchy and fainter, at about 0.35
-million degrees. We have ruled out the telescope's layout, the imaging settings
-and the length of the observation. The leading suspect now is the bright noise
-storm: it can mislead the self-calibration, the step that refines the
-calibration using the Sun itself. A test without that step is running.
+million degrees. Step by step we found why. Calibrated on the reference
+source alone, 2015 and 2022 agree (about 0.4 million degrees). The difference
+comes from self-calibration, the step that refines the calibration using the
+Sun itself: in 2015 it raises the brightness to the published value, in 2022
+the bright noise storm dominates the sky and it does not. The patchiness of
+the 2022 disk is in the data either way. So the brightness of our 2022 images
+is uncertain by a factor of about 1.5–2; their positions are not affected.
 
 ## Highlight 2 — Four images per second: the burst flickers (30 September 2022)
 
@@ -162,9 +165,9 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
   brightening just before the burst sits about 120 arcseconds further north.
 - **In progress:** the brightness scale (Highlight 1). Our pipeline
   reproduces the MWA team's published quiet Sun of 3 December 2015 (0.58
-  against 0.63 million degrees). Our 2022 quiet Sun is fainter (about 0.35);
-  not the array layout, imaging settings or integration time; a test without
-  self-calibration is running. Also in progress: combining MWA with
+  against 0.63 million degrees). Our 2022 quiet Sun is fainter (about 0.35)
+  because self-calibration behaves differently with the noise storm present;
+  calibrated on the reference source alone, both years agree. Also in progress: combining MWA with
   e-Callisto, STIX and SDO.
 - **Stopped:** quarter-second images of the rest of the flare (before and after
   the main burst). The first of these runs failed on 13 October and nothing has
