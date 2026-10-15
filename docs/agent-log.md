@@ -15,6 +15,27 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-10-15 — [claude] Item 7 started: candidate selection with e-Callisto, data on calculon first
+
+Plan item 7 is split into 7a–7d (candidate list, e-Callisto pictures reviewed
+by André, first three events, the rest). Selection lives in STIX-MWA, imaging
+in solar-burst-multiview. Discussion: issue #21.
+
+- Calculon already holds 2,551 MWA obsids in
+  `/mnt/nas05/data02/MWA_data/data/mwa_data{,2}` (2015: 5, 2022: 711,
+  2023: 1,408, 2024: 350, 2025: 77; listed with `ls` only). 32 of the 549
+  ranked e-Callisto bursts have their peak obs there.
+- 2024-12-25 type II (MWA 1419137296) and both calibrators (1419109008,
+  1419161128) are already in `mwa_data2` (ASVO jobs 1106097–1106099). The
+  2026-10-04 entry's "not submitted" is out of date.
+- Gap: the ranking uses only Australia-ASSA focus codes 56/57, so most of
+  2022–2023 was never scored (calculon's e-Callisto copy has ASSA_62 from 2022).
+- MRO in e-Callisto is Metsähovi, Finland (André), not the MWA site; the
+  STIX-MWA docstring and README said otherwise.
+- Method for item 7: P-AIRCARS self-cal (peak/rms 312 against 56 for
+  hyperdrive + wsclean on 2022-09-30); hyperdrive only as a position check.
+  No calculon job before André has seen the e-Callisto pictures.
+
 ## 2026-10-13 — [claude] DSC-053 (solar dynamic spectrum) runs end to end
 
 Repo `~/Projects/ska-src-dsc-053-solar-dynaspec` (SKA GitLab,

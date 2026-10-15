@@ -1,4 +1,4 @@
-# Sabbatical plan (14 October 2026)
+# Sabbatical plan (15 October 2026)
 
 **Theme:** agentic software aspects of solar radio indirect imaging and
 spectroscopy.
@@ -18,7 +18,11 @@ engineering in Switzerland.
 | 4 | Reproduce Sharma et al. 2022 from existing MWA packages | solar-burst-multiview | 🟢 done |
 | 5 | Solar extension of the MWA stack, and calibration / self-cal (MWA and SKA-Low teams) | solar-burst-multiview | 🟡 in progress (12 Oct: first quiet-Sun check of the brightness scale, 0.73 MK quiet disk at 148.5 MHz) |
 | 6 | P-AIRCARS for MWA | P-AIRCARS | 🟡 in progress (runs on calculon since 8 Oct, 4 local patches; see solar-burst-multiview `docs/calculon-paircars.md`) |
-| 7 | 2024 campaign: image all events in the MWA solar archive | solar-burst-multiview | 🔴 not started. Plan carefully first: it can use huge resources if it has to be redone. Start with a few test cases (strong bursts and quiet Sun); see [#21](https://github.com/i4Ds/solar-radio-imaging-spectroscopy/issues/21) |
+| 7 | 2024 campaign: image all events in the MWA solar archive | STIX-MWA (selection) + solar-burst-multiview (imaging) | 🟡 in progress. Plan carefully first: it can use huge resources if it has to be redone. Start with a few test cases (strong bursts and quiet Sun); see [#21](https://github.com/i4Ds/solar-radio-imaging-spectroscopy/issues/21) |
+| 7a | Candidate list: MWA Sun obs with e-Callisto-confirmed bursts, data already on calculon first | STIX-MWA `src/ecallisto_mwa_bursts.py` | 🟡 in progress (15 Oct: 32 ranked bursts already on calculon; the ranking misses 2022–2023 because it uses only ASSA_56/57) |
+| 7b | e-Callisto picture per candidate, with the times and channels to image; reviewed before any calculon job | STIX-MWA | 🔴 not started |
+| 7c | First three events imaged (P-AIRCARS self-cal), starting with 2024-12-25 type II, MWA 1419137296 (data and calibrators on calculon) | solar-burst-multiview | 🔴 not started |
+| 7d | Rest of the reviewed candidates | solar-burst-multiview | 🔴 not started |
 | 8 | Design a system for seamless solar radio images (MCP later) | umbrella + solar-burst-multiview | 🔴 not started |
 | 9 | SRCNet solar Detailed Science Cases | same work as item 25 | 🟡 in progress (DSC-053, see item 25) |
 | 10 | Work with the SRCNet small deployment shown at Swiss SKA Days (August 2026) | SRCNet (hands-on for item 27) | 🔴 not started |
@@ -49,7 +53,7 @@ Notes and findings: [skao-notes.md](skao-notes.md).
 | 16 | e-Callisto as context / alarm / interval selection | [ecallisto_ng](https://github.com/i4Ds/ecallisto_ng) | 🔴 not started |
 | 17 | Dynamic range of Mexican stations | — | 🔴 not started |
 | 18 | AI burst classification, paper, Mexican stations | ecallisto_ng | 🔴 not started |
-| 19 | Compare e-Callisto and imagers; network calibration | ecallisto_ng + solar-burst-multiview | 🔴 not started |
+| 19 | Compare e-Callisto and imagers; network calibration | ecallisto_ng + solar-burst-multiview | 🔴 not started (the e-Callisto confirmation from items 7a and 7b is reused here) |
 | 20 | SDR tests (Spain / Udaipur / Mexico) as a long-term replacement | — | 🔴 not started |
 | 23 | Align the FHNW tools with the other projects, e-Callisto first | [ecallisto_ng](https://github.com/i4Ds/ecallisto_ng), [FlareSense-v2](https://github.com/i4Ds/FlareSense-v2) | 🟡 started early (needed now, not only in January) |
 
