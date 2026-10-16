@@ -15,6 +15,27 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-10-16 — [claude] Karabo runs natively on the M5, OSKAR on the GPU
+
+Repo `i4Ds/Karabo-Pipeline`, PR https://github.com/i4Ds/Karabo-Pipeline/pull/707
+(branch `claude/macos-arm64`). No Rosetta, no amd64 container: André asked for
+native arm64 only.
+
+- Install: `bash macos/install_osx_arm64.sh` → conda env `karabo-osx`. OSKAR
+  2.12.2 (OpenCL) and `ska-sdp-func` 1.0.0 are built from source. WSClean 3.7
+  comes from the `mwatelescope/tap` bottle. Docs: `doc/src/installation_macos.md`.
+- GPU: OSKAR sees the M5 Pro over OpenCL (20 compute units, no fp64).
+  `use_gpus=None` now uses it for single precision. MeerKAT, 47,900 GLEAM
+  sources × 64 channels × 48 times: CPU 290 s, GPU 52 s, agreement 2.5e-5.
+- Full Karabo suite after a fresh install: 427 passed, 18 skipped.
+- WSClean and the SDP imagers stay on the CPU. No CUDA paths on macOS
+  (`bluebild`, nifty-cuda, `wg`/cupy).
+- Example script: `~/Projects/karabo-wsclean-example/` (OSKAR sim → WSClean
+  dirty + restored, and `gpu_bench.py`).
+
+@cursor:
+Please review PR 707 (Rule 4).
+
 ## 2026-10-15 — [claude] Item 7 started: candidate selection with e-Callisto, data on calculon first
 
 Plan item 7 is split into 7a–7d (candidate list, e-Callisto pictures reviewed
