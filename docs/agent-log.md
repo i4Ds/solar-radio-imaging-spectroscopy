@@ -15,6 +15,78 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-10-16 — [claude] Daily update
+
+First run of the evening docs task; it covers 14–16 Oct (no earlier daily
+update exists).
+
+**Today**
+
+- solar-burst-multiview (all Claude, with André): quiet-Sun brightness tests.
+  2015-12-03 quiet Sun (Sharma & Oberoi 2020, obs 1133149192) through our
+  P-AIRCARS chain (`1291cdb`, `e4baef9`, `9d52914`): 0.58 MK against the
+  published 0.63. Tests on why 2022 is fainter: short baselines (`742f6d7`,
+  2 % change), 2015 imaging settings (`a04b238`, 0.30 vs 0.31 MK), 13 min
+  integration (`75c5bb7`, `a04b238`, 0.23 MK), self-cal on/off (`29e6390`:
+  calibrator only 0.37 MK in 2015 and 0.42 MK in 2022; self-cal gives 0.58 and
+  0.35). Progress report `f110705`. Tooling: `31a78e1`, `2a09678`, `d245b9b`.
+- Umbrella (Claude): Highlight 1 (`baa85d0`, `6eb4c9b`); item 7 split into
+  7a–7d (`e98567f`); SKAO items 24/27 split, notes and issues #11–#20
+  (`42316da`, `ff45a27`); AGENTS.md worktree rule (`6bd39e5`).
+- Umbrella, this run: André caught a wrong sentence in Highlight 1. It said
+  self-cal "does not" raise the 2022 brightness because of the noise storm.
+  The data (`29e6390`) show self-cal *lowers* 2022 (0.42 → 0.35 MK, ×0.85), and
+  the storm is a likely cause, not a demonstrated one (f110705 lists it as
+  open). Fixed in Highlight 1 (`84c91d3`), the README progress item and the
+  umbrella progress report (`dc3d0e5`). The error was Claude's (`6eb4c9b`).
+- Karabo-Pipeline (Claude, André's account): native macOS arm64 install,
+  OSKAR on the M5 GPU, [PR 707](https://github.com/i4Ds/Karabo-Pipeline/pull/707)
+  open. Its log entry (`f8cdba5`) is on branch `claude/log-karabo-macos`, not
+  on `main`.
+- STIX-MWA: no commits. The local checkout has untracked
+  `src/mwa_obs_lookup.py`, `src/my_mwa_obs.csv`, `src/out.txt`,
+  `_results/my_mwa_obs/` (not touched).
+- README "Where we are" and plan items 3, 5, 12 updated (this commit).
+
+**Review**
+
+*Cursor.* No commits since 10 Oct (`9101aa6`, solar-burst-multiview); last
+`[cursor]` log entry on `main` is 6 Oct. The shared umbrella checkout holds an
+uncommitted `[cursor]` entry dated 13 Oct ("Split SDP and SRCNet services")
+plus README and plan edits. That split is already on `main` (`42316da`,
+Claude, 14 Oct), so the local work is duplicated and now stale. Fix: discard
+it, or diff it against `main` and keep only what `main` lacks.
+
+*André.* No commits without an agent trailer in the window. Two points:
+1. PR 707 on Karabo-Pipeline is from your account on a `claude/*` branch.
+   AGENTS.md rule 3 says others' repos are prepared locally and you submit;
+   if you opened it, fine. If a Claude session opened it, that broke the rule.
+2. The Karabo log entry `f8cdba5` sits on a branch. Cursor reads `main`, so
+   Cursor will not see its `@cursor:` request unless it is merged. Fix:
+   merge it to `main` (I relay the request below in the meantime).
+Good: your catch on Highlight 1 was right and important. The README is read
+by non-specialists, and the old text sold a hypothesis as a finding.
+
+@cursor:
+1. Umbrella checkout: your uncommitted 13 Oct SDP/SRCNet edits duplicate
+   `42316da`. Diff against `origin/main`, keep only what is missing, commit
+   from a worktree, or drop them. Done when `git status` in
+   `~/Projects/solar-radio-imaging-spectroscopy` is clean of your edits.
+2. Review (Rule 4): Karabo-Pipeline PR 707 (native arm64, OSKAR OpenCL);
+   solar-burst-multiview `f110705` (progress report, test table) and
+   `29e6390`; umbrella `84c91d3` and `dc3d0e5` (Highlight 1 wording).
+   Check that every number in Highlight 1 matches the table in
+   `docs/progress-2026-10-09.md`. Done when your review is a `[cursor]` log
+   entry on `main`.
+3. Plan item 7b (not started, doable on the Mac): one e-Callisto picture per
+   7a candidate, with the MWA obs window, times and channels to image, for
+   André to review. Start with 2024-12-25 (MWA 1419137296). Done when the
+   pictures and a candidate table are committed in STIX-MWA. No calculon job.
+4. Plan item 24 (Understand SDP, not started): a one-page summary in
+   `docs/skao-notes.md#24--sdp` from SKAO Confluence, with links. Done when
+   it answers what SDP does with visibilities and where a solar pipeline
+   would plug in.
+
 ## 2026-10-15 — [claude] Item 7 started: candidate selection with e-Callisto, data on calculon first
 
 Plan item 7 is split into 7a–7d (candidate list, e-Callisto pictures reviewed

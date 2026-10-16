@@ -14,9 +14,9 @@ engineering in Switzerland.
 |---|------|------|--------|
 | 1 | Understand MWA as a user | [solar-burst-multiview](https://github.com/i4Ds/solar-burst-multiview) | 🟢 done |
 | 2 | MWA stack on the laptop, calculon, and CSCS (non-solar demo) | solar-burst-multiview `docs/calculon-mwa.md` | 🟢 done |
-| 3 | Understand MWA calibration | solar-burst-multiview | 🟡 in progress |
+| 3 | Understand MWA calibration | solar-burst-multiview | 🟡 in progress (15 Oct: calibrator-only flux scales agree, 2015 0.37 MK and 2022 0.42 MK; amplitude self-cal sets the final scale) |
 | 4 | Reproduce Sharma et al. 2022 from existing MWA packages | solar-burst-multiview | 🟢 done |
-| 5 | Solar extension of the MWA stack, and calibration / self-cal (MWA and SKA-Low teams) | solar-burst-multiview | 🟡 in progress (12 Oct: first quiet-Sun check of the brightness scale, 0.73 MK quiet disk at 148.5 MHz) |
+| 5 | Solar extension of the MWA stack, and calibration / self-cal (MWA and SKA-Low teams) | solar-burst-multiview | 🟡 in progress (15 Oct: our P-AIRCARS run reproduces the Sharma & Oberoi 2020 quiet Sun, 0.58 vs 0.63 MK; self-cal lowers 2022 from 0.42 to 0.35 MK; burst T_B uncertain by ×1.5–2) |
 | 6 | P-AIRCARS for MWA | P-AIRCARS | 🟡 in progress (runs on calculon since 8 Oct, 4 local patches; see solar-burst-multiview `docs/calculon-paircars.md`) |
 | 7 | 2024 campaign: image all events in the MWA solar archive | STIX-MWA (selection) + solar-burst-multiview (imaging) | 🟡 in progress. Plan carefully first: it can use huge resources if it has to be redone. Start with a few test cases (strong bursts and quiet Sun); see [#21](https://github.com/i4Ds/solar-radio-imaging-spectroscopy/issues/21) |
 | 7a | Candidate list: MWA Sun obs with e-Callisto-confirmed bursts, data already on calculon first | STIX-MWA `src/ecallisto_mwa_bursts.py` | 🟡 in progress (15 Oct: 32 ranked bursts already on calculon; the ranking misses 2022–2023 because it uses only ASSA_56/57) |
@@ -27,7 +27,7 @@ engineering in Switzerland.
 | 9 | SRCNet solar Detailed Science Cases | same work as item 25 | 🟡 in progress (DSC-053, see item 25) |
 | 10 | Work with the SRCNet small deployment shown at Swiss SKA Days (August 2026) | SRCNet (hands-on for item 27) | 🔴 not started |
 | 11 | Instrument-agnostic parts (SKA-MID / MeerKAT / ALMA / eOVSA) | — | 🔴 not started |
-| 12 | KARABO | [Karabo-Pipeline](https://github.com/i4Ds/Karabo-Pipeline) | 🔴 not started |
+| 12 | KARABO | [Karabo-Pipeline](https://github.com/i4Ds/Karabo-Pipeline) | 🟡 in progress (16 Oct: native macOS arm64 install, OSKAR on the M5 GPU, [PR 707](https://github.com/i4Ds/Karabo-Pipeline/pull/707) open) |
 | 13 | Scalability: CSCS, SKA-SDP, SKA software stack, data-flow hardware, calibration on new hardware | Karabo-Pipeline, CSCS (after items 24 and 27) | 🔴 not started |
 | 14 | Science goals with CESRA | [docs/science-direction.md](science-direction.md) | 🟡 in progress (draft v3) |
 | 21 | A P-AIRCARS version that runs on a Mac | P-AIRCARS | 🔴 not started (no macOS wheel for `casatools`; runs in an Ubuntu container) |

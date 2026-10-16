@@ -150,7 +150,7 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
 
 <a id="where-we-are"></a>
 
-## Where we are (14 October 2026)
+## Where we are (16 October 2026)
 
 **Season I — imaging (October–December).**
 
@@ -172,8 +172,16 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
   reason, not yet confirmed. Also in progress: combining MWA with
   e-Callisto, STIX and SDO.
 - **Stopped:** quarter-second images of the rest of the flare (before and after
-  the main burst). The first of these runs failed on 13 October and nothing has
-  run since.
+  the main burst). The first of these runs failed on 13 October and nothing had
+  run since when we last checked (14 October).
+- **Since 14 October:** the archive campaign (plan item 7) has started with
+  careful planning, not with computing. 32 of our ranked e-Callisto bursts
+  already have MWA data on our cluster; the first test case is a type II
+  burst on 25 December 2024. No large job runs before André has looked at
+  the e-Callisto pictures of each candidate. Separately, the SKA simulation
+  package Karabo now installs natively on André's Mac and simulates on its
+  graphics processor, about 5.6 times faster than on the processor (290 s
+  against 52 s); the change is under review.
 - **Next:** polarisation, which tells us more about how the radio waves are
   produced; checking the absolute positions; a few more test events from the
   archive (strong bursts and quiet days) before any large campaign.
