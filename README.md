@@ -166,9 +166,10 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
   brightening just before the burst sits about 120 arcseconds further north.
 - **In progress:** the brightness scale (Highlight 1). Our pipeline
   reproduces the MWA team's published quiet Sun of 3 December 2015 (0.58
-  against 0.63 million degrees). Our 2022 quiet Sun is fainter (about 0.35)
-  because self-calibration behaves differently with the noise storm present;
-  calibrated on the reference source alone, both years agree. Also in progress: combining MWA with
+  against 0.63 million degrees). Our 2022 quiet Sun is fainter (about 0.35):
+  calibrated on the reference source alone, both years agree, but
+  self-calibration raises 2015 and lowers 2022. The noise storm is a likely
+  reason, not yet confirmed. Also in progress: combining MWA with
   e-Callisto, STIX and SDO.
 - **Stopped:** quarter-second images of the rest of the flare (before and after
   the main burst). The first of these runs failed on 13 October and nothing has
