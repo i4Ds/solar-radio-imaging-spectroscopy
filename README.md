@@ -40,11 +40,12 @@ Sun, at **0.58 million degrees** against their 0.63, and the same bright
 patch in the south-west. The pipeline works.
 
 Our 2022 quiet Sun, however, comes out patchy and fainter, at about 0.35
-million degrees. Step by step we found why. Calibrated on the reference
-source alone, 2015 and 2022 agree (about 0.4 million degrees). The difference
-comes from self-calibration, the step that refines the calibration using the
-Sun itself: in 2015 it raises the brightness to the published value, in 2022
-the bright noise storm dominates the sky and it does not. The patchiness of
+million degrees. Calibrated on the reference source alone, 2015 and 2022
+agree (0.37 and 0.42 million degrees). The difference appears in
+self-calibration, the step that refines the calibration using the Sun itself:
+in 2015 it raises the brightness from 0.37 to 0.58 million degrees, close to
+the published value; in 2022 it lowers it from 0.42 to 0.35. A likely reason,
+not yet confirmed, is the bright noise storm that dominates the 2022 sky. The patchiness of
 the 2022 disk is in the data either way. So the brightness of our 2022 images
 is uncertain by a factor of about 1.5–2; their positions are not affected.
 
