@@ -7,13 +7,105 @@ Format:
 ```
 ## YYYY-MM-DD — [cursor|claude] short title
 
-Facts only. What changed, which repo, what to read next.
+**Question.** Which science question this work is about, in one or two
+sentences.
+
+**What we found.** Plain words, as you would tell a colleague. A number only
+when it is the result, with what it means.
+
+**What it means and what next.** What this changes in our picture of the
+Sun or of the data, and the best next step for the science.
+
+**Review.** What the other agent and André did well, and what is wrong or
+weaker than it could be, in plain words.
+
+@cursor: (or @claude:) what the other agent should do next.
+
+<details><summary>Technical notes</summary>
+
+Only what the other agent needs to act: commits, files, job IDs.
+
+</details>
 ```
+
+Written for André (AGENTS.md rule 7): no commit hashes, PR numbers, file
+paths or tool settings outside the "Technical notes" block.
 
 Do not put session notes in `solar-burst-multiview`. That tree is the MWA
 workhorse. This file is the running memory for both agents.
 
 ---
+
+## 2026-10-18 — [claude] New way of working: science first, log written for André
+
+**Question.** André asked both agents to change how we work and write. The
+log had become technical: commit hashes, PR numbers, tool details. He wants
+to read our discussion as a discussion about the science, and he wants
+both of us to aim for the largest step forward in the science, not in the
+machinery.
+
+**What changed.** AGENTS.md now opens with "The aim: advance the science".
+Every session starts with the question of which science question the work
+moves forward, and whether there is a faster way to an answer. Rule 7 and
+the format at the top of this file now say: the log is written for André,
+in plain words, no hashes, numbers or paths in the main text unless a
+number is itself a result. What only the other agent needs goes into a
+collapsed "Technical notes" block. My evening task follows the same rules
+from tonight on.
+
+**Where the science stands, in these terms.** We can reproduce the
+published 2015 quiet-Sun brightness with our own chain: 0.58 against the
+published 0.63 million kelvin. So the method works. The 2022 quiet Sun
+comes out fainter, and none of the obvious suspects explain it: not the
+short baselines, not the imaging settings, not a longer integration.
+Self-calibration makes 2022 fainter still, where it made 2015 brighter. A
+solar noise storm that day is the most likely reason, but we have not shown
+it. The open science question is therefore whether the 2022 Sun was really
+fainter, or whether the storm hides the true quiet Sun. The next step that
+moves the science most is to pick the flares we will image (item 7), since
+those are the core of the sabbatical.
+
+**Review.** Cursor reviewed the quiet-Sun write-up this morning (entry
+below), and it is a good review. Two of its points matter for the science.
+First, the progress report still carries an older 2022 brightness with the
+remark that the scale is "about right", above the later finding that it is
+fainter and uncertain. A reader could take the old value as the answer.
+Second, the two Highlight 1 pictures are at slightly different frequencies,
+and the text does not say so. The effect on the comparison is small, but it
+should be stated. Both are my errors, and I will fix them, together with
+the two older numbers from 12 Oct that do not agree with the report. I take
+note of the point on other people's repos.
+
+One remark to Cursor: your entry is written the old way, as a list of
+commits and numbers. Please use the new format from your next entry on.
+
+@cursor: please read the new section "The aim: advance the science" and rule
+7 in AGENTS.md, and the format at the top of this file, and write your log
+entries that way from now on. Then:
+1. Item 7b: for each flare candidate, one radio-spectrum picture with the
+   MWA observing window, so André can choose which ones we image. Start with
+   25 December 2024. Done when André has the pictures and a short table to
+   choose from.
+2. Clean up your old uncommitted edits in the shared umbrella checkout;
+   they repeat what is already on main. You noted them this morning but
+   left them in place; they are yours to remove.
+
+<details><summary>Technical notes</summary>
+
+- Rules: `AGENTS.md` (new section after the intro; rules 5 and 7),
+  `docs/agent-log.md` header. Claude's evening task changed the same way.
+- Cursor's review is `d104a5e`. Its @claude: items 1, 2 and 4 are open on
+  Claude (progress report 0.78 MK paragraph; 0.73/110 vs 0.78/86 MK at
+  148.5 MHz; Highlight 1 frequencies 145.9 vs 137.0 MHz). Item 3 noted.
+- `d104a5e` is committed as André with no Cursor co-author trailer, so the
+  attribution rule in the daily task reads it as André's. Please add
+  `Co-authored-by: Cursor <cursoragent@cursor.com>` to your commits.
+- Task 1: plan item 7b; first candidate MWA obs 1419137296; commit pictures
+  and table in STIX-MWA; no calculon job.
+- Task 2: 13 Oct SDP/SRCNet edits in `~/Projects/solar-radio-imaging-spectroscopy`
+  duplicate `42316da`.
+
+</details>
 
 ## 2026-10-18 — [cursor] Review of the 14–16 Oct quiet-Sun write-up
 

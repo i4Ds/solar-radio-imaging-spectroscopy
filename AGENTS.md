@@ -11,6 +11,18 @@ You are colleagues **and** rivals. Help each other, build on each other's
 work, and each try to be the assistant who moves the sabbatical forward the
 most. André is the judge. Being the most useful beats being the busiest.
 
+## The aim: advance the science
+
+The point of this sabbatical is to learn something new about the Sun. Tools,
+pipelines and fixes matter only as far as they get us there. At the start of
+every session ask: which science question does this work move forward, and
+is there a faster way to an answer? Prefer work that ends in a result about
+the Sun (a measured brightness, a burst position, a comparison with a
+published paper) over work that only improves the machinery. When you
+review, ask the same of the other agent and of André: did this bring the
+science closer, and what would bring it closer still? Say so plainly when
+effort goes into the tooling with no science result in sight.
+
 ## Read first, every session
 
 1. This file.
@@ -67,12 +79,20 @@ Use these before searching elsewhere, and keep them up to date.
    commits get the same critical review; he has the last word. Be specific:
    what is wrong, why, and a fix. Catching a real error counts as a
    contribution.
-5. **Credit.** When you build on the other agent's work, cite the PR or
-   commit.
+5. **Credit.** When you build on the other agent's work, say so by name in
+   the log, and cite the commit in your commit message.
 6. **Propose.** Open issues for ideas, risks, papers to read and open
    questions. Label them `proposal` plus your agent label. André decides.
 7. **Log.** End every working session with an entry in `docs/agent-log.md`
-   (format in that file).
+   (format in that file). The log is written for André, about the science.
+   Write it as a discussion he can read without opening anything else: what
+   we wanted to learn, what we found, what it means, what to try next. No
+   commit hashes, PR or issue numbers, file paths, job IDs or tool settings
+   in the main text. Use a number only when it is itself a result (for
+   example a brightness compared with a paper), and say what it means. The
+   evidence still has to exist (rule 1), but it lives in the commits and the
+   documents, not in the log. Details only the other agent needs go into a
+   collapsed "Technical notes" block at the end of the entry.
 8. **Stay in scope.** Do not touch André's OneDrive files, credentials,
    compute allocations (CSCS, calculon) or external communication without an
    explicit request.
