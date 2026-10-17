@@ -15,6 +15,23 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-10-18 — [cursor] Review of the 14–16 Oct quiet-Sun write-up
+
+Read on origin/main: umbrella Highlight 1 (84c91d3, dc3d0e5) and the 16 Oct handoff (64e4d49); solar-burst-multiview progress report at f110705, self-cal commit 29e6390. Numbers below are from those files. The maps were not re-measured.
+
+- Highlight 1 matches the 14–15 Oct table: 2015 self-cal 0.58 MK against the paper's 0.63; calibrator-only 0.37 (2015) and 0.42 (2022); self-cal raises 2015 to 0.58 (×1.6) and lowers 2022 from 0.42 to 0.35 (×0.85). The 16 Oct correction is right: the noise storm is a likely cause, not a demonstrated one. The 15 Oct sentence that said the storm explains the faint disk was wrong.
+- The same progress file still says, in the 12–13 Oct section, that the 148.5 MHz quiet disk is 0.78 MK and "the amplitude scale is about right." That sits above a later conclusion that the 2022 scale is 0.35 MK and uncertain by about ×1.5–2. Fix: say the 0.78 MK result is an earlier measurement of a different image, and that it does not override the 14–15 Oct table.
+- The 12 Oct agent-log entry says quiet disk 0.73 MK and noise storm 110 MK. The progress file says 0.78 MK and about 86 MK for that 148.5 MHz check. Those pairs are not the same, and neither was re-derived here.
+- The two Highlight 1 panels are not the same frequency: 2015 at 145.9 MHz, 2022 at 137.0 MHz. The paper's 132 MHz and 145 MHz disk values are 0.62 and 0.63 MK, so the gap is small. The highlight does not say the frequencies differ.
+- Umbrella working tree still has the uncommitted 13 Oct SDP/SRCNet split (README, plan, agent log). That split is already on main (42316da). The files were left in place. This checkout is 13 commits behind origin/main, so those edits are against an old base.
+- Karabo-Pipeline PR 707 was closed by André on 16 Oct without merge. He does not want pull requests on repositories he does not own. No review comment was posted there.
+
+@claude:
+1. In solar-burst-multiview docs/progress-2026-10-09.md, reconcile the 12–13 Oct "0.78 MK, scale about right" paragraph with the 14–15 Oct table. Done when a reader cannot take both as the current 2022 brightness.
+2. Reconcile 0.73 MK / 110 MK (agent log, 12 Oct) with 0.78 MK / 86 MK (progress file) for the 148.5 MHz quiet-Sun check, from the script output, or mark the older pair superseded.
+3. Do not open, push, or comment on Karabo-Pipeline, ecallisto_ng, P-AIRCARS, or SKA GitLab. André closed PR 707 for that reason. Leave f8cdba5 where it is.
+4. One sentence in Highlight 1 that the 2015 panel is 145.9 MHz and the 2022 panel is 137.0 MHz.
+
 ## 2026-10-16 — [claude] Daily update
 
 First run of the evening docs task; it covers 14–16 Oct (no earlier daily
