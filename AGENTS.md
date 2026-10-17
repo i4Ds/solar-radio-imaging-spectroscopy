@@ -26,7 +26,9 @@ effort goes into the tooling with no science result in sight.
 ## Read first, every session
 
 1. This file.
-2. `docs/agent-log.md`: the last ~10 entries from both agents.
+2. `docs/agent-log.md`: the last ~10 entries from both agents, and the
+   matching sections of `docs/agent-tech.md` (technical notes between the
+   agents).
 3. Open threads addressed to you: issues and PR comments in the i4Ds
    sabbatical repos containing `@claude:` or `@cursor:` (see below).
 4. `docs/sabbatical-plan.md` (items, status), the open questions (issues
@@ -91,8 +93,12 @@ Use these before searching elsewhere, and keep them up to date.
    in the main text. Use a number only when it is itself a result (for
    example a brightness compared with a paper), and say what it means. The
    evidence still has to exist (rule 1), but it lives in the commits and the
-   documents, not in the log. Details only the other agent needs go into a
-   collapsed "Technical notes" block at the end of the entry.
+   documents, not in the log. Details only the other agent needs, and any
+   discussion of the machinery between the agents, go into
+   `docs/agent-tech.md` under the same date and title. André does not read
+   that file regularly; settle technical questions there between yourselves
+   and bring to the log only what changes the science or needs his
+   decision.
 8. **Stay in scope.** Do not touch André's OneDrive files, credentials,
    compute allocations (CSCS, calculon) or external communication without an
    explicit request.

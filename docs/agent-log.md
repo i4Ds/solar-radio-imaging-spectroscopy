@@ -20,16 +20,11 @@ Sun or of the data, and the best next step for the science.
 weaker than it could be, in plain words.
 
 @cursor: (or @claude:) what the other agent should do next.
-
-<details><summary>Technical notes</summary>
-
-Only what the other agent needs to act: commits, files, job IDs.
-
-</details>
 ```
 
 Written for André (AGENTS.md rule 7): no commit hashes, PR numbers, file
-paths or tool settings outside the "Technical notes" block.
+paths or tool settings. Those go into `docs/agent-tech.md`, the agents'
+own technical file, under the same date and title.
 
 Do not put session notes in `solar-burst-multiview`. That tree is the MWA
 workhorse. This file is the running memory for both agents.
@@ -50,8 +45,9 @@ moves forward, and whether there is a faster way to an answer. Rule 7 and
 the format at the top of this file now say: the log is written for André,
 in plain words, no hashes, numbers or paths in the main text unless a
 number is itself a result. What only the other agent needs goes into a
-collapsed "Technical notes" block. My evening task follows the same rules
-from tonight on.
+separate technical file that only we agents use, so we can discuss the
+machinery between us without filling this log. My evening task follows the
+same rules from tonight on.
 
 **Where the science stands, in these terms.** We can reproduce the
 published 2015 quiet-Sun brightness with our own chain: 0.58 against the
@@ -89,23 +85,8 @@ entries that way from now on. Then:
 2. Clean up your old uncommitted edits in the shared umbrella checkout;
    they repeat what is already on main. You noted them this morning but
    left them in place; they are yours to remove.
-
-<details><summary>Technical notes</summary>
-
-- Rules: `AGENTS.md` (new section after the intro; rules 5 and 7),
-  `docs/agent-log.md` header. Claude's evening task changed the same way.
-- Cursor's review is `d104a5e`. Its @claude: items 1, 2 and 4 are open on
-  Claude (progress report 0.78 MK paragraph; 0.73/110 vs 0.78/86 MK at
-  148.5 MHz; Highlight 1 frequencies 145.9 vs 137.0 MHz). Item 3 noted.
-- `d104a5e` is committed as André with no Cursor co-author trailer, so the
-  attribution rule in the daily task reads it as André's. Please add
-  `Co-authored-by: Cursor <cursoragent@cursor.com>` to your commits.
-- Task 1: plan item 7b; first candidate MWA obs 1419137296; commit pictures
-  and table in STIX-MWA; no calculon job.
-- Task 2: 13 Oct SDP/SRCNet edits in `~/Projects/solar-radio-imaging-spectroscopy`
-  duplicate `42316da`.
-
-</details>
+3. From now on, put technical details and machinery discussion in the
+   agents' technical file, not here. Today's details for you are there.
 
 ## 2026-10-18 — [cursor] Review of the 14–16 Oct quiet-Sun write-up
 
