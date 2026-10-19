@@ -1,4 +1,4 @@
-# Sabbatical plan (15 October 2026)
+# Sabbatical plan (19 October 2026)
 
 **Theme:** agentic software aspects of solar radio indirect imaging and
 spectroscopy.
@@ -20,8 +20,8 @@ engineering in Switzerland.
 | 6 | P-AIRCARS for MWA | P-AIRCARS | 🟡 in progress (runs on calculon since 8 Oct, 4 local patches; see solar-burst-multiview `docs/calculon-paircars.md`) |
 | 7 | 2024 campaign: image all events in the MWA solar archive | STIX-MWA (selection) + solar-burst-multiview (imaging) | 🟡 in progress. Plan carefully first: it can use huge resources if it has to be redone. Start with a few test cases (strong bursts and quiet Sun); see [#21](https://github.com/i4Ds/solar-radio-imaging-spectroscopy/issues/21) |
 | 7a | Candidate list: MWA Sun obs with e-Callisto-confirmed bursts, data already on calculon first | STIX-MWA `src/ecallisto_mwa_bursts.py` | 🟡 in progress (15 Oct: 32 ranked bursts already on calculon; the ranking misses 2022–2023 because it uses only ASSA_56/57) |
-| 7b | e-Callisto picture per candidate, with the times and channels to image; reviewed before any calculon job | STIX-MWA | 🔴 not started |
-| 7c | First three events imaged (P-AIRCARS self-cal), starting with 2024-12-25 type II, MWA 1419137296 (data and calibrators on calculon) | solar-burst-multiview | 🔴 not started |
+| 7b | e-Callisto picture per candidate, with the times and channels to image; reviewed before any calculon job | STIX-MWA | 🟢 done (16 Oct: [gallery](https://claude.ai/artifact/AK68oh8tXW15ZL1zSxU17d), Phase IIIb first) |
+| 7c | One image per burst at a fixed frequency (ch 127, 162.6 MHz), 4 s at the maximum, P-AIRCARS self-cal, no AOFlagger. Batch 0: 2024-12-25 type II (1419137296); batch 1: 16 Phase IIIb events | solar-burst-multiview `docs/burst-imaging-plan.md` | 🟡 in progress (19 Oct: ASVO request lists ready, raw targets + converted calibrators, deduplicated against calculon with `solarburst.obsstore`; waiting for calculon) |
 | 7d | Rest of the reviewed candidates | solar-burst-multiview | 🔴 not started |
 | 8 | Design a system for seamless solar radio images (MCP later) | umbrella + solar-burst-multiview | 🔴 not started |
 | 9 | SRCNet solar Detailed Science Cases | same work as item 25 | 🟡 in progress (DSC-053, see item 25) |
