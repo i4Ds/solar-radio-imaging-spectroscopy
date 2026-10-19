@@ -29,7 +29,9 @@ ellipse: the size of the telescope's sharpest detail. Left: 3 December 2015,
 the observation published by the MWA solar team (Sharma & Oberoi 2020), here
 processed with our own pipeline. Right: 30 September 2022, one hour before our
 flare; the dark red spot is a "noise storm" over the active region, up to
-9 million degrees.*
+9 million degrees. The two maps are at slightly different frequencies (145.9
+MHz in 2015, 137.0 MHz in 2022); the published quiet Sun hardly changes over
+that range (0.62 million degrees at 132 MHz, 0.63 at 145 MHz).*
 
 Away from flares the Sun's outer atmosphere glows steadily at radio
 wavelengths, at roughly a million degrees, which makes it a natural yardstick
@@ -150,7 +152,7 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
 
 <a id="where-we-are"></a>
 
-## Where we are (16 October 2026)
+## Where we are (19 October 2026)
 
 **Season I — imaging (October–December).**
 
@@ -174,17 +176,22 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
 - **Stopped:** quarter-second images of the rest of the flare (before and after
   the main burst). The first of these runs failed on 13 October and nothing had
   run since when we last checked (14 October).
-- **Since 14 October:** the archive campaign (plan item 7) has started with
-  careful planning, not with computing. 32 of our ranked e-Callisto bursts
-  already have MWA data on our cluster; the first test case is a type II
-  burst on 25 December 2024. No large job runs before André has looked at
-  the e-Callisto pictures of each candidate. Separately, the SKA simulation
-  package Karabo now installs natively on André's Mac and simulates on its
-  graphics processor, about 5.6 times faster than on the processor (290 s
-  against 52 s); the change is under review.
-- **Next:** polarisation, which tells us more about how the radio waves are
-  produced; checking the absolute positions; a few more test events from the
-  archive (strong bursts and quiet days) before any large campaign.
+- **Since 16 October:** the archive campaign (plan item 7) has a fixed
+  recipe: one image per burst, all at the same frequency (162.6 MHz), 4
+  seconds at the burst maximum, with the solar pipeline's self-calibration.
+  André reviewed the e-Callisto pictures of the candidates. The data are now
+  being requested from the MWA archive: the test case (a type II burst on
+  25 December 2024) and 11 of the 16 newest events, which were observed with
+  the full 256-tile array. The other 5 are under embargo until 2027–2028 and
+  open only to their principal investigator. Nothing has been imaged yet.
+  Separately, the SKA simulation package Karabo installs natively on André's
+  Mac and simulates on its graphics processor, about 5.6 times faster than
+  on the processor (52 s against 290 s); the change stays local. André also
+  drafted two bachelor projects for computer science students, for after the
+  sabbatical.
+- **Next:** the first image from the campaign (25 December 2024), checked
+  before the rest run; polarisation, which tells us more about how the radio
+  waves are produced; checking the absolute positions.
 
 **SKAO side (plan items 24–27).** First the SKA Science Data Processor (SDP), then
 the services of the SKA Regional Centre Network (SRCNet), then a sketch of a

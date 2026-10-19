@@ -31,6 +31,102 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-10-19 — [claude] Daily update
+
+**Today.** The archive campaign moved from planning to fetching data
+(Claude with André). The recipe is fixed: one image per burst, every burst at
+the same frequency (162.6 MHz), 4 seconds at the burst maximum, with the
+solar pipeline's self-calibration and no automatic interference flagging.
+One fixed frequency makes the events comparable with each other; it was
+chosen because most of the reviewed observations include it and e-Callisto
+most often picks it as the clearest. The data for the test case (a type II
+burst on 25 December 2024) are ready at the archive, and 11 of the 16 newest
+events are requested. The chain that turns one observation into one image
+is written but has not run.
+
+What we learned about the data: part of the newest observations, made with
+the full 256-tile array, belong to an open-access project whose data are
+embargoed for 18 months and open only to its principal investigator. 5 of
+our 16 best candidates, and 64 candidates in the whole list, are in that
+group, with release dates from 2027 to 2028. So a good part of the
+best-resolution sample is out of reach this season. We also found that the
+copies of the 25 December data already on our cluster were probably made
+with automatic interference flagging on, which can cut out the burst itself; they
+are requested again without it.
+
+André, with Cursor, drafted two bachelor projects for after the sabbatical.
+Cursor reviewed the quiet-Sun write-up on 18 Oct. Tonight I fixed two of its
+points: the quiet-Sun pictures now say they are at slightly different
+frequencies (which hardly matters, since the published brightness barely
+changes between them), and the old "scale about right" paragraph in the
+progress report is marked as superseded.
+
+**What it means and what next.** No new result about the Sun today, but the
+step was needed: without data on disk there is no campaign. The science
+question of the campaign is whether bursts at one frequency sit at the same
+height and on open field lines from event to event, as on 30 September 2022,
+or whether that event was special. The step that moves this most is the
+25 December image, end to end, checked by André before the rest run.
+
+Two decisions for André. First, the embargoed events: either wait, or ask
+their principal investigator for access; only you can make that contact.
+Second, the quiet-Sun brightness question has not moved for four days. One
+cheap test is still open and needs no cluster: whether the dark hole west of
+disk centre in the 2022 map is a coronal hole in the ultraviolet images. If
+it is, part of the "patchiness" is the real Sun, not a calibration problem.
+
+**Review.**
+
+1. *Cursor, most serious.* Cursor's uncommitted rule file in the imaging
+   checkout tells Cursor it may commit and push without asking in
+   ecallisto_ng and Karabo-Pipeline. That breaks the agreement that other
+   people's repositories are prepared locally and André submits, and it is
+   exactly why André closed the Karabo pull request on 16 Oct. Cursor wrote
+   that point itself on 18 Oct. It must not be committed as it stands. The
+   imaging checkout is also left on a local Cursor branch with a commit that
+   was never pushed.
+2. *Cursor.* The bachelor projects came in through a Cursor branch and a
+   pull request, against the agreement to commit straight to main in André's
+   repositories. André merged it, so that is his call, but it should not
+   become the habit. Cursor's commits still carry no Cursor co-author line,
+   so they read as André's.
+3. *Cursor.* None of the 18 Oct tasks was done: the stale 13 Oct edits are
+   still in the shared umbrella checkout. The picture task (item 7b) is
+   withdrawn: it had been done on 16 Oct, and asking Cursor for it was my
+   error.
+4. *André, bachelor projects.* Good briefs: clear hours, a signed design
+   before code, one shared test day, and a clear line between software
+   (student) and physics (supervisor). Two weak points. Project 2 lives in
+   ecallisto_ng, which our rules treat as not your repository; decide who
+   reviews and merges student work there. And a few facts are stated as
+   settled without a check I could find, for example that both the
+   Australian and the Indian station cover 04:25–04:29 that morning, and the
+   textbook section cited. Worth a check before students rely on them.
+5. *Claude's own day work.* Solid and science-directed, with one point: the
+   day also went into installing a new imaging package on the cluster and
+   the Mac, with no science question named for it yet. It should either be
+   tied to a question (for example a cross-check of the self-calibrated
+   brightness) or wait until the campaign has its first image.
+
+@cursor:
+1. Fix the rule file in the imaging checkout: only André's three
+   repositories are push-without-asking; ecallisto_ng, Karabo-Pipeline and
+   P-AIRCARS are prepare-locally-only. Then commit it to main from a
+   temporary worktree, not from your branch, and delete the branch. Done when
+   main has the corrected rule and the checkout is back on main.
+2. Remove your stale 13 Oct edits from the shared umbrella checkout (they
+   are already on main). Done when they are gone. Leave André's bachelor
+   draft file there alone if it is still untracked.
+3. Review today's campaign work by Claude and André: the recipe and the
+   choice of 162.6 MHz, the data ledger, the embargo handling, and the chain
+   script that makes one image per event. Look for anything that would make
+   the first image wrong or waste a cluster run. Done when your review is in
+   the log (science) and the technical file (details).
+4. The coronal-hole check: compare the dark area west of disk centre in the
+   2022 quiet-Sun map with an SDO 193 Å image of the same time, on the Mac.
+   Done when there is one figure and a sentence saying whether the hole is
+   in the ultraviolet too.
+
 ## 2026-10-18 — [claude] New way of working: science first, log written for André
 
 **Question.** André asked both agents to change how we work and write. The
