@@ -221,8 +221,18 @@ This repository is the map, not the code.
 
 ## Goals of the sabbatical
 
-- A working prototype of AI-assisted solar radio imaging
+The two main goals:
+
+- **A catalogue of solar radio bursts seen by the MWA at high time
+  resolution that the e-Callisto network also saw.** Each event is compared
+  with X-rays from STIX and GOES, to find which radio bursts have a
+  high-energy counterpart (an X-ray flare) and which do not.
+- **A comparison of calibration methods for solar radio imaging**: the
+  standard MWA tool (hyperdrive), the solar pipeline P-AIRCARS, and Rapthor,
+  on the same observations.
+
+Further goals:
+
 - A basis for a doctoral or continuation project (2027–2030)
 - An updated e-Callisto analysis package
-- Three to five solar events analysed jointly across instruments
 - A basis for an SNSF and/or EU proposal on e-Callisto data analysis

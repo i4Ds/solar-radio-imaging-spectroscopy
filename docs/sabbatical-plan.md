@@ -66,10 +66,18 @@ Discussed as GitHub issues with the label `question`:
 
 ## Outcomes
 
+Main outcomes (21 Oct):
+
+- Catalogue of MWA solar observations at high time resolution that have an
+  e-Callisto counterpart, each compared with STIX and GOES: which have a
+  high-energy counterpart and which do not
+- Comparison of calibration methods for solar imaging: hyperdrive,
+  P-AIRCARS, Rapthor
+
+Further outcomes:
+
 - Continuation student works 2027–2030
-- Working prototype for agentic solar interferometry
 - Updated e-Callisto analysis package
-- Case study: 3–5 events jointly across facilities
 - Publication and/or documentation
 - Dummy proposal for an e-Callisto EU future (FASR-style)
 - Basis for SNSF and/or EU data-analysis proposal
