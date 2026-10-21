@@ -18,7 +18,8 @@ engineering in Switzerland.
 | 4 | Reproduce Sharma et al. 2022 from existing MWA packages | solar-burst-multiview | 🟢 done |
 | 5 | Solar extension of the MWA stack, and calibration / self-cal (MWA and SKA-Low teams) | solar-burst-multiview | 🟡 in progress (15 Oct: our P-AIRCARS run reproduces the Sharma & Oberoi 2020 quiet Sun, 0.58 vs 0.63 MK; self-cal lowers 2022 from 0.42 to 0.35 MK; burst T_B uncertain by ×1.5–2) |
 | 6 | P-AIRCARS for MWA | P-AIRCARS | 🟡 in progress (runs on calculon since 8 Oct, 4 local patches; see solar-burst-multiview `docs/calculon-paircars.md`) |
-| 7 | 2024 campaign: image all events in the MWA solar archive | STIX-MWA (selection) + solar-burst-multiview (imaging) | 🟡 in progress. Plan carefully first: it can use huge resources if it has to be redone. Start with a few test cases (strong bursts and quiet Sun); see [#21](https://github.com/i4Ds/solar-radio-imaging-spectroscopy/issues/21) |
+| 28 | Compare calibration methods for solar imaging: hyperdrive, P-AIRCARS, Rapthor, on the same observations. Needed for a robust pipeline before item 7 is scaled up | solar-burst-multiview | 🟡 started (hyperdrive and P-AIRCARS compared on the 2022-09-30 burst; Rapthor not yet installed or tried) |
+| 7 | Ultimate goal: image all events in the MWA solar archive. First the selection (7a–7d), the catalogue with e-Callisto, STIX and GOES, and a robust calibration (item 28) | STIX-MWA (selection) + solar-burst-multiview (imaging) | 🟡 in progress. Plan carefully first: it can use huge resources if it has to be redone. Start with a few test cases (strong bursts and quiet Sun); see [#21](https://github.com/i4Ds/solar-radio-imaging-spectroscopy/issues/21) |
 | 7a | Candidate list: MWA Sun obs with e-Callisto-confirmed bursts, data already on calculon first | STIX-MWA `src/ecallisto_mwa_bursts.py` | 🟡 in progress (15 Oct: 32 ranked bursts already on calculon; the ranking misses 2022–2023 because it uses only ASSA_56/57) |
 | 7b | e-Callisto picture per candidate, with the times and channels to image; reviewed before any calculon job | STIX-MWA | 🟢 done (16 Oct: [pictures and candidate table](https://github.com/i4Ds/STIX-MWA/tree/main/_results/ecallisto_mwa_bursts), [gallery](https://claude.ai/artifact/AK68oh8tXW15ZL1zSxU17d) (private), Phase IIIb first; 19 Oct: embargoed observations removed from the candidates) |
 | 7c | One image per burst at a fixed frequency (ch 127, 162.6 MHz), 4 s at the maximum, P-AIRCARS self-cal, no AOFlagger. Batch 0: 2024-12-25 type II (1419137296); batch 1: 16 Phase IIIb events | solar-burst-multiview `docs/burst-imaging-plan.md` | 🟡 in progress (19 Oct: ASVO requests submitted. Batch 0: raw data ready, calibrator being prepared. Batch 1: 11 of 16 targets and 4 calibrators submitted; 5 targets are under embargo until 2027–2028 (open-access project, PI only), their 5 calibrators on hold. Chain script for one image per event written; nothing imaged yet) |
@@ -72,7 +73,10 @@ Main outcomes (21 Oct):
   e-Callisto counterpart, each compared with STIX and GOES: which have a
   high-energy counterpart and which do not
 - Comparison of calibration methods for solar imaging: hyperdrive,
-  P-AIRCARS, Rapthor
+  P-AIRCARS, Rapthor (item 28)
+
+Ultimate goal: images of all events in the MWA solar archive (item 7). It
+needs the robust calibration first, so the catalogue's selection comes first.
 
 Further outcomes:
 
@@ -98,6 +102,8 @@ largest models cannot run in-house; agentic AI changes how scientists touch
 data.
 
 The six-month goal is to see how those pieces fit, accelerate heliophysics
-tooling, and open Swiss collaborations on solar radio imaging. That includes
-going into the large volume of MWA solar observations and making images of
-all events.
+tooling, and open Swiss collaborations on solar radio imaging. The ultimate
+goal is to go into the large volume of MWA solar observations and make images
+of all events. That is very difficult and needs a robust calibration pipeline
+first (item 28), so we work down a selection first: the catalogue of events
+with e-Callisto, STIX and GOES counterparts (item 7a–7d).

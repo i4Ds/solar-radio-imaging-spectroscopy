@@ -231,6 +231,10 @@ The two main goals:
   standard MWA tool (hyperdrive), the solar pipeline P-AIRCARS, and Rapthor,
   on the same observations.
 
+These two lead to the ultimate goal: images of all events in the MWA solar
+archive. That is very difficult and needs a robust calibration pipeline
+first, so we start with the selected events of the catalogue.
+
 Further goals:
 
 - A basis for a doctoral or continuation project (2027–2030)
