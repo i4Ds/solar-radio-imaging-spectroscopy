@@ -31,6 +31,103 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-10-23 — [claude] Daily update
+
+This entry covers the afternoon of 22 October. The cluster could not be
+reached tonight, so nothing here about running jobs is checked.
+
+**Today.** One real idea came out of the day (André with Claude). On 12
+December 2025 the MWA saw no clear burst at the frequency we image, although
+e-Callisto shows one. The reason: that observation does not have our standard
+frequency, and the nearest channel sits beside the burst, not on it. Instead
+of writing "no burst", the e-Callisto spectrum was used to follow the burst as
+it drifts down in frequency, and to pick, every 2 seconds, the MWA channel
+closest to it. The spectrum shows two bright lanes, one near 206 MHz and one
+near 161 MHz, both drifting slowly downwards (by about 5 and 2 MHz over the
+two minutes of the observation). If the images follow the lanes, we get where
+the emitting region sits as a function of frequency, which is the step from
+"one picture per burst" to height and motion. This round is prepared, together
+with ten more events from 2022 to 2024; whether it has started is not checked.
+
+The rest of the day went into the image review page again: run times,
+clickable full-size images, and moving it from the cluster to the laptop with
+its own small server.
+
+Nothing has been done yet on the three things the last review put first:
+written verdicts on the eleven images, the saturation test for 25 December,
+and a table of positions. Cursor has done nothing since 18 October.
+
+**What it means and what next.** The drift idea is the right kind of step,
+because it turns the e-Callisto spectrum into a guide for the imaging rather
+than an afterthought. But the campaign question (do bursts at one frequency
+sit in a similar place relative to their flare from event to event?) still
+has no answer, because the eleven images we have are not looked at. The step
+that moves the science most is still one afternoon of looking: a yes/no and a
+position for each image, written into the repository, and the saturation
+test. Only then is it worth downloading the next ten events.
+
+**Review.**
+
+1. *André and Claude, most serious.* The next round asks for about eight
+   terabytes of new downloads (ten events plus their calibrators) while not
+   one of the eleven images in hand has a verdict. The plan for this item says
+   to plan carefully because a redo is expensive. If the review finds a
+   problem in the chain (saturation, a wrong calibrator choice, a wrong
+   position), all ten will have to be redone. Fix: hold the ten new events
+   until the eleven have verdicts; let only the drift images run.
+2. *André and Claude.* The two lanes of 12 December are called "fundamental"
+   and "harmonic". Their frequencies are in the ratio 1.28. A harmonic pair is
+   close to 2, so these are more likely two parts of one split band or two
+   separate lanes. Calling them harmonic would mislead any reading of heights
+   later. Fix: call them upper and lower lane until the full spectrum is
+   checked.
+3. *André and Claude.* The lower lane sits at about 159–161 MHz, but the
+   channel chosen for it is at 153.6 MHz, 5 to 7 MHz below. That is the same
+   kind of miss as the image that failed (8 MHz beside the burst). Fix: before
+   spending cluster time, check in the e-Callisto spectrum whether there is
+   burst emission at 153.6 MHz at all; if not, drop that run and image only
+   the upper lane.
+4. *André and Claude.* The review page grew by four more changes after
+   yesterday's review said it was finished enough. Fine for the tool, but it
+   is still the only place where any judgement on the images could live, and
+   none is written down.
+5. *Claude.* Two names for "batch 2" now exist: the six remaining newest
+   events (21 October) and the ten earlier events (22 October). The imaging
+   plan means the second; one config file means the first. Whoever reruns
+   will mix them up. The old imaging-plan text and the misnamed channel for
+   one event, both flagged yesterday, are also still not fixed.
+6. *Claude, own error.* The evening run of 22 October updated the documents
+   but stopped before it opened the daily discussion issue, so André got
+   nothing on GitHub for 19–22 October beyond the log. Tonight's issue covers
+   it. The quiet-Sun numbers that disagree (open since 18 October) are still
+   not reconciled.
+7. *Cursor.* Nothing since 18 October; the rule file, the P-AIRCARS draft and
+   the side branch in the imaging checkout are unchanged. All five tasks from
+   22 October are open.
+
+@cursor:
+1. Still first: fix your rule file in the imaging checkout (only André's three
+   repositories are push-without-asking), keep the error messages and code
+   locations in the P-AIRCARS draft, commit both from a temporary worktree,
+   put the checkout back on main. Done when main has both and the checkout is
+   clean.
+2. The saturation test for 25 December 2024: MWA light curve at 162.5 MHz and
+   e-Callisto (Australian station) at the same frequency on one time axis,
+   04:47 to 04:52. Done when there is one figure and one sentence: saturated
+   or not.
+3. Check the 12 December 2025 drift plan in the e-Callisto spectrum: is there
+   burst emission at 153.6 MHz in the observation window, and do the two
+   lanes look like a split band or a harmonic pair? Done when there is one
+   figure and two sentences in this log, before that run uses cluster time.
+4. A first X-ray table for the eleven imaged events: GOES class, and whether
+   the STIX flare list has a flare in or near the image window, with its
+   position. Done when the table is committed in the STIX-MWA repository.
+5. Review Claude's and André's work of 22 October: the drift-finding script
+   (it fits a centroid of the lane, not its maximum, while the figure says
+   "maxima"), the next-round lists and start script, and one number the review
+   page computes, checked by hand against one image. Done when the review is
+   in this log and the details in the technical file.
+
 ## 2026-10-22 — [claude] Daily update
 
 This entry covers 19 to 22 October. The evening run of 20 October stopped

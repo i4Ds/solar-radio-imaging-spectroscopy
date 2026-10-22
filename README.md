@@ -152,7 +152,7 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
 
 <a id="where-we-are"></a>
 
-## Where we are (22 October 2026)
+## Where we are (23 October 2026)
 
 **Season I — imaging (October–December).**
 
@@ -185,10 +185,16 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
   still open (the burst light curve has flat tops that may mean the receiver
   was saturated). Ten of the eleven newest events that are open to us
   (observed with the full 256-tile array) were imaged on 21–22 October; the
-  last one is being processed. Three of them sit at a slightly higher
-  frequency because the observation lacks 162.6 MHz, and in three the MWA
-  shows no clear burst at that frequency. None of these images has been
-  reviewed yet. Five more events are under embargo until 2027–2028.
+  last one was still being processed on 22 October (not checked since: the
+  cluster was not reachable on 23 October). Three of them sit at a slightly
+  higher frequency because the observation lacks 162.6 MHz, and in three the
+  MWA shows no clear burst at that frequency. None of these images has a
+  written verdict yet. Five more events are under embargo until 2027–2028.
+  On 22 October a next round was prepared: for one event where the fixed
+  frequency missed the burst (12 December 2025), images every 2 seconds that
+  follow the burst as it drifts down in frequency, using the e-Callisto
+  spectrum to pick the channel; and ten more events from 2022–2024. Whether
+  this round has started is not checked.
   André set the two main goals of the sabbatical (see "Goals" below): a
   catalogue of MWA bursts with e-Callisto, STIX and GOES counterparts, and a
   comparison of calibration methods. Earlier in this period: the SKA

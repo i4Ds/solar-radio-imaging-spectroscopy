@@ -25,6 +25,70 @@ Technical details, with commits, file:line, job IDs.
 
 ---
 
+## 2026-10-23 — [claude] Daily update (log entry of the same title)
+
+Window: `last-run` still said 2026-10-19T03:37Z (the 22 Oct run pushed
+`f2766ec` but never created the daily issue nor wrote `last-run`; both its
+worktrees were left clean in `/var/folders/.../sabbatical-daily/`; the
+multiview one removed tonight, the umbrella one reused). New material is
+everything after `f2766ec` (22 Oct 02:05Z) up to 2026-10-22T21:52Z.
+Calculon not reachable (`ssh calculon` fails to resolve the hostname: no
+VPN), so no squeue/sacct/log checks; every job state below is unverified. No
+new issue comments in the three repos; `check.sh` reports no `@claude:`; no
+`[cursor]` entries; no Cursor commits (last Cursor log entry 18 Oct).
+
+**Commits after the 22 Oct daily update** (all with Claude trailer,
+interactive sessions with André).
+- multiview: `ac2491f` (board: run times, full-res PNGs, ASCII page),
+  `1d8d3e0` (drop peak curve), `d6417c3` (`serve_board.py` on
+  localhost:8793, `sync_board.sh`, launchd agents), `9e0cc4a` (plan doc),
+  `e5ea643` (next round: `configs/products/drift_1449551392.{txt,json}`,
+  `configs/products/batch2.txt`, `scripts/calculon/start_round.sh`, `jobof`
+  auto job ids and single-MS calibrator check in `product_run.sh`).
+- STIX-MWA: `f89e99f` (`src/burst_drift.py`).
+
+**Review details.**
+1. Resources: `docs/burst-imaging-plan.md:52` gives batch 2 as 4.20 + 4.20 TB.
+   `start_round.sh:17-24` submits all 9 new targets and 9 calibrators in one
+   go, together with `1449573440`. Recommend splitting: run step 1 only for
+   `1449573440`, step 4 only for `drift_1449551392.txt`, until the 11 images
+   in `docs/archive-events.md` have verdicts.
+2. `configs/products/drift_1449551392.txt:3-5`: lanes 185-220 MHz (205.8 ->
+   201.1) and 140-175 MHz (160.8 -> 158.6), ratio 205.8/160.8 = 1.28; labels
+   `drift_h_*` / `drift_f_*` and the composite note in `start_round.sh:36`
+   say "harmonic" (`start_round.sh:9,29,38`). Rename to upper/lower until
+   checked.
+3. Same file line 9: `CH=120` = 153.6 MHz, 5.0-7.2 MHz below the fitted lower
+   lane; ch 132 (168.96 MHz) is 8.2 MHz above it and gave "no clear burst"
+   (`docs/archive-events.md:67`). Check e-Callisto ASSA_57 at 153.6 MHz in
+   05:09:34-05:11:34 before running it. Not checked in this run.
+4. `src/burst_drift.py:64-70`: lane position is an intensity-weighted centroid
+   over the whole band (positive excess clipped at 0), so with a weak lane
+   noise pulls it towards the band centre (157.5 and 202.5 MHz here); both
+   fits lie within ~3 MHz of those centres. Worth a check that the fit
+   follows the lane and not the band edges. Title at line 104 says "lane
+   maxima". `noise`/`snr` (lines 47-48) only serve to get `f`.
+5. Batch naming: `configs/events/batch2.txt` (6 Phase IIIb, 21 Oct) vs
+   `configs/products/batch2.txt` (10 tier A, plan's batch 2). Rename the
+   former (e.g. `batch1b.txt`). Still open from 22 Oct: the old batch table
+   text in `docs/burst-imaging-plan.md` vs what ran, `configs/events/batch2.txt`
+   channel 126 for `1449551392` (ran at 132), branch
+   `claude/paircars-calibration-walkthrough` not on main.
+6. `configs/products/batch2.txt:14` uses `1419137056` (04:47:39 start,
+   wanted-csv batch 2), not `1419137296` (the imaged 25 Dec obs). Correct as
+   a different window, but worth saying in `archive-events.md` so nobody
+   takes it for a duplicate.
+7. Cursor's open items unchanged: multiview checkout on
+   `cursor/git-push-policy` with uncommitted `.cursor/rules/git-push.mdc` and
+   `docs/paircars-upstream.md`; three untracked PDFs in `references/` (dated
+   18 Oct; whose is unclear: commit or ignore). Umbrella checkout on `main`
+   with the stale 13 Oct edits to `README.md`, `docs/agent-log.md`,
+   `docs/sabbatical-plan.md` and an untracked `docs/bachelor-projects-2027.md`.
+
+@cursor: technical side of tonight's list: task 3 can use
+`STIX-MWA/src/burst_drift.py` output and the e-Callisto loader
+(`ecallisto_mwa_bursts.load`); task 5 covers points 2-4 above.
+
 ## 2026-10-22 — [claude] Daily update (log entry of the same title)
 
 Window: 2026-10-19T03:37Z to 2026-10-22T01:58Z (the 20 Oct run stalled; its
