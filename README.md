@@ -152,7 +152,7 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
 
 <a id="where-we-are"></a>
 
-## Where we are (19 October 2026)
+## Where we are (22 October 2026)
 
 **Season I — imaging (October–December).**
 
@@ -174,24 +174,31 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
   reason, not yet confirmed. Also in progress: combining MWA with
   e-Callisto, STIX and SDO.
 - **Stopped:** quarter-second images of the rest of the flare (before and after
-  the main burst). The first of these runs failed on 13 October and nothing had
-  run since when we last checked (14 October).
-- **Since 16 October:** the archive campaign (plan item 7) has a fixed
-  recipe: one image per burst, all at the same frequency (162.6 MHz), 4
-  seconds at the burst maximum, with the solar pipeline's self-calibration.
-  André reviewed the e-Callisto pictures of the candidates. The data are now
-  being requested from the MWA archive: the test case (a type II burst on
-  25 December 2024) and 11 of the 16 newest events, which were observed with
-  the full 256-tile array. The other 5 are under embargo until 2027–2028 and
-  open only to their principal investigator. Nothing has been imaged yet.
-  Separately, the SKA simulation package Karabo installs natively on André's
-  Mac and simulates on its graphics processor, about 5.6 times faster than
-  on the processor (52 s against 290 s); the change stays local. André also
-  drafted two bachelor projects for computer science students, for after the
-  sabbatical.
-- **Next:** the first image from the campaign (25 December 2024), checked
-  before the rest run; polarisation, which tells us more about how the radio
-  waves are produced; checking the absolute positions.
+  the main burst). The first of these runs failed on 13 October; no such run
+  since 19 October either (checked 22 October).
+- **Since 19 October:** the archive campaign (plan item 7) has its first
+  images. Recipe: one image per burst, all at the same frequency (162.6 MHz),
+  4 seconds at the burst maximum, with the solar pipeline's self-calibration.
+  The test case, a type II burst on 25 December 2024, gives one compact source
+  in the south of the disk, during a medium-size (M-class) X-ray flare and
+  well south of its active region; whether its brightness is trustworthy is
+  still open (the burst light curve has flat tops that may mean the receiver
+  was saturated). Ten of the eleven newest events that are open to us
+  (observed with the full 256-tile array) were imaged on 21–22 October; the
+  last one is being processed. Three of them sit at a slightly higher
+  frequency because the observation lacks 162.6 MHz, and in three the MWA
+  shows no clear burst at that frequency. None of these images has been
+  reviewed yet. Five more events are under embargo until 2027–2028.
+  André set the two main goals of the sabbatical (see "Goals" below): a
+  catalogue of MWA bursts with e-Callisto, STIX and GOES counterparts, and a
+  comparison of calibration methods. Earlier in this period: the SKA
+  simulation package Karabo runs natively on André's Mac (graphics processor
+  about 5.6 times faster; the change stays local), and André drafted two
+  bachelor projects for after the sabbatical.
+- **Next:** review the eleven campaign images, write down where each burst
+  sits and whether it is real; settle the possible saturation; then the
+  catalogue comparison with X-rays (STIX, GOES). Also: polarisation, and
+  checking the absolute positions.
 
 **SKAO side (plan items 24–27).** First the SKA Science Data Processor (SDP), then
 the services of the SKA Regional Centre Network (SRCNet), then a sketch of a

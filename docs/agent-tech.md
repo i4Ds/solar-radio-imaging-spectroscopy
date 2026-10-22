@@ -25,6 +25,91 @@ Technical details, with commits, file:line, job IDs.
 
 ---
 
+## 2026-10-22 — [claude] Daily update (log entry of the same title)
+
+Window: 2026-10-19T03:37Z to 2026-10-22T01:58Z (the 20 Oct run stalled; its
+worktree at `4d43d03` was left in `/var/folders/.../sabbatical-daily/`,
+clean, and reused). Calculon reachable. No new issue comments; no `@claude:`
+in PR threads; no `[cursor]` entries or Cursor commits.
+
+**Commits in the window** (all with Claude trailer, interactive sessions with André).
+- multiview: `260a38a` `678017e` `efa11bb` `cc7678e` `4752201` `ba1cd25`
+  `cec4e1c` `0dd4fca` (19 Oct); `23df299` `3f5c854` `5010b0e` `6ebc391`
+  (20 Oct); `93fc11a` `97fc453` `f816aab` `67d8052` `d5ac545` `2f4e495`
+  `2331001` (21 Oct); `4dec19a` `ccd58ba` `553d925` `366fe6b` `a56aaa6`
+  (22 Oct). Branch `origin/claude/paircars-calibration-walkthrough`:
+  `6d60db4` `1f5895e` `29699b6` `d645793`, not on main.
+- umbrella: `687c317` `4d43d03` (19 Oct), `33fdf98` `fa5a2c5` (21 Oct, goals, item 28).
+- STIX-MWA: `8a56077` `a39d480` `9966dd7` `8a027be`.
+- This run: multiview `cdb75bc`; umbrella this commit.
+
+**Calculon, read 22 Oct ~04:00 CEST.** `squeue -M all`: one job, 112246
+raw-birli (1458877312). `sacct -M all -S 2026-10-19`: ASVO downloads
+1114407–1114423 and 1115547–51, 1115658–63 completed; P-AIRCARS runs
+completed for 1419137296 (111710), 1475301616, 1469325616 (111972/111974),
+1446870616, 1446865216 (112001/112004), 1446861616 (112148; first attempt
+111973 cancelled after 11.5 h), 1451801392 (112210), 1451778960 (112215),
+1449551392, 1450835520, 1451779192 (112232/112233/112238). Status files
+`~/mwa/events/<obsid>.md` all end in `DONE: 1 image(s)` except 1458877312.
+The last three say "MLflow logging failed": the calculon copy of
+`event_image.sh` (dated 21 Oct 01:26) still calls the removed logger; the
+repo copy (`scripts/calculon/event_image.sh:66`) says it was removed. Copy the
+repo version over or retire `event_image.sh` in favour of `product_run.sh`.
+Board database (`QwU6ZtNBeVh7Vxuuip27qk`): `judgements` and `requests` empty.
+
+**Review details.**
+1. `docs/burst-imaging-plan.md` "Before anything runs": "Batch 0 first, end
+   to end; batch 1 only after its image is checked." Batch 1 started
+   2026-10-21 04:21 (`67d8052`); the flat-top check in
+   `docs/archive-events.md` was still open, and the "position check with
+   hyperdrive on the first event only" (same file, "What each image is") is
+   not done.
+2. Tooling churn: MLflow `93fc11a` → `97fc453` → `f816aab` → `4dec19a`
+   (launchd mirror) → removed in `ccd58ba` (~24 h). Board `ccd58ba`,
+   `553d925`, `366fe6b`, `a56aaa6`. Per-image numbers are only in
+   `~/mwa/board/board.json` and the private artifact, not in git.
+3. `docs/archive-events.md` (Claude, `5010b0e`): "290″ south-southwest of the
+   STIX position and of AR 13932". Source (−187, −572), STIX (−88, −297):
+   Δ = (−99, −275), 292″, ~20° east of south. SHARP (6, −188): Δ = (−193,
+   −384), 430″. Fixed in `cdb75bc`. Not rechecked: "0.63 R☉ projected"
+   (602″ / ~975″ gives ~0.62; depends on the R☉ used).
+4. Window LC max/median from the status files: 1475301616 1.59, 1449551392
+   1.49, 1446865216 1.39. `event_peak.py` picks the maximum regardless; the
+   plan says such bursts are marked. Suggest a threshold flag in the chain
+   (e.g. < 2) written to the status and the board. Marked by hand in
+   `cdb75bc`.
+5. `configs/events/batch2.txt` had CH=126 for 1449551392; it ran at CH=132
+   from calculon-only `~/mwa/events/rerun3.txt` (`ch132_archive_has_12_of_24_channels`).
+   Comment added in `cdb75bc`; `rerun1/2/3.txt` are not in git.
+   `docs/burst-imaging-plan.md` batch table (0/1/2) contradicts
+   `configs/events/batch1.txt`/`batch2.txt` and `67d8052`/`d5ac545`.
+6. `docs/sabbatical-plan.md` item 28 said "Rapthor not yet installed";
+   `4752201` and `ba1cd25` installed it (calculon SIF, Mac Colima). Fixed in
+   this commit.
+7. Cursor, multiview checkout: still on `cursor/git-push-policy` (`18db859`),
+   uncommitted `.cursor/rules/git-push.mdc` (lists `i4Ds/ecallisto_ng`,
+   `i4Ds/Karabo-Pipeline`) and `docs/paircars-upstream.md` (rewrite as PR
+   bodies; drops the `FileNotFoundError` / `AttributeError` /
+   `UnboundLocalError` messages and the file:line references, e.g.
+   `slurm_cluster.py` line 437, `proc_manage_utils.py` line 300). Untracked
+   `references/Bastian 2018 Figure.pdf`, `Benz Drawing 1/2.pdf` (owner
+   unknown, not touched). Umbrella checkout: still on `8e8d029` with the old
+   13 Oct edits, 21+ behind.
+8. Open on Claude since 18 Oct: 0.73 MK / 110 MK vs 0.78 MK / 86 MK at
+   148.5 MHz. Not done.
+
+@cursor:
+- Item 2 (saturation): MWA light curve `~/mwa/events/1419137296_ch127_lightcurve.png`
+  (data via `solarburst.dynspec` on the ch 127 MS of 1419137296); e-Callisto
+  ASSA at ~162 MHz, 04:47–04:52 UTC 2024-12-25. Commit figure + sentence in
+  multiview `docs/archive-events.md` under "To check before trusting the brightness".
+- Item 3 (X-ray table): times and obsids in multiview `docs/archive-events.md`
+  (both tables); STIX list is the Hayes et al. list already used in `6ebc391`.
+- Item 4 (review): multiview `cec4e1c`..`a56aaa6` above, especially
+  `scripts/calculon/export_board.py` (peak/rms/centroid/T_B) against one
+  `pbcor_hpcs` FITS, `scripts/calculon/product_run.sh`, `2f4e495`; and `cdb75bc`.
+- Commit trailer `Co-authored-by: Cursor <cursoragent@cursor.com>`.
+
 ## 2026-10-19 — [claude] Daily update (log entry of the same title)
 
 Window: 2026-10-17T22:47Z to 2026-10-19T03:37Z (plus commits that reached

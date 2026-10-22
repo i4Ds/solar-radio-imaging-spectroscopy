@@ -31,6 +31,126 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-10-22 — [claude] Daily update
+
+This entry covers 19 to 22 October. The evening run of 20 October stopped
+before it finished, so there was no update in between.
+
+**Today.** The archive campaign has its first images (André with Claude).
+The test case, a type II burst on 25 December 2024, gives one compact source
+in the south of the disk, 2.5 minutes after the peak of a medium-size
+(M4.9) X-ray flare. The source lies well south and a little east of the
+flare's active region and of the position in the STIX flare list. That is a
+real observation, but not yet an interpretation: a type II burst is driven
+by a shock, and a shock can sit far from the flare site. Its brightness is
+not yet trustworthy. The MWA light curve at our frequency has three maxima
+with the same flat top, which could mean the receiver was saturated.
+
+Ten of the eleven newest events that are open to us were then imaged on 21
+and 22 October; the last one is being processed now. What they tell us about
+the data so far: in three of them the MWA sees no clear burst at our
+frequency (at its highest the light curve is less than 1.6 times its usual
+level),
+so the chain simply imaged the brightest moment of a quiet curve. Three
+observations do not contain our standard frequency and were imaged slightly
+higher, so they are not directly comparable. Four events show strong bursts
+(more than ten times the usual level). Nobody has looked at the images yet:
+the review page has no verdict on any of them.
+
+Two errors in the data requests were found and repaired along the way: one
+set of calibrator requests had automatic interference flagging switched on by
+accident, and was requested again without it.
+
+André set the two main goals of the sabbatical: a catalogue of MWA bursts at
+high time resolution with their e-Callisto, STIX and GOES counterparts, and a
+comparison of three calibration methods. Imaging the whole archive stays the
+final aim, after those two.
+
+Cursor did nothing in this period; its last work is from 18 October.
+
+**What it means and what next.** We now have, for the first time, a small
+sample of bursts from different days, all made the same way. The science
+question of the campaign is whether bursts at one frequency appear at a
+similar place relative to their flare and its open field lines from event
+to event, as on 30 September 2022, or not. The 25 December case already
+hints at "not always": its source is far from the flare. The step that moves
+this most is not more images and not more tooling. It is one afternoon of
+looking: a verdict on each of the eleven images, its position, and whether
+the MWA burst matches an X-ray flare (GOES, STIX). That is the first version
+of the catalogue André just named as the main goal. Before any brightness is
+quoted, the saturation question must be settled.
+
+**Review.**
+
+1. *Claude and André, most serious.* The plan said: batch 1 only after the
+   first image is checked. The first image raised the saturation question on
+   20 October, and the next day ten more events ran with the same chain,
+   without an answer. If the receiver saturates in strong bursts, every
+   strong burst in the sample is affected in brightness (positions much less
+   so). The cluster time is spent, so the fix is cheap: settle the question
+   now, before any brightness goes into a table. The quickest test is to
+   compare the 25 December MWA light curve with e-Callisto at the same
+   frequency: if e-Callisto shows three peaks of different height where the
+   MWA shows three equal flat tops, the MWA was saturated. The promised
+   position cross-check with the standard MWA calibration on the first event
+   is also not done.
+2. *Claude and André.* About two days went into ways of tracking results: a
+   tracking server was installed, mirrored to the Mac and removed again
+   within a day, then replaced by a review page with movies, ultraviolet
+   context, magnetic field lines and thumbnails, still growing this morning.
+   Meanwhile not one of the eleven images has a verdict, and the positions
+   live only in that private page, not in the repository. The page may well
+   be the right tool, but it is finished enough. The next hour should go into
+   the verdicts and a written table of positions.
+3. *Claude, own error.* The write-up of the 25 December image said the
+   source lies south-south*west* of the flare. The numbers put it
+   south-south*east*, and further from the active region (about 430
+   arcseconds) than from the STIX position (about 290). Fixed tonight. I
+   also wrote the ten new images into the event table, with the three that
+   show no clear burst marked, as the plan asks.
+4. *Claude.* The imaging plan still describes the old batches (batch 1 = all
+   16 newest events, batch 2 = older events), while the runs used new ones
+   (5 and 6 of the newest). The config for one event still names the
+   channel it did not run at. Small, but it will mislead whoever reruns.
+   The calibration walk-through with André stopped on 19 October after its
+   third step and sits on a side branch, against the commit-to-main rule.
+5. *Cursor.* Nothing since 18 October. Its rule file in the imaging checkout
+   still lists two repositories that are not André's as push-without-asking;
+   it is still uncommitted and the checkout is still on Cursor's branch. The
+   same checkout holds an uncommitted rewrite of the P-AIRCARS findings for
+   its developers: shorter and clearer, but it drops the error messages and
+   code locations the developers need to reproduce the bugs. Keep those. The
+   coronal-hole check from 19 October is not done.
+6. *André, goals.* Good: two goals that end in a result, and the archive
+   imaging kept as the long-term aim instead of the first step. One gap: no
+   plan item says who builds the X-ray comparison for the catalogue, and
+   when it is done. Without it the catalogue goal has no next step.
+7. *Claude, open since 18 October.* The two older quiet-Sun numbers that do
+   not agree (12 October log against the progress report) are still not
+   reconciled. Not done tonight either.
+
+@cursor:
+1. Fix your rule file in the imaging checkout: only André's three
+   repositories are push-without-asking. Commit it from a temporary
+   worktree, put the checkout back on main, delete your branch. For the
+   P-AIRCARS draft, keep your plainer text but put back the error messages
+   and code locations. Done when main has both and the checkout is clean.
+2. The saturation test for 25 December 2024: the MWA light curve at 162.5
+   MHz and e-Callisto (the Australian station) at the same frequency on one
+   time axis, 04:47 to 04:52. Done when there is one figure and one sentence:
+   saturated or not.
+3. A first X-ray table for the catalogue: for each of the eleven imaged
+   events, the GOES class and whether the STIX flare list has a flare in the
+   4 s window or the minutes around it, with its position. Done when the
+   table is committed in the STIX-MWA repository.
+4. Review the campaign work of 19–22 October by André and Claude: the event
+   chain, the calibrator redo, the event table I wrote tonight, and the
+   numbers the review page computes (peak, noise, position, brightness)
+   checked against one image by hand. Done when your review is in this log
+   and the details in the technical file.
+5. Still open from 19 October: the coronal-hole check on the 2022 quiet-Sun
+   map. Lower priority than 2 and 3.
+
 ## 2026-10-19 — [claude] Daily update
 
 **Today.** The archive campaign moved from planning to fetching data
