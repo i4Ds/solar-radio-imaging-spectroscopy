@@ -25,6 +25,57 @@ Technical details, with commits, file:line, job IDs.
 
 ---
 
+## 2026-10-23 — [claude] Daily update (evening) (log entry of the same title)
+
+Window: 2026-10-22T21:52:38Z to 2026-10-23T12:14:06Z. Calculon not
+reachable (`ssh calculon` fails to resolve the hostname: no VPN), so every
+job state below comes from commit messages and docs, not from
+squeue/sacct/logs. No new issue comments in the three repos; `check.sh`
+reports no `@claude:`; no `[cursor]` entries; no Cursor commits (last Cursor
+log entry 18 Oct). Commit timestamps are +0800.
+
+**Commits in the window** (all multiview, Claude trailer, interactive
+sessions with André): `ec4abd5` (round started: ASVO jobs 1115915–1115933
+for 9 raw targets and 10 calibrators in `configs/asvo_jobs.csv`;
+`asvo-submit-retry.sbatch` per-obsid retry), `071a792` (all-channel round
+for 1449551392: `configs/products/allch_1449551392.txt`,
+`scripts/calculon/start_allch.sh`, calibrator jobs 1115936/1115937,
+zero-padded `CHP` in `product_run.sh` and `raw-birli.sbatch`, composite
+parts with time spans in `export_board.py`), `00c5424` (TRANGE
+05:09:40~05:11:28; MS spans 05:09:39.5–05:11:29.1; sleep outside the
+product lock), `27a3759` (`asvo_watch.py` SMALL_BYTES=100e9, SMALL_SLOTS=2),
+`2c4e70f` (`burst_series.sh`: move an earlier `imagedir_*_<LABEL>` aside).
+
+**Review details.**
+1. Batch 2 imaging: `configs/products/batch2.txt` (10 tier A) is ready to
+   run once the tars land. Recommend not running it until
+   `docs/archive-events.md` has verdicts for the 11.
+2. Naming: `start_allch.sh:28-35` re-registers
+   `1449551392_ch161-158_drift_h` with note "along the harmonic lane". Ch 161
+   = 206.1 MHz, ch 158 = 202.2 MHz (ch × 1.28 MHz); lower lane ~159–161 MHz;
+   ratio ~1.28. Rename `drift_h`/`drift_f` → upper/lower.
+3. Time window: the first allch try (01:28, per
+   `docs/burst-imaging-plan.md`) used the nominal obs span and P-AIRCARS
+   refused ("Please provide valid time range"). Suggest `product_run.sh`
+   clamps or rejects TRANGE against the MS time span before submitting.
+4. Ledger: `configs/asvo_jobs.csv` row `1449573328,…,1115661` notes
+   "(ch126)" but it now serves ch 120 and 132 (Cal_3C444_Ch121). Batch
+   labels: `batch2` (6 Phase IIIb, 21 Oct), `round 23 Oct` (10 tier A,
+   ledger), `configs/products/batch2.txt` and `configs/events/batch2.txt`
+   still collide. Not fixed tonight (config rename, not a doc fix).
+5. Not checked in this run (for Cursor): `start_allch.sh` product runs use
+   `CAL_JOB=auto` for 1449573272/1449573384/1449573440: does
+   `product_run.sh` wait for those tars or fail early? Extraction pattern
+   `*_ch097_*.fits` etc. assumes gpubox names `<obsid>_<time>_chNNN_NNN.fits`.
+   `asvo_watch.py`: a Ready job with no `files` size (want=0) lands in the
+   small pool and is treated as not on NAS.
+6. Cursor's checkouts unchanged since last night (see 2026-10-23 section
+   below, item 7).
+
+@cursor: task 5 of tonight's log = point 5 above plus `ec4abd5`
+`asvo-submit-retry.sbatch` (the 999 embargo branch and the generic
+`status code` grep order).
+
 ## 2026-10-23 — [claude] Daily update (log entry of the same title)
 
 Window: `last-run` still said 2026-10-19T03:37Z (the 22 Oct run pushed

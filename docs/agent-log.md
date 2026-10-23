@@ -31,6 +31,101 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-10-23 — [claude] Daily update (evening)
+
+This entry covers 23 October up to the evening. The cluster could not be
+reached tonight, so nothing here about running jobs is checked.
+
+**Today.** André and Claude started the next round. The useful change is
+for 12 December 2025, the event where our fixed frequency sat beside the
+burst. Instead of guessing one channel per moment from the e-Callisto
+spectrum, André asked for every frequency the archive has: eleven channels
+from 124 to 221 MHz, each imaged every 2 seconds over the whole two
+minutes. That is the first time we image one burst across most of the MWA
+band at once. If it works, it gives the position of the emitting region as
+a function of frequency and time, which is what we need to talk about height
+and motion, and it settles the open question of whether there is burst
+emission at the lower channel without anyone having to guess. The first
+attempt made no images because the requested time window was a few seconds
+longer than the data; it was restarted with the right window. No images have
+come back yet.
+
+The data for the ten next events from 2022–2024 were requested from the
+archive as well. Three of the raw data sets are about a terabyte each, and
+they blocked the much smaller calibrator downloads for nine hours, until
+small downloads got their own lane. The rest of the day was this kind of
+plumbing: requests that retry one by one, folders that a rerun no longer
+overwrites, channel names with leading zeros.
+
+Nothing has been done on the three things the last two reviews put first:
+written verdicts on the eleven images, the saturation test for 25 December,
+and a table of positions. Cursor has done nothing since 18 October.
+
+**What it means and what next.** The all-channel run is the right science
+step: it replaces a judgement call with a measurement. When its images
+arrive, the first thing to look at is simple: does the burst source move
+across the disk as the frequency goes down, and by how much? That one plot
+(position against frequency, for a few moments) is worth more than a movie.
+The campaign question (do bursts at one frequency sit in a similar place
+relative to their flare from event to event?) still has no answer, because
+the eleven images in hand are not looked at. The step that moves it most is
+still one afternoon of looking, and it does not need the cluster.
+
+**Review.**
+
+1. *André and Claude, most serious.* Last night's review asked to hold the
+   ten new events until the eleven images have verdicts. They were requested
+   this morning. That is André's call, and the downloads only cost disk and
+   time. But imaging them is where the risk is: if the review of the first
+   eleven finds a problem (saturation, a wrong calibrator, wrong positions),
+   all ten have to be imaged again. Fix: let the downloads finish, but start
+   no imaging of the ten until the eleven have a yes/no and a position each.
+2. *André and Claude.* The upper lane of 12 December is still called
+   "harmonic" in the new run and its movie. The two lanes are at a frequency
+   ratio of about 1.28, not 2, so that name is probably wrong and will
+   mislead any height estimate. With all channels imaged, the movie that
+   jumps from one channel to another is also less needed than before. Fix:
+   rename to upper and lower lane; first make the position-against-frequency
+   plot from the full set.
+3. *André and Claude.* The failed first attempt (time window longer than the
+   data) cost a round. A check of the requested window against the data
+   before any job starts would catch it in seconds. Small, but this kind of
+   miss will repeat with every new event.
+4. *André and Claude.* Four of today's five changes are machinery. They were
+   needed to get the round going, but the balance of the last five days is
+   heavily on tooling and downloads, and no image has a written verdict yet.
+5. *Claude, own open items.* The quiet-Sun numbers that disagree (open since
+   18 October) and the two names for "batch 2" are still not fixed; today a
+   third name ("round of 23 October") was added for the same ten events.
+6. *Cursor.* Nothing since 18 October; the rule file, the P-AIRCARS draft
+   and the side branch in the imaging checkout are unchanged, and the old
+   13 October edits still sit in the umbrella checkout. All five tasks from
+   last night are open.
+
+@cursor:
+1. Still first: fix your rule file in the imaging checkout (only André's
+   three repositories are push-without-asking), keep the error messages and
+   code locations in the P-AIRCARS draft, commit both from a temporary
+   worktree, put the checkout back on main, and drop your old 13 October
+   edits in the umbrella checkout (they are already on main in another
+   form). Done when main has both and both checkouts are clean.
+2. The saturation test for 25 December 2024: MWA light curve at 162.5 MHz
+   and e-Callisto (Australian station) at the same frequency on one time
+   axis, 04:47 to 04:52. Done when there is one figure and one sentence:
+   saturated or not.
+3. 12 December 2025 in the e-Callisto spectrum: do the two lanes look like a
+   split band or a harmonic pair, and at which of the eleven MWA channels is
+   there burst emission? Done when there is one figure and two sentences in
+   this log, ready for when the all-channel images arrive.
+4. A first X-ray table for the eleven imaged events: GOES class, and whether
+   the STIX flare list has a flare in or near the image window, with its
+   position. Done when the table is committed in the STIX-MWA repository.
+5. Review today's work by André and Claude: the all-channel start script
+   (does every product run wait for its calibrator, and is the extraction
+   pattern right for every channel), the new download lanes and the
+   one-by-one request retry. Done when the review is in this log and the
+   details in the technical file.
+
 ## 2026-10-23 — [claude] Daily update
 
 This entry covers the afternoon of 22 October. The cluster could not be

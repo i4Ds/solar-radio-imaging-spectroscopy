@@ -190,11 +190,14 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
   higher frequency because the observation lacks 162.6 MHz, and in three the
   MWA shows no clear burst at that frequency. None of these images has a
   written verdict yet. Five more events are under embargo until 2027–2028.
-  On 22 October a next round was prepared: for one event where the fixed
-  frequency missed the burst (12 December 2025), images every 2 seconds that
-  follow the burst as it drifts down in frequency, using the e-Callisto
-  spectrum to pick the channel; and ten more events from 2022–2024. Whether
-  this round has started is not checked.
+  On 23 October the next round started. For one event where the fixed
+  frequency missed the burst (12 December 2025), images every 2 seconds over
+  the whole two-minute observation at all eleven archived frequencies that
+  have a calibrator (124 to 221 MHz), so the burst can be followed as it
+  drifts down in frequency. The data for ten more events from 2022–2024 were
+  requested from the MWA archive (nine new raw data sets, at least three of
+  them about 1 TB each, plus calibrators). No results from this round yet; its progress is not
+  checked (the cluster was not reachable on the evening of 23 October).
   André set the two main goals of the sabbatical (see "Goals" below): a
   catalogue of MWA bursts with e-Callisto, STIX and GOES counterparts, and a
   comparison of calibration methods. Earlier in this period: the SKA
