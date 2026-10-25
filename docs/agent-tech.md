@@ -25,6 +25,52 @@ Technical details, with commits, file:line, job IDs.
 
 ---
 
+## 2026-10-25 — [cursor] What can replace a CALLISTO (log entry of the same title)
+
+Written from a worktree of `origin/main` at `0ed942d`
+(`/Users/csillag/Projects/solar-radio-imaging-spectroscopy-plan`). The shared
+checkout `~/Projects/solar-radio-imaging-spectroscopy` was left untouched:
+it is behind `origin/main` and has local edits to `README.md`,
+`docs/agent-log.md`, `docs/sabbatical-plan.md`, plus untracked
+`docs/bachelor-projects-2027.md`.
+
+Plan: `docs/sabbatical-plan.md`, items 15 and 20 set to started, table under
+“Replacing a CALLISTO”. README “Where we are” date moved to 25 October; the
+five science highlights are unchanged. Season II sentence replaced.
+
+Prices, 25 Oct 2026:
+
+- CALLISTO CHF 430 on e-callisto.org products page; × 1.213 USD/CHF → $522.
+- tinySA basic: Amazon AURSINC listing $62.50–$63.
+- RTL-SDR: the bench unit is a generic RTL2832U / R820T. $34.95 is the
+  RTL-SDR Blog V3 dongle-only price. LNA not included. Measured lock
+  10–1766 MHz, 2.4 MS/s capture.
+- tinySA Ultra+ ZS406: about $170 (R&L $169.95, Amazon about $150–$170).
+  Noise from the published −169 dBm/Hz with the LNA, about 5 dB. Not this unit.
+- RX-888 MKII: shop listings $170–$290, no maker price. Alcalá thesis
+  Rabadán Parra 2025, hdl.handle.net/10017/69083. Goals met; no NF extracted.
+- RSPdx-R2: Ham Radio Outlet $239.95; SDRplay £188 ex VAT. NF from the April
+  2024 datasheet.
+- LimeSDR Mini 2.0: Crowd Supply campaign price $399, page said in stock,
+  order button price not in the fetched text. 10 MHz–3.5 GHz, 40 MHz.
+- bladeRF 2.0 micro: Nuand, xA4 $540, xA9 $860. Spec table RX 70–6000 MHz,
+  56 MHz IBW. The two RX channels share one tune.
+- Ettus B200mini $1,503 (ettus.com). AD9364 NF 2 dB at 800 MHz, maximum gain,
+  chip only.
+- Signal Hound SM200B from $17,750; SM200C from $21,495. Sweep 1 THz/s at
+  RBW ≥ 30 kHz. DANL −156 dBm/Hz below 700 MHz → about 18 dB. Stated NF
+  11 dB only from 700 MHz.
+- Ettus USRP X410 $33,020 (ettus.com; NI also showed a higher starting
+  price on one page). Four independent 400 MHz RX, 1 MHz–7.2 GHz, NF 8 dB
+  from 500 MHz to 3.1 GHz. No NF below 500 MHz in the table used.
+
+Bench, earlier this session, not left armed: tinySA basic firmware
+tinySA_v1.4-175, low input, 0–350 MHz, 290 points, radio sweeptime 411 ms,
+wall-clock scanraw about 0.6 s. RTL-SDR spectrogram was at 98 MHz only.
+
+@claude: nothing technical. Do not treat the RX-888 row as a measured noise
+figure.
+
 ## 2026-10-23 — [claude] Daily update (evening) (log entry of the same title)
 
 Window: 2026-10-22T21:52:38Z to 2026-10-23T12:14:06Z. Calculon not

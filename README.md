@@ -152,7 +152,7 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
 
 <a id="where-we-are"></a>
 
-## Where we are (23 October 2026)
+## Where we are (25 October 2026)
 
 **Season I — imaging (October–December).**
 
@@ -216,7 +216,13 @@ SKA-Low solar pipeline. The solar Detailed Science Case
 end on an MWA observation on the laptop; next is running it on the SRCNet
 software stack.
 
-**Season II — e-Callisto (January–March, Mexico)** has not started yet.
+**Season II — e-Callisto (January–March, Mexico)** started early on one
+question: what to buy instead of another CALLISTO. A basic spectrum analyser
+and a small software radio were tried on the bench on 25 October. Neither can
+replace a CALLISTO station. The full comparison, with prices, is in the plan.
+Nothing under $1000 watches the whole 45–870 MHz band at once. The quietest
+radio in that range of money is about $240 and still sees only 10 MHz at a
+time. The instrument that does see the whole band at once costs about $33,000.
 
 The detailed plan is in [docs/sabbatical-plan.md](docs/sabbatical-plan.md), the
 latest progress report in [docs/progress-2026-10-09.md](docs/progress-2026-10-09.md),

@@ -31,6 +31,55 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-10-25 — [cursor] What can replace a CALLISTO
+
+**Question.** For the bursts the MWA and e-Callisto see together, can a
+receiver we buy now do the spectrometer’s job better than a CALLISTO, and
+is there one in the range of a few hundred to a thousand dollars?
+
+**What we found.** A basic handheld analyser and a small software radio were
+tried on the bench. The analyser reaches 350 MHz in about 0.4 s, but it is
+about 18 dB noisier than a CALLISTO and it does not cover the rest of the
+band. The software radio can be tuned anywhere in the band, but it sees only
+a couple of megahertz at a time. Neither replaces a station.
+
+Of the products one can order, nothing under $1000 watches 45–870 MHz at
+once. The only radios in the $500–1000 window still chop the band into
+slices, and their published reception starts at 70 MHz, so they miss the
+bottom of the band where many bursts begin. The quietest radio found is
+cheaper than that, about $240, and quieter than a CALLISTO through this
+band, but it sees 10 MHz at a time. The receiver already tested at Alcalá
+as a network spectrometer is also under $300; below 64 MHz it can take a
+wide slice in one look, and above that it is again a 10 MHz tuner. The
+instrument that really does see the whole band at the same time has four
+wide receivers and costs about $33,000. A fast spectrum analyser at about
+$21,000 sweeps the band in under a millisecond, which is fast enough for a
+drifting burst, but it is noisier than a CALLISTO below 700 MHz unless an
+amplifier sits at the antenna. The prices and the noise figures are in the
+sabbatical plan.
+
+**What it means and what next.** The catalogue of MWA bursts that e-Callisto
+also saw still depends on the existing network. Buying a mid-price radio
+does not give a second CALLISTO. The useful next measurement is one known
+burst recorded at the same time by a CALLISTO and by either the $240 radio
+or the Alcalá receiver, on the same antenna if possible. That says whether
+the quieter radio, seeing only a slice, actually catches the bursts the
+network is for. The $33,000 instrument is the performance reference, not
+the next purchase.
+
+**Review.** The bench test is solid for the two devices that were connected:
+sweep time, frequency reach, and the noise comparison are measured or taken
+from the maker’s specification, not guessed. The weakness is that the
+quieter radios have not been measured here at all. Their advantage is on
+paper. The Alcalá thesis says its design goals were met and does not give a
+sensitivity, so that row must not be read as “better than CALLISTO”. The
+campaign images from 23 October are untouched; this session did not look at
+them.
+
+@claude: no action. If a receiver is ordered for Mexico, the comparison in
+the plan is the shortlist: the $240 radio or the Alcalá receiver first, not
+a board in the $500–1000 gap.
+
 ## 2026-10-23 — [claude] Daily update (evening)
 
 This entry covers 23 October up to the evening. The cluster could not be

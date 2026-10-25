@@ -1,4 +1,4 @@
-# Sabbatical plan (23 October 2026)
+# Sabbatical plan (25 October 2026)
 
 **Theme:** agentic software aspects of solar radio indirect imaging and
 spectroscopy.
@@ -50,15 +50,55 @@ Notes and findings: [skao-notes.md](skao-notes.md).
 
 | # | Item | Repo | Status |
 |---|------|------|--------|
-| 15 | Test the SDR solution with the mini-spectrum analyzer | — | 🔴 not started |
+| 15 | Test the SDR solution with the mini-spectrum analyzer | — | 🟡 in progress (25 Oct: basic tinySA and an RTL-SDR measured on the bench; neither replaces a CALLISTO) |
 | 16 | e-Callisto as context / alarm / interval selection | [ecallisto_ng](https://github.com/i4Ds/ecallisto_ng) | 🔴 not started |
 | 17 | Dynamic range of Mexican stations | — | 🔴 not started |
 | 18 | AI burst classification, paper, Mexican stations | ecallisto_ng | 🔴 not started |
 | 19 | Compare e-Callisto and imagers; network calibration | ecallisto_ng + solar-burst-multiview | 🔴 not started (the e-Callisto confirmation from items 7a and 7b is reused here) |
-| 20 | SDR tests (Spain / Udaipur / Mexico) as a long-term replacement | — | 🔴 not started |
+| 20 | SDR tests (Spain / Udaipur / Mexico) as a long-term replacement | — | 🟡 started (25 Oct: replacement comparison below; nothing bought) |
 | 23 | Align the FHNW tools with the other projects, e-Callisto first | [ecallisto_ng](https://github.com/i4Ds/ecallisto_ng), [FlareSense-v2](https://github.com/i4Ds/FlareSense-v2) | 🟡 started early (needed now, not only in January) |
 
 Item 23 belongs to Season II but starts now, in parallel with Season I.
+
+### Replacing a CALLISTO (25 October 2026)
+
+Items 15 and 20. The question was which product to buy instead of another
+CALLISTO, and which of those is better. Prices are US dollars on 25 October
+2026. CALLISTO is the maker’s price of 430 Swiss francs, converted at 1.213
+dollars per franc. The two bench rows are what a new unit of that kind costs,
+not an invoice for the ones already here.
+
+Nothing between $500 and $1000 watches 45–870 MHz at once. The only radios in
+that window are the two bladeRF boards, and their published receive range
+starts at 70 MHz. The quieter radio is cheaper: an RSPdx-R2 at $240. The one
+instrument that does see the whole band at the same time is an Ettus USRP
+X410, at $33,020.
+
+| Product | Price | Band | At once | How 45–870 MHz is covered | Noise |
+|---|---:|---|---|---|---|
+| This RTL-SDR | $35 | Centers 10–1766 MHz, measured | 2.4 MHz, 8-bit | Hundreds of retunes | Set by the LNA, not measured |
+| This tinySA | $63 | 0–350 MHz, filtered | One sweep, 290 points | 0.41 s to 350 MHz. The rest is missing | About 28 dB on the low input |
+| tinySA Ultra+ | $170 | 100 kHz–900 MHz on the low input | One sweep, 450 points | About 1.8 MHz between points | About 5 dB with the LNA |
+| RX-888 MKII, Alcalá | $170–$290 | 1 kHz–1.7 GHz, split at 64 MHz | 64 MHz below 64 MHz; 10 MHz above | Direct sampling through 64 MHz, then a tuner | Not published |
+| RSPdx-R2 | $240 | 1 kHz–2 GHz | 10 MHz, 14-bit | About 80 steps. A 300 kHz channel is available | 2.1–6.0 dB from 100 to 660 MHz |
+| LimeSDR Mini 2.0 | $399 | 10 MHz–3.5 GHz | 40 MHz, 12-bit | About 21 steps. Includes 45 MHz | Not published for the board |
+| CALLISTO | $522 | 45–870 MHz | 300 kHz | 200 channels in 0.25 s | 10 dB maximum |
+| bladeRF 2.0 micro xA4 | $540 | Receive 70 MHz–6 GHz | 56 MHz, 12-bit, two channels at one tune | About 15 steps. Misses 45–70 MHz | Not published for the board |
+| bladeRF 2.0 micro xA9 | $860 | Same as the xA4 | Same radio, larger programmable logic | Same coverage as the xA4 | Not published for the board |
+| Ettus B200mini | $1,503 | 70 MHz–6 GHz | 56 MHz, one receiver | About 15 steps. Misses 45–70 MHz | Chip 2 dB at 800 MHz, before the board |
+| Signal Hound SM200B | $17,750 | 100 kHz–20 GHz | 160 MHz for 2 seconds; sweep 1 THz/s | Under 1 ms at 30 kHz resolution | About 18 dB below 700 MHz |
+| Signal Hound SM200C | $21,495 | 100 kHz–20 GHz | 160 MHz streamed continuously | Under 1 ms at 30 kHz resolution | About 18 dB below 700 MHz |
+| Ettus USRP X410 | $33,020 | 1 MHz–7.2 GHz | Four independent 400 MHz receivers | The whole band at the same time | 8 dB from 500 MHz to 3.1 GHz |
+
+The RX-888 is the receiver a 2025 master’s thesis at the University of Alcalá
+validated as a spectrometer for the e-CALLISTO network. The thesis reports
+that the design goals were met. It does not give a sensitivity number, so
+none is entered above. The X410 datasheet used here has no noise figure below
+500 MHz. The Signal Hound noise below 700 MHz is read from a displayed floor
+of −156 dBm/Hz, not from a stated noise figure. The $35 RTL-SDR is a current
+named dongle of the same class as the generic one on the bench, and it does
+not include the amplifier. The LimeSDR price is the campaign price; the shop
+still listed it in stock but the order button showed no price.
 
 ## Open questions
 
