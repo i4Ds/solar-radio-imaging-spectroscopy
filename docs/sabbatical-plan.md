@@ -100,6 +100,69 @@ named dongle of the same class as the generic one on the bench, and it does
 not include the amplifier. The LimeSDR price is the campaign price; the shop
 still listed it in stock but the order button showed no price.
 
+### Keeping CALLISTO, without a single builder (25 October 2026)
+
+A new board that behaves as a CALLISTO can be made with 2026 parts and a
+Chinese prototype line. A copy of the 2006 board cannot. The obsolete part
+is not a chip we can send out for a new mask. It is the Philips cable-tuner
+module, CD1316, a shielded can. The project still lists 20 of them as
+spares. When those are gone, that front end is gone. There is no current
+Philips or NXP part that drops into the same footprint.
+
+The rest of the radiometer is ordinary and mostly still made. After the
+tuner, a mixer (an old SA602) converts 36.13 MHz down to 10.7 MHz, a ceramic
+filter sets the 300 kHz channel, and an AD8307 logarithmic detector feeds a
+10-bit converter in an ATmega16. The detector is still in production at
+Analog Devices, and its 25 mV/dB slope is the instrument’s 25.4 mV/dB. The
+microcontroller family is still listed in production; the exact through-hole
+part in the kit has to be checked before any rebuild. The second mixer is
+old as well. The two IF coils are wound by hand. A Chinese assembly line
+solders boards. It does not wind those coils, and it cannot buy a new
+CD1316.
+
+The design itself is not locked in one person’s notes. The specification,
+the schematics, a construction manual, a manufacturing checklist, the
+firmware archive and the host program are all published. What sits with
+Christian Monstein is the running of it: which quartz, which engineering
+changes, the pass-fail test, the spare tuners, the firmware rebuild, and
+the support of the stations. That is the dependency to remove. It is removed
+by a second person building one unit while he can still say whether it
+passes, and by a new front end whose files a board house can build without
+him.
+
+1. **Write down a pass.** One spare tuner, one board, a second person. Record
+   the quartz, the coil alignment, the detector slope, and the spectrum
+   against a station that already works. This is the step that expires.
+2. **Spend the 20 tuners on purpose.** A Chinese house can remake the
+   printed board from exported Gerbers. The tuner still comes from the
+   spare stock, fitted here. That batch keeps the network supplied. It does
+   not create a new supply of tuners.
+3. **Design the board that replaces the can.** Same behaviour, new front
+   end: 45–870 MHz, channels of 300 kHz on the 62.5 kHz grid, 200 channels
+   in 0.25 s, noise figure no worse than 10 dB, the same files uploaded as
+   now. The tuner is chosen the week the schematic is drawn, from a part
+   actually in stock, with an analog intermediate frequency a 300 kHz
+   filter and the AD8307 can measure. No such part was identified as a
+   pin-compatible successor. A silicon tuner that is already “not for new
+   designs” is not a basis for a new instrument. The hand-wound coils
+   become catalog filters. The microcontroller can be any current part that
+   speaks the present serial protocol, so the existing logging software
+   stays.
+4. **Prove it on the Sun.** Same antenna, same hour, one new board beside
+   one CALLISTO. The test is the burst and the quiet spectrum, plus the
+   noise figure, the channel frequencies, and a stability of at least 100
+   seconds. If those match, the network does not care that the can changed.
+5. **Leave a second source.** Gerbers, a bill of materials with distributor
+   numbers, a test jig, and the firmware in the institute archive. Two
+   people can order the board. The first article is reviewed by the person
+   who knows the old instrument. He is not the factory.
+
+A Chinese prototype run is the right scale: tens of boards, not a factory.
+The risk is the tuner choice and the side-by-side test, not the plating or
+the assembly. Until that test passes, the Alcalá receiver remains the
+fallback that already aims at the same files, and it is not a new CALLISTO
+board.
+
 ## Open questions
 
 Discussed as GitHub issues with the label `question`:

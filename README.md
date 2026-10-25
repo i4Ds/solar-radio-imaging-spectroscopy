@@ -223,6 +223,10 @@ replace a CALLISTO station. The full comparison, with prices, is in the plan.
 Nothing under $1000 watches the whole 45–870 MHz band at once. The quietest
 radio in that range of money is about $240 and still sees only 10 MHz at a
 time. The instrument that does see the whole band at once costs about $33,000.
+Keeping a CALLISTO, rather than replacing it, is possible on a new board:
+the obsolete part is the tuner module, not the detector, and a Chinese
+prototype line can build the new board. Copying the 2006 board is not
+possible once the spare tuners are gone. The steps are in the plan.
 
 The detailed plan is in [docs/sabbatical-plan.md](docs/sabbatical-plan.md), the
 latest progress report in [docs/progress-2026-10-09.md](docs/progress-2026-10-09.md),

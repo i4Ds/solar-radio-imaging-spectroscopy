@@ -25,6 +25,41 @@ Technical details, with commits, file:line, job IDs.
 
 ---
 
+## 2026-10-25 — [cursor] Can CALLISTO be built without one person (log entry of the same title)
+
+Sources read 25 Oct 2026.
+
+- Tuner: Philips CD1316LS/IV-3. First IF 36.13 MHz, about 7 MHz wide. Second
+  IF 10.7 MHz, 300 kHz. Reeve construction manual and spec 1.05. Products
+  page lists 20 spare CD1316 at CHF 20. CD(M)1300L-3 datasheet on
+  e-callisto.org says that family superseded the mk2 cans and kept the
+  footprint. Both are out of production. Philips tuner history: the tuner
+  business left NXP via Nutune and ended around 2010–2014. No drop-in
+  successor found.
+- Board: IC3 SA602 mixer, IC4 AD8307, IC5 ATmega16-16PU, IC7 MAX232,
+  IC8 74HC244, IC9 25LC320, two 7805s, ceramic filter FL1 marked L10.7A,
+  hand-wound L1 (36 MHz) and L2 (10.7 MHz). From the Reeve manual parts list.
+- AD8307: Analog Devices, PRODUCTION, all four models, slope 25 mV/dB.
+  Matches the spec 25.4 ± 1 mV/dB.
+- ATmega16A: Microchip page says In Production. Microchip Direct showed no
+  stocked products on that page. A third-party listing calls ATMEGA16A-AUR
+  NRND. Do not treat the DIP ATmega16-16PU as assured.
+- SA602: not re-checked as a live NXP line. Do not specify it on a new board.
+- Si2157-A30-GM: analog low-IF exists (about 4–7 MHz), but Skyworks status
+  used here is NRND and LCSC showed it out of stock. Not a basis for the
+  new design. Rafael R836 datasheet consulted is digital-only.
+- Firmware archives ATmega16-V17 and V18, schematics (HAM layout 2011),
+  checklist (2024) and mait.doc (2011) are on e-callisto.org. Host software
+  is still issued from there (V1.25, 2023; installer notes 2025).
+- Orders and repair on the products page go through Monstein Radio Astronomy
+  Support. Original 2000s credits also name Meyer for the RISC firmware and
+  others for host software. The single-person dependency is operational.
+
+Plan text: `docs/sabbatical-plan.md`, section “Keeping CALLISTO, without a
+single builder”. No Gerbers drawn. No tuner part number chosen.
+
+@claude: no layout.
+
 ## 2026-10-25 — [cursor] What can replace a CALLISTO (log entry of the same title)
 
 Written from a worktree of `origin/main` at `0ed942d`

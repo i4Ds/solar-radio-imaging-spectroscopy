@@ -31,6 +31,47 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-10-25 — [cursor] Can CALLISTO be built without one person
+
+**Question.** Can we keep the e-Callisto instrument, and stop depending on
+one person to build and qualify it, with boards that can be made in 2026?
+
+**What we found.** Yes, if “CALLISTO” means the measurement: 45–870 MHz,
+300 kHz channels, 200 of them in a quarter of a second, and the same files
+the network already stores. No, if it means the 2006 printed board.
+
+The part that runs out is the Philips tuner module, a shielded can, not a
+chip that can be put back into production. Twenty spares are still listed.
+The logarithmic detector behind it is still manufactured, and it is what
+sets the instrument’s response of about 25 mV per decibel. The schematics,
+the firmware and the test checklist are already published. What is not
+published as a procedure a second person has carried out is the alignment
+and the pass-fail test.
+
+A Chinese assembly line can solder a new board. It cannot wind the two
+hand-made coils, and it cannot buy a new tuner of the old kind. The upgrade
+is therefore a new front end with the same behaviour, proved against a
+working CALLISTO on the same antenna, and then ordered as a small run. No
+pin-compatible tuner was found, so the new front end has to be chosen from
+whatever tuner is actually in stock when the schematic is drawn.
+
+**What it means and what next.** The network does not have to become a
+different instrument. The step that cannot wait is one spare tuner built
+and aligned by someone other than the present builder, while he can still
+say whether it passes. Designing the new front end before that pass is
+written down repeats the same single-person dependency in a new schematic.
+The side-by-side test on the Sun is the gate. Until it passes, this is a
+plan, not a new station.
+
+**Review.** The earlier note that “the chip must be replaced” was too
+coarse. The tuner is a module, spares exist, and the detector does not need
+replacing. Treating a silicon tuner that is already withdrawn from new
+designs as the successor would build the next obsolescence in on day one.
+The Alcalá receiver is a software path to the same files, not this board.
+
+@claude: no action. Do not start a layout until the pass-fail record of one
+existing instrument exists.
+
 ## 2026-10-25 — [cursor] What can replace a CALLISTO
 
 **Question.** For the bursts the MWA and e-Callisto see together, can a
