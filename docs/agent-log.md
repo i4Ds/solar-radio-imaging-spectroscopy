@@ -31,6 +31,33 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-10-26 — [claude] New Highlight 1: twenty archive bursts
+
+**What changed.** André called the quiet-Sun picture of Highlight 1 not a
+highlight. It is off the main page (not moved to the older highlights; its
+numbers stay under "Where we are"). The new Highlight 1 shows the best image
+of each of the 20 bursts imaged from the MWA archive so far.
+
+**What the figure shows.** Most bursts are one compact source; 10 August 2024
+and 11 November 2025 (04:31) have a second source; 30 March 2026 (type IV,
+X1.4) breaks up into patches and is the weakest (peak/rms 53). On 12 December
+2025 the source is above the west limb at 213.7 MHz (1.27 solar radii). Not
+checked yet: sources against flares and active regions, brightness.
+
+**Failed.** 21 December 2023: stripes, no Sun (peak/rms 24). 29 December 2024:
+P-AIRCARS stops in `calc_uvtaper` (no uv bin below 1 % of the peak count,
+IndexError). That is P-AIRCARS code: not changed, for André to raise with the
+developers.
+
+<details><summary>Technical references</summary>
+
+- Figure: solar-burst-multiview `scripts/calculon/archive_overview.py` (best
+  frame per event by peak/rms, composites skipped, `--skip 1387165944`).
+- 1348547272 ch 125 rerun was stuck 2.8 days: its tar predates asvo-watch;
+  `product_run.sh` now accepts such tars. Restarted 26 Oct 16:30.
+
+</details>
+
 ## 2026-10-25 — [cursor] Can CALLISTO be built without one person
 
 **Question.** Can we keep the e-Callisto instrument, and stop depending on

@@ -19,37 +19,42 @@ can help.
 
 ---
 
-## Highlight 1 — Is the brightness right? Checking against a published quiet Sun
+## Highlight 1 — Twenty radio bursts from the MWA archive (2022–2026)
 
-![The quiet Sun in 2015 and in 2022, brightness temperature maps](docs/highlights/highlight_quiet_2015_vs_2022.png)
+![The best MWA image of each of 20 radio bursts, 2022 to 2026](docs/highlights/archive_overview_2026-10-26.png)
 
-*Radio "temperature" maps of the quiet Sun, coloured from 0 to 1.5 million
-degrees. Inner circle: the visible Sun; outer circle: twice its radius; small
-ellipse: the size of the telescope's sharpest detail. Left: 3 December 2015,
-the observation published by the MWA solar team (Sharma & Oberoi 2020), here
-processed with our own pipeline. Right: 30 September 2022, one hour before our
-flare; the dark red spot is a "noise storm" over the active region, up to
-9 million degrees. The two maps are at slightly different frequencies (145.9
-MHz in 2015, 137.0 MHz in 2022); the published quiet Sun hardly changes over
-that range (0.62 million degrees at 132 MHz, 0.63 at 145 MHz).*
+*The best image of each radio burst we have imaged so far from the MWA
+archive, in date order. Each panel has its own colour scale. Cyan circle: the
+visible Sun; cyan lines: where the burst reaches 50 % and 90 % of its peak;
+white: a 15° grid of solar latitude and longitude. Above each panel: date and
+time (UTC), the burst type seen by the e-Callisto stations, the X-ray flare
+class (GOES) during the observation, the frequency, the length of the image
+and how far the burst stands above the noise ("peak/rms"). Two images are
+marked "weak" (peak/rms below 100).*
 
-Away from flares the Sun's outer atmosphere glows steadily at radio
-wavelengths, at roughly a million degrees, which makes it a natural yardstick
-for the brightness scale of our images. To test our pipeline, we downloaded the
-very observation the MWA team published and processed it ourselves. The result
-matches their published map: a smooth disk somewhat larger than the visible
-Sun, at **0.58 million degrees** against their 0.63, and the same bright
-patch in the south-west. The pipeline works.
+Since 19 October the pipeline has been running through the archive: e-Callisto
+picks the observations with a clear burst, and for each one the solar
+pipeline P-AIRCARS makes an image at the burst maximum on our cluster. The
+recipe is the same every time: one frequency where possible (162.5 MHz, 15 of
+the 20 events) and 4-second images, so the events can be compared.
 
-Our 2022 quiet Sun, however, comes out patchy and fainter, at about 0.35
-million degrees. Calibrated on the reference source alone, 2015 and 2022
-agree (0.37 and 0.42 million degrees). The difference appears in
-self-calibration, the step that refines the calibration using the Sun itself:
-in 2015 it raises the brightness from 0.37 to 0.58 million degrees, close to
-the published value; in 2022 it lowers it from 0.42 to 0.35. A likely reason,
-not yet confirmed, is the bright noise storm that dominates the 2022 sky. The patchiness of
-the 2022 disk is in the data either way. So the brightness of our 2022 images
-is uncertain by a factor of about 1.5–2; their positions are not affected.
+What the 20 images show:
+
+- **Most bursts are one compact source.** The bursts sit all over the disk,
+  from the centre to the edge. The strongest stand more than 1000 times above
+  the noise (16 September 2022: 2664).
+- **Some do not.** 10 August 2024 and the third burst of 11 November 2025 show
+  a second, weaker source. The type IV burst during the X1.4 flare of 30 March
+  2026 breaks up into several patches, and it is also the weakest image (53).
+- **One burst sits above the edge of the Sun.** On 12 December 2025, at 213.7
+  MHz, the source is outside the west limb, 1.27 solar radii from the centre.
+  For this event we made 2-second images over the whole observation at all
+  eleven archived frequencies.
+
+Not yet done: whether each source matches its flare and active region, and
+whether the brightness is right (still open, see [Where we are](#where-we-are)). Two events are not in the
+figure: on 21 December 2023 the image shows stripes instead of the Sun, and on
+29 December 2024 P-AIRCARS stops with a programming error before the image.
 
 ## Highlight 2 — Four images per second: the burst flickers (30 September 2022)
 
@@ -152,7 +157,7 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
 
 <a id="where-we-are"></a>
 
-## Where we are (25 October 2026)
+## Where we are (26 October 2026)
 
 **Season I — imaging (October–December).**
 
@@ -166,7 +171,7 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
   on our cluster. The burst is a series of brightenings: 13 of them stand far
   above the noise, and all come from the same place within 10 arcseconds. A
   brightening just before the burst sits about 120 arcseconds further north.
-- **In progress:** the brightness scale (Highlight 1). Our pipeline
+- **In progress:** the brightness scale. Our pipeline
   reproduces the MWA team's published quiet Sun of 3 December 2015 (0.58
   against 0.63 million degrees). Our 2022 quiet Sun is fainter (about 0.35):
   calibrated on the reference source alone, both years agree, but
@@ -190,21 +195,21 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
   higher frequency because the observation lacks 162.6 MHz, and in three the
   MWA shows no clear burst at that frequency. None of these images has a
   written verdict yet. Five more events are under embargo until 2027–2028.
-  On 23 October the next round started. For one event where the fixed
-  frequency missed the burst (12 December 2025), images every 2 seconds over
-  the whole two-minute observation at all eleven archived frequencies that
-  have a calibrator (124 to 221 MHz), so the burst can be followed as it
-  drifts down in frequency. The data for ten more events from 2022–2024 were
-  requested from the MWA archive (nine new raw data sets, at least three of
-  them about 1 TB each, plus calibrators). No results from this round yet; its progress is not
-  checked (the cluster was not reachable on the evening of 23 October).
+  The round started on 23 October is done (checked 26 October). Nine of the
+  ten events from 2022–2024 were imaged; on 29 December 2024 P-AIRCARS stops
+  with a programming error, and on 21 December 2023 the image shows only
+  stripes. For 12 December 2025 there are 2-second images over the whole
+  two-minute observation at all eleven archived frequencies with a
+  calibrator (124 to 221 MHz), as a movie with all frequencies side by side.
+  The burst does not drift visibly within those two minutes. All images are
+  on the image board on André's laptop (Highlight 1 shows the best of each).
   André set the two main goals of the sabbatical (see "Goals" below): a
   catalogue of MWA bursts with e-Callisto, STIX and GOES counterparts, and a
   comparison of calibration methods. Earlier in this period: the SKA
   simulation package Karabo runs natively on André's Mac (graphics processor
   about 5.6 times faster; the change stays local), and André drafted two
   bachelor projects for after the sabbatical.
-- **Next:** review the eleven campaign images, write down where each burst
+- **Next:** review the twenty campaign images, write down where each burst
   sits and whether it is real; settle the possible saturation; then the
   catalogue comparison with X-rays (STIX, GOES). Also: polarisation, and
   checking the absolute positions.
