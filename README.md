@@ -221,21 +221,13 @@ SKA-Low solar pipeline. The solar Detailed Science Case
 end on an MWA observation on the laptop; next is running it on the SRCNet
 software stack.
 
-**Season II — e-Callisto (January–March, Mexico)** started early on one
-question: what to buy instead of another CALLISTO. A basic spectrum analyser
-and a small software radio were tried on the bench on 25 October. Neither can
-replace a CALLISTO station. The full comparison, with prices, is in the plan.
-Nothing under $1000 watches the whole 45–870 MHz band at once. The quietest
-radio in that range of money is about $240 and still sees only 10 MHz at a
-time. The instrument that does see the whole band at once costs about $33,000.
-Keeping a CALLISTO, rather than replacing it, is possible on a new board:
-the obsolete part is the tuner module, not the detector, and a Chinese
-prototype line can build the new board. Copying the 2006 board is not
-possible once the spare tuners are gone. The steps are in the plan.
+**Season II — e-Callisto (January–March, Mexico)** has not started yet.
 
-The detailed plan is in [docs/sabbatical-plan.md](docs/sabbatical-plan.md), the
-latest progress report in [docs/progress-2026-10-09.md](docs/progress-2026-10-09.md),
-and the scientific write-up of the 30 September event in
+The detailed plan is in [docs/sabbatical-plan.md](docs/sabbatical-plan.md).
+Notes on a replacement receiver are on their own page,
+[docs/callisto-receiver.md](docs/callisto-receiver.md). The
+latest progress report is in [docs/progress-2026-10-09.md](docs/progress-2026-10-09.md),
+and the scientific write-up of the 30 September event is in
 [docs/handover-2022-09-30-science-results.md](docs/handover-2022-09-30-science-results.md).
 Work is tracked on the [GitHub Project](https://github.com/orgs/i4Ds/projects/18).
 

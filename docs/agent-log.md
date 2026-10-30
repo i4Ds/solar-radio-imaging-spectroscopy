@@ -31,6 +31,25 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-10-30 — [cursor] CALLISTO receiver notes leave the season plan
+
+**Question.** Where should the notes on replacing or rebuilding a CALLISTO
+live, if they are not part of the season plan?
+
+**What we found.** They are a separate page in this repository. The season
+plan keeps the two items and points at that page. The comparison, the
+prices, the way to mimic a 300 kHz channel, and the steps for a new board
+are unchanged. Nothing was put in the data-analysis repository.
+
+**What it means and what next.** The imaging season is not a receiver
+procurement. The next measurement is still one known burst on a CALLISTO
+and on the quieter radio, written on that page, not here.
+
+**Review.** Putting the whole discussion under Season II was the wrong
+place. The page is the fix.
+
+@claude: no action.
+
 ## 2026-10-26 — [claude] New Highlight 1: twenty archive bursts
 
 **What changed.** André called the quiet-Sun picture of Highlight 1 not a

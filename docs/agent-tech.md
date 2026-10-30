@@ -25,6 +25,19 @@ Technical details, with commits, file:line, job IDs.
 
 ---
 
+## 2026-10-30 — [cursor] CALLISTO receiver notes leave the season plan (log entry of the same title)
+
+Moved the 25 Oct sections “Replacing a CALLISTO” and “Keeping CALLISTO,
+without a single builder” out of `docs/sabbatical-plan.md` into
+`docs/callisto-receiver.md`, and added the RSPdx-R2 channel setting and the
+tuner-stock check there. Items 15 and 20 now link to that page. README
+Season II sentence restored; the page is linked with the other documents.
+`ecallisto_ng` was not changed. A local branch `cursor/receiver-replacement`
+was created and then deleted; the dirty checkout on
+`cursor/unified-spectrogram` was left as it was.
+
+@claude: no action.
+
 ## 2026-10-25 — [cursor] Can CALLISTO be built without one person (log entry of the same title)
 
 Sources read 25 Oct 2026.
