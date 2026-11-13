@@ -25,6 +25,66 @@ Technical details, with commits, file:line, job IDs.
 
 ---
 
+## 2026-11-13 — [cursor] SuperUniform remake of the 2015 quiet Sun, by eye (log entry of the same title)
+
+solar-burst-multiview `cursor/sharma2020-fig4`, commit `7b50570`, PR 8.
+
+Pictures: `figures/sharma2020/fig4_his_vs_ours.png` (0–1.7 MK),
+`fig4_his_vs_ours_shape.png` (own peak), `fig4_diff.png` (per-panel ±max),
+`fig4_ours_strip_{108,162,217,240}.png`. Script
+`scripts/sharma2020_fig4_visuals.py`. Notebook
+`notebooks/05_sharma2020_fig4_compare.ipynb` is a picture book of those PNGs.
+Does not overwrite `fig4.png` or Rohit’s tree.
+
+Our frames on the laptop at write time: 108 n=129, 162 n=127, 217 n=48,
+240 mid-scan only. Cluster had ~160/band and was still writing; squeue
+looked empty while files grew to `108MHz_0172.fits`. Calculon array
+179924–179927, SuperUniform tclean niter 8000, CASA 6.6, dest
+`/scratch/$USER/mwa/sharma2020/paper/casa_su/`. Not 570 yet.
+
+Peaks (million K) and beam (arcsec):
+
+| MHz | caption | his | ours | his beam | ours beam |
+|---|---|---|---|---|---|
+| 108 | 0.92 | 0.892 | 0.884 | 225×217 | 217×205 |
+| 162 | 1.20 | 0.996 | 1.017 | 198×186 | 160×150 |
+| 217 | 1.50 | 1.064 | 1.115 | 188×186 | 128×119 |
+| 240 | — | 0.621 | 0.636 (n=1) | 209×202 | 183×157 |
+
+F(ν) on our frames ~10.64 / 12.35 / 13.15. Difference max |Δ| 0.02 / 0.04 /
+0.06 / 0.03 MK.
+
+@claude: if CASA 5.3 classic `clean` can be run, that is the 162/217 beam
+test. Do not start extra cluster jobs without André.
+
+## 2026-11-13 — [cursor] 2020 quiet-Sun maps, as the paper made them (log entry of the same title)
+
+Published FITS last `imager::clean()` (CASA 5.3.0-143, 15–16 May 2020):
+1024², 50″, Stokes I, MFS, SuperUniform uv cell [−3, 3] (`npixels=0`),
+multifield Hogbom, gain 0.1, niter 8000, threshold 0 mJy, uvrange empty,
+phasecentre J2000 16h40m55.28s −19d40m25.38s. 570 frames
+`1133149192-<ch>.0010` … `.0579`.
+
+Haslam: LAMBDA `lambda_haslam408_nofilt.fits`, Haslam et al. 1982 A&AS 47, 1,
+SHA256 `ea1f5f3d595cf07ebe8dbd08d67abdf60326249f93c9e1d332de7efc3833ac4e`.
+α = −2.55. Pointing 2015-12-03 03:42 UT, Galactic (l, b) ≈ (356°, +17°).
+`P_N` is 4×4 array-factor, not FEKO. Code: `solarburst.haslam`,
+`solarburst.oberoi2017`, `solarburst.sharma2020.mean_tb_per_frame`.
+Front door `scripts/sharma2020_pipeline.py`. Do not overwrite `fig4.png`.
+
+Per-frame Mohan then mean T_B on Rohit’s 570 frames:
+
+| MHz | F(ν) | ± | peak MK | caption |
+|---|---|---|---|---|
+| 108 | 10.73 | 0.07 | 0.892 | 0.92 |
+| 162 | 12.26 | 0.10 | 0.996 | 1.20 |
+| 217 | 13.19 | 0.18 | 1.064 | 1.50 |
+| 240 | 13.10 | 0.22 | 0.621 | — |
+
+S_⊙ SFU at this pointing: 2.87 / 6.50 / 11.72 / 8.17.
+
+@claude: no action on the 9.48 path.
+
 ## 2026-10-30 — [cursor] CALLISTO receiver notes leave the season plan (log entry of the same title)
 
 Moved the 25 Oct sections “Replacing a CALLISTO” and “Keeping CALLISTO,
