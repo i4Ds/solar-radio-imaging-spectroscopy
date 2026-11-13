@@ -31,6 +31,36 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-11-13 — [cursor] SuperUniform remake of the 2015 quiet Sun, by eye
+
+**Question.** Does a remake of the 3 December 2015 visibilities with the paper’s imaging settings look like Sharma & Oberoi 2020 Figure 4, or is it still a different Sun?
+
+**What we found.** At 108 MHz it is the same picture. The western patch sits on the west. The peak is 0.88 million K against his 0.89 and the caption 0.92. The restoring beam is 217 arcsec against his 225. Half-second frames through the first minute of the scan all look like that quiet Sun, not a burst.
+
+At 162 and 217 MHz the same patch is there, and the kelvin number sits on his maps (1.02 against 1.00, 1.12 against 1.06), still well below the caption (1.20 and 1.50). What you see is a tighter blob: 160 arcsec against his 198 at 162 MHz, 128 against 188 at 217 MHz. Subtracting his map from ours, the leftover is a few hundredths of a million K.
+
+This remake is still only the first minute or so of the four-minute scan.
+
+**What it means and what next.** The 108 MHz match says the visibilities, SuperUniform weighting, and the Haslam flux at this pointing are doing the right thing. The missing kelvin at 162 and 217 MHz is not a wrong image; it is the unpublished tile beam. The tighter blob at those frequencies is a later CASA against his 2015 CASA. Finish the four-minute mean; take the beam leftover to Rohit.
+
+**Review.** Comparing one half-second to Figure 4 was the wrong test. A mean of a hundred frames already shows the match. On the paper’s 0–1.7 million K scale the two rows look the same; the leftover only appears when the difference is stretched to a few hundredths of a million K.
+
+@claude: the 162/217 restoring beam is the thing to check against CASA 5.3 if that environment still exists. Do not invent a FEKO beam.
+
+## 2026-11-13 — [cursor] 2020 quiet-Sun maps, as the paper made them
+
+**Question.** What pipeline actually produced Sharma & Oberoi 2020 Figure 4, and how close do we get without the 2022 shortcut?
+
+**What we found.** The published pictures used SuperUniform weighting and 8000 clean iterations, not Briggs and 2500. Each of the 570 half-second frames was converted to kelvin with the Mohan stretch at 5σ, then averaged. That stretch is almost constant over the four minutes (scatter about 1%). After that, 108 MHz peaks at 0.89 million K against the caption 0.92. 162 and 217 MHz stay low (1.00 vs 1.20, 1.06 vs 1.50). Averaging order is not the cause.
+
+The whole-Sun flux used Haslam 1982 at *this* pointing, not the 2013 high-latitude table. On this morning the Sun sat about 17° from the Galactic centre. Whole-Sun flux with that sky: 2.9 / 6.5 / 11.7 / 8.2 solar flux units at 108 / 162 / 217 / 240 MHz (was 0.82 / 2.2 / 6.3 / 5.7 with the 2013 table).
+
+**What it means and what next.** 108 MHz is already at the caption once the sky is the 2015 sky. The leftover at 162 and 217 MHz is the unpublished FEKO tile beam, the use of visibility amplitude instead of the real part, and a UV-range the FITS do not record. Re-image with the HISTORY settings and compare the beam.
+
+**Review.** Treating the 2022 factor 9.48 as a 2020 calibration was wrong. It matches a pickle, not the paper.
+
+@claude: leave Rohit’s tree and the 9.48 figure alone. The discussion with Rohit is the FEKO beam and the UV-range that is not in the FITS.
+
 ## 2026-10-30 — [cursor] CALLISTO receiver notes leave the season plan
 
 **Question.** Where should the notes on replacing or rebuilding a CALLISTO
