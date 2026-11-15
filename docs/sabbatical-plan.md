@@ -1,4 +1,4 @@
-# Sabbatical plan (30 October 2026)
+# Sabbatical plan (15 November 2026)
 
 **Theme:** agentic software aspects of solar radio indirect imaging and
 spectroscopy.
@@ -14,9 +14,9 @@ engineering in Switzerland.
 |---|------|------|--------|
 | 1 | Understand MWA as a user | [solar-burst-multiview](https://github.com/i4Ds/solar-burst-multiview) | 🟢 done |
 | 2 | MWA stack on the laptop, calculon, and CSCS (non-solar demo) | solar-burst-multiview `docs/calculon-mwa.md` | 🟢 done |
-| 3 | Understand MWA calibration | solar-burst-multiview | 🟡 in progress (15 Oct: calibrator-only flux scales agree, 2015 0.37 MK and 2022 0.42 MK; amplitude self-cal sets the final scale) |
+| 3 | Understand MWA calibration | solar-burst-multiview | 🟡 in progress (15 Oct: calibrator-only flux scales agree, 2015 0.37 MK and 2022 0.42 MK; amplitude self-cal sets the final scale. 12 Nov: quiet-Sun list 2013–2015, one obs per day near noon, 305 days, calibrator within 24 h for 238; data to come on André's drive, no ASVO jobs) |
 | 4 | Reproduce Sharma et al. 2022 from existing MWA packages | solar-burst-multiview | 🟢 done |
-| 5 | Solar extension of the MWA stack, and calibration / self-cal (MWA and SKA-Low teams) | solar-burst-multiview | 🟡 in progress (15 Oct: our P-AIRCARS run reproduces the Sharma & Oberoi 2020 quiet Sun, 0.58 vs 0.63 MK; self-cal lowers 2022 from 0.42 to 0.35 MK; burst T_B uncertain by ×1.5–2) |
+| 5 | Solar extension of the MWA stack, and calibration / self-cal (MWA and SKA-Low teams) | solar-burst-multiview | 🟡 in progress (15 Oct: our P-AIRCARS run reproduces the Sharma & Oberoi 2020 quiet Sun, 0.58 vs 0.63 MK; self-cal lowers 2022 from 0.42 to 0.35 MK; burst T_B uncertain by ×1.5–2. 13 Nov, side branch, not merged: CASA remake of 3 Dec 2015 with the published files' settings (SuperUniform, 8000 iterations) and Haslam sky at the 2015 pointing matches the published maps at 108 MHz, 0.88 vs 0.89 MK, caption 0.92; at 162/217 MHz within ~5 % of the published maps, both below the caption, 1.0/1.1 vs 1.2/1.5 MK; cause unconfirmed; only part of the 570 frames remade) |
 | 6 | P-AIRCARS for MWA | P-AIRCARS | 🟡 in progress (runs on calculon since 8 Oct, 4 local patches; see solar-burst-multiview `docs/calculon-paircars.md`) |
 | 28 | Compare calibration methods for solar imaging: hyperdrive, P-AIRCARS, Rapthor, on the same observations. Needed for a robust pipeline before item 7 is scaled up | solar-burst-multiview | 🟡 started (hyperdrive and P-AIRCARS compared on the 2022-09-30 burst; 19 Oct: Rapthor installed as a container on the Mac and on calculon, not yet run) |
 | 7 | Ultimate goal: image all events in the MWA solar archive. First the selection (7a–7d), the catalogue with e-Callisto, STIX and GOES, and a robust calibration (item 28) | STIX-MWA (selection) + solar-burst-multiview (imaging) | 🟡 in progress. Plan carefully first: it can use huge resources if it has to be redone. Start with a few test cases (strong bursts and quiet Sun); see [#21](https://github.com/i4Ds/solar-radio-imaging-spectroscopy/issues/21) |

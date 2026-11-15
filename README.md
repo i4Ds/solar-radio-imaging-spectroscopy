@@ -157,7 +157,7 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
 
 <a id="where-we-are"></a>
 
-## Where we are (26 October 2026)
+## Where we are (15 November 2026)
 
 **Season I — imaging (October–December).**
 
@@ -176,7 +176,14 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
   against 0.63 million degrees). Our 2022 quiet Sun is fainter (about 0.35):
   calibrated on the reference source alone, both years agree, but
   self-calibration raises 2015 and lowers 2022. The noise storm is a likely
-  reason, not yet confirmed. Also in progress: combining MWA with
+  reason, not yet confirmed. On 13 November André and Cursor remade the
+  2015 images the way the published files say they were made. At 108 MHz
+  our map now matches the published one (0.88 against 0.89 million degrees;
+  the paper's caption says 0.92). At 162 and 217 MHz our maps agree with the
+  published images, converted to brightness the same way, within a few per
+  cent, but both stay below the caption (about 1.0 and 1.1 against 1.2 and
+  1.5 million degrees). Why is not confirmed yet. This work is on a side
+  branch, not yet on the main line. Also in progress: combining MWA with
   e-Callisto, STIX and SDO.
 - **Stopped:** quarter-second images of the rest of the flare (before and after
   the main burst). The first of these runs failed on 13 October; no such run
@@ -209,6 +216,13 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
   simulation package Karabo runs natively on André's Mac (graphics processor
   about 5.6 times faster; the change stays local), and André drafted two
   bachelor projects for after the sabbatical.
+- **Since 26 October:** no new campaign images in the main line (the
+  cluster could not be checked on 15 November). On 12 November André and
+  Claude chose one quiet-Sun observation per day from 2013 to 2015 (305
+  days, each with the closest calibrator where there is one; none for 2013).
+  The data will come on André's drive, not from the archive service. On
+  25–30 October Cursor compared receivers that could replace an e-Callisto
+  station (own page, below).
 - **Next:** review the twenty campaign images, write down where each burst
   sits and whether it is real; settle the possible saturation; then the
   catalogue comparison with X-rays (STIX, GOES). Also: polarisation, and

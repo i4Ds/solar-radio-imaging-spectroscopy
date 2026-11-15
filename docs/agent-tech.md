@@ -25,6 +25,58 @@ Technical details, with commits, file:line, job IDs.
 
 ---
 
+## 2026-11-15 — [claude] Daily update (log entry of the same title)
+
+Window 2026-10-22T21:52:38Z to 2026-11-15T05:09:52Z. Calculon not reachable
+(`ssh calculon` → hostname not resolved, no VPN): Cursor's array
+179924–179927 and the `casa_su/` frame counts are unverified. No new issue
+comments in the three repos; `sabbatical-claude-threads/check.sh` → NONE.
+
+Commits in window:
+- umbrella main: 8f706ca (Claude, 26 Oct, Highlight 1), 6b1f151/c006766
+  (Cursor, 25 Oct, receivers), 631833f (Cursor, 30 Oct). Branch
+  `cursor/fig4-visuals-log` 2c49b0b (13 Nov, two log + two tech entries),
+  PR #27 open, not merged.
+- solar-burst-multiview main: 4c595d4 (André + Claude, 12 Nov, quiet-Sun
+  list); Claude machinery 23–26 Oct. Branch `cursor/sharma2020-fig4`
+  72a8efa…7b50570 (8 commits, 13 Nov), PR #8 open, 40 files, +4326.
+- STIX-MWA main: ec98cc4, b5ec827 (Claude, 24 Oct, board spectra).
+
+Review details:
+1. Untested causes: 2c49b0b agent-log "+…it is the unpublished tile beam",
+   "…is a later CASA against his 2015 CASA"; branch
+   `docs/sharma2020-pipeline.md` "Leftover: CASA 6.6 `tclean` vs his 5.3
+   `clean`". Same file, "Leftovers" list, has "Per-band UV-range: not in
+   these FITS". Our beams are smaller than his at 162/217 (160×150 vs
+   198×186; 128×119 vs 188×186), the direction an upper uv cut on his side
+   would produce. Test: one 217 MHz frame, tclean SuperUniform niter 8000
+   with uvrange upper limits (e.g. a few values in λ), compare fitted
+   BMAJ/BMIN to 188×186″. Not checked in this run (no computation allowed).
+2. `.cursor/rules/git-push.mdc`: committed on branch (new file, line
+   "Branch `cursor/<topic>`. Never push to `main`. Open a pull request;
+   André merges.") contradicts AGENTS.md rule 3. Uncommitted edit in
+   `~/Projects/solar-burst-multiview` adds `i4Ds/ecallisto_ng` and
+   `i4Ds/Karabo-Pipeline` to push-without-asking; AGENTS.md rule 3 lists
+   both as owned by others. Was task 1 of the 23 Oct handoff.
+3. Frame counts: 2c49b0b tech table 108 n=129, 162 n=127, 217 n=48, 240
+   n=1; uncommitted `figures/sharma2020/fig4_ours_summary.json` in the
+   shared checkout has 217 n=183 (peak 1.112 MK) and 240 n=122 (0.637 MK).
+   Commit a9629a4 title says "image all 570 frames".
+4. Haslam et al. 1982 A&AS 47, 1 has no DOI; bibcode not checked in this
+   run. Check it is in `references/science_direction_refs.ris` (AGENTS.md
+   references rule) when merging.
+5. Plan item 5 numbers (15 Oct, 0.58 vs 0.63 MK) are consistent with the
+   new 240 MHz column (his 0.621), if that comparison was at 240 MHz; not
+   checked.
+
+Claude fixes tonight: solar-burst-multiview `configs/quiet/README.md`
+("Planned ASVO conversion" → on hold, André's drive). Claude's own draft PR
+solar-burst-multiview #7 (19 Oct) still open; left for André to close.
+
+@cursor: when you touch PR #8, also put `haslam_sky.png`'s source map
+SHA256 and the LAMBDA URL in `docs/sharma2020-pipeline.md` (already in your
+tech note, not in the repo doc).
+
 ## 2026-10-30 — [cursor] CALLISTO receiver notes leave the season plan (log entry of the same title)
 
 Moved the 25 Oct sections “Replacing a CALLISTO” and “Keeping CALLISTO,

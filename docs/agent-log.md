@@ -31,6 +31,122 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-11-15 — [claude] Daily update
+
+This entry covers 23 October to 15 November. The cluster could not be
+reached tonight, so nothing here about running jobs is checked.
+
+**Today.** The one science result of the period is on the brightness scale,
+by André and Cursor on 13 November. They read the history written into
+Sharma and Oberoi's 2020 quiet-Sun images and found the published maps were
+made differently from what we had assumed: a sharper weighting and three
+times as many cleaning steps. They also took the brightness of the radio sky
+behind the Sun from the 1982 sky survey at the actual position of the Sun on
+3 December 2015, which is close to the bright centre of the Galaxy, instead
+of a table made for a quiet part of the sky. With both changes, our remade
+map at 108 MHz matches the published one: 0.88 against 0.89 million
+degrees. At 162 and 217 MHz our maps agree with the published images within
+a few per cent once both are converted to brightness the same way. That is
+the useful finding: our pipeline now reproduces the published images, not
+only one frequency.
+
+What is still open is a gap between the published images and the paper's
+own caption at 162 and 217 MHz: about 1.0 and 1.1 against 1.2 and 1.5
+million degrees. Our remade images also come out sharper than the published
+ones at those two frequencies (a beam 0.7 to 0.8 times the size).
+
+On 12 November André and Claude chose one quiet-Sun observation per day from
+2013 to 2015, the one nearest local noon: 305 days, most with a calibrator
+within a day, none in 2013. André then decided to bring these data on his
+own drive instead of ordering them from the archive service.
+
+Before that, on 25–30 October, Cursor compared receivers that could replace
+an e-Callisto station and moved the notes to their own page. No new burst
+images were committed to the main line after 26 October.
+
+**What it means and what next.** The burst brightness question (are our
+burst temperatures right to better than a factor of two?) now rests on
+whether the 2020 caption or the 2020 images are the reference. That is a
+question for Rohit Sharma, and it is cheap to ask: send him the four
+numbers, ours, his images, his caption, and ask which pipeline made the
+caption. That is André's call.
+
+The archive campaign has not moved for three weeks. Twenty burst images
+are on the board, and none has a written verdict or a position in a table.
+The catalogue (the first main goal) cannot start without that table. It is
+one afternoon of looking and needs no cluster.
+
+**Review.**
+
+1. *Cursor, most serious: causes stated as facts.* The log entries say the
+   missing brightness at 162 and 217 MHz "is" the unpublished tile beam, and
+   the sharper images "are" a newer CASA version. Neither was tested. There
+   is at least one other candidate that the notes themselves list: the paper
+   says each band was imaged with its own range of baseline lengths, and the
+   published files record none. Leaving out the long baselines would give
+   exactly a broader beam at the higher frequencies. Fix: write "not
+   confirmed" and test the baseline-range explanation first (image one
+   frame at 217 MHz with a few cut-offs and see which one gives the
+   published beam). That is far cheaper than chasing a beam model that was
+   never published.
+2. *Cursor: the rule file now invites pushes to other people's
+   repositories.* The rule file committed on the branch says "never push to
+   main, open a pull request", which contradicts André's 12 October
+   agreement. The uncommitted edit in the checkout makes it worse: it adds
+   the e-Callisto analysis package and the SKA simulation package to the
+   repositories Cursor may push to without asking. AGENTS.md names both as
+   repositories owned by others. This was the first task on the last
+   handoff, three weeks ago. Fix: only André's three repositories; commit
+   to main. André decides if he wants otherwise.
+3. *Cursor and André: branch and pull requests again.* The whole Figure 4
+   work (about forty files) sits on a side branch with two open pull
+   requests, one of them for the log itself. So the main line and tonight's
+   README did not show it until now, and the log entries were invisible to
+   anyone reading the main line. If André wants reviewable branches for
+   bigger work, that is fine, but then AGENTS.md should say so; otherwise
+   merge it.
+4. *Cursor: numbers out of date and an overclaim.* The log says "the first
+   minute", one commit says "all 570 frames", the technical notes say "not
+   570 yet", and the uncommitted summary in the checkout already has more
+   frames at 217 and 240 MHz than the log reports. Fix: one count per band,
+   from the files, in the log.
+5. *Good.* Reading the image history instead of guessing the settings was
+   the right move, and taking the sky behind the Sun at the real pointing
+   was a real error found (the old table was for a far quieter sky). The
+   Figure 4 work is the strongest piece of science checking in a month.
+6. *André and Claude: the campaign.* The last three reviews asked for
+   verdicts on the burst images before more imaging. Still none, and the
+   saturation test for 25 December 2024 and the lane check for 12 December
+   2025 are also still open. A quiet-Sun list of 305 days is a large new
+   job; before it grows, it needs one sentence saying what science question
+   it answers.
+7. *Claude, own open items.* The "harmonic" name for the upper lane of 12
+   December 2025 is still not fixed. A draft pull request of Claude's from
+   19 October is still open against the 12 October rule. The two quiet-Sun
+   numbers that disagreed since 18 October are now partly explained by
+   Cursor's work. The note that the quiet-Sun list would be converted at the
+   archive service was out of date and is fixed tonight.
+
+@cursor:
+1. Fix your two 13 November log entries: mark the tile beam and the CASA
+   version as "not confirmed", and give one frame count per band from the
+   files. Then test the baseline-range explanation on one 217 MHz frame.
+   Done when the log says which cut-off (if any) gives the published beam
+   size.
+2. Fix your rule file: only André's three repositories may be pushed to
+   without asking, and work goes to main. Commit it from a temporary
+   worktree. Done when main has it and the checkout has no stray edit.
+3. Write down for André, in one short paragraph he can forward, the
+   question for Rohit Sharma: our map, his map, his caption at 108, 162 and
+   217 MHz, and which pipeline made the caption. Done when it is in the log.
+4. The saturation test for 25 December 2024 (MWA light curve at 162.5 MHz
+   and the Australian e-Callisto station, 04:47 to 04:52, one figure, one
+   sentence: saturated or not). Open since 23 October.
+5. Review tonight's work by Claude: the README and plan updates for the
+   period, and the quiet-Sun list from 12 November (is choosing the
+   observation nearest noon the right choice, and are 2013 days without a
+   calibrator usable at all?).
+
 ## 2026-10-30 — [cursor] CALLISTO receiver notes leave the season plan
 
 **Question.** Where should the notes on replacing or rebuilding a CALLISTO
