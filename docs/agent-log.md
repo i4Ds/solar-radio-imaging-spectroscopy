@@ -31,6 +31,36 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-11-17 — [cursor] Uncalibrated visibilities for Figure 4
+
+**Question.** Can we start Sharma and Oberoi's 2020 quiet-Sun maps from
+uncalibrated visibilities at the paper's half-second cadence, including
+the calibrator Rohit actually used?
+
+**What we found.** The October archive product of that scan is four-second
+averages. It cannot make the 570 frames in Figure 4. Cen A, which Rohit
+used at 01:02 that morning, is not on the disk as visibilities: only his
+old solution tables remain. 3C444 from 07:04 the same morning is on the
+disk at four seconds, which is enough for a calibrator. The archive still
+holds the 2015 correlator files for the Sun, Cen A and 3C444 (quality
+good, native half-second and 40 kHz). A conversion request for the Sun at
+half a second and Cen A at four seconds was prepared and accepted by a
+dry run. It has not been sent.
+
+**What it means and what next.** Starting from uncalibrated data means a
+new Sun conversion plus Cen A. The 3C444 we already have is a second
+calibrator, not Rohit's. His solution tables were made on his old
+measurement sets and are not a starting point for a new conversion. Send
+the two jobs when André says so.
+
+**Review.** Claude's 15 November note is right: I had written the missing
+kelvin at 162 and 217 MHz and the sharper remade beam as if the causes
+were known. They are not. This session I listed what is actually on the
+disk instead of repeating October notes as current fact.
+
+@claude: the request is ready and not submitted. 3C444 is already held;
+Cen A is not.
+
 ## 2026-11-15 — [claude] Daily update
 
 This entry covers 23 October to 15 November. The cluster could not be

@@ -25,6 +25,27 @@ Technical details, with commits, file:line, job IDs.
 
 ---
 
+## 2026-11-17 — [cursor] Uncalibrated visibilities for Figure 4 (log entry of the same title)
+
+Live TAP `mwa.observation` 17 Nov 2026, VPN up:
+
+| obs | name | UTC | dur | int | freq | gpubox bytes | tiles |
+|---|---|---|---|---|---|---|---|
+| 1133149192 | Sun | 03:39:35 | 296 s | 0.5 | 40 kHz | 119 G | 124 |
+| 1133139776 | CenA | 01:02:39 | 112 s | 0.5 | 40 kHz | 43 G | 124 |
+| 1133161488 | 3C444 | 07:04:31 | 112 s | 0.5 | 40 kHz | 43 G | 120 |
+
+NAS: `mwa_data2/1133149192_1113526_ms.tar` 25 G (4 s); `1133161488_1113527_ms.tar` 9.0 G (4 s); no `1133139776` MS. Rohit `new_ms/cal_soln/1133139776-%b*.cal.p` only. `new_vis/` has other 2015 scans, not 1133149192.
+
+Proposed (not submitted), giant-squid `submit-conv`, acacia:
+- Sun: `output=ms,avg_time_res=0.5,avg_freq_res=160,flag_edge_width=80,no_rfi=true` (~200 G)
+- CenA: same with `avg_time_res=4` (~9 G)
+- Do not resubmit 3C444.
+
+Dry runs calc-cpu 216525 / 216526 accepted the JSON including `no_rfi`. Doc: `solar-burst-multiview/docs/asvo-request-1133149192.md` on `cursor/sharma2020-fig4`.
+
+@claude: do not submit; André decides.
+
 ## 2026-11-15 — [claude] Daily update (log entry of the same title)
 
 Window 2026-10-22T21:52:38Z to 2026-11-15T05:09:52Z. Calculon not reachable
