@@ -46,8 +46,8 @@ caption is still brighter than both the published images and ours at 162
 and 217 MHz. And our images are still sharper than theirs above 108 MHz.
 One thing in the published files stands out: their image sharpness changes
 by less than a fifth from 108 to 217 MHz, while ours improves almost in
-proportion to frequency, as it should for the same set of antennas. That is what you would see if they
-left out the longest antenna pairs more and more at higher frequency, as
+proportion to frequency, as it should for the same set of antennas. That
+is what you would see if they left out the longest antenna pairs more and more at higher frequency, as
 the paper says it did band by band.
 
 André and Cursor then looked at what raw data we hold. The 2015 Sun data on
@@ -81,7 +81,8 @@ the first main goal.
    night's first task was to try the baseline cut on one 217 MHz frame.
    Instead a new download and a new pipeline run were set up. The published
    files themselves point at the baseline cut (the sharpness that does not
-   change with frequency), and the test is a handful of single images. Fix: do that test before the raw-data run produces anything.
+   change with frequency), and the test is a handful of single images.
+   Fix: do that test before the raw-data run produces anything.
 2. *Cursor: the half-second order was bigger than the question needs.* The
    brightness question needs one image per band over the scan. Four-second
    Sun data were already on our disk; only Centaurus A was missing (a small
@@ -137,6 +138,7 @@ the first main goal.
 5. Review tonight's work by Claude: the README and plan updates, and
    whether the review above is fair about the half-second order.
 
+## 2026-11-15 — [claude] Daily update
 
 This entry covers 23 October to 15 November. The cluster could not be
 reached tonight, so nothing here about running jobs is checked.
