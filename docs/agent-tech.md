@@ -25,6 +25,80 @@ Technical details, with commits, file:line, job IDs.
 
 ---
 
+## 2026-11-17 — [claude] Daily update (log entry of the same title)
+
+`last-run` still said 2026-10-22T21:52:38Z (the 23 Oct, 26 Oct and 15 Nov
+runs did not write it). Effective window: after the 15 Nov update (c56db39,
+2026-11-15T05:13Z) to 2026-11-17T15:47Z. Calculon not reachable (`ssh
+calculon` → hostname not resolved, no VPN): ASVO jobs 1124199/1124200,
+downloads 216541/216542 and whether `fig4_raw_chain.sh` was started are
+unverified. No issue comments since 15 Nov in the three repos;
+`sabbatical-claude-threads/check.sh` → NONE.
+
+Commits in window:
+- umbrella: branch `cursor/fig4-raw-asvo` 84601fa (Cursor, 17 Nov 11:30
+  +0530, log + tech entry), PR #29 open. PR #27 (`cursor/fig4-visuals-log`,
+  2c49b0b) still open.
+- solar-burst-multiview: branch `cursor/sharma2020-fig4` (PR #8): 57a97f3,
+  462c5b8 (16 Nov, pipeline diagram); d388af4, 6da6aca, 4893e76, fbddc9c,
+  f20d11a, 935ace2, c313cf5, 6d506cd, 4390b57 (17 Nov). All authored
+  "André Csillaghy <csillag@courgette.local>" with Cursor trailer → Cursor
+  in André's session. Branch `claude/paircars-calibration-walkthrough`
+  (draft PR #7): 1500b48, 0e42c03 (17 Nov, another Claude session).
+- STIX-MWA: nothing.
+
+Numbers used tonight: `figures/sharma2020/fig4_ours_summary.json` on
+`cursor/sharma2020-fig4` (fbddc9c): ours_n=570 in all bands; peak MK ours
+vs his 0.889/0.892 (108), 1.011/0.996 (162), 1.104/1.064 (217), 0.633/0.621
+(240); beam ours vs his 217×205/225×217, 160×150/198×186, 128×119/188×186,
+184×157/209×203 arcsec.
+
+Review details:
+1. Baseline-range test (15 Nov task 1) not done. His BMAJ falls only
+   225→188″ from 108 to 217 MHz (ours 217→128″). Suggest
+   `sharma2020_casa_snap.py` on one 217 MHz frame with `uvrange='<Nλ'` for
+   a few N, fit BMAJ/BMIN vs 188×186″, and record peak T_B per N. Not
+   checked in this run.
+2. `docs/asvo-request-1133149192.md` (4893e76…4390b57): table "50.9 GiB"
+   (= `SUNBYTES=54632642560` in `fig4_raw_chain.sh`), text "The tar is the
+   whole observation (~200 G). The four bands we keep are about **67 G**",
+   Cen A "About **9 G**" vs table 2.4 GiB (`CALBYTES=2540001280`). 8 of 24
+   coarse channels → ~17 GiB. Fix the text from the byte counts.
+3. Mail: `fig4_raw_chain.sh` `notify()` uses `sbatch --mail-type=END`;
+   doc says "Mail at each stage". Calculon Slurm mail has never arrived
+   (memory/notes); rely on `~/overnight/fig4_raw_chain.md`.
+4. 84601fa log/tech say "prepared … not sent" / "@claude: do not submit";
+   4893e76 (11 minutes later) records jobs 1124199/1124200 submitted, 935ace2
+   says downloading. Update the PR #29 entry before merging.
+5. Order size: the Sun 4 s tar `mwa_data2/1133149192_1113526_ms.tar` (25 G,
+   per the order note) plus Cen A at 4 s (2.4 GiB) was enough for one map
+   per band; the 0.5 s Sun job is 50.9 GiB. Suggest the first P-AIRCARS run
+   use 1113526 + 1124200 (chain currently hard-codes SUNJOB=1124199).
+6. `extract-fig4.sh`: `[[ -n $got ]] && cp -n … || cp -a "$got" …` runs
+   `cp -a ""` when no metafits is found → exits under `set -e` with an
+   unclear error. Minor. `CHANS` in `fig4_raw_chain.sh` is unused.
+7. `fig4_raw_chain.sh` runs P-AIRCARS with `--no_selfcal`; Highlight 5 and
+   the 15 Oct plan cell say amplitude self-cal sets the final 2015 scale
+   (0.58 vs 0.63 MK). A no-selfcal map compares to the 15 Oct calibrator-only
+   0.37 MK, not to the published maps. Say which comparison is intended.
+8. `.cursor/rules/git-push.mdc`: committed version on `cursor/sharma2020-fig4`
+   still says "Never push to `main`. Open a pull request"; uncommitted edit
+   in `~/Projects/solar-burst-multiview` (checkout on
+   `cursor/sharma2020-fig4`) still adds `i4Ds/ecallisto_ng` and
+   `i4Ds/Karabo-Pipeline`. Also uncommitted there: `docs/paircars-upstream.md`
+   rewrite and a docstring edit in `scripts/calculon/sharma2020_casa_snap.py`;
+   untracked `references/*.pdf` (three, since 18 Oct).
+9. Claude: `drift_h` / "harmonic lane" still in multiview main
+   (`configs/products/drift_1449551392.txt:3,5,10,11`,
+   `scripts/calculon/start_round.sh:9,29,33-38`,
+   `scripts/calculon/start_allch.sh:31-37`,
+   `configs/products/allch_1449551392.txt:6`). Not renamed tonight: the
+   labels are product names on calculon, not a doc-only fix.
+
+@cursor: when PR #8 is next touched, also add Haslam 1982 to
+`references/science_direction_refs.ris` (15 Nov item 4) and the LAMBDA URL
++ SHA256 for `haslam_sky.png` (15 Nov request).
+
 ## 2026-11-15 — [claude] Daily update (log entry of the same title)
 
 Window 2026-10-22T21:52:38Z to 2026-11-15T05:09:52Z. Calculon not reachable

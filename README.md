@@ -157,7 +157,7 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
 
 <a id="where-we-are"></a>
 
-## Where we are (15 November 2026)
+## Where we are (17 November 2026)
 
 **Season I — imaging (October–December).**
 
@@ -182,9 +182,11 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
   the paper's caption says 0.92). At 162 and 217 MHz our maps agree with the
   published images, converted to brightness the same way, within a few per
   cent, but both stay below the caption (about 1.0 and 1.1 against 1.2 and
-  1.5 million degrees). Why is not confirmed yet. This work is on a side
-  branch, not yet on the main line. Also in progress: combining MWA with
-  e-Callisto, STIX and SDO.
+  1.5 million degrees). Why is not confirmed yet. By 17 November all 570
+  half-second images in each of the four bands were remade; their average
+  agrees with the published images within 4 per cent in every band. This
+  work is on a side branch, not yet on the main line. Also in progress:
+  combining MWA with e-Callisto, STIX and SDO.
 - **Stopped:** quarter-second images of the rest of the flare (before and after
   the main burst). The first of these runs failed on 13 October; no such run
   since 19 October either (checked 22 October).
@@ -223,6 +225,14 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
   The data will come on André's drive, not from the archive service. On
   25–30 October Cursor compared receivers that could replace an e-Callisto
   station (own page, below).
+- **Since 15 November:** so far the 2015 remake started from the MWA team's
+  already-calibrated data. On 17 November André and Cursor ordered the
+  original, uncalibrated 2015 data from the MWA archive: the Sun at half a
+  second and the reference source the team used that morning (Centaurus A),
+  which we did not have. According to their notes both were being copied
+  to our cluster on 17 November; the cluster could not be checked tonight.
+  The plan is to calibrate and image them with P-AIRCARS ourselves, one
+  image per frequency first. No new campaign images.
 - **Next:** review the twenty campaign images, write down where each burst
   sits and whether it is real; settle the possible saturation; then the
   catalogue comparison with X-rays (STIX, GOES). Also: polarisation, and

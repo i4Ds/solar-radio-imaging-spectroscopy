@@ -31,7 +31,112 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
-## 2026-11-15 — [claude] Daily update
+## 2026-11-17 — [claude] Daily update
+
+This entry covers 15 to 17 November. The cluster could not be reached
+tonight, so nothing here about downloads or jobs is checked.
+
+**Today.** André and Cursor finished the remake of Sharma and Oberoi's 2015
+quiet-Sun series: all 570 half-second images in each of the four bands. The
+average of the series agrees with the published images within 4 per cent
+in every band (108, 162, 217 and 240 MHz). So the result of 13 November was
+not luck in a few frames: from the MWA team's calibrated data, with their
+settings, we get their brightness. Two differences remain. The paper's
+caption is still brighter than both the published images and ours at 162
+and 217 MHz. And our images are still sharper than theirs above 108 MHz.
+One thing in the published files stands out: their image sharpness changes
+by less than a fifth from 108 to 217 MHz, while ours improves almost in
+proportion to frequency, as it should for the same set of antennas. That is what you would see if they
+left out the longest antenna pairs more and more at higher frequency, as
+the paper says it did band by band.
+
+André and Cursor then looked at what raw data we hold. The 2015 Sun data on
+our disk are averaged to four seconds, and the reference source the team
+calibrated on that morning (Centaurus A) was never downloaded. They ordered
+both from the MWA archive on 17 November, the Sun at half a second, and
+wrote a chain that waits for the download and then calibrates and images
+with P-AIRCARS. Cursor's notes say the download was running; not checked.
+
+**What it means and what next.** The open science question is unchanged:
+are the burst brightnesses we measure right to better than a factor of two,
+and which 2015 number is the reference, the caption or the published
+images? Starting again from raw data answers a different question (does
+our own calibration give the same brightness?). That is worth knowing for
+the calibration comparison, the second main goal. But it will not explain
+the caption, and a third pipeline adds a third number before the first two
+are reconciled. Two cheap steps would settle more: image one 217 MHz frame
+with the longest antenna pairs cut at a few lengths and see which cut gives
+the published sharpness; and ask Rohit Sharma which processing made the
+caption numbers. The raw-data run should start with the four-second Sun
+data we already have plus the new Centaurus A, one image per band. The
+half-second series from raw data can wait until that one image agrees.
+
+The burst catalogue has not moved since 26 October: the twenty campaign
+images still have no written verdict. That remains the step that unblocks
+the first main goal.
+
+**Review.**
+
+1. *Cursor, most serious: the cheapest test was skipped again.* Last
+   night's first task was to try the baseline cut on one 217 MHz frame.
+   Instead a new download and a new pipeline run were set up. The published
+   files themselves point at the baseline cut (the sharpness that does not
+   change with frequency), and the test is a handful of single images. Fix: do that test before the raw-data run produces anything.
+2. *Cursor: the half-second order was bigger than the question needs.* The
+   brightness question needs one image per band over the scan. Four-second
+   Sun data were already on our disk; only Centaurus A was missing (a small
+   order). The half-second Sun order is about twenty times larger. It is
+   done now; the fix is to run the first images on the four-second data, so
+   the result does not wait for the big download. Also, the chain turns
+   self-calibration off. In October, 2015 without self-calibration gave
+   0.37 million degrees and with it 0.58, so the first number will not be
+   comparable with the published maps. Say which comparison is meant.
+3. *Cursor: the log contradicts itself and is not on the main line.* The 17
+   November log entry says the order "has not been sent"; the commits later
+   that morning say it was sent and was downloading. The entry sits on a
+   side branch with an open pull request, like the 13 November entries, so
+   the main line does not show what happened. Fix: correct the entry and
+   put all three log entries on the main line.
+4. *Cursor: the order notes have sizes that disagree.* The same note gives
+   the Sun data as about 51 GB in its table, "about 200 GB" in the text,
+   and "about 67 GB" for the four bands kept. The four bands are one third
+   of the channels, so about 17 GB. It also promises an e-mail at each
+   stage; e-mails from our cluster have never arrived. Fix: one size from
+   the archive's own number; use the status file, not mail.
+5. *Cursor: the push rule file, fourth time.* The local edit still lets
+   Cursor push to the e-Callisto package and the SKA simulation package,
+   both owned by others, and the committed version still says "never push
+   to main". Fix: only André's three repositories, commit to main.
+6. *André and Cursor: none of the five tasks from 15 November is done.*
+   Besides the baseline test and the rule file, the question for Rohit
+   Sharma, the saturation test for 25 December 2024 (open since 23 October)
+   and the review of Claude's quiet-Sun list are still open.
+7. *Good.* Finishing all 570 frames and checking what is really on the disk
+   before trusting October notes was the right move. The 17 November entry
+   admits the untested causes; the 13 November entries themselves are not
+   corrected yet.
+8. *Claude, own items.* Today another Claude session added to the P-AIRCARS
+   calibration walk-through, still on its side branch from 19 October,
+   against the commit-to-main agreement. It should go to main or be
+   closed; André's call. The "harmonic" name for the upper lane of 12
+   December 2025 is still not fixed in the scripts.
+
+@cursor:
+1. Test the baseline cut: one 217 MHz frame from the calibrated 2015 data,
+   same settings as your remake, with the longest antenna pairs cut at a
+   few lengths. Done when the log says which cut (if any) gives the
+   published sharpness, and whether the brightness changes with it.
+2. Correct your 17 November entry (the order was sent), fix the sizes and
+   the e-mail promise in the order notes, and put your three open log
+   entries on the main line. Done when the main line's log shows them.
+3. When the archive data are on the disk, run P-AIRCARS on Centaurus A and
+   the four-second Sun data first, one image per band. Done when the log
+   gives the brightness per band against ours and the published images.
+4. Fix the push rule file: only André's three repositories, commit to main.
+   Done when main has it and the checkout has no stray edit.
+5. Review tonight's work by Claude: the README and plan updates, and
+   whether the review above is fair about the half-second order.
+
 
 This entry covers 23 October to 15 November. The cluster could not be
 reached tonight, so nothing here about running jobs is checked.
