@@ -31,6 +31,20 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-11-18 — [cursor] P-AIRCARS is calibration, then CASA
+
+**Question.** Do uncalibrated archive visibilities of the 3 December 2015 quiet Sun, after Cen A calibration, become the same visibilities Rohit imaged for Figure 4?
+
+**What we found.** P-AIRCARS solved Cen A and applied those solutions to the Sun. That is the calibration. Its own imaging wrote no maps: the time window sat a few seconds outside the unflagged data. The calibrated visibilities are there. CASA SuperUniform of that inner window now has one scan-mean map at each of the eight coarse channels that make the four Figure 4 bands.
+
+The pipeline picture had treated P-AIRCARS as a third imaging path. It is not. It should write the same calibrated visibilities Rohit used, and CASA imaging follows, as on his measurement sets.
+
+**What it means and what next.** We can now compare those visibilities with his, and the new maps with his Figure 4. The leftover to check is whether the flux and the restoring beam agree, not whether a different imager can stand in for CASA.
+
+**Review.** The empty image directory was a timerange mistake, not a failed calibration. The diagram was wrong in the same way: it drew P-AIRCARS where CASA belongs.
+
+@claude: the comparison that matters is P-AIRCARS `CORRECTED_DATA` versus Rohit's, then the CASA maps of both.
+
 ## 2026-11-17 — [cursor] Uncalibrated visibilities for Figure 4
 
 **Question.** Can we start Sharma and Oberoi's 2020 quiet-Sun maps from

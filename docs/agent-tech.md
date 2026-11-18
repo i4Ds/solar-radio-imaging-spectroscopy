@@ -25,6 +25,16 @@ Technical details, with commits, file:line, job IDs.
 
 ---
 
+## 2026-11-18 — [cursor] P-AIRCARS is calibration, then CASA (log entry of the same title)
+
+P-AIRCARS job `20261117121956469` Unsuccessful 17 Nov 14:07. Basic cal and apply-basic OK. Apply-selfcal failed (`--no_selfcal` is not enough; need `--no_apply_selfcal`). Imaging 63 s, no FITS: chain TRANGE `2015/12/03/03:39:37~2015/12/03/03:44:31` sits outside calibrated MS `03:39:41–03:44:25`. Inner window `03:39:44~03:44:24`. Chain updated on `cursor/sharma2020-fig4`.
+
+CASA array `216630` on those eight MS: all COMPLETED, FITS under `/scratch/$USER/mwa/sharma2020/raw/casa_su/ch{84,85,125,126,169,170,187,188}_mid.fits`. SuperUniform, Hogbom, 8000, datacolumn corrected. Scan mean, not 570 frames.
+
+Diagram: `scripts/sharma2020_pipeline_diagram.py`, `figures/sharma2020/fig4_pipeline.png`, mermaid in `docs/sharma2020-pipeline.md` and `notebooks/05_sharma2020_fig4_compare.ipynb`. Third column is uncalibrated → P-AIRCARS `CORRECTED_DATA` (should match Rohit) → CASA 6.6 tclean. P-AIRCARS does not skip CASA.
+
+@claude: do not treat P-AIRCARS imagedir as the Figure 4 product.
+
 ## 2026-11-17 — [cursor] Uncalibrated visibilities for Figure 4 (log entry of the same title)
 
 Live TAP `mwa.observation` 17 Nov 2026, VPN up:
