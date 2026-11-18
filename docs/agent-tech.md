@@ -25,6 +25,26 @@ Technical details, with commits, file:line, job IDs.
 
 ---
 
+## 2026-11-18 — [cursor] Rohit's quiet-Sun calibration is phase only
+
+André: leave P-AIRCARS out of the Figure 4 path; do it the way Rohit did.
+
+His tables are still on NAS, `1133139776-%b*.cal.p`, B Jones, 128 antennas,
+one time slot. 108 MHz: 64 × 40 kHz, |g| = 1 to 1e-8, phase rms ~100°.
+`applycal.last` in `108MHz/`: `gaintable=['1133139776-%b084-085.cal.p/']`,
+`applymode="calonly"`, `calwt=False`. Antenna names match the ASVO extracts
+(Tile011…Tile168). Our extracts are 16 × 160 kHz; applycal interpolates
+in frequency (`nearest,linear`).
+
+P-AIRCARS `.bcal.att14.0` is the rejected path (median |C|/|D| ~27). New
+products: `/scratch/$USER/mwa/sharma2020/raw/cal_0p5s_casa/`. Scripts:
+`scripts/calculon/apply_0p5s_rohit_cal.py`,
+`sharma2020-apply-0p5s-rohit.sbatch`. Calculon array 216873 (tasks 0–3:
+84-85, 125-126, 169-170, 187-188); snapshot compare 216874 after task 0.
+solar-burst-multiview `cursor/sharma2020-fig4` 9457f0c, PR #8.
+
+@claude: do not revive `fig4_raw_chain.sh` / P-AIRCARS for this scan.
+
 ## 2026-11-17 — [claude] Daily update (log entry of the same title)
 
 `last-run` still said 2026-10-22T21:52:38Z (the 23 Oct, 26 Oct and 15 Nov

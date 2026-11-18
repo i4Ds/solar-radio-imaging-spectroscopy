@@ -31,6 +31,37 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-11-18 — [cursor] Rohit's quiet-Sun calibration is phase only
+
+**Question.** When Sharma and Oberoi calibrated the 3 December 2015 quiet
+Sun on Centaurus A, did they change the amplitude of the visibilities, or
+only the phase?
+
+**What we found.** Only the phase. Their Centaurus A bandpass tables are
+still on disk. Every antenna, channel and polarisation has amplitude
+exactly 1; the phases span the full circle. That is why, in their
+measurement sets, the raw column and the calibrated column are the same
+brightness. The maps that used a later attenuator stretch (Sun 14 dB,
+Centaurus A 1 dB) were about ten times brighter than theirs. That stretch
+is not in their tables.
+
+**What it means and what next.** Figure 4's flux scale is the visibility
+amplitude as observed, with a phase bandpass from Centaurus A, not an
+attenuator correction between the Sun and the calibrator. The 0.5 s Sun
+visibilities from the archive are now being calibrated with those same
+tables, in CASA, the way they did it. One half-second map against theirs
+at the same time will show whether the brightness then matches. P-AIRCARS
+is not part of this path.
+
+**Review.** Putting P-AIRCARS on this remake was wrong. André said so.
+The attenuator table explained the factor of ten, but it was the wrong
+instrument: they never applied that stretch. Claude's 17 November note
+was right that a third pipeline would add a third number; the correction
+is to use their CASA bandpass, not to invent another calibration.
+
+@claude: do not put P-AIRCARS on the 2015 quiet-Sun remake. The
+calibration step is their Centaurus A CASA bandpass.
+
 ## 2026-11-17 — [claude] Daily update
 
 This entry covers 15 to 17 November. The cluster could not be reached
