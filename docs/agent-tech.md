@@ -25,6 +25,51 @@ Technical details, with commits, file:line, job IDs.
 
 ---
 
+## 2026-11-19 — [cursor] Figure 4 from the archive visibilities
+
+570 SuperUniform frames per band, job 217048 COMPLETED, under
+`/scratch/$USER/mwa/sharma2020/raw/casa_su_rohitcal/`. First frame
+`108MHz_0010.fits` is identically zero (scan start); mid-scan peak
+12.29 Jy/beam, off-Sun σ 0.15, 5σ mask 3333 pixels. Job 219299 failed
+in `scale_image` because `mean_tb_paths` used frame 0010. Fix: skip
+zero crops in `scripts/sharma2020_fig4_visuals.py`. Job 219325 wrote
+`fig4_his_vs_raw.png` and `_shape.png` (569/570). Flux JSON already
+present (Haslam, CORRECTED_DATA): S_⊙ 2.94 / 6.90 / 13.96 / 9.59 SFU.
+
+Mohan F(ν) on the archive mean: 32.3 / 14.0 / 43.2 / 92.1 versus 10.7 /
+12.5 / 13.4 / 13.2 on his-MS remake. T_B peaks 0.94 / 1.08 / 1.31 /
+0.75 MK. Beams 216″ / 161″ / 128″ / 118″ versus his 225″ / 198″ / 188″
+/ 209″ (240 MHz is the outlier).
+
+ASVO 40 kHz still 1124500 (Sun) and 1124501 (Cen A); login node has no
+giant-squid. P-AIRCARS remains out of this path.
+
+solar-burst-multiview `cursor/sharma2020-fig4`, commit after the empty-
+frame skip. This log: same branch as the 18 Nov phase-only entry.
+
+@claude: if you pull the 40 kHz set, compare |DATA| at the same four
+40 kHz channels Rohit kept, not the 160 kHz average.
+
+## 2026-11-18 — [cursor] Rohit's quiet-Sun calibration is phase only
+
+André: leave P-AIRCARS out of the Figure 4 path; do it the way Rohit did.
+
+His tables are still on NAS, `1133139776-%b*.cal.p`, B Jones, 128 antennas,
+one time slot. 108 MHz: 64 × 40 kHz, |g| = 1 to 1e-8, phase rms ~100°.
+`applycal.last` in `108MHz/`: `gaintable=['1133139776-%b084-085.cal.p/']`,
+`applymode="calonly"`, `calwt=False`. Antenna names match the ASVO extracts
+(Tile011…Tile168). Our extracts are 16 × 160 kHz; applycal interpolates
+in frequency (`nearest,linear`).
+
+P-AIRCARS `.bcal.att14.0` is the rejected path (median |C|/|D| ~27). New
+products: `/scratch/$USER/mwa/sharma2020/raw/cal_0p5s_casa/`. Scripts:
+`scripts/calculon/apply_0p5s_rohit_cal.py`,
+`sharma2020-apply-0p5s-rohit.sbatch`. Calculon array 216873 (tasks 0–3:
+84-85, 125-126, 169-170, 187-188); snapshot compare 216874 after task 0.
+solar-burst-multiview `cursor/sharma2020-fig4` 9457f0c, PR #8.
+
+@claude: do not revive `fig4_raw_chain.sh` / P-AIRCARS for this scan.
+
 ## 2026-11-17 — [claude] Daily update (log entry of the same title)
 
 `last-run` still said 2026-10-22T21:52:38Z (the 23 Oct, 26 Oct and 15 Nov

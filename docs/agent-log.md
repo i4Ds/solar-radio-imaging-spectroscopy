@@ -31,6 +31,69 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-11-19 — [cursor] Figure 4 from the archive visibilities
+
+**Question.** If we start from the public 2015 visibilities, apply only
+Rohit's Centaurus A phase table, image every half-second as he did, and
+take the mean, do we recover Figure 4?
+
+**What we found.** The shape, yes. The disk in kelvin, close, once the
+Mohan stretch is applied. At 108 MHz the mean peaks at 0.94 million K
+against his 0.89. At 162 MHz, 1.08 against 1.00. At 217 and 240 MHz the
+peaks sit about a fifth above his (1.31 against 1.06, 0.75 against 0.62).
+One of the 570 half-seconds is empty at the start of the scan; 569 enter
+the mean. The two bright regions on the disk are in the same places.
+
+The visibilities themselves are still fainter. At a mid-scan sample the
+archive amplitudes are about four times his, before any calibration. The
+Mohan factor is then about three times larger than on his maps, so the
+disk integral in kelvin is restored. That stretch does not explain why
+the archive is fainter.
+
+**What it means and what next.** We can draw his Figure 4 from the
+archive without using his measurement set. We still do not know why his
+converter wrote a brighter amplitude. The 40 kHz conversion is the next
+test of whether the archive's 160 kHz averaging is part of that, even
+though the phase scatter across 160 kHz already says it is not.
+
+**Review.** Leaving P-AIRCARS out was the right call: its attenuator
+table was stretching the gains. The remaining factor is already in
+uncalibrated DATA, so it is the converter or the pad, not the phase
+table.
+
+@claude: do not apply an attenuator scale on this path.
+
+## 2026-11-18 — [cursor] Rohit's quiet-Sun calibration is phase only
+
+**Question.** When Sharma and Oberoi calibrated the 3 December 2015 quiet
+Sun on Centaurus A, did they change the amplitude of the visibilities, or
+only the phase?
+
+**What we found.** Only the phase. Their Centaurus A bandpass tables are
+still on disk. Every antenna, channel and polarisation has amplitude
+exactly 1; the phases span the full circle. That is why, in their
+measurement sets, the raw column and the calibrated column are the same
+brightness. The maps that used a later attenuator stretch (Sun 14 dB,
+Centaurus A 1 dB) were about ten times brighter than theirs. That stretch
+is not in their tables.
+
+**What it means and what next.** Figure 4's flux scale is the visibility
+amplitude as observed, with a phase bandpass from Centaurus A, not an
+attenuator correction between the Sun and the calibrator. The 0.5 s Sun
+visibilities from the archive are now being calibrated with those same
+tables, in CASA, the way they did it. One half-second map against theirs
+at the same time will show whether the brightness then matches. P-AIRCARS
+is not part of this path.
+
+**Review.** Putting P-AIRCARS on this remake was wrong. André said so.
+The attenuator table explained the factor of ten, but it was the wrong
+instrument: they never applied that stretch. Claude's 17 November note
+was right that a third pipeline would add a third number; the correction
+is to use their CASA bandpass, not to invent another calibration.
+
+@claude: do not put P-AIRCARS on the 2015 quiet-Sun remake. The
+calibration step is their Centaurus A CASA bandpass.
+
 ## 2026-11-17 — [claude] Daily update
 
 This entry covers 15 to 17 November. The cluster could not be reached
