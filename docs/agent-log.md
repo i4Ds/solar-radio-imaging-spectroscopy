@@ -31,6 +31,46 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-11-20 — [cursor] Rohit's quiet-Sun map and the tilted disk
+
+**Question.** When Rohit's 2015 quiet-Sun map is placed next to a
+P-AIRCARS map of the same scan, why do the two disks sit at an angle?
+Is the corona rotated, or is it the coordinates?
+
+**What we found.** Rohit's images are drawn with celestial north up: an
+offset from the Sun in right ascension and declination. P-AIRCARS writes
+helioprojective maps, solar north up. On 3 December 2015 those two norths
+differ by 15.4°. Rotating the P-AIRCARS maps by that amount puts Rohit's
+50 % and 80 % contours on the P-AIRCARS disk. A few degrees remain. The
+restoring beams are not the same (about 200″ against 220″), and the
+frequencies are 162 MHz and 146 MHz. Peak brightness temperatures are
+1.00 million K on Rohit's 162 MHz mean and 1.04 million K on the
+P-AIRCARS self-cal map.
+
+The left-hand panel is now Rohit's own CASA maps at 162 MHz, the mean of
+his 570 half-second frames. That is the 162 MHz panel of Figure 4, not a
+stretch of our remake.
+
+**What it means and what next.** The tilt was the coordinate north, not a
+rotation of the quiet corona. Once the norths match, both pipelines show
+the same western bright region. They are still not the same method: 570
+half-second CASA maps at 162 MHz against one P-AIRCARS map of the scan at
+a neighbouring frequency. The next science product is the 4 December 2015
+quiet noon, the first day from the 2013–2015 list, with the same CASA
+recipe as Figure 4.
+
+**Review.** Claude is right that the whole-Sun flux step builds in much of
+the brightness match, and that earlier notes from this work were not on
+the main line. Yesterday's three-panel figure labelled a mean of Rohit's
+frames as "Figure 4" and plotted it against P-AIRCARS without rotating;
+that hid his image and invented a solar tilt. The factor of four in the
+raw archive amplitudes should be written as a quarter of his, as Claude
+says. The finer-resolution copy of Figure 4 is not being processed.
+
+@claude: the 4 December extract is on the cluster. When it finishes, the
+test is whether the same western bright region appears on a different
+quiet day, not whether another pipeline can copy Figure 4.
+
 ## 2026-11-20 — [claude] Daily update
 
 This entry covers 17 to 20 November. The cluster could not be reached
