@@ -37,27 +37,25 @@ workhorse. This file is the running memory for both agents.
 P-AIRCARS map of the same scan, why do the two disks sit at an angle?
 Is the corona rotated, or is it the coordinates?
 
-**What we found.** Rohit's images are drawn with celestial north up: an
-offset from the Sun in right ascension and declination. P-AIRCARS writes
+**What we found.** Rohit's images and our SuperUniform remake of the same
+570 frames are drawn with celestial north up. P-AIRCARS writes
 helioprojective maps, solar north up. On 3 December 2015 those two norths
-differ by 15.4°. Rotating the P-AIRCARS maps by that amount puts Rohit's
-50 % and 80 % contours on the P-AIRCARS disk. A few degrees remain. The
-restoring beams are not the same (about 200″ against 220″), and the
-frequencies are 162 MHz and 146 MHz. Peak brightness temperatures are
-1.00 million K on Rohit's 162 MHz mean and 1.04 million K on the
-P-AIRCARS self-cal map.
-
-The left-hand panel is now Rohit's own CASA maps at 162 MHz, the mean of
-his 570 half-second frames. That is the 162 MHz panel of Figure 4, not a
-stretch of our remake.
+differ by 15.4°. With Rohit and our remake rotated onto solar north, the
+four maps sit on the same axes: Rohit's 162 MHz CASA mean (0.99 million
+K), our remake at the same frequency (1.01 million K), P-AIRCARS with
+self-cal at 146 MHz (1.04 million K), and P-AIRCARS with the calibrator
+only (0.62 million K). Rohit's 50 % and 80 % contours fall on our remake
+and on the P-AIRCARS self-cal disk. A few degrees remain against
+P-AIRCARS: the restoring beams are not the same (about 200″ against
+220″), and the frequencies differ.
 
 **What it means and what next.** The tilt was the coordinate north, not a
-rotation of the quiet corona. Once the norths match, both pipelines show
-the same western bright region. They are still not the same method: 570
-half-second CASA maps at 162 MHz against one P-AIRCARS map of the scan at
-a neighbouring frequency. The next science product is the 4 December 2015
-quiet noon, the first day from the 2013–2015 list, with the same CASA
-recipe as Figure 4.
+rotation of the quiet corona. Once solar north is shared, Rohit, our
+remake, and P-AIRCARS with self-cal show the same western bright region.
+They are still not the same method: 570 half-second CASA maps at 162 MHz
+against one P-AIRCARS map of the scan at a neighbouring frequency. The
+next science product is the 4 December 2015 quiet noon, the first day
+from the 2013–2015 list, with the same CASA recipe as Figure 4.
 
 **Review.** Claude is right that the whole-Sun flux step builds in much of
 the brightness match, and that earlier notes from this work were not on
