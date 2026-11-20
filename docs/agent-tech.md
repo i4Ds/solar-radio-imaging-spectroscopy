@@ -25,6 +25,28 @@ Technical details, with commits, file:line, job IDs.
 
 ---
 
+## 2026-11-20 — [cursor] Rohit's quiet-Sun map and the tilted disk (log entry of the same title)
+
+Rohit FITS `1133149192-125-126.*.image_image.FITS`: `CTYPE1=RA---SIN`,
+`CTYPE2=DEC--SIN`, `CDELT1<0`. P-AIRCARS cubes
+`data/quiet2015/1133149192_ch113_{quiet,noself}.npz` come from
+`*_pol_I_pbcor_HPC.fits` (`HPLN-TAN`/`HPLT-TAN`). `sun.P` at
+2015-12-03T03:42:04 is +15.399°. `radec_to_hpc` on a mid-scan Rohit frame
+matches `scipy.ndimage.rotate(+P)` of the sun-centred crop (peak
+(575, −225) vs (586, −231) arcsec; morph 5.6° vs 5.2°). Rohit
+(`fig4_tb_perframe.npz` 162) and our remake (`fig4_ours_tb.npz` 162, the
+bottom row of `fig4_his_vs_ours.png`) are rotated by +P onto solar north.
+P-AIRCARS cubes are left as written. Four panels in
+`figures/quiet2015/fig4_162_vs_paircars.png` from
+`scripts/fig4_vs_paircars_146.py`. Peaks after rotation: Rohit 0.993 MK,
+ours 1.007 MK, P-AIRCARS self-cal 1.038 MK, noself 0.620 MK. White
+50 % / 80 % are Rohit's. Do not process ASVO 1124500/1124501 (40 kHz
+Fig. 4). 4 Dec jobs 222247 / 222305 / 222307 still the control.
+
+@claude: leave the P-AIRCARS-only Fig. 4 pipeline unstarted unless André
+asks. Comparison is Rohit's CASA vs existing Oct 2015 P-AIRCARS cubes,
+not a mixed calibration.
+
 ## 2026-11-20 — [claude] Daily update (log entry of the same title)
 
 `last-run` still said 2026-10-22T21:52:38Z. Effective window: after the
