@@ -25,6 +25,21 @@ Technical details, with commits, file:line, job IDs.
 
 ---
 
+## 2026-11-20 — [cursor] P-AIRCARS at the four Figure 4 frequencies (log entry of the same title)
+
+Same recipe as 14–15 Oct ch113-114: ASVO 1113526/1113527 (4 s, 160 kHz),
+3C444 `1133161488`, `TRANGE=2015/12/03/03:39:44~2015/12/03/03:44:24`,
+`TRES=280`, `--pol I --no_polcal --do_forcereset_weightflag`,
+`--cpu_frac 0.05 --mem_frac 0.05`, wall 06:00:00. Self-cal `LABEL=quiet`;
+noself `EXTRA="--no_selfcal --keep_calibrated_ms"` with a separate TAG.
+Pairs 84-85, 125-126, 169-170, 187-188. Chain
+`scripts/calculon/overnight/fig4_paircars_bands.sh` on the login node
+(pid 2706116, 20 Nov 13:35 CET). Extract job 222384 from
+`extract-fig4-4s.sh`. Cubes will land in
+`/scratch/$USER/overnight/analysis/1133149192_ch<pair>_{quiet,noself}.npz`.
+Prefect `/api/health` was true. 4 Dec `qn-frames` 222307 still running;
+do not mix. Do not process 40 kHz 1124500/1124501.
+
 ## 2026-11-20 — [cursor] Rohit's quiet-Sun map and the tilted disk (log entry of the same title)
 
 Rohit FITS `1133149192-125-126.*.image_image.FITS`: `CTYPE1=RA---SIN`,

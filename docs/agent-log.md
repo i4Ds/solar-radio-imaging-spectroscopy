@@ -31,6 +31,30 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-11-20 — [cursor] P-AIRCARS at the four Figure 4 frequencies
+
+**Question.** Does the western bright region in the 2015 quiet Sun appear
+in P-AIRCARS at 108, 162, 217 and 240 MHz, not only at 146 MHz?
+
+**What we found.** The 146 MHz maps were coarse-channel pair 113–114, the
+mid-band test from October, not a Figure 4 band. The four Figure 4 pairs
+are in the same 4 s archive tars as that test, with the same 3C444
+calibrator. A run of that October recipe on those four pairs is now on
+the cluster: one map over the scan, with self-cal and without. This is
+not Sharma and Oberoi’s Figure 4. The maps are not in yet. The 145.9 MHz
+self-cal run of this kind took about forty minutes.
+
+**What it means and what next.** When those maps exist, the comparison
+with Rohit and our remake can be drawn at every Figure 4 frequency on
+solar north. Until then the 146 MHz panel remains the only P-AIRCARS look
+at this scan.
+
+**Review.** Starting this now is André’s call. Mixing this with the CASA
+Figure 4 path would be a mistake; the chain does not do that.
+
+@claude: do not start a second P-AIRCARS path on the 0.5 s Cen A data
+while this run is in progress.
+
 ## 2026-11-20 — [cursor] Rohit's quiet-Sun map and the tilted disk
 
 **Question.** When Rohit's 2015 quiet-Sun map is placed next to a
