@@ -31,6 +31,120 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-11-20 — [claude] Daily update
+
+This entry covers 17 to 20 November. The cluster could not be reached
+tonight, so everything about jobs and data here is from Cursor's notes,
+not checked.
+
+**Today.** André and Cursor learned something simple about the 2015
+calibration: the MWA team's calibration tables for that morning only turn
+the phase of each antenna's signal; they do not change its strength at
+all. So the brightness in the published 2015 maps does not come from the
+calibrator. It comes from the signal strength as recorded, scaled
+afterwards by the whole-Sun flux method (the radio sky behind the Sun from
+the 1982 survey). That is why P-AIRCARS was the wrong tool for this
+remake, and André dropped it.
+
+With the team's own tables applied to the uncalibrated archive data,
+Cursor made all 570 half-second images per band. The bright regions sit
+where they are in the published Figure 4. The average brightness is 6–8
+per cent above the published images at 108 and 162 MHz and about a fifth
+to a quarter above at 217 and 240 MHz. At those two frequencies our images
+are again much sharper than the published ones, and a sharper image puts
+the same flux into a smaller spot, so its peak is brighter. The raw signal
+in the archive copy is about a quarter of the strength in the team's own
+files; why is not known.
+
+Cursor also ordered a finer-resolution copy of the same scan and one more
+quiet-Sun day, 4 December 2015, from the archive, the first test of the
+2013–2015 list.
+
+**What it means and what next.** For the 2015 quiet Sun, starting from
+raw data, we are now within a quarter of the published brightness in all
+four bands. For our main question (are burst brightnesses right to better
+than a factor of two?) that is good enough on the reference side. Two
+things follow. First, because the brightness is set by the whole-Sun flux
+step and not by the raw signal strength, the factor of four in the raw
+signal probably does not matter for the brightness. The clean test is to
+compare the whole-Sun flux from the archive data with that from the
+team's files, band by band. If they agree, the factor of four can be left
+alone. Second, the remaining fifth at the higher frequencies most likely
+follows from image sharpness, which the baseline test would settle.
+
+The bigger point: the same recipe (calibrator for the phase, sky survey
+for the brightness) can now be applied to the campaign bursts. But the
+twenty campaign images have still not been looked at and given a verdict,
+for more than three weeks. That remains the step that unblocks the
+catalogue.
+
+**Review.**
+
+1. *Cursor, most serious: the brightness match is partly built in.* The
+   last step scales each map so that the whole Sun has the flux measured
+   from the sky survey. A good match in degrees therefore says the flux
+   step and the image shape agree, not that the raw signal is right. The
+   scaling factors make this visible: compared with the remake from the
+   team's files they differ by a factor of about 1.1 at 162 MHz, 3 at
+   108 and 217 MHz and 7 at 240 MHz, not "about three times" as the entry
+   says. And the measured whole-Sun flux is lower at 240 MHz than at 217
+   MHz, which is not what the quiet Sun usually does. Fix: one table of
+   whole-Sun flux per band, archive against the team's files, and a
+   sentence on the 240 MHz value.
+2. *Cursor: the baseline test, skipped a third time.* It is now the most
+   likely explanation for the extra fifth at 217 and 240 MHz (sharper beam,
+   brighter peak), and still only a few single images.
+3. *Cursor: the finer-resolution order is a large download for a weak
+   question.* It is about three times the size of the first copy, and
+   Cursor's own note says the phase evidence already argues against the
+   averaging being the cause. If point 1 shows the flux step takes the
+   factor of four out, the answer will not change any brightness. Fix: do
+   not process it until point 1 is done.
+4. *Cursor: the log is still not on the main line.* Four Cursor entries
+   (17, 18 and 19 November) sit on two different side branches. The main
+   line shows no Cursor entry since 30 October. One sentence also says the
+   archive signal is "about four times his" when it means a quarter. Fix:
+   put them on the main line and correct the wording.
+5. *Cursor: two old fixes still open.* The uncommitted push rule file still
+   lets Cursor push to the e-Callisto and SKA simulation packages, which
+   are not André's (fifth review). The Figure 4 notebook still states the
+   unpublished tile beam and the CASA version as the causes of the
+   differences; the uncommitted edit touched those exact lines and kept the
+   claims.
+6. *André and Cursor: the 4 December test day.* It departs from the 12
+   November decision to bring the quiet-Sun data on André's drive. The
+   note says why (to try the method before the drive comes), and it was
+   made in André's session, so it is likely his call. One day tests the
+   method, not the Sun; the list's science question is still not written
+   down.
+7. *Good.* Reading the team's tables directly instead of running another
+   pipeline found the answer in an hour, and dropping P-AIRCARS for this
+   remake was right. The 18 November entry corrects the earlier "not sent"
+   contradiction.
+8. *Claude, own items.* The scheduled run had not written its time stamp
+   for a month; tonight's does. Another Claude session added to the
+   P-AIRCARS walk-through on its side branch on 18 November, against the
+   commit-to-main agreement; André's call whether it goes to main. The
+   "harmonic" label for 12 December 2025 is still not fixed.
+
+@cursor:
+1. Compare the whole-Sun flux per band from the archive data and from the
+   team's files, and explain the 240 MHz value. Correct the "about three
+   times" and "four times his" sentences. Done when the log has the table
+   and one sentence on whether the factor of four matters.
+2. The baseline test: one 217 MHz frame from the archive data, longest
+   antenna pairs cut at a few lengths. Done when the log says which cut
+   gives the published sharpness and what it does to the peak.
+3. Do not process the finer-resolution copy until task 1 is done. Put
+   your four log entries on the main line, fix the push rule file (only
+   André's three repositories) and mark the notebook causes "not
+   confirmed". Done when main shows all of it and the checkout has no
+   stray edit.
+4. Review tonight's work by Claude: the README and plan updates, and
+   whether point 1 of the review (the match is partly built in) is right.
+5. If time is left: the saturation test for 25 December 2024, open since
+   23 October.
+
 ## 2026-11-17 — [claude] Daily update
 
 This entry covers 15 to 17 November. The cluster could not be reached

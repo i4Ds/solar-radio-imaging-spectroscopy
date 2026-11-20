@@ -25,6 +25,62 @@ Technical details, with commits, file:line, job IDs.
 
 ---
 
+## 2026-11-20 — [claude] Daily update (log entry of the same title)
+
+`last-run` still said 2026-10-22T21:52:38Z. Effective window: after the
+17 Nov update (d26c74f / a1a0c8c, 2026-11-17T15:51Z) to
+2026-11-20T05:41Z. Calculon not reachable (hostname not resolved, no
+VPN): jobs 216873/216874, 217048, 219299, 219325, downloads 219395/219396
+and ASVO 1124500/1124501/1124591/1124592 are from Cursor's commits only,
+unverified. No issue comments since 17 Nov in the three repos;
+`sabbatical-claude-threads/check.sh` → NONE. STIX-MWA: no commits.
+
+Commits in window (all "André Csillaghy <csillag@courgette.local>" with
+Cursor trailer → Cursor in André's session):
+- umbrella `cursor/fig4-raw-asvo` 7e6b04e (18 Nov log + tech: "P-AIRCARS
+  is calibration, then CASA"); `cursor/sharma2020-casa-cal` 82e431b
+  (18 Nov, phase-only) and 2f247f4 (19 Nov, archive Figure 4). Neither on
+  main. The 18 Nov fig4-raw-asvo entry still frames P-AIRCARS as the
+  calibration; the casa-cal entry of the same day drops it. Two branches,
+  two different stories for 18 Nov.
+- solar-burst-multiview `cursor/sharma2020-fig4` (PR #8): 7deb5c6, 62d828f,
+  7cbdf2b, 846d418, 603f5b4, f3b3a0f, 5f2b8d2, 0086a9e, 9457f0c, 70967d6,
+  8c92b5f, 6d59da3. `cursor/quiet-noon-20151204` 304b3f5 (4 Dec 2015
+  control, ASVO 1124591/1124592, new `solve_cena_bandpass.py`,
+  `quiet_noon_casa_snap.py`).
+- Claude: `claude/paircars-calibration-walkthrough` 88c8d7d (18 Nov,
+  another session).
+
+Review details:
+1. Mohan F(ν) (umbrella agent-tech 19 Nov, Cursor): archive 32.3 / 14.0 /
+   43.2 / 92.1 vs his-MS remake 10.7 / 12.5 / 13.4 / 13.2. Ratios 3.0 /
+   1.1 / 3.2 / 7.0. The log's "about three times larger" holds at 108 and
+   217 only. S_⊙ (Haslam, CORRECTED_DATA) 2.94 / 6.90 / 13.96 / 9.59 SFU:
+   240 < 217. Need the his-MS S_⊙ per band next to these; not checked in
+   this run. If S_⊙ agrees, the |DATA| factor ~4 (`compare_vis_scale.py`,
+   uncommitted in the checkout) is cancelled by the T_B scaling.
+2. Beams archive 128″ / 118″ at 217 / 240 vs his 188″ / 209″; peak excess
+   1.24 / 1.21. Baseline-cut test still not done (asked 15 and 17 Nov).
+3. `docs/asvo-request-1133149192.md` (uncommitted edit): 40 kHz Sun 176.8
+   GiB, Cen A 8.2 GiB, downloads 219395/219396. Hold processing.
+4. Uncommitted in `~/Projects/solar-burst-multiview` (branch
+   `cursor/sharma2020-fig4`): `.cursor/rules/git-push.mdc` lists
+   `i4Ds/ecallisto_ng` and `i4Ds/Karabo-Pipeline` as push-without-asking;
+   `scripts/build_fig4_notebook.py` §11 and the notebook still say "That
+   leftover is the flux (simple tile vs unpublished FEKO)" and "That is
+   CASA 6.6 `tclean` vs his CASA 5.3 `clean`" as facts; also the stale
+   "Our mean is still a partial scan" line. `docs/paircars-upstream.md`
+   rewritten as PR drafts (uncommitted; not to be sent without André).
+5. Umbrella log 19 Nov: "archive amplitudes are about four times his" →
+   should read "about a quarter of his".
+6. `configs/quiet/README.md` (304b3f5) now records the 4 Dec exception to
+   the 12 Nov drive decision; fine if André agreed. Bandpass there is
+   solved by us and amplitude forced to 1, i.e. not Rohit's tables; the
+   flux then rests entirely on the Haslam step, same as Figure 4.
+
+@cursor: technical items are the same as the log's @cursor: list; put the
+his-MS S_⊙ per band in the same table as the archive values.
+
 ## 2026-11-17 — [claude] Daily update (log entry of the same title)
 
 `last-run` still said 2026-10-22T21:52:38Z (the 23 Oct, 26 Oct and 15 Nov

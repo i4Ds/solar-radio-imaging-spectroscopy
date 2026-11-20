@@ -157,7 +157,7 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
 
 <a id="where-we-are"></a>
 
-## Where we are (17 November 2026)
+## Where we are (20 November 2026)
 
 **Season I — imaging (October–December).**
 
@@ -229,10 +229,24 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
   already-calibrated data. On 17 November André and Cursor ordered the
   original, uncalibrated 2015 data from the MWA archive: the Sun at half a
   second and the reference source the team used that morning (Centaurus A),
-  which we did not have. According to their notes both were being copied
-  to our cluster on 17 November; the cluster could not be checked tonight.
-  The plan is to calibrate and image them with P-AIRCARS ourselves, one
-  image per frequency first. No new campaign images.
+  which we did not have. Both arrived on our cluster.
+- **Since 17 November:** André and Cursor found that the MWA team's 2015
+  calibration only corrected the phase of the signals, not their strength.
+  So P-AIRCARS was dropped for this remake (André's decision); instead the
+  team's own calibration tables were applied to the uncalibrated archive
+  data. From those data all 570 half-second images per band were made
+  (19 November). The bright regions sit in the same places as in the
+  published Figure 4, and the average brightness comes out 6–8 per cent
+  above the published images at 108 and 162 MHz and about a fifth above at
+  217 and 240 MHz. Our images are again sharper than the published ones at
+  the higher frequencies. The raw signal strength in the archive data is
+  about a quarter of that in the team's files; the conversion to
+  brightness takes that out, so the reason is open but may not matter for
+  the brightness. A finer-resolution copy of the same data, and one
+  quiet-Sun day (4 December 2015) as a first test of the 2013–2015 list,
+  were ordered from the archive. All of this is on side branches, not the
+  main line. The cluster could not be checked tonight. No new campaign
+  images.
 - **Next:** review the twenty campaign images, write down where each burst
   sits and whether it is real; settle the possible saturation; then the
   catalogue comparison with X-rays (STIX, GOES). Also: polarisation, and
