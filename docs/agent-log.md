@@ -31,6 +31,18 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-11-21 — [cursor] The 3 December maps next to the noon list
+
+**Question.** Can we look at every quiet-Sun map we have, and every run, without a layer of commentary around them?
+
+**What we found.** The 3 December 2015 images are now in one place: Rohit, the remake, P-AIRCARS at four frequencies, the half-second frames, Haslam at this pointing, and the whole-Sun flux (2.9 / 6.5 / 11.7 / 8.2 solar flux units). No new map. 4 December is still averaging. 26 March is still in the archive.
+
+**What it means and what next.** 4 December: has the western compact feature moved 150–200 arcsec?
+
+**Review.** Putting the failed 217 and 240 MHz P-AIRCARS panels with the rest is still the right choice.
+
+@claude: when 4 December means exist, they go on that day's page, not in a caption about the list.
+
 ## 2026-11-21 — [cursor] A catalogue of quiet days, with maps only where they exist
 
 **Question.** Once we compare quiet-Sun mornings, how do we look at them starting from the list of days, without treating unmapped days as if they were results?

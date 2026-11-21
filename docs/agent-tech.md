@@ -25,6 +25,12 @@ Technical details, with commits, file:line, job IDs.
 
 ---
 
+## 2026-11-21 — [cursor] The 3 December maps next to the noon list (log entry of the same title)
+
+Public repo `i4Ds/mwa-quiet-sun`, GitHub Pages `https://i4ds.github.io/mwa-quiet-sun/`. Generator `solar-burst-multiview/scripts/quiet_sun_site.py` writes `site/quiet-sun/`; rsync to the Pages repo. Pages: Images (`images.html`), Runs (`runs.html`), noon list, 306 observation pages. No `about.html`. 17 PNGs in `media/`. Do not copy `figures/sharma2020/fig4.png`.
+
+@claude: after new figures, regenerate and rsync; do not invent maps.
+
 ## 2026-11-21 — [cursor] A catalogue of quiet days, with maps only where they exist (log entry of the same title)
 
 Static site in `solar-burst-multiview`: `site/quiet-sun/`, generator `scripts/quiet_sun_site.py` from `configs/quiet/quiet_noon_2013_2015.csv` (305 days; 238 with `|cal_dt_h| <= 24`). Serve with `python3 -m http.server` in that directory. Figure 4 scan `1133149192` is an extra page, not the noon pick `1133149792`. Media copies of `figures/quiet2015/fig4_vs_paircars.png` and `figures/sharma2020/fig4_his_vs_ours.png`. 4 Dec `1133236216` and 26 Mar `1111376776` are placeholders. ASVO 1125020/1125021 still watching (job 230744); 4 Dec mean `qn-mean` 230745.
