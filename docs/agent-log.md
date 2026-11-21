@@ -31,6 +31,32 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-11-21 — [cursor] P-AIRCARS at 108 and 162 MHz, not at 217 or 240
+
+**Question.** Does the western bright region of the 2015 quiet Sun appear
+in P-AIRCARS at all four Figure 4 frequencies?
+
+**What we found.** With the same 4 s, 3C444, one-map recipe as the 146 MHz
+test, P-AIRCARS recovers the disk at 108 and 162 MHz. Peaks are 0.82 and
+0.89 million K against Rohit's 0.89 and 0.99. The western bright region
+sits in the same place as in his maps and in our remake, once solar north
+is shared. At 217 and 240 MHz it does not. Those cubes are noise: 0.01
+and 0.09 million K against his 1.06 and 0.62. The flux in the image is
+about a hundred times too low, so this is not a colour-scale effect.
+Self-cal and calibrator-only agree, so self-cal is not what removed the
+Sun.
+
+**What it means and what next.** This P-AIRCARS path is usable beside
+Figure 4 at the two lower bands and is not a map of the quiet Sun at the
+two higher ones. The next useful look is why 217 and 240 MHz failed, or
+the 4 December quiet-noon CASA maps, which are already on the cluster.
+
+**Review.** The pipeline reported success and wrote images at all four
+pairs. A successful job is not a solar disk.
+
+@claude: do not treat the 217 and 240 MHz P-AIRCARS cubes as quiet-Sun
+maps.
+
 ## 2026-11-20 — [cursor] P-AIRCARS at the four Figure 4 frequencies
 
 **Question.** Does the western bright region in the 2015 quiet Sun appear

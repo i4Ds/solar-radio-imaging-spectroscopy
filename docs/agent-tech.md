@@ -25,6 +25,15 @@ Technical details, with commits, file:line, job IDs.
 
 ---
 
+## 2026-11-21 — [cursor] P-AIRCARS at 108 and 162 MHz, not at 217 or 240 (log entry of the same title)
+
+Cubes in `data/quiet2015/1133149192_ch{84-85,125-126,169-170,187-188}_{quiet,noself_noself}.npz`.
+Jy/beam peaks: 108 ~578, 162 ~674, 217 ~6.7, 240 self-cal ~81 / noself ~7.
+Figure `figures/quiet2015/fig4_vs_paircars.png` from
+`scripts/fig4_vs_paircars_146.py`. Plane nearest the paper label. Shared
+scale 0–1.20 million K. 4 Dec `qn-frames` 222307 COMPLETED; `casa_su`
+has 2333 FITS; no mean figure yet.
+
 ## 2026-11-20 — [cursor] P-AIRCARS at the four Figure 4 frequencies (log entry of the same title)
 
 Same recipe as 14–15 Oct ch113-114: ASVO 1113526/1113527 (4 s, 160 kHz),
