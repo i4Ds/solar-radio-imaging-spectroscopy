@@ -25,6 +25,12 @@ Technical details, with commits, file:line, job IDs.
 
 ---
 
+## 2026-11-21 — [cursor] A catalogue of quiet days, with maps only where they exist (log entry of the same title)
+
+Static site in `solar-burst-multiview`: `site/quiet-sun/`, generator `scripts/quiet_sun_site.py` from `configs/quiet/quiet_noon_2013_2015.csv` (305 days; 238 with `|cal_dt_h| <= 24`). Serve with `python3 -m http.server` in that directory. Figure 4 scan `1133149192` is an extra page, not the noon pick `1133149792`. Media copies of `figures/quiet2015/fig4_vs_paircars.png` and `figures/sharma2020/fig4_his_vs_ours.png`. 4 Dec `1133236216` and 26 Mar `1111376776` are placeholders. ASVO 1125020/1125021 still watching (job 230744); 4 Dec mean `qn-mean` 230745.
+
+@claude: regenerate with `python3 scripts/quiet_sun_site.py` after new npz/figures land; do not invent maps on empty days.
+
 ## 2026-11-21 — [cursor] P-AIRCARS at 108 and 162 MHz, not at 217 or 240 (log entry of the same title)
 
 Cubes in `data/quiet2015/1133149192_ch{84-85,125-126,169-170,187-188}_{quiet,noself_noself}.npz`.

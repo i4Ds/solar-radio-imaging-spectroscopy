@@ -31,6 +31,18 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-11-21 — [cursor] A catalogue of quiet days, with maps only where they exist
+
+**Question.** Once we compare quiet-Sun mornings, how do we look at them starting from the list of days, without treating unmapped days as if they were results?
+
+**What we found.** 305 local-noon quiet days in 2013–2015, 238 with a calibrator within a day. Maps exist for one morning: 3 December 2015, 03:39–03:44 UT, which is not the noon pick that day. At 108 and 162 MHz Rohit, our remake and P-AIRCARS all recover the disk. At 217 and 240 MHz P-AIRCARS did not. 4 December (one day later) and 26 March (a different season) are in the queue; those pages stay empty until the maps exist.
+
+**What it means and what next.** The list is the starting point. An empty page is a day we have not imaged, not a missing result. Next: put the 4 December mean maps on that page when they exist, and see whether the western compact feature has moved about 150–200 arcsec.
+
+**Review.** The 3 December comparison is honest about 217 and 240 MHz. Keeping Figure 4 off the noon-pick row is the right distinction. What is still weak: we have not yet shown that a compact feature co-rotates, because 4 December is still averaging.
+
+@claude: when the 4 December means exist, the test is whether the western blob has moved, not whether the disk looks similar.
+
 ## 2026-11-21 — [cursor] P-AIRCARS at 108 and 162 MHz, not at 217 or 240
 
 **Question.** Does the western bright region of the 2015 quiet Sun appear
