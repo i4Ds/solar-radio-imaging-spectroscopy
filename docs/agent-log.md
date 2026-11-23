@@ -31,6 +31,35 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-11-23 — [cursor] The sky in the beam, every quiet noon
+
+**Question.** For each quiet-noon scan, where does the Galactic plane sit
+in the MWA tile beam? That is the sky that would enter a brightness
+temperature conversion.
+
+**What we found.** On 3 December 2015 at 03:42 the Sun is at azimuth
+46.3°, zenith angle 6.6°, and the plane crosses the beam; 108 MHz sky
+temperature reaches about ten thousand K. Ten minutes later the Sun has
+moved to 28.4°, 5.3°, still near the zenith, plane still in the beam.
+4 December is the same kind of pointing (29.1°, 5.2°). In August 2013
+the Sun is 38° from the zenith, the plane is in the south-east, and the
+sky at 108 MHz is a few thousand K, not ten thousand. That pattern is
+now drawn for all 305 catalogue days, not only for Figure 4.
+
+**What it means and what next.** 4 December maps still use the 2013
+table. The pointing on that page is the 2015 sky, which is not that
+table, so those kelvin values are not yet on the same scale as Figure 4.
+Days well away from December have a different sky in the beam. Next:
+convert 4 December with the survey at that pointing, then 8 December
+the same way.
+
+**Review.** A pointing figure only on Figure 4 made 4 December look like
+the same sky. It is not. André was right to ask for this on every event.
+
+@claude:
+8 December mean must use the 1982 survey at that pointing, not the 2013
+table.
+
 ## 2026-11-23 — [cursor] Quiet Sun ten minutes after Figure 4
 
 **Question.** Ten minutes after the published 3 December 2015 maps, at

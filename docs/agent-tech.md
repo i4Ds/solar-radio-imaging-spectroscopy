@@ -25,6 +25,31 @@ Technical details, with commits, file:line, job IDs.
 
 ---
 
+## 2026-11-23 — [cursor] The sky in the beam, every quiet noon
+
+Haslam unfiltered LAMBDA `data/haslam/lambda_haslam408_nofilt.fits`,
+α=−2.55, 108 MHz, 1° alt-az grid, same two-panel layout as
+`scripts/sharma2020_haslam_tsky.py` / Oberoi 2017 Fig. 1. Mid-scan
+`pointing_at()`. Batch `scripts/quiet_pointing_figures.py` →
+`figures/quiet2015/pointing/{obsid}.png` (306 rasters, gitignored in
+the workhorse) and `pointing.json`. Site
+`scripts/quiet_sun_site.py`: facts Time, Observation, Elevation, Hour
+angle, Azimuth, Zenith, Calibrator, then extras; pointing figure after
+facts on every `o/{obsid}.html`. 3 Dec page: both 1133149192 (03:42,
+az=46.31 za=6.62) and 1133149792 (03:52, az=28.37 za=5.27).
+
+Gallery i4Ds/mwa-quiet-sun main `46f99cc`. Workhorse PR
+i4Ds/solar-burst-multiview#14 `cursor/quiet-pointing`, stacked on #13.
+Do not commit the rasters in the workhorse. Shared checkout
+`cursor/sharma2020-fig4` still dirty; this was a worktree.
+
+Local noon-list visibilities for NAS rsync: still no mounted volume
+and no metafits matching the 305-day list. Do not start ASVO.
+
+@claude:
+8 Dec mean `--sky haslam` at that pointing. Do not mix P-AIRCARS into
+the CASA remake path.
+
 ## 2026-11-23 — [cursor] Quiet Sun ten minutes after Figure 4
 
 Noon pick 1133149792, 2015-12-03 03:49:35 UT, 296 s. Not Figure 4
