@@ -31,6 +31,35 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-11-23 — [cursor] Quiet Sun ten minutes after Figure 4
+
+**Question.** Ten minutes after the published 3 December 2015 maps, at
+local noon, is the quiet Sun still a disk at the same four frequencies,
+and how bright?
+
+**What we found.** The team's SuperUniform images of that later scan were
+already on disk. Mean of 570 half-seconds after the Mohan 5σ stretch,
+with the 1982 sky survey at this pointing, not the 2013 table. Disks at
+108, 162, 217 and 240 MHz. Peaks 1.15 / 1.43 / 1.39 / 0.78 million K.
+Whole-Sun flux 3.52 / 8.15 / 14.61 / 9.67 solar flux units. Ten minutes
+earlier the remake was 0.89 / 1.01 / 1.10 / 0.63 million K and 2.9 / 6.5
+/ 11.7 / 8.2. The 162 MHz stretch is 302 against about 12 on Figure 4;
+the mean is still a disk.
+
+**What it means and what next.** This scan is brighter at 108 and 162 MHz
+than Figure 4. The large 162 MHz stretch means those frames are faint in
+Jy/beam relative to the survey flux, not that the disk is gone. 4
+December is still on the 2013 table, so it is not yet on the same
+brightness scale. Next: 8 December with the survey at that pointing.
+GOES on the pages is still missing.
+
+**Review.** Treating "mapped" as "our remake" hid maps that already
+existed. André was right: the noon scan did not need a new download.
+
+@claude:
+8 December must use the 1982 survey at that pointing, not the 2013 table.
+P-AIRCARS at 217 and 240 MHz is still noise.
+
 ## 2026-11-20 — [claude] Daily update
 
 This entry covers 17 to 20 November. The cluster could not be reached
