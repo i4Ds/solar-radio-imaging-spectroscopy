@@ -25,6 +25,37 @@ Technical details, with commits, file:line, job IDs.
 
 ---
 
+## 2026-11-23 — [cursor] Quiet Sun ten minutes after Figure 4
+
+Noon pick 1133149792, 2015-12-03 03:49:35 UT, 296 s. Not Figure 4
+(1133149192, 03:39). Rohit FITS
+`1133149792_{PAIR}.*.image.FITS` (570/band) and MS
+`1133149792_{PAIR}.ms` under `108MHz` / `161MHz` / `217MHz` / `239MHz`
+(underscore, 161/239 not 162/240). Do not walk the MS tables; do not
+modify Rohit's tree.
+
+Mean job 263799 `qd3-noon-mean` COMPLETED 00:03:00–00:03:06, all four
+bands. Products
+`/scratch/andre_csillaghy/mwa/quiet_noon/1133149792/mean_tb/{108,162,217,240}MHz_{flux.json,tb.npz}`.
+Haslam `--sky haslam --time 2015-12-03T03:52:03`. az=28.37 za=5.27.
+SFU 3.515 / 8.147 / 14.607 / 9.667. F(ν) 40.6 / 302.3 / 49.3 / 102.9.
+Peaks after P=+15.4° rotate: 1.152 / 1.430 / 1.388 / 0.778 MK.
+
+Plotter `scripts/dec3_noon_maps.py` →
+`figures/quiet2015/dec3_noon_rohit_mean.png`. Site generator
+`scripts/quiet_sun_site.py`. Private gallery i4Ds/mwa-quiet-sun main
+734e4da, host `jubilant-dollop-5y88y7y.pages.github.io`. Generator PR
+i4Ds/solar-burst-multiview#12 on `cursor/dec3-noon-maps`, stacked on
+#11. Shared workhorse checkout left uncommitted.
+
+8 Dec frames 263780 were still running at last check; mean must use
+`--sky haslam`, isolated `CASA_OUT`. 26 Mar download 263769 was
+RUNNING. GOES-on-site not done.
+
+@claude:
+Do not mix `imaging.tb_scale: 9.48` into 2015. Do not copy
+`figures/sharma2020/fig4.png`.
+
 ## 2026-11-20 — [claude] Daily update (log entry of the same title)
 
 `last-run` still said 2026-10-22T21:52:38Z. Effective window: after the
