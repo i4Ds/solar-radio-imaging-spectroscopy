@@ -157,7 +157,7 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
 
 <a id="where-we-are"></a>
 
-## Where we are (20 November 2026)
+## Where we are (24 November 2026)
 
 **Season I — imaging (October–December).**
 
@@ -247,6 +247,19 @@ Older highlights: [docs/older-highlights.md](docs/older-highlights.md).
   were ordered from the archive. All of this is on side branches, not the
   main line. The cluster could not be checked tonight. No new campaign
   images.
+- **Since 20 November:** Cursor, with André, made quiet-Sun maps of four
+  more mornings: 3 December 2015 ten minutes after Figure 4, 4 and 8
+  December 2015, and 26 March 2015. The same Sun ten minutes later comes
+  out 18–25 per cent brighter in every band. The Sun does not change that
+  fast, so this is the spread of the brightness method itself (it depends
+  on the radio sky behind the Sun, which moves with the pointing). On 26
+  March three of the four bands failed (impossible brightnesses), and 4
+  December is not yet on the same brightness scale. P-AIRCARS is back as a
+  separate comparison, not as the remake: on Figure 4 it finds the Sun at
+  108 and 162 MHz but only noise at 217 and 240 MHz, for reasons not yet
+  known. The maps are in a private gallery. All of this is on side
+  branches, not the main line; the cluster could not be checked tonight.
+  No new campaign images.
 - **Next:** review the twenty campaign images, write down where each burst
   sits and whether it is real; settle the possible saturation; then the
   catalogue comparison with X-rays (STIX, GOES). Also: polarisation, and

@@ -25,6 +25,59 @@ Technical details, with commits, file:line, job IDs.
 
 ---
 
+## 2026-11-24 — [claude] Daily update (log entry of the same title)
+
+`last-run` still said 2026-10-22T21:52:38Z (the 20 Nov run did not write
+it). Effective window: after umbrella `1a09435` (2026-11-20T05:46Z) to
+2026-11-24T16:00Z. Calculon: hostname did not resolve (no VPN); no job,
+log or image count checked. No new issue/PR comments in the three repos;
+`check.sh` returned NONE.
+
+Cursor commits read (none on any `main`):
+- Umbrella branches `cursor/fig4-paircars-north` (`5150e05`…`7d552c0`),
+  `cursor/log-dec3-noon` + `cursor/log-quiet-pointing` (`7dbcec1`,
+  `be49161`), `cursor/handover-quiet-sun` (`d8003e0`, adds
+  `docs/handover-quiet-sun-next-agent.md`).
+- Workhorse PRs #8–#15 all OPEN, none merged; #15
+  `cursor/quiet-pipelines` (`9f03e4d`) adds `docs/quiet-sun-handover.md`,
+  `scripts/pipelines/*.py`, `notebooks/06_quiet_sun_pipelines.ipynb`.
+
+Review references (numbering as in the log entry):
+1. `docs/quiet-sun-handover.md` (branch `cursor/quiet-pipelines`),
+   section "Keep doing": "Branch `cursor/<topic>`. Pull request. André
+   merges." and `docs/handover-quiet-sun-next-agent.md` item 7. Conflicts
+   with the 12 Oct commit-to-main agreement in AGENTS.md.
+2. Handover "Finished maps": 26 Mar peaks `421 / 3.85 / 368 / 360 MK`,
+   Mohan 5σ kept `38 / 583 / 225 / 2` of 586. Log `d8003e0` cites only
+   the frame counts and 3.85 MK. 4 Dec "Flux still Oberoi 2017 Table 1".
+3. 3 Dec noon 1133149792 vs Fig. 4 1133149192 whole-Sun SFU
+   3.515/8.147/14.607/9.667 vs 2.9/6.5/11.7/8.2 → ratios 1.21/1.25/1.25/
+   1.18; pointing az 28.37 za 5.27 vs az 46.31 za 6.62 (`be49161`).
+   F(ν) at 162 MHz 302.3 vs ~12 (`7dbcec1` tech note). Ratios computed
+   here from the logged values; not re-measured.
+4. 21 Nov log entries (`da20639`, `7d552c0`) name the western-feature
+   test; no position measurement in any later entry.
+6. Workhorse `6c3f664` "Request 8 December 2015 visibilities"; 26 Mar
+   ASVO 1125020/1125021 (21 Nov tech note), download job 263769. 12 Nov
+   decision recorded in workhorse `configs/quiet/README` (`f9d4b94`).
+7. Fig. 4 P-AIRCARS Jy/beam peaks 217 ~6.7, 240 ~81/~7 (21 Nov tech
+   note). Next run 266429 is 8 Dec ch84-85 (108 MHz).
+8. `~/Projects/solar-burst-multiview/.cursor/rules/git-push.mdc`
+   uncommitted diff still lists `i4Ds/ecallisto_ng` and
+   `i4Ds/Karabo-Pipeline`.
+- Minor: 21 Nov tech note calls `i4Ds/mwa-quiet-sun` "Public repo";
+  `gh repo view` says PRIVATE (created 2026-11-21T12:54Z). Later notes
+  say private. Correct the 21 Nov note when it moves to main.
+10. Claude fix pushed tonight in the workhorse: "harmonic lane" →
+    "upper (drift) lane" in `configs/products/drift_1449551392.txt:3-7`,
+    `scripts/calculon/start_round.sh:9,29,38`,
+    `scripts/calculon/start_allch.sh:37`. Product names `*_drift_h`
+    kept (paths on calculon depend on them); the config comment says the
+    suffix means the upper lane.
+
+@cursor: when you move your entries to main, keep them below this one
+(newest first) and fix the "Public repo" line.
+
 ## 2026-11-20 — [claude] Daily update (log entry of the same title)
 
 `last-run` still said 2026-10-22T21:52:38Z. Effective window: after the

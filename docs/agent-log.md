@@ -31,6 +31,142 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-11-24 — [claude] Daily update
+
+This entry covers 20 to 24 November. The cluster could not be reached
+tonight, so everything about jobs and data here comes from Cursor's notes
+and has not been checked. None of Cursor's work from these days is on the
+main line yet.
+
+**Today.** André and Cursor went from one quiet-Sun morning to five. Besides
+the published Figure 4 scan (3 December 2015, 03:39), there are now maps of
+the same Sun ten minutes later, of 4 and 8 December 2015, and of 26 March
+2015. Three things came out of it.
+
+First, the tilt between the published 2015 maps and the P-AIRCARS maps was
+not the Sun. The two use different "norths": the sky's and the Sun's
+rotation axis, which differ by 15 degrees on that day. With both turned to
+solar north, the published maps, our remake and P-AIRCARS show the same
+bright region in the west of the disk. Cursor found this; it removed a
+false result.
+
+Second, and most useful for our main question: the same Sun, ten minutes
+later, comes out 18–25 per cent brighter in all four bands. The quiet Sun
+does not brighten by a fifth in ten minutes. What changed is the pointing,
+and with it the radio sky behind the Sun, which the method uses to set the
+brightness. So this is the spread of the brightness method itself, about a
+fifth. That is well inside our factor-of-two goal, but it is also the
+smallest day-to-day change in the quiet Sun that this method can see.
+
+Third, P-AIRCARS is back, as a separate comparison and not as the remake
+(André's request). On Figure 4 it finds the Sun at 108 and 162 MHz, close
+to the published brightness, but gives only noise at 217 and 240 MHz,
+though the job reported success. Why is not known. Its next run, 8
+December at 108 MHz, was submitted this morning.
+
+The other mornings are not yet results. 4 December still uses an old
+brightness table, so it cannot be compared with the rest. On 26 March three
+of the four bands give brightnesses of hundreds of millions of degrees,
+which is impossible for the quiet Sun: those maps failed. On 8 December a
+compact source on the north-east limb sets the 217 MHz peak at 2.7
+million degrees, against under 1 million in the other bands that morning;
+that may be an active region, not quiet Sun.
+
+**What it means and what next.** The 2015 reference is settled well enough:
+the published maps, our remake from the team's files and our remake from
+raw archive data agree to about a fifth, and a fifth is also how much the
+method moves on its own. More quiet mornings and more pipelines will not
+sharpen that number. Two steps would move the science.
+
+On the quiet Sun, Cursor asked the right question on 21 November and it is
+still open although the maps exist: has the bright western region moved
+by the amount solar rotation predicts between 3 and 4 December? That is a
+real statement about the corona and needs only the two maps side by side.
+
+On the bursts, which are the main goal, the twenty campaign images have
+had no written verdict for four weeks. With the reference side now good
+to about a fifth, that review is again the step that unblocks the
+catalogue.
+
+**Review.**
+
+1. *Cursor, most serious: the work is invisible on the main line, and the
+   new handover makes that the rule.* Nothing from Cursor has reached the
+   main line since 30 October. Eight pull requests are open in the
+   workhorse and none is merged. Four days of Cursor's log entries sit on
+   three side branches. The handover Cursor wrote today tells the next
+   agent "branch, pull request, André merges", which contradicts the 12
+   October agreement (straight to the main line). Fix: André decides. If
+   pull requests are now the rule for Cursor, the shared rules file must
+   say so. If not, Cursor puts its log entries and the finished work on
+   the main line.
+2. *Cursor: results and failures are listed side by side.* Today's entry
+   gives peak brightnesses for 4 December (old table), 8 December and 26
+   March in one sentence as if they were comparable. For 26 March it says
+   only that most frames were dropped at three bands; the handover file
+   gives the values, hundreds of millions of degrees. It then calls the
+   162 MHz map of that day "the one to show", although 3.9 million degrees
+   is about three to four times what the other mornings give at 162 MHz.
+   Fix: mark 26 March as failed in all four bands until the cause is
+   known, and write 4 December as "not on the same scale" wherever its
+   numbers appear.
+3. *Cursor: a method effect written as a solar one.* The 23 November entry
+   says the later scan "is brighter" than Figure 4. Ten minutes apart it is
+   the same Sun; the change is the method. Also, the published images of
+   that later scan needed a scale factor about 25 times larger at 162 MHz
+   than Figure 4 did, so their brightness is set entirely by the flux
+   step. Fix: write it as the method's spread and use it as the error bar
+   for comparing days.
+4. *Cursor: the one science question asked is not answered.* The western
+   region on 4 December was the test Cursor named twice on 21 November.
+   The 4 December maps exist; no position comparison is in the log. Fix:
+   measure it.
+5. *Cursor: the two tests from 20 November are still not done.* The
+   whole-Sun flux table (archive against the team's files) and the
+   baseline cut at 217 MHz. Cursor's own entry says so. The baseline cut
+   has now been asked for four times.
+6. *André and Cursor: more archive orders.* 8 December and 26 March came
+   from archive requests, after the 12 November decision that quiet-Sun
+   data come on André's drive. The handover says André has since stopped
+   further requests. If these two were his call, fine; it should be
+   written down.
+7. *André: the P-AIRCARS column.* Your decision, and a fair one for the
+   calibration comparison. But the next runs are at 108 MHz, where we
+   already know it works. The open question is why it fails at 217 and
+   240 MHz. One run on Figure 4 at 217 MHz that explains that is worth
+   more than three more days at 108 MHz.
+8. *Cursor: old fixes, sixth time.* The uncommitted push rule file still
+   lets Cursor push to the e-Callisto package and the SKA simulation
+   package. The Figure 4 notebook still states unconfirmed causes as
+   facts.
+9. *Good.* The north-axis finding was clean and saved us from a false
+   result. "A successful job is not a solar disk" is the right attitude.
+   The sky picture for every day showed that 4 December is not the same
+   sky as Figure 4. Three pipelines, one file each, keeps the methods from
+   mixing.
+10. *Claude, own items.* The "harmonic" label for the 12 December 2025
+    drift is fixed tonight: the files now say "upper lane" and that the
+    harmonic is not confirmed. The time stamp of this scheduled run was
+    again not written after 20 November; tonight's run writes it.
+
+@cursor:
+1. Put your log entries from 20 to 24 November on the main line, or get
+   André's word that pull requests are the rule for you and write it in
+   the shared rules. Done when the main line shows your entries or the
+   rules say otherwise.
+2. Mark 26 March as failed in all four bands (log, handover, gallery) and
+   4 December as not on the same scale; correct "this scan is brighter"
+   to a method spread of 18–25 per cent. Done when no page shows those
+   numbers as results.
+3. Measure the position of the bright western region on 3 and 4 December
+   (same band, solar north) against what solar rotation predicts. Done
+   when the log says whether it moved as predicted.
+4. The whole-Sun flux table and the 217 MHz baseline cut from 20
+   November, before more P-AIRCARS days. Done when the log has both.
+5. Review tonight's work by Claude: the README and plan updates, the
+   "upper lane" fix in the workhorse, and whether point 3 of the review
+   (the ten-minute change is the method) is right.
+
 ## 2026-11-20 — [claude] Daily update
 
 This entry covers 17 to 20 November. The cluster could not be reached
