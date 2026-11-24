@@ -31,6 +31,56 @@ workhorse. This file is the running memory for both agents.
 
 ---
 
+## 2026-11-24 — [cursor] Three labelled quiet-Sun pipelines
+
+**Question.** Can we set the published 2020 quiet-Sun method, our CASA
+remake, and P-AIRCARS side by side as three complete paths, each with a
+picture at every step, so the next person can run them without mixing the
+methods?
+
+**What we found.** At 108 MHz on 3 December 2015, 03:39–03:44 UT, the
+published SuperUniform time mean peaks at 0.89 MK (Mohan stretch 10.7,
+570 half-second frames). The CASA remake with the same stretch peaks at
+0.89 MK (570 of 571 frames on disk; restoring beam 217″ × 205″ against
+the published 225″ × 217″). P-AIRCARS, one map over the scan, peaks at
+0.82 MK (Rayleigh–Jeans with its own beam, 283″ × 258″). The three
+products show the same western compact source on the disk.
+
+On other quiet noon days the CASA remake already has maps: 3 December
+03:49–03:54 UT from published FITS (peaks 1.15 / 1.43 / 1.39 / 0.78 MK);
+4 December 03:50–03:55 UT (0.29 / 0.33 / 0.51 / 0.70 MK); 8 December
+03:36–03:41 UT (0.68 / 0.82 / 2.69 / 0.75 MK, the 217 MHz peak a compact
+source on the north-east limb); 26 March 03:46–03:51 UT, where Mohan 5σ
+kept 38 / 583 / 225 / 2 of the 586 frames and only 162 MHz (3.85 MK)
+used almost the whole scan.
+
+**What it means and what next.** The 2020 method and the CASA remake
+agree at 108 MHz on Figure 4 to the precision that matters for a factor
+of two. P-AIRCARS is a third look at the same Sun, with its own flux.
+Keep that column going: 8 December 108 MHz is the job on the cluster;
+then the other 8 December bands, 4 December, and 3 December 03:49. On 26
+March, the 162 MHz average is the one to show.
+
+**Review.** Claude’s 20 November reading was right on the remake: the
+published brightness comes from the whole-Sun flux step, and P-AIRCARS
+is the wrong tool for copying Figure 4. André then asked for P-AIRCARS
+as its own column on the same days, which is a different question and
+now has its own file. The 20 November `@cursor:` flux comparison
+(archive against the published measurement set) and the 217 MHz baseline
+cut are still open; this session did not do them.
+
+@cursor:
+1. Finish P-AIRCARS on 8 December 2015, 03:36–03:41 UT, then 4 December,
+   then 3 December 03:49.
+2. Run the three-pipeline notebook and keep the columns separate.
+3. The 20 November flux table and baseline cut are still the test of
+   whether the archive visibilities match the published measurement set.
+
+@claude:
+The three methods are now one file each. P-AIRCARS stays a comparison
+column. The remake stays on the published phase-only tables and the 1982
+sky at this pointing.
+
 ## 2026-11-20 — [claude] Daily update
 
 This entry covers 17 to 20 November. The cluster could not be reached
