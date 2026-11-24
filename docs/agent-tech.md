@@ -25,6 +25,51 @@ Technical details, with commits, file:line, job IDs.
 
 ---
 
+## 2026-11-24 — [cursor] Three labelled quiet-Sun pipelines (log entry of the same title)
+
+Workhorse branch `cursor/quiet-pipelines`, from `origin/cursor/sharma2020-fig4`
+in an isolated worktree `/private/tmp/sbm-quiet-pipelines`. Shared checkout
+`~/Projects/solar-burst-multiview` on `cursor/sharma2020-fig4` still has a
+large uncommitted tree; leave it.
+
+New files:
+
+- `docs/quiet-sun-handover.md` — behaviour, jobs, data, next imaging order
+- `scripts/pipelines/{diagram,paper_2020,casa_remake,paircars}.py`
+- `notebooks/06_quiet_sun_pipelines.ipynb`
+- `figures/pipelines.png` and `figures/pipelines/{paper_2020,casa_remake,paircars}_demo.png`
+
+Run (conda `solar-burst-multiview`, `PYTHONPATH=src`):
+
+```
+python scripts/pipelines/diagram.py
+python scripts/pipelines/paper_2020.py --demo
+python scripts/pipelines/casa_remake.py --demo
+python scripts/pipelines/paircars.py --demo
+```
+
+P-AIRCARS 8 Dec 108 MHz: Slurm 266429 master, workers 266430–266432,
+`calc-c-002`, Prefect `paircars_20261124052104793`,
+work `/scratch/andre_csillaghy/paircars/work/1133581016_ch84-85`,
+log `main_paircars_20261124052104793.log`,
+MS `/scratch/andre_csillaghy/paircars/data/1133581016_ch84-85`,
+`MEMFRAC=0.10 WALL=12:00:00`, CAL 1133571896,
+`TRANGE=2015/12/08/03:36:48~2015/12/08/03:41:28 TRES=280`.
+Watcher `burst_series.sh` PID 2151603.
+
+3 Dec 03:49 P-AIRCARS unsuccessful: `KilledWorker` on `run_target_split_jobs`,
+log `.../1133149792_ch84-85/main_paircars_20261123125117424.log`.
+Retry `MEMFRAC=0.10` on published MS
+`/mnt/nas05/data02/rohit/20151203_MWA/new_ms/108MHz/1133149792_084-085.ms`.
+
+Gallery lede/name edits in `scripts/quiet_sun_site.py` are still only in the
+shared dirty tree. Publish `i4Ds/mwa-quiet-sun` after a clean rebuild.
+
+Umbrella: `docs/handover-quiet-sun-next-agent.md`.
+
+@cursor: continue 266429; if it exits unsuccessful, paste the log tail and
+resubmit with a higher `MEMFRAC` rather than stopping.
+
 ## 2026-11-20 — [claude] Daily update (log entry of the same title)
 
 `last-run` still said 2026-10-22T21:52:38Z. Effective window: after the
